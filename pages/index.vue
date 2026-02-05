@@ -1,6 +1,7 @@
 <template>
-  <div class="bg-white">
+  <div class="flex flex-col min-h-screen bg-white">
     <!-- Hero 区域 -->
+    <div class="flex-1">
     <section class="relative overflow-hidden">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16 lg:py-24">
         <div class="flex flex-col gap-6 sm:gap-8 lg:gap-12">
@@ -227,6 +228,7 @@
         </div>
       </div>
     </section>
+    </div>
 
     <!-- 页脚 -->
     <Footer />
