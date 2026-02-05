@@ -12,3 +12,42 @@
   }
 }
 
+/* 品牌色按钮样式 */
+@layer components {
+  .register-btn {
+    background-color: #3A82F9;
+  }
+  .register-btn:hover {
+    background-color: #2B6FE8;
+  }
+  
+  .learn-more-btn {
+    color: #3A82F9;
+    border-color: #3A82F9;
+  }
+  .learn-more-btn:hover {
+    background-color: #E8F2FF;
+  }
+  
+  /* 品牌色文字和链接 */
+  .text-brand {
+    color: #3A82F9;
+  }
+  
+  .hover\:text-brand:hover {
+    color: #3A82F9;
+  }
+  
+  .border-brand {
+    border-color: #3A82F9;
+  }
+  
+  .bg-brand {
+    background-color: #3A82F9;
+  }
+  
+  .bg-brand:hover {
+    background-color: #2B6FE8;
+  }
+}
+
