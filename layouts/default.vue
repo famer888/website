@@ -124,17 +124,17 @@
               </svg>
             </button>
             <div v-if="mobileDropdown === 'why'" class="pl-4 space-y-1">
-              <NuxtLink to="/who-are-we" class="block px-3 py-2 text-sm text-brand">我们是谁</NuxtLink>
-              <NuxtLink to="/advantages" class="block px-3 py-2 text-sm text-gray-700">我们的优势</NuxtLink>
-              <NuxtLink to="/statistics" class="block px-3 py-2 text-sm text-gray-700">数据统计</NuxtLink>
-              <NuxtLink to="/mobile-ads" class="block px-3 py-2 text-sm text-gray-700">移动广告</NuxtLink>
+              <NuxtLink to="/who-are-we" class="block px-3 py-2 text-xs sm:text-sm text-brand">我们是谁</NuxtLink>
+              <NuxtLink to="/advantages" class="block px-3 py-2 text-xs sm:text-sm text-gray-700">我们的优势</NuxtLink>
+              <NuxtLink to="/statistics" class="block px-3 py-2 text-xs sm:text-sm text-gray-700">数据统计</NuxtLink>
+              <NuxtLink to="/mobile-ads" class="block px-3 py-2 text-xs sm:text-sm text-gray-700">移动广告</NuxtLink>
             </div>
-            <NuxtLink to="/advertiser" class="block text-gray-700 hover:text-brand px-3 py-2 rounded-md text-base font-medium">广告商</NuxtLink>
-            <NuxtLink to="/ad-styles" class="block text-gray-700 hover:text-brand px-3 py-2 rounded-md text-base font-medium">广告样式</NuxtLink>
-            <NuxtLink to="/contact" class="block text-gray-700 hover:text-brand px-3 py-2 rounded-md text-base font-medium">联系我们</NuxtLink>
+            <NuxtLink to="/advertiser" class="block text-gray-700 hover:text-brand px-3 py-2 rounded-md text-sm sm:text-base font-medium">广告商</NuxtLink>
+            <NuxtLink to="/ad-styles" class="block text-gray-700 hover:text-brand px-3 py-2 rounded-md text-sm sm:text-base font-medium">广告样式</NuxtLink>
+            <NuxtLink to="/contact" class="block text-gray-700 hover:text-brand px-3 py-2 rounded-md text-sm sm:text-base font-medium">联系我们</NuxtLink>
             <div class="pt-2 space-y-2">
-              <NuxtLink to="/login" class="block text-center text-gray-700 hover:text-brand px-3 py-2 rounded-md text-base font-medium">登陆</NuxtLink>
-              <NuxtLink to="/register" class="block text-center bg-brand text-white px-3 py-2 rounded-full text-base font-medium">注册</NuxtLink>
+              <NuxtLink to="/login" class="block text-center text-gray-700 hover:text-brand px-3 py-2 rounded-md text-sm sm:text-base font-medium">登陆</NuxtLink>
+              <NuxtLink to="/register" class="block text-center bg-brand text-white px-3 py-2 rounded-full text-sm sm:text-base font-medium">注册</NuxtLink>
             </div>
           </div>
         </div>
