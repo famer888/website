@@ -29,10 +29,10 @@
                 v-if="activeDropdown === 'why'"
                 class="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50"
               >
-                <NuxtLink to="/who-are-we" class="block px-4 py-2 text-sm text-brand hover:bg-gray-50">我们是谁</NuxtLink>
-                <NuxtLink to="/advantages" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">我们的优势</NuxtLink>
-                <NuxtLink to="/statistics" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">数据统计</NuxtLink>
-                <NuxtLink to="/mobile-ads" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">移动广告</NuxtLink>
+                <NuxtLink to="/why/who-are-we" class="block px-4 py-2 text-sm text-brand hover:bg-gray-50">我们是谁</NuxtLink>
+                <NuxtLink to="/why/advantages" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">我们的优势</NuxtLink>
+                <NuxtLink to="/why/statistics" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">数据统计</NuxtLink>
+                <NuxtLink to="/why/mobile-ads" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">移动广告</NuxtLink>
               </div>
             </div>
 
@@ -52,9 +52,9 @@
                 v-if="activeDropdown === 'advertiser'"
                 class="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50"
               >
-                <NuxtLink to="/how-to-operate" class="block px-4 py-2 text-sm text-brand hover:bg-gray-50">如何操作</NuxtLink>
-                <NuxtLink to="/t1-dsp" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">T1 DSP</NuxtLink>
-                <NuxtLink to="/target-function" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">目标功能</NuxtLink>
+                <NuxtLink to="/advertiser/how-to-operate" class="block px-4 py-2 text-sm text-brand hover:bg-gray-50">如何操作</NuxtLink>
+                <NuxtLink to="/advertiser/t1-dsp" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">T1 DSP</NuxtLink>
+                <NuxtLink to="/advertiser/target-function" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">目标功能</NuxtLink>
               </div>
             </div>
 
@@ -80,9 +80,9 @@
                 class="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50"
               >
                 <NuxtLink to="/contact" class="block px-4 py-2 text-sm text-brand hover:bg-gray-50">联系我们</NuxtLink>
-                <NuxtLink to="/help-center" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">帮助中心</NuxtLink>
-                <NuxtLink to="/quality-guide" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">质量指南</NuxtLink>
-                <NuxtLink to="/download-media-kit" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">下载媒体资源包</NuxtLink>
+                <NuxtLink to="/contact/help-center" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">帮助中心</NuxtLink>
+                <NuxtLink to="/contact/quality-guide" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">质量指南</NuxtLink>
+                <NuxtLink to="/contact/download-media-kit" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">下载媒体资源包</NuxtLink>
               </div>
             </div>
 
@@ -122,10 +122,10 @@
                 <img :src="openIconSrc" alt="Toggle" class="h-6 w-6 transition-transform -rotate-90" :class="{ 'rotate-0': mobileDropdown === 'why' }" />
               </button>
               <div v-if="mobileDropdown === 'why'" class="bg-white border-b border-gray-100">
-                <NuxtLink to="/who-are-we" @click="mobileMenuOpen = false" class="block px-8 py-3.5 font-pingfang font-normal text-[14px] leading-[20px] tracking-normal text-justify text-[#93959c]">我们是谁</NuxtLink>
-                <NuxtLink to="/advantages" @click="mobileMenuOpen = false" class="block px-8 py-3.5 font-pingfang font-normal text-[14px] leading-[20px] tracking-normal text-justify text-[#93959c]">我们的优势</NuxtLink>
-                <NuxtLink to="/statistics" @click="mobileMenuOpen = false" class="block px-8 py-3.5 font-pingfang font-normal text-[14px] leading-[20px] tracking-normal text-justify text-[#93959c]">数据统计</NuxtLink>
-                <NuxtLink to="/mobile-ads" @click="mobileMenuOpen = false" class="block px-8 py-3.5 font-pingfang font-normal text-[14px] leading-[20px] tracking-normal text-justify text-[#93959c]">移动广告</NuxtLink>
+                <NuxtLink to="/why/who-are-we" @click="mobileMenuOpen = false" class="block px-8 py-3.5 font-pingfang font-normal text-[14px] leading-[20px] tracking-normal text-justify text-[#93959c]">我们是谁</NuxtLink>
+                <NuxtLink to="/why/advantages" @click="mobileMenuOpen = false" class="block px-8 py-3.5 font-pingfang font-normal text-[14px] leading-[20px] tracking-normal text-justify text-[#93959c]">我们的优势</NuxtLink>
+                <NuxtLink to="/why/statistics" @click="mobileMenuOpen = false" class="block px-8 py-3.5 font-pingfang font-normal text-[14px] leading-[20px] tracking-normal text-justify text-[#93959c]">数据统计</NuxtLink>
+                <NuxtLink to="/why/mobile-ads" @click="mobileMenuOpen = false" class="block px-8 py-3.5 font-pingfang font-normal text-[14px] leading-[20px] tracking-normal text-justify text-[#93959c]">移动广告</NuxtLink>
               </div>
             </div>
             
@@ -140,9 +140,9 @@
                 <img :src="openIconSrc" alt="Toggle" class="h-6 w-6 transition-transform -rotate-90" :class="{ 'rotate-0': mobileDropdown === 'advertiser' }" />
               </button>
               <div v-if="mobileDropdown === 'advertiser'" class="bg-white border-b border-gray-100">
-                <NuxtLink to="/how-to-operate" @click="mobileMenuOpen = false" class="block px-8 py-3.5 font-pingfang font-normal text-[14px] leading-[20px] tracking-normal text-justify text-[#93959c]">如何操作</NuxtLink>
-                <NuxtLink to="/t1-dsp" @click="mobileMenuOpen = false" class="block px-8 py-3.5 font-pingfang font-normal text-[14px] leading-[20px] tracking-normal text-justify text-[#93959c]">T1 DSP</NuxtLink>
-                <NuxtLink to="/target-function" @click="mobileMenuOpen = false" class="block px-8 py-3.5 font-pingfang font-normal text-[14px] leading-[20px] tracking-normal text-justify text-[#93959c]">目标功能</NuxtLink>
+                <NuxtLink to="/advertiser/how-to-operate" @click="mobileMenuOpen = false" class="block px-8 py-3.5 font-pingfang font-normal text-[14px] leading-[20px] tracking-normal text-justify text-[#93959c]">如何操作</NuxtLink>
+                <NuxtLink to="/advertiser/t1-dsp" @click="mobileMenuOpen = false" class="block px-8 py-3.5 font-pingfang font-normal text-[14px] leading-[20px] tracking-normal text-justify text-[#93959c]">T1 DSP</NuxtLink>
+                <NuxtLink to="/advertiser/target-function" @click="mobileMenuOpen = false" class="block px-8 py-3.5 font-pingfang font-normal text-[14px] leading-[20px] tracking-normal text-justify text-[#93959c]">目标功能</NuxtLink>
               </div>
             </div>
             
@@ -167,9 +167,9 @@
               </button>
               <div v-if="mobileDropdown === 'contact'" class="bg-white border-b border-gray-100">
                 <NuxtLink to="/contact" @click="mobileMenuOpen = false" class="block px-8 py-3.5 font-pingfang font-normal text-[14px] leading-[20px] tracking-normal text-justify text-[#93959c]">联系我们</NuxtLink>
-                <NuxtLink to="/help-center" @click="mobileMenuOpen = false" class="block px-8 py-3.5 font-pingfang font-normal text-[14px] leading-[20px] tracking-normal text-justify text-[#93959c]">帮助中心</NuxtLink>
-                <NuxtLink to="/quality-guide" @click="mobileMenuOpen = false" class="block px-8 py-3.5 font-pingfang font-normal text-[14px] leading-[20px] tracking-normal text-justify text-[#93959c]">质量指南</NuxtLink>
-                <NuxtLink to="/download-media-kit" @click="mobileMenuOpen = false" class="block px-8 py-3.5 font-pingfang font-normal text-[14px] leading-[20px] tracking-normal text-justify text-[#93959c]">下载媒体资源包</NuxtLink>
+                <NuxtLink to="/contact/help-center" @click="mobileMenuOpen = false" class="block px-8 py-3.5 font-pingfang font-normal text-[14px] leading-[20px] tracking-normal text-justify text-[#93959c]">帮助中心</NuxtLink>
+                <NuxtLink to="/contact/quality-guide" @click="mobileMenuOpen = false" class="block px-8 py-3.5 font-pingfang font-normal text-[14px] leading-[20px] tracking-normal text-justify text-[#93959c]">质量指南</NuxtLink>
+                <NuxtLink to="/contact/download-media-kit" @click="mobileMenuOpen = false" class="block px-8 py-3.5 font-pingfang font-normal text-[14px] leading-[20px] tracking-normal text-justify text-[#93959c]">下载媒体资源包</NuxtLink>
               </div>
             </div>
             
