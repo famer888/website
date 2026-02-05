@@ -29,6 +29,14 @@
     background-color: #E8F2FF;
   }
   
+  /* 媒体资料部分的立即下载按钮 */
+  .learn-more-btn.bg-\[#F5F5F5\] {
+    background-color: #F5F5F5;
+  }
+  .learn-more-btn.bg-\[#F5F5F5\]:hover {
+    background-color: #E8F2FF;
+  }
+  
   /* 品牌色文字和链接 */
   .text-brand {
     color: #3A82F9;

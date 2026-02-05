@@ -59,11 +59,8 @@
             </div>
 
             <!-- 广告样式 -->
-            <NuxtLink to="/ad-styles" class="flex items-center text-gray-700 hover:text-brand px-3 py-2 text-sm font-medium transition-colors">
+            <NuxtLink to="/ad-styles" class="text-gray-700 hover:text-brand px-3 py-2 text-sm font-medium transition-colors">
               广告样式
-              <svg class="ml-1 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-              </svg>
             </NuxtLink>
 
             <!-- 联系我们 -->
