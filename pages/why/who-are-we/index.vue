@@ -85,6 +85,37 @@
           <div class="mt-[80px]">
             <BenefitsCarousel />
           </div>
+          
+          <!-- 移动广告组件 - PC端 -->
+          <div class="mt-[80px] max-w-5xl mx-auto">
+            <!-- 上部分：左右布局 -->
+            <div class="flex gap-8 items-center mb-12">
+              <!-- 左侧：文本内容 -->
+              <div class="flex-1">
+                <h2 class="text-4xl font-bold text-[#626671] mb-4">移动广告</h2>
+                <h3 class="text-2xl font-medium text-[#626671] mb-6">在所有设备上触达您的受众</h3>
+                <p class="text-base text-[#93959C] leading-relaxed">
+                  我们的广告投放技术赋能移动广告商,使他们能够针对全球数百万用户,在用户全天使用智能手机时,投放高度精准、可自动优化的广告活动。
+                </p>
+              </div>
+              
+              <!-- 右侧：图片 -->
+              <div class="flex-1 flex items-center justify-center">
+                <img :src="why8ImageSrc" alt="移动广告" class="w-full h-auto" />
+              </div>
+            </div>
+            
+            <!-- 下部分：居中显示 -->
+            <div class="text-center">
+              <h2 class="text-4xl font-bold text-[#3A82F9] mb-4">立即开始!</h2>
+              <p class="text-xl font-medium text-[#626671] mb-2">免费加入!</p>
+              <p class="text-base text-[#93959C] mb-8">来看看我们能为您做些什么。</p>
+              <!-- 行动号召按钮 -->
+              <NuxtLink to="/register" class="inline-block w-[200px] h-[50px] bg-gradient-to-r from-[#3A82F9] to-[#2B6FE8] text-white rounded-full text-lg font-medium hover:opacity-90 transition-opacity flex items-center justify-center mx-auto">
+                立即加入
+              </NuxtLink>
+            </div>
+          </div>
         </div>
       </div>
       
@@ -154,7 +185,44 @@
               </div>
             </div>
           </div>
+          
+          <!-- 好处轮播组件 - 移动端 -->
+          <div class="mt-8 px-4">
+            <BenefitsCarousel />
+          </div>
         </div>
+        
+        <!-- 移动广告组件 - 移动端 -->
+        <div class="bg-white">
+          <!-- 上部分：文本内容 -->
+          <div class="py-8 px-4 mb-8">
+            <h2 class="text-[32px] font-bold text-[#626671] mb-4 text-left">移动广告</h2>
+            <h3 class="text-xl font-medium text-[#626671] mb-4 text-left">在所有设备上触达您的受众。</h3>
+            <p class="text-base text-[#93959C] leading-relaxed mb-4 text-left">
+              我们的广告投放技术赋能移动广告商,使他们能够针对全球数百万用户,在用户全天使用智能手机时,投放高度精准、可自动优化的广告活动。
+            </p>
+            <p class="text-base text-[#93959C] leading-relaxed text-left">
+              立即加入我们的广告联盟,让先进的移动广告和营销解决方案为您服务。
+            </p>
+          </div>
+          
+          <!-- 中间：图片 -->
+          <div class="mb-8 px-4">
+            <img :src="why8ImageSrc" alt="移动广告" class="w-full h-auto" />
+          </div>
+          
+          <!-- 下部分：居中显示，灰色背景占满 -->
+          <div class="text-center bg-gray-50 py-8 px-4 w-full">
+            <h2 class="text-[32px] font-bold text-[#3A82F9] mb-4">立即开始!</h2>
+            <p class="text-lg font-medium text-[#626671] mb-2">免费加入!</p>
+            <p class="text-base text-[#93959C] mb-6">来看看我们能为您做些什么。</p>
+            <!-- 行动号召按钮 -->
+            <NuxtLink to="/register" class="inline-block w-[200px] h-[45px] bg-gradient-to-r from-[#3A82F9] to-[#2B6FE8] text-white rounded-full text-lg font-medium hover:opacity-90 transition-opacity flex items-center justify-center mx-auto">
+              报名
+            </NuxtLink>
+          </div>
+        </div>
+        
       </div>
     </div>
     
@@ -170,6 +238,7 @@ import why2ImageSrc from '~/assets/imgaes/why/why2.svg'
 import why3ImageSrc from '~/assets/imgaes/why/why3.svg'
 import why4ImageSrc from '~/assets/imgaes/why/why4.svg'
 import why5ImageSrc from '~/assets/imgaes/why/why5.svg'
+import why8ImageSrc from '~/assets/imgaes/why/why8.svg'
 
 // 导入本地组件
 import BenefitsCarousel from './components/BenefitsCarousel.vue'
