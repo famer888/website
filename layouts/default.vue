@@ -103,10 +103,7 @@
               @click="mobileMenuOpen = !mobileMenuOpen"
               class="text-gray-700 hover:text-gray-900 focus:outline-none"
             >
-              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path v-if="!mobileMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                <path v-else stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-              </svg>
+              <img :src="menuIconSrc" alt="Menu" class="h-5 w-5" />
             </button>
           </div>
         </div>
@@ -151,6 +148,7 @@
 <script setup>
 // 导入图片
 import logoImageSrc from '~/assets/imgaes/logo.png'
+import menuIconSrc from '~/assets/imgaes/menu.svg'
 
 const mobileMenuOpen = ref(false)
 const activeDropdown = ref(null)

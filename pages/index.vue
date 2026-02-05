@@ -277,14 +277,14 @@
 
 <script setup>
 // 导入图片
-import centerImageSrc from '~/assets/imgaes/center.png'
-import center2ImageSrc from '~/assets/imgaes/center2.png'
-import center3ImageSrc from '~/assets/imgaes/center3.png'
-import icon1Src from '~/assets/imgaes/icon1.png'
-import icon2Src from '~/assets/imgaes/icon2.png'
-import icon3Src from '~/assets/imgaes/icon3.png'
+import centerImageSrc from '~/assets/imgaes/home/center.png'
+import center2ImageSrc from '~/assets/imgaes/home/center2.png'
+import center3ImageSrc from '~/assets/imgaes/home/center3.png'
+import icon1Src from '~/assets/imgaes/home/icon1.png'
+import icon2Src from '~/assets/imgaes/home/icon2.png'
+import icon3Src from '~/assets/imgaes/home/icon3.png'
 import logoImageSrc from '~/assets/imgaes/logo.png'
-import footIconSrc from '~/assets/imgaes/footIcon.png'
+import footIconSrc from '~/assets/imgaes/home/footIcon.png'
 
 // SEO 配置
 useHead({
