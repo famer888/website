@@ -206,7 +206,7 @@
 <script setup>
 import FeatureCardsSection from "~/components/FeatureCardsSection.vue";
 import img_dsp7 from "~/assets/imgaes/advertiser/DSP7.png";
-import img_t1dsp6x from "~/assets/imgaes/advertiser/img_t1dsp6x.png";
+import img_t1dsp6x from "~/assets/imgaes/advertiser/img_t1dsp6x.jpg";
 
 // SEO 配置
 useHead({

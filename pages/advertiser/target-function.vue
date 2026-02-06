@@ -196,7 +196,7 @@
 <script setup>
 import FeatureCardsSection from "~/components/FeatureCardsSection.vue";
 import SvgIcon from "~/components/SvgIcon.vue";
-import img_mbgn8 from "~/assets/imgaes/advertiser/img_mbgn8.png";
+import img_mbgn8 from "~/assets/imgaes/advertiser/img_mbgn8.jpg";
 
 // SEO 配置
 useHead({
