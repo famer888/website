@@ -80,6 +80,7 @@
 </template>
 
 <script setup>
+import { PrivacyStatement } from '@/utils/constants'
 const route = useRoute()
 
 // 根据查询参数确定当前tab，默认为使用条款
@@ -137,36 +138,8 @@ const tabsContent = {
       </section>
     `
   },
-  privacy: {
-    title: '隐私声明',
-    lastUpdated: '2026年1月5日',
-    intro: '我们重视您的隐私。本隐私声明说明了我们如何收集、使用和保护您的个人信息。',
-    content: `
-      <section class="mb-8">
-        <h2 class="text-2xl font-semibold text-gray-900 mb-4">信息收集</h2>
-        <p>我们收集的信息类型包括...</p>
-      </section>
-      <section class="mb-8">
-        <h2 class="text-2xl font-semibold text-gray-900 mb-4">信息使用</h2>
-        <p>我们如何使用收集的信息...</p>
-      </section>
-    `
-  },
-  cookie: {
-    title: 'Cookie 政策',
-    lastUpdated: '2026年1月5日',
-    intro: '本 Cookie 政策说明了我们如何使用 Cookie 和类似技术来改善您的浏览体验。',
-    content: `
-      <section class="mb-8">
-        <h2 class="text-2xl font-semibold text-gray-900 mb-4">什么是 Cookie</h2>
-        <p>Cookie 是存储在您设备上的小文本文件...</p>
-      </section>
-      <section class="mb-8">
-        <h2 class="text-2xl font-semibold text-gray-900 mb-4">我们如何使用 Cookie</h2>
-        <p>我们使用 Cookie 来...</p>
-      </section>
-    `
-  },
+  privacy:PrivacyStatement,
+  cookie: CookiePolicy,
   sitemap: {
     title: '网站地图',
     lastUpdated: '2026年1月5日',
