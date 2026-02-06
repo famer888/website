@@ -2,47 +2,48 @@
   <div class="min-h-screen bg-white">
     <!-- Tab 导航栏 -->
     <div class="bg-gray-50 border-b border-gray-200">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <nav class="flex flex-wrap items-center justify-center gap-4 md:gap-6 lg:gap-8 py-3 md:py-4">
+      <div class="max-w-7xl mx-auto">
+        <!-- 移动端：横向滚动 -->
+        <nav class="flex items-center gap-4 md:gap-6 lg:gap-8 py-3 md:py-4 overflow-x-auto scrollbar-hide md:justify-center px-4 sm:px-6 lg:px-8">
           <NuxtLink
             to="/terms?tab=terms"
-            class="px-3 md:px-4 py-2 text-sm font-medium transition-colors whitespace-nowrap"
-            :class="activeTab === 'terms' ? 'text-gray-900 border-b-2 border-gray-900 pb-2' : 'text-gray-600 hover:text-gray-900'"
+            class="px-3 md:px-4 py-2 text-sm font-medium transition-colors whitespace-nowrap flex-shrink-0"
+            :class="activeTab === 'terms' ? 'text-blue-600 border-b-2 border-blue-600 pb-2' : 'text-gray-600 hover:text-gray-900'"
           >
             使用条款
           </NuxtLink>
           <NuxtLink
             to="/terms?tab=department"
-            class="px-3 md:px-4 py-2 text-sm font-medium transition-colors whitespace-nowrap"
-            :class="activeTab === 'department' ? 'text-gray-900 border-b-2 border-gray-900 pb-2' : 'text-gray-600 hover:text-gray-900'"
+            class="px-3 md:px-4 py-2 text-sm font-medium transition-colors whitespace-nowrap flex-shrink-0"
+            :class="activeTab === 'department' ? 'text-blue-600 border-b-2 border-blue-600 pb-2' : 'text-gray-600 hover:text-gray-900'"
           >
             部门制度
           </NuxtLink>
           <NuxtLink
             to="/terms?tab=privacy"
-            class="px-3 md:px-4 py-2 text-sm font-medium transition-colors whitespace-nowrap"
-            :class="activeTab === 'privacy' ? 'text-gray-900 border-b-2 border-gray-900 pb-2' : 'text-gray-600 hover:text-gray-900'"
+            class="px-3 md:px-4 py-2 text-sm font-medium transition-colors whitespace-nowrap flex-shrink-0"
+            :class="activeTab === 'privacy' ? 'text-blue-600 border-b-2 border-blue-600 pb-2' : 'text-gray-600 hover:text-gray-900'"
           >
             隐私声明
           </NuxtLink>
           <NuxtLink
             to="/terms?tab=cookie"
-            class="px-3 md:px-4 py-2 text-sm font-medium transition-colors whitespace-nowrap"
-            :class="activeTab === 'cookie' ? 'text-gray-900 border-b-2 border-gray-900 pb-2' : 'text-gray-600 hover:text-gray-900'"
+            class="px-3 md:px-4 py-2 text-sm font-medium transition-colors whitespace-nowrap flex-shrink-0"
+            :class="activeTab === 'cookie' ? 'text-blue-600 border-b-2 border-blue-600 pb-2' : 'text-gray-600 hover:text-gray-900'"
           >
             Cookie 政策
           </NuxtLink>
           <NuxtLink
             to="/terms?tab=sitemap"
-            class="px-3 md:px-4 py-2 text-sm font-medium transition-colors whitespace-nowrap"
-            :class="activeTab === 'sitemap' ? 'text-gray-900 border-b-2 border-gray-900 pb-2' : 'text-gray-600 hover:text-gray-900'"
+            class="px-3 md:px-4 py-2 text-sm font-medium transition-colors whitespace-nowrap flex-shrink-0"
+            :class="activeTab === 'sitemap' ? 'text-blue-600 border-b-2 border-blue-600 pb-2' : 'text-gray-600 hover:text-gray-900'"
           >
             网站地图
           </NuxtLink>
           <NuxtLink
             to="/terms?tab=contact"
-            class="px-3 md:px-4 py-2 text-sm font-medium transition-colors whitespace-nowrap"
-            :class="activeTab === 'contact' ? 'text-gray-900 border-b-2 border-gray-900 pb-2' : 'text-gray-600 hover:text-gray-900'"
+            class="px-3 md:px-4 py-2 text-sm font-medium transition-colors whitespace-nowrap flex-shrink-0"
+            :class="activeTab === 'contact' ? 'text-blue-600 border-b-2 border-blue-600 pb-2' : 'text-gray-600 hover:text-gray-900'"
           >
             联系我们
           </NuxtLink>
@@ -239,6 +240,16 @@ watch(() => route.query.tab, () => {
 
 .prose :deep(li) {
   @apply text-gray-700;
+}
+
+/* 隐藏滚动条但保持滚动功能 */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;  /* Chrome, Safari and Opera */
 }
 </style>
 
