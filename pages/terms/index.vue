@@ -1,7 +1,7 @@
 <template>
   <div class="min-h-screen bg-white">
-    <!-- Tab 导航栏 -->
-    <div class="bg-gray-50 border-b border-gray-200">
+    <!-- Tab 导航栏 - 固定定位 -->
+    <div class="sticky top-0 z-50 bg-gray-50 border-b border-gray-200 shadow-sm">
       <div class="max-w-7xl mx-auto">
         <!-- 移动端：横向滚动 -->
         <nav class="flex items-center gap-4 md:gap-6 lg:gap-8 py-3 md:py-4 overflow-x-auto scrollbar-hide md:justify-center px-4 sm:px-6 lg:px-8">
@@ -72,7 +72,13 @@
           </p>
 
           <!-- 动态内容 -->
-          <div v-html="currentTab.content"></div>
+          <div v-if="activeTab === 'terms'">
+            <TermsTermsContent />
+          </div>
+          <div v-else-if="activeTab === 'department'">
+            <TermsDepartmentContent />
+          </div>
+          <div v-else v-html="currentTab.content"></div>
         </div>
       </div>
     </div>
@@ -80,6 +86,9 @@
 </template>
 
 <script setup>
+import TermsTermsContent from './components/TermsContent.vue'
+import TermsDepartmentContent from './components/DepartmentContent.vue'
+
 const route = useRoute()
 
 // 根据查询参数确定当前tab，默认为使用条款
@@ -95,47 +104,14 @@ const tabsContent = {
   terms: {
     title: '使用条款 | 广告商',
     lastUpdated: '2026年1月5日',
-    intro: '通过访问和使用本网站，您同意遵守以下使用条款和条件。如果您不同意这些条款，请不要使用本网站。',
-    content: `
-      <section class="mb-8">
-        <h2 class="text-2xl font-semibold text-gray-900 mb-4">1. 解释</h2>
-        <div class="space-y-4">
-          <div>
-            <p class="mb-2"><strong>"广告位"</strong> 指卖方网站或电子邮件通讯等资产，用于提供广告空间。</p>
-          </div>
-          <div>
-            <p class="mb-2"><strong>"广告"</strong> 指所有形式的数字文本、图形、富媒体和其他广告。</p>
-          </div>
-          <div>
-            <p class="mb-2"><strong>"T1"</strong> 指 Aylo Freesites Ltd.。</p>
-          </div>
-          <div>
-            <p class="mb-2"><strong>"会员"</strong> 指网站上的任何账户，包括买方和卖方。</p>
-          </div>
-          <div>
-            <p class="mb-2"><strong>"网站"</strong> 指 T1 网站，域名为 www.T1.com。</p>
-          </div>
-          <div>
-            <p class="mb-2"><strong>"您"、"您的"和"用户"</strong> 指访问 T1 网站的任何人员。</p>
-          </div>
-        </div>
-        <div class="mt-6">
-          <h3 class="text-xl font-semibold text-gray-900 mb-3">一般解释</h3>
-          <p>单数形式的词语包括复数形式，反之亦然。性别特定的词语包括所有性别。指代人员的词语包括个人、团体和公司。</p>
-        </div>
-      </section>
-    `
+    intro: '访问本网站即表示您已同意本使用条款以及我们的各项政策，包括但不限于我们的推荐计划条款及细则、我们的商品广告政策和我们的隐私声明（以下统称"条款"）。如果您不打算受本条款的法律约束，则不得访问或使用我们的网站及任何服务。',
+    content: ` `
   },
   department: {
-    title: '部门制度',
-    lastUpdated: '2026年1月5日',
-    intro: '本部门制度规定了公司各部门的职责、工作流程和管理规范。',
-    content: `
-      <section class="mb-8">
-        <h2 class="text-2xl font-semibold text-gray-900 mb-4">部门制度内容</h2>
-        <p>部门制度详细内容将在此处显示...</p>
-      </section>
-    `
+    title: '规则与条例 | 广告商',
+    lastUpdated: '2024年4月16日',
+    intro: '本规则和条例规定了广告商在使用本平台时需要遵守的各项规定和标准。',
+    content: ` `
   },
   privacy: {
     title: '隐私声明',
