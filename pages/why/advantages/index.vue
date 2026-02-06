@@ -8,17 +8,17 @@
       <!-- 第一部分：推荐计划 -->
       <div class="bg-transparent md:bg-white rounded-lg md:shadow-md p-0 md:p-8 mb-8 md:min-h-[330px] flex items-center">
         <div class="flex flex-col md:flex-row gap-8 items-center w-full">
-          <div class="flex-1 flex flex-col justify-center order-1 md:order-1">
+          <div class="flex-1 flex flex-col justify-center order-1 md:order-1 pl-[20px] pt-[2px]">
             <h2 class="text-3xl font-bold text-[#626671] mb-6 md:-mt-4">推荐计划</h2>
-            <p class="text-base text-[#93959C] leading-relaxed mb-4">
+            <div class="text-base text-[#93959C] leading-relaxed ">
               口碑营销被认为是最好的营销方式之一,因为消费者会因为认识的人推荐某个产品或服务而进行购买。
-            </p>
-            <p class="text-base text-[#93959C] leading-relaxed mb-4">
+            </div>
+            <div class="text-base text-[#93959C] leading-relaxed ">
               何不赚点外快呢?
-            </p>
-            <p class="text-base text-[#93959C] leading-relaxed mb-8">
+            </div>
+            <div class="text-base text-[#93959C] leading-relaxed mb-8">
               T1 愿意奖励您,只要您推荐其他人使用我们的平台!
-            </p>
+            </div>
             <div class="hidden md:block">
               <NuxtLink to="/referral" class="inline-block w-[160px] h-[45px] bg-[#3A82F9] text-white rounded-full text-base font-medium hover:bg-[#2B6FE8] transition-colors flex items-center justify-center">
                 了解更多

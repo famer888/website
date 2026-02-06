@@ -45,117 +45,13 @@
               <div v-else-if="index === 1" class="w-full h-full flex items-center justify-center">
                 <img :src="why7ImageSrc" alt="Benefits" class="w-full h-full object-contain" />
               </div>
-              <!-- 第三张图显示 ECharts 图表 -->
-              <div v-else-if="index === 2" class="w-full h-[300px] flex flex-col px-2 pt-2 pb-2 bg-[#F9FAFD]">
-                <!-- 顶部图表区域 -->
-                <div id="main-chart-container-mobile" class="w-full h-[140px] mb-1 bg-white rounded-lg px-2 pt-1 pb-2"></div>
-                <!-- 底部数据面板 -->
-                <div class="grid grid-cols-3 gap-1.5 h-[170px]">
-                  <!-- 左侧数据面板 -->
-                  <div class="bg-white rounded-lg overflow-auto shadow-md">
-                    <div class="bg-[#f3f4f6] px-2 pt-2">
-                      <table class="w-full text-[10px]">
-                        <thead>
-                          <tr class="text-gray-600 border-b">
-                            <th class="text-left pb-1">Impr.</th>
-                            <th class="text-left pb-1">Clicks</th>
-                            <th class="text-left pb-1">CTR</th>
-                            <th class="text-left pb-1">Val.</th>
-                          </tr>
-                        </thead>
-                      </table>
-                    </div>
-                    <div class="px-2 pb-2">
-                      <table class="w-full text-[10px]">
-                        <thead class="hidden">
-                          <tr>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr v-for="(row, rowIndex) in tableData.left" :key="rowIndex" class="border-b">
-                            <td class="py-0.5">{{ row.impressions }}</td>
-                            <td class="py-0.5">{{ row.clicks || '' }}</td>
-                            <td class="py-0.5">{{ row.ctr }}</td>
-                            <td class="py-0.5">
-                              <div v-if="row.value" :class="row.value === 'green' ? 'w-6 h-2 bg-green-500 rounded' : 'w-4 h-2 bg-gray-400 rounded'"></div>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-                  <!-- 中间数据面板 -->
-                  <div class="bg-white rounded-lg overflow-auto shadow-md">
-                    <div class="bg-[#f3f4f6] px-2 pt-2">
-                      <table class="w-full text-[10px]">
-                        <thead>
-                          <tr class="text-gray-600 border-b">
-                            <th class="text-left pb-1">Impr.</th>
-                            <th class="text-left pb-1">Clicks</th>
-                            <th class="text-left pb-1">CTR%</th>
-                            <th class="text-left pb-1">Val.</th>
-                          </tr>
-                        </thead>
-                      </table>
-                    </div>
-                    <div class="px-2 pb-2">
-                      <table class="w-full text-[10px]">
-                        <thead class="hidden">
-                          <tr>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr v-for="(row, rowIndex) in tableData.middle" :key="rowIndex" class="border-b">
-                            <td class="py-0.5">{{ row.impressions }}</td>
-                            <td class="py-0.5">{{ row.clicks }}</td>
-                            <td class="py-0.5">{{ row.ctr }}</td>
-                            <td class="py-0.5">
-                              <div :class="row.value === 'green' ? 'w-6 h-2 bg-green-500 rounded' : 'w-4 h-2 bg-gray-400 rounded'"></div>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-                  <!-- 右侧数据面板 -->
-                  <div class="bg-white rounded-lg p-2 overflow-auto shadow-md">
-                    <div class="mb-1 flex items-center justify-center">
-                      <div id="donut-chart-container-mobile" class="w-12 h-12"></div>
-                    </div>
-                    <table class="w-full text-[10px]">
-                      <thead>
-                        <tr class="text-gray-600 border-b bg-[#f3f4f6]">
-                          <th class="text-left pb-1">Impr.</th>
-                          <th class="text-left pb-1">Clicks</th>
-                          <th class="text-left pb-1">CTR%</th>
-                          <th class="text-left pb-1">Val.</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr v-for="(row, rowIndex) in tableData.right" :key="rowIndex" class="border-b">
-                          <td class="py-0.5">{{ row.impressions }}</td>
-                          <td class="py-0.5">{{ row.clicks }}</td>
-                          <td class="py-0.5">{{ row.ctr }}</td>
-                          <td class="py-0.5">
-                            <div class="w-6 h-2 bg-green-500 rounded"></div>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
+              <!-- 第三张图显示 why9.svg -->
+              <div v-else-if="index === 2" class="w-full h-full flex items-center justify-center">
+                <img :src="why9ImageSrc" alt="综合统计与分析" class="w-full h-full object-contain" />
               </div>
-              <!-- 第四张图显示表格 -->
-              <div v-else-if="index === 3" class="w-full h-[300px]">
-                <DailyAdImpressionsTable />
+              <!-- 第四张图显示 why10.svg -->
+              <div v-else-if="index === 3" class="w-full h-full flex items-center justify-center">
+                <img :src="why10ImageSrc" alt="人口统计数据" class="w-full h-full object-contain" />
               </div>
             </div>
           </div>
@@ -366,6 +262,8 @@
 // 导入图片
 import why6ImageSrc from '~/assets/imgaes/why/why6.svg'
 import why7ImageSrc from '~/assets/imgaes/why/why7.svg'
+import why9ImageSrc from '~/assets/imgaes/why/why9.svg'
+import why10ImageSrc from '~/assets/imgaes/why/why10.svg'
 // 导入 ECharts
 import * as echarts from 'echarts'
 // 导入表格组件

@@ -29,10 +29,10 @@
                 v-if="activeDropdown === 'why'"
                 class="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50"
               >
-                <NuxtLink to="/why/who-are-we" class="block px-4 py-2 text-sm text-brand hover:bg-gray-50">我们是谁</NuxtLink>
-                <NuxtLink to="/why/advantages" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">我们的优势</NuxtLink>
-                <NuxtLink to="/why/statistics" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">数据统计</NuxtLink>
-                <NuxtLink to="/why/mobile-ads" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">移动广告</NuxtLink>
+                <NuxtLink to="/why/who-are-we" :class="route.path === '/why/who-are-we' ? 'block px-4 py-2 text-sm text-brand hover:bg-gray-50' : 'block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50'">我们是谁</NuxtLink>
+                <NuxtLink to="/why/advantages" :class="route.path === '/why/advantages' ? 'block px-4 py-2 text-sm text-brand hover:bg-gray-50' : 'block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50'">我们的优势</NuxtLink>
+                <NuxtLink to="/why/statistics" :class="route.path === '/why/statistics' ? 'block px-4 py-2 text-sm text-brand hover:bg-gray-50' : 'block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50'">数据统计</NuxtLink>
+                <NuxtLink to="/why/mobile-ads" :class="route.path === '/why/mobile-ads' ? 'block px-4 py-2 text-sm text-brand hover:bg-gray-50' : 'block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50'">移动广告</NuxtLink>
               </div>
             </div>
 
@@ -52,9 +52,9 @@
                 v-if="activeDropdown === 'advertiser'"
                 class="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50"
               >
-                <NuxtLink to="/advertiser/how-to-operate" class="block px-4 py-2 text-sm text-brand hover:bg-gray-50">如何操作</NuxtLink>
-                <NuxtLink to="/advertiser/t1-dsp" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">T1 DSP</NuxtLink>
-                <NuxtLink to="/advertiser/target-function" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">目标功能</NuxtLink>
+                <NuxtLink to="/advertiser/how-to-operate" :class="route.path === '/advertiser/how-to-operate' ? 'block px-4 py-2 text-sm text-brand hover:bg-gray-50' : 'block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50'">如何操作</NuxtLink>
+                <NuxtLink to="/advertiser/t1-dsp" :class="route.path === '/advertiser/t1-dsp' ? 'block px-4 py-2 text-sm text-brand hover:bg-gray-50' : 'block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50'">T1 DSP</NuxtLink>
+                <NuxtLink to="/advertiser/target-function" :class="route.path === '/advertiser/target-function' ? 'block px-4 py-2 text-sm text-brand hover:bg-gray-50' : 'block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50'">目标功能</NuxtLink>
               </div>
             </div>
 
@@ -79,10 +79,10 @@
                 v-if="activeDropdown === 'contact'"
                 class="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50"
               >
-                <NuxtLink to="/contact" class="block px-4 py-2 text-sm text-brand hover:bg-gray-50">联系我们</NuxtLink>
-                <NuxtLink to="/contact/help-center" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">帮助中心</NuxtLink>
-                <NuxtLink to="/contact/quality-guide" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">质量指南</NuxtLink>
-                <NuxtLink to="/contact/download-media-kit" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">下载媒体资源包</NuxtLink>
+                <NuxtLink to="/contact" :class="route.path === '/contact' ? 'block px-4 py-2 text-sm text-brand hover:bg-gray-50' : 'block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50'">联系我们</NuxtLink>
+                <NuxtLink to="/contact/help-center" :class="route.path === '/contact/help-center' ? 'block px-4 py-2 text-sm text-brand hover:bg-gray-50' : 'block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50'">帮助中心</NuxtLink>
+                <NuxtLink to="/contact/quality-guide" :class="route.path === '/contact/quality-guide' ? 'block px-4 py-2 text-sm text-brand hover:bg-gray-50' : 'block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50'">质量指南</NuxtLink>
+                <NuxtLink to="/contact/download-media-kit" :class="route.path === '/contact/download-media-kit' ? 'block px-4 py-2 text-sm text-brand hover:bg-gray-50' : 'block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50'">下载媒体资源包</NuxtLink>
               </div>
             </div>
 
@@ -196,6 +196,7 @@ import logoImageSrc from '~/assets/imgaes/logo.png'
 import menuIconSrc from '~/assets/imgaes/menu.svg'
 import openIconSrc from '~/assets/imgaes/open.svg'
 
+const route = useRoute()
 const mobileMenuOpen = ref(false)
 const activeDropdown = ref(null)
 const mobileDropdown = ref(null)
@@ -208,12 +209,23 @@ const toggleMobileDropdown = (name) => {
   mobileDropdown.value = mobileDropdown.value === name ? null : name
 }
 
+// 根据当前路由自动打开对应的下拉菜单
+watch(() => route.path, (newPath) => {
+  if (newPath.startsWith('/why/')) {
+    activeDropdown.value = 'why'
+  } else if (newPath.startsWith('/advertiser/')) {
+    activeDropdown.value = 'advertiser'
+  } else if (newPath.startsWith('/contact')) {
+    activeDropdown.value = 'contact'
+  }
+}, { immediate: true })
+
 // 点击外部关闭下拉菜单
 onMounted(() => {
   const handleClickOutside = (event) => {
     const target = event.target
-    // 检查点击是否在下拉菜单相关元素外部
-    if (!target.closest('.relative.group') && !target.closest('.absolute')) {
+    // 检查点击是否在下拉菜单相关元素外部（包括按钮和下拉菜单本身）
+    if (!target.closest('.relative.group')) {
       activeDropdown.value = null
     }
   }
