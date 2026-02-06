@@ -52,13 +52,19 @@
     </div>
 
     <!-- 主要内容区域 -->
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <!-- 联系我们组件 -->
+    <div v-if="activeTab === 'contact'" class="w-full">
+      <ContactUsComponent />
+    </div>
+    
+    <!-- 其他内容 -->
+    <div v-else class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12" :class="{ 'max-w-7xl': activeTab === 'sitemap' }">
       <!-- 标题和日期 -->
       <div class="mb-8">
         <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
           {{ currentTab.title }}
         </h1>
-        <p class="text-gray-600 text-sm md:text-base">
+        <p v-if="activeTab !== 'sitemap' && activeTab !== 'contact'" class="text-gray-600 text-sm md:text-base">
           最后更新日期: {{ currentTab.lastUpdated }}
         </p>
       </div>
@@ -72,13 +78,7 @@
           </p>
 
           <!-- 动态内容 -->
-          <div v-if="activeTab === 'terms'">
-            <TermsTermsContent />
-          </div>
-          <div v-else-if="activeTab === 'department'">
-            <TermsDepartmentContent />
-          </div>
-          <div v-else v-html="currentTab.content"></div>
+          <div v-html="currentTab.content"></div>
         </div>
       </div>
     </div>
@@ -86,9 +86,8 @@
 </template>
 
 <script setup>
-import TermsTermsContent from './components/TermsContent.vue'
-import TermsDepartmentContent from './components/DepartmentContent.vue'
-
+import { PrivacyStatement } from '@/utils/constants'
+import ContactUsComponent from './components/index.vue'
 const route = useRoute()
 
 // 根据查询参数确定当前tab，默认为使用条款
@@ -101,77 +100,17 @@ const activeTab = computed(() => {
 
 // Tab内容配置
 const tabsContent = {
-  terms: {
-    title: '使用条款 | 广告商',
-    lastUpdated: '2026年1月5日',
-    intro: '访问本网站即表示您已同意本使用条款以及我们的各项政策，包括但不限于我们的推荐计划条款及细则、我们的商品广告政策和我们的隐私声明（以下统称"条款"）。如果您不打算受本条款的法律约束，则不得访问或使用我们的网站及任何服务。',
-    content: ` `
-  },
-  department: {
-    title: '规则与条例 | 广告商',
-    lastUpdated: '2024年4月16日',
-    intro: '本规则和条例规定了广告商在使用本平台时需要遵守的各项规定和标准。',
-    content: ` `
-  },
-  privacy: {
-    title: '隐私声明',
-    lastUpdated: '2026年1月5日',
-    intro: '我们重视您的隐私。本隐私声明说明了我们如何收集、使用和保护您的个人信息。',
-    content: `
-      <section class="mb-8">
-        <h2 class="text-2xl font-semibold text-gray-900 mb-4">信息收集</h2>
-        <p>我们收集的信息类型包括...</p>
-      </section>
-      <section class="mb-8">
-        <h2 class="text-2xl font-semibold text-gray-900 mb-4">信息使用</h2>
-        <p>我们如何使用收集的信息...</p>
-      </section>
-    `
-  },
-  cookie: {
-    title: 'Cookie 政策',
-    lastUpdated: '2026年1月5日',
-    intro: '本 Cookie 政策说明了我们如何使用 Cookie 和类似技术来改善您的浏览体验。',
-    content: `
-      <section class="mb-8">
-        <h2 class="text-2xl font-semibold text-gray-900 mb-4">什么是 Cookie</h2>
-        <p>Cookie 是存储在您设备上的小文本文件...</p>
-      </section>
-      <section class="mb-8">
-        <h2 class="text-2xl font-semibold text-gray-900 mb-4">我们如何使用 Cookie</h2>
-        <p>我们使用 Cookie 来...</p>
-      </section>
-    `
-  },
-  sitemap: {
-    title: '网站地图',
-    lastUpdated: '2026年1月5日',
-    intro: '网站地图帮助您快速找到所需的内容和页面。',
-    content: `
-      <section class="mb-8">
-        <h2 class="text-2xl font-semibold text-gray-900 mb-4">主要页面</h2>
-        <ul class="list-disc list-inside space-y-2">
-          <li><NuxtLink to="/" class="text-blue-600 hover:underline">首页</NuxtLink></li>
-          <li><NuxtLink to="/why/who-are-we" class="text-blue-600 hover:underline">我们是谁</NuxtLink></li>
-          <li><NuxtLink to="/why/advantages" class="text-blue-600 hover:underline">我们的优势</NuxtLink></li>
-          <li><NuxtLink to="/advertiser/how-to-operate" class="text-blue-600 hover:underline">如何操作</NuxtLink></li>
-          <li><NuxtLink to="/contact" class="text-blue-600 hover:underline">联系我们</NuxtLink></li>
-        </ul>
-      </section>
-    `
-  },
+  terms: TermsTermsContent,
+  department: TermsDepartmentContent,
+  privacy:PrivacyStatement,
+  cookie: CookiePolicy,
+  sitemap: WetmentbMap,
   contact: {
-    title: '联系我们',
-    lastUpdated: '2026年1月5日',
-    intro: '如果您有任何问题或需要帮助，请通过以下方式联系我们。',
+    title: '',
+    lastUpdated: '',
+    intro: '',
     content: `
-      <section class="mb-8">
-        <h2 class="text-2xl font-semibold text-gray-900 mb-4">联系方式</h2>
-        <div class="space-y-4">
-          <p><strong>电话：</strong>+44(20)4577-0610</p>
-          <p><strong>地址：</strong>Aylo Freesites Ltd. Block 1, 195-197 Old Nicosia-Limassol Road Dali IndustrialZone, Nicosia, 2540 Cyprus</p>
-        </div>
-      </section>
+     
     `
   }
 }
@@ -216,6 +155,46 @@ watch(() => route.query.tab, () => {
 
 .prose :deep(li) {
   @apply text-gray-700;
+}
+
+/* 网站地图样式 */
+.prose :deep(.sitemap-container) {
+  @apply w-full;
+}
+
+.prose :deep(.sitemap-column) {
+  @apply flex flex-col box-border;
+}
+
+.prose :deep(.sitemap-section) {
+  @apply mb-6;
+}
+
+.prose :deep(.sitemap-heading) {
+  @apply mb-4;
+}
+
+.prose :deep(.sitemap-heading a) {
+  @apply text-blue-600 text-base md:text-lg font-medium pb-1 border-b-2 border-blue-600 inline-block;
+  text-decoration: none;
+}
+
+.prose :deep(.sitemap-heading a:hover) {
+  @apply text-blue-700;
+}
+
+.prose :deep(.sitemap-list) {
+  @apply list-none pl-0 mt-4 space-y-2;
+}
+
+.prose :deep(.sitemap-list li) {
+  @apply text-gray-700 text-sm md:text-base mb-2;
+  list-style: none;
+}
+
+.prose :deep(.sitemap-list li a) {
+  @apply text-gray-700 hover:text-blue-600 transition-colors;
+  text-decoration: none;
 }
 
 /* 隐藏滚动条但保持滚动功能 */

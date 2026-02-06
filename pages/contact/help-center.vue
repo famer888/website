@@ -46,24 +46,24 @@
           </div>
 
           <!-- 展开文本内容 -->
-          <div class="mt-20">
-            <div>
+          <div class="mt-5 sm:mt-20">
+            <div v-for="info in informations" :key="info.key" @click="handleInfoClick(info.key)">
               <div
-                class="flex py-8 justify-between items-center border-b-[1px] border-[#3A82F9]"
+                class="flex py-4 sm:py-8 justify-between items-center border-b-[1px] border-[#3A82F9]"
               >
-                <span class="text-[16px] sm:text-[24px]">T1 Ads是什么?</span>
-                <img :src="ArrowDownSrc" alt="" class="w-[14px] sm:w-[32px]" />
+                <span class="text-[16px] sm:text-[24px]">{{ info.title }}</span>
+                <img :src="infoActive === info.key ? ArrowUpSrc : ArrowDownSrc" alt="" class="w-[14px] sm:w-[32px]" />
               </div>
-              <div class="my-4 p-4 bg-[#F4F5F9]">
+              <div v-if="infoActive === info.key" class="my-4 p-4 bg-[#F4F5F9]">
                 <div class="text-[14px] text-[#626671] sm:min-h-[150px]">
-                  T1Ads是一家广告联盟，负责管理全球一些最大的成人视频网站的横幅广告。TraficJunky采用自助竞价、预付费的广告平台，向广告商提供广告位。
+                  {{ info.content }}
                 </div>
               </div>
             </div>
           </div>
 
           <!-- 联系客服 -->
-          <div class="mt-10">
+          <div class="mt-5 sm:mt-10">
             <div class="flex flex-col py-10 bg-[#F4F5F9] justify-center">
               <div class="text-center">这是否解答了您的问题？</div>
               <div class="flex mt-3 gap-2 items-center justify-center">
@@ -88,9 +88,9 @@
 <script setup>
 import ArrowDownSrc from "~/assets/imgaes/help/arrow-d-icon.svg";
 import ArrowUpSrc from "~/assets/imgaes/help/arrow-t-icon.svg";
-import Emo1Src from "~/assets/imgaes/help/emo1-icon.png";
-import Emo2Src from "~/assets/imgaes/help/emo2-icon.png";
-import Emo3Src from "~/assets/imgaes/help/emo3-icon.png";
+import Emo1Src from "~/assets/imgaes/help/emo1-icon.svg";
+import Emo2Src from "~/assets/imgaes/help/emo2-icon.svg";
+import Emo3Src from "~/assets/imgaes/help/emo3-icon.svg";
 import ServiceSrc from "~/assets/imgaes/help/service-icon.svg";
 
 // SEO 配置
@@ -100,6 +100,7 @@ useHead({
 });
 
 const activeTab = ref(1);
+const infoActive = ref(-1);
 
 const tabs = [
   {
@@ -116,7 +117,28 @@ const tabs = [
   },
 ];
 
+const informations = [
+  {
+    key: 1,
+    title: "T1 Ads是什么?",
+    content: 'T1Ads是一家广告联盟，负责管理全球一些最大的成人视频网站的横幅广告。TraficJunky采用自助竞价、预付费的广告平台，向广告商提供广告位。'
+  },
+  {
+    key: 2,
+    title: "T1 Ads的市场是什么?",
+    content: 'T1Ads是一家广告联盟，负责管理全球一些最大的成人视频网站的横幅广告。TraficJunky采用自助竞价、预付费的广告平台，向广告商提供广告位。'
+  }
+]
+
 const handleTabClick = (tabId) => {
   activeTab.value = tabId;
 };
+
+const handleInfoClick = (infoKey) => {
+  if(infoActive.value === infoKey) {
+    infoActive.value = -1;
+  }else {
+    infoActive.value = infoKey;
+  }
+}
 </script>
