@@ -1,28 +1,35 @@
 <template>
-  <div class="min-h-screen bg-white">
-    <!-- 页面内容 -->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <div class="prose max-w-none">
-        <h1 class="text-4xl font-bold text-gray-900 mb-8">移动广告</h1>
-        
-        <!-- 这里可以添加业务内容 -->
-        <div class="mt-8">
-          <p class="text-lg text-gray-700 leading-relaxed">
-            在这里添加您的业务内容...
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
+	<div class="min-h-screen bg-white font-pingfang">
+		<!-- Banner 区域 -->
+		<Banner />
+
+		<!-- 移动广告技术与触达目标受众 -->
+		<TechSection />
+
+		<!-- 移动广告解决方案 -->
+		<SolutionsSection />
+
+		<!-- CTA 行动号召区 -->
+		<CtaSection />
+
+		<Footer />
+	</div>
 </template>
 
 <script setup>
-// SEO 配置
-useHead({
-  title: '移动广告 - T1',
-  meta: [
-    { name: 'description', content: '了解我们的移动广告服务' }
-  ]
-})
-</script>
+import Banner from "./components/banner.vue";
+import TechSection from "./components/tech-section.vue";
+import SolutionsSection from "./components/solutions-section.vue";
+import CtaSection from "./components/cta-section.vue";
 
+useHead({
+	title: "移动广告 - T1",
+	meta: [
+		{
+			name: "description",
+			content:
+				"抓住移动广告热潮的机遇。TII 创新广告技术，AI 赋能、精准定向、高曝光广告位，助您触达海量移动用户。",
+		},
+	],
+});
+</script>
