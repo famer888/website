@@ -32,7 +32,7 @@
 </template>
 
 <script setup>
-import bannerBgSrc from "~/assets/imgaes/why/banner.png";
+import bannerBgSrc from "~/assets/imgaes/why/mobile-ads/banner.png";
 
 const bannerData = {
 	title: "移动广告",
