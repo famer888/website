@@ -183,7 +183,7 @@
 </template>
 
 <script setup>
-import img_ggxs9 from "~/assets/imgaes/advertiser/img_ggxs9.png";
+import img_ggxs9 from "~/assets/imgaes/advertiser/img_ggxs9.jpg";
 import img_ggxs10 from "~/assets/imgaes/advertiser/img_ggxs10.png";
 import img_ggxs11 from "~/assets/imgaes/advertiser/img_ggxs11.png";
 import img_ggxs12 from "~/assets/imgaes/advertiser/img_ggxs12.png";
