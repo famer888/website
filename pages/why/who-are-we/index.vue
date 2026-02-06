@@ -144,11 +144,9 @@
         
         <!-- 为什么选择T1部分 - 移动端 -->
         <div class="bg-white py-8">
-          <h2 class="text-left text-2xl font-bold mb-8 px-4">
-
-            <h1 class="text-[36px] font-bold text-[#171A1D] mb-6 text-left">为什么选择</h1>
-            <h1 class="text-[36px] font-bold text-[#3A82F9] mb-6 text-left">T1 DSP?</h1>
-
+          <h2 class="text-[36px] font-bold mb-6 text-left px-4">
+            <span class="text-[#171A1D]">为什么选择</span>
+            <span class="text-[#3A82F9]">T1 DSP?</span>
           </h2>
           
           <!-- 大图片 -->
