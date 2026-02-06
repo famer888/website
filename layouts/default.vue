@@ -107,81 +107,95 @@
             </button>
           </div>
         </div>
+      </div>
+    </nav>
 
-        <!-- 移动端菜单 -->
-        <div v-if="mobileMenuOpen" class="md:hidden border-t">
+    <!-- 移动端菜单 - 固定定位抽屉 -->
+    <Transition name="drawer">
+      <div 
+        v-if="mobileMenuOpen"
+        class="md:hidden fixed inset-0 z-[70]"
+      >
+        <!-- 背景遮罩 -->
+        <div 
+          class="absolute inset-0 bg-black/50 backdrop-blur-sm drawer-backdrop"
+          @click="mobileMenuOpen = false"
+        ></div>
+        
+        <!-- 抽屉内容 -->
+        <div class="absolute top-0 left-0 right-0 bg-white shadow-lg max-h-screen overflow-y-auto drawer-content">
           <div class="px-0 py-0">
-            <!-- 为什么选择我们 -->
-            <div>
-              <button 
-                @click="toggleMobileDropdown('why')"
-                class="w-full flex items-center justify-between px-4 py-4 font-pingfang font-medium text-[16px] leading-[24px] tracking-normal text-justify text-[#626671] border-b transition-colors"
-                :class="mobileDropdown === 'why' ? 'border-[#3A82F9]' : 'border-gray-100'"
-              >
-                <span>为什么选择我们?</span>
-                <img :src="openIconSrc" alt="Toggle" class="h-6 w-6 transition-transform -rotate-90" :class="{ 'rotate-0': mobileDropdown === 'why' }" />
-              </button>
-              <div v-if="mobileDropdown === 'why'" class="bg-white border-b border-gray-100">
-                <NuxtLink to="/why/who-are-we" @click="mobileMenuOpen = false" class="block px-8 py-3.5 font-pingfang font-normal text-[14px] leading-[20px] tracking-normal text-justify text-[#93959c]">我们是谁</NuxtLink>
-                <NuxtLink to="/why/advantages" @click="mobileMenuOpen = false" class="block px-8 py-3.5 font-pingfang font-normal text-[14px] leading-[20px] tracking-normal text-justify text-[#93959c]">我们的优势</NuxtLink>
-                <NuxtLink to="/why/statistics" @click="mobileMenuOpen = false" class="block px-8 py-3.5 font-pingfang font-normal text-[14px] leading-[20px] tracking-normal text-justify text-[#93959c]">数据统计</NuxtLink>
-                <NuxtLink to="/why/mobile-ads" @click="mobileMenuOpen = false" class="block px-8 py-3.5 font-pingfang font-normal text-[14px] leading-[20px] tracking-normal text-justify text-[#93959c]">移动广告</NuxtLink>
-              </div>
-            </div>
-            
-            <!-- 广告商 -->
-            <div>
-              <button 
-                @click="toggleMobileDropdown('advertiser')"
-                class="w-full flex items-center justify-between px-4 py-4 font-pingfang font-medium text-[16px] leading-[24px] tracking-normal text-justify text-[#626671] border-b transition-colors"
-                :class="mobileDropdown === 'advertiser' ? 'border-[#3A82F9]' : 'border-gray-100'"
-              >
-                <span>广告商</span>
-                <img :src="openIconSrc" alt="Toggle" class="h-6 w-6 transition-transform -rotate-90" :class="{ 'rotate-0': mobileDropdown === 'advertiser' }" />
-              </button>
-              <div v-if="mobileDropdown === 'advertiser'" class="bg-white border-b border-gray-100">
-                <NuxtLink to="/advertiser/how-to-operate" @click="mobileMenuOpen = false" class="block px-8 py-3.5 font-pingfang font-normal text-[14px] leading-[20px] tracking-normal text-justify text-[#93959c]">如何操作</NuxtLink>
-                <NuxtLink to="/advertiser/t1-dsp" @click="mobileMenuOpen = false" class="block px-8 py-3.5 font-pingfang font-normal text-[14px] leading-[20px] tracking-normal text-justify text-[#93959c]">T1 DSP</NuxtLink>
-                <NuxtLink to="/advertiser/target-function" @click="mobileMenuOpen = false" class="block px-8 py-3.5 font-pingfang font-normal text-[14px] leading-[20px] tracking-normal text-justify text-[#93959c]">目标功能</NuxtLink>
-              </div>
-            </div>
-            
-            <!-- 广告样式 -->
-            <NuxtLink 
-              to="/ad-styles" 
-              @click="mobileMenuOpen = false"
-              class="w-full flex items-center px-4 py-4 font-pingfang font-medium text-[16px] leading-[24px] tracking-normal text-justify text-[#626671] border-b border-gray-100"
+          <!-- 为什么选择我们 -->
+          <div>
+            <button 
+              @click="toggleMobileDropdown('why')"
+              class="w-full flex items-center justify-between px-4 py-4 font-pingfang font-medium text-[16px] leading-[24px] tracking-normal text-justify text-[#626671] border-b transition-colors"
+              :class="mobileDropdown === 'why' ? 'border-[#3A82F9]' : 'border-gray-100'"
             >
-              <span>广告样式</span>
-            </NuxtLink>
-            
-            <!-- 联系我们 -->
-            <div>
-              <button 
-                @click="toggleMobileDropdown('contact')"
-                class="w-full flex items-center justify-between px-4 py-4 font-pingfang font-medium text-[16px] leading-[24px] tracking-normal text-justify text-[#626671] border-b transition-colors"
-                :class="mobileDropdown === 'contact' ? 'border-[#3A82F9]' : 'border-gray-100'"
-              >
-                <span>联系我们</span>
-                <img :src="openIconSrc" alt="Toggle" class="h-6 w-6 transition-transform -rotate-90" :class="{ 'rotate-0': mobileDropdown === 'contact' }" />
-              </button>
-              <div v-if="mobileDropdown === 'contact'" class="bg-white border-b border-gray-100">
-                <NuxtLink to="/contact" @click="mobileMenuOpen = false" class="block px-8 py-3.5 font-pingfang font-normal text-[14px] leading-[20px] tracking-normal text-justify text-[#93959c]">联系我们</NuxtLink>
-                <NuxtLink to="/contact/help-center" @click="mobileMenuOpen = false" class="block px-8 py-3.5 font-pingfang font-normal text-[14px] leading-[20px] tracking-normal text-justify text-[#93959c]">帮助中心</NuxtLink>
-                <NuxtLink to="/contact/quality-guide" @click="mobileMenuOpen = false" class="block px-8 py-3.5 font-pingfang font-normal text-[14px] leading-[20px] tracking-normal text-justify text-[#93959c]">质量指南</NuxtLink>
-                <NuxtLink to="/contact/download-media-kit" @click="mobileMenuOpen = false" class="block px-8 py-3.5 font-pingfang font-normal text-[14px] leading-[20px] tracking-normal text-justify text-[#93959c]">下载媒体资源包</NuxtLink>
-              </div>
+              <span>为什么选择我们?</span>
+              <img :src="openIconSrc" alt="Toggle" class="h-6 w-6 transition-transform -rotate-90" :class="{ 'rotate-0': mobileDropdown === 'why' }" />
+            </button>
+            <div v-if="mobileDropdown === 'why'" class="bg-white border-b border-gray-100">
+              <NuxtLink to="/why/who-are-we" @click="mobileMenuOpen = false" class="block px-8 py-3.5 font-pingfang font-normal text-[14px] leading-[20px] tracking-normal text-justify text-[#93959c]">我们是谁</NuxtLink>
+              <NuxtLink to="/why/advantages" @click="mobileMenuOpen = false" class="block px-8 py-3.5 font-pingfang font-normal text-[14px] leading-[20px] tracking-normal text-justify text-[#93959c]">我们的优势</NuxtLink>
+              <NuxtLink to="/why/statistics" @click="mobileMenuOpen = false" class="block px-8 py-3.5 font-pingfang font-normal text-[14px] leading-[20px] tracking-normal text-justify text-[#93959c]">数据统计</NuxtLink>
+              <NuxtLink to="/why/mobile-ads" @click="mobileMenuOpen = false" class="block px-8 py-3.5 font-pingfang font-normal text-[14px] leading-[20px] tracking-normal text-justify text-[#93959c]">移动广告</NuxtLink>
             </div>
-            
-            <!-- 登录和注册按钮 -->
-            <div class="px-4 py-4 space-y-3 border-t border-gray-200">
-              <NuxtLink to="/login" @click="mobileMenuOpen = false" class="block w-full text-center bg-brand text-white px-4 py-3 rounded-full text-base font-medium">登陆</NuxtLink>
-              <NuxtLink to="/register" @click="mobileMenuOpen = false" class="block w-full text-center border-2 border-brand text-brand bg-white px-4 py-3 rounded-full text-base font-medium">注册</NuxtLink>
+          </div>
+          
+          <!-- 广告商 -->
+          <div>
+            <button 
+              @click="toggleMobileDropdown('advertiser')"
+              class="w-full flex items-center justify-between px-4 py-4 font-pingfang font-medium text-[16px] leading-[24px] tracking-normal text-justify text-[#626671] border-b transition-colors"
+              :class="mobileDropdown === 'advertiser' ? 'border-[#3A82F9]' : 'border-gray-100'"
+            >
+              <span>广告商</span>
+              <img :src="openIconSrc" alt="Toggle" class="h-6 w-6 transition-transform -rotate-90" :class="{ 'rotate-0': mobileDropdown === 'advertiser' }" />
+            </button>
+            <div v-if="mobileDropdown === 'advertiser'" class="bg-white border-b border-gray-100">
+              <NuxtLink to="/advertiser/how-to-operate" @click="mobileMenuOpen = false" class="block px-8 py-3.5 font-pingfang font-normal text-[14px] leading-[20px] tracking-normal text-justify text-[#93959c]">如何操作</NuxtLink>
+              <NuxtLink to="/advertiser/t1-dsp" @click="mobileMenuOpen = false" class="block px-8 py-3.5 font-pingfang font-normal text-[14px] leading-[20px] tracking-normal text-justify text-[#93959c]">T1 DSP</NuxtLink>
+              <NuxtLink to="/advertiser/target-function" @click="mobileMenuOpen = false" class="block px-8 py-3.5 font-pingfang font-normal text-[14px] leading-[20px] tracking-normal text-justify text-[#93959c]">目标功能</NuxtLink>
             </div>
+          </div>
+          
+          <!-- 广告样式 -->
+          <NuxtLink 
+            to="/ad-styles" 
+            @click="mobileMenuOpen = false"
+            class="w-full flex items-center px-4 py-4 font-pingfang font-medium text-[16px] leading-[24px] tracking-normal text-justify text-[#626671] border-b border-gray-100"
+          >
+            <span>广告样式</span>
+          </NuxtLink>
+          
+          <!-- 联系我们 -->
+          <div>
+            <button 
+              @click="toggleMobileDropdown('contact')"
+              class="w-full flex items-center justify-between px-4 py-4 font-pingfang font-medium text-[16px] leading-[24px] tracking-normal text-justify text-[#626671] border-b transition-colors"
+              :class="mobileDropdown === 'contact' ? 'border-[#3A82F9]' : 'border-gray-100'"
+            >
+              <span>联系我们</span>
+              <img :src="openIconSrc" alt="Toggle" class="h-6 w-6 transition-transform -rotate-90" :class="{ 'rotate-0': mobileDropdown === 'contact' }" />
+            </button>
+            <div v-if="mobileDropdown === 'contact'" class="bg-white border-b border-gray-100">
+              <NuxtLink to="/contact" @click="mobileMenuOpen = false" class="block px-8 py-3.5 font-pingfang font-normal text-[14px] leading-[20px] tracking-normal text-justify text-[#93959c]">联系我们</NuxtLink>
+              <NuxtLink to="/contact/help-center" @click="mobileMenuOpen = false" class="block px-8 py-3.5 font-pingfang font-normal text-[14px] leading-[20px] tracking-normal text-justify text-[#93959c]">帮助中心</NuxtLink>
+              <NuxtLink to="/contact/quality-guide" @click="mobileMenuOpen = false" class="block px-8 py-3.5 font-pingfang font-normal text-[14px] leading-[20px] tracking-normal text-justify text-[#93959c]">质量指南</NuxtLink>
+              <NuxtLink to="/contact/download-media-kit" @click="mobileMenuOpen = false" class="block px-8 py-3.5 font-pingfang font-normal text-[14px] leading-[20px] tracking-normal text-justify text-[#93959c]">下载媒体资源包</NuxtLink>
+            </div>
+          </div>
+          
+          <!-- 登录和注册按钮 -->
+          <div class="px-4 py-4 space-y-3 border-t border-gray-200">
+            <NuxtLink to="/login" @click="mobileMenuOpen = false" class="block w-full text-center bg-brand text-white px-4 py-3 rounded-full text-base font-medium">登陆</NuxtLink>
+            <NuxtLink to="/register" @click="mobileMenuOpen = false" class="block w-full text-center border-2 border-brand text-brand bg-white px-4 py-3 rounded-full text-base font-medium">注册</NuxtLink>
+          </div>
           </div>
         </div>
       </div>
-    </nav>
+    </Transition>
 
     <!-- 主要内容 -->
     <main>
@@ -236,4 +250,70 @@ onMounted(() => {
   })
 })
 </script>
+
+<style scoped>
+/* 抽屉整体过渡 */
+.drawer-enter-active,
+.drawer-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.drawer-enter-active .drawer-content,
+.drawer-leave-active .drawer-content {
+  transition: transform 0.3s ease;
+}
+
+.drawer-enter-active .drawer-backdrop,
+.drawer-leave-active .drawer-backdrop {
+  transition: opacity 0.3s ease;
+}
+
+.drawer-enter-from {
+  opacity: 0;
+}
+
+.drawer-enter-from .drawer-content {
+  transform: translateY(-100%);
+}
+
+.drawer-enter-from .drawer-backdrop {
+  opacity: 0;
+}
+
+.drawer-enter-to {
+  opacity: 1;
+}
+
+.drawer-enter-to .drawer-content {
+  transform: translateY(0);
+}
+
+.drawer-enter-to .drawer-backdrop {
+  opacity: 1;
+}
+
+.drawer-leave-from {
+  opacity: 1;
+}
+
+.drawer-leave-from .drawer-content {
+  transform: translateY(0);
+}
+
+.drawer-leave-from .drawer-backdrop {
+  opacity: 1;
+}
+
+.drawer-leave-to {
+  opacity: 0;
+}
+
+.drawer-leave-to .drawer-content {
+  transform: translateY(-100%);
+}
+
+.drawer-leave-to .drawer-backdrop {
+  opacity: 0;
+}
+</style>
 
