@@ -72,13 +72,13 @@
 
 <script setup>
 // 左侧大图
-import leftIllustrationSrc from "~/assets/imgaes/why/mobile-ads/solution-left.png";
+import leftIllustrationSrc from "~/assets/imgaes/why/mobile-ads/solution-left.svg";
 
 // 图标
-import iconSrc1 from "~/assets/imgaes/why/mobile-ads/solution-1.png";
-import iconSrc2 from "~/assets/imgaes/why/mobile-ads/solution-2.png";
-import iconSrc3 from "~/assets/imgaes/why/mobile-ads/solution-3.png";
-import iconSrc4 from "~/assets/imgaes/why/mobile-ads/solution-4.png";
+import iconSrc1 from "~/assets/imgaes/why/mobile-ads/solution-1.svg";
+import iconSrc2 from "~/assets/imgaes/why/mobile-ads/solution-2.svg";
+import iconSrc3 from "~/assets/imgaes/why/mobile-ads/solution-3.svg";
+import iconSrc4 from "~/assets/imgaes/why/mobile-ads/solution-4.svg";
 
 const sectionData = {
 	title: "移动广告解决方案!",
