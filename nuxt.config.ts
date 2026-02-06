@@ -31,6 +31,22 @@ export default defineNuxtConfig({
   // 注意：SSG 仍然需要 ssr: true，因为需要在构建时进行服务端渲染
   ssr: true,
 
+  // 确保客户端 JavaScript 正确加载和 hydration
+  experimental: {
+    payloadExtraction: false
+  },
+
+  // 确保客户端脚本正确加载
+  vite: {
+    build: {
+      rollupOptions: {
+        output: {
+          manualChunks: undefined
+        }
+      }
+    }
+  },
+
   // Nitro 配置 - 启用静态站点生成
   // @ts-ignore - nitro 配置在运行时有效
   nitro: {
@@ -66,7 +82,15 @@ export default defineNuxtConfig({
         '/brand-protection',
         '/referral'
       ]
-    }
+    },
+    // 确保静态资源正确输出
+    publicAssets: [
+      {
+        baseURL: '/',
+        dir: 'public',
+        maxAge: 60 * 60 * 24 * 7 // 7 days
+      }
+    ]
   },
 
   // 运行时配置

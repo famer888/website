@@ -236,18 +236,20 @@ watch(() => route.path, (newPath) => {
 
 // 点击外部关闭下拉菜单
 onMounted(() => {
-  const handleClickOutside = (event) => {
-    const target = event.target
-    // 检查点击是否在下拉菜单相关元素外部（包括按钮和下拉菜单本身）
-    if (!target.closest('.relative.group')) {
-      activeDropdown.value = null
+  if (process.client) {
+    const handleClickOutside = (event) => {
+      const target = event.target
+      // 检查点击是否在下拉菜单相关元素外部（包括按钮和下拉菜单本身）
+      if (!target.closest('.relative.group')) {
+        activeDropdown.value = null
+      }
     }
+    document.addEventListener('click', handleClickOutside)
+    
+    onUnmounted(() => {
+      document.removeEventListener('click', handleClickOutside)
+    })
   }
-  document.addEventListener('click', handleClickOutside)
-  
-  onUnmounted(() => {
-    document.removeEventListener('click', handleClickOutside)
-  })
 })
 </script>
 
