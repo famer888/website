@@ -169,68 +169,7 @@
       </div>
     </section>
 
-    <!-- 创意素材标准规定（下册） -->
     <section class="bg-[#F5F7FB] py-10 sm:py-14 lg:py-16">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h3
-          class="text-2xl mb-3">
-          创意素材标准规定（下册）：弹窗 / 推送通知
-        </h3>
-        <p
-          class=" mb-8">
-          以下规定适用于弹窗和推送通知类型的广告。
-        </p>
-
-        <!-- 下册规则 -->
-        <div class="space-y-12 sm:space-y-14 md:space-y-16">
-          <div v-for="(rule, idx) in popupRules" :key="idx" class="mb-8">
-            <p
-              class=" mb-6">
-              {{ rule.description }}
-            </p>
-            <!-- 图片示例 -->
-            <div v-if="rule.examples && rule.examples.length" class="flex flex-col sm:flex-row gap-4 sm:gap-6">
-              <div v-for="(example, eIdx) in rule.examples" :key="eIdx" class="flex-1 relative">
-                <div class="rounded-lg overflow-hidden border border-[#E6ECF5] bg-white">
-                  <div class="w-full aspect-[4/3] bg-[#F0F2F5] flex items-center justify-center">
-                    <div class="text-center px-4">
-                      <div
-                        class="w-[60px] h-[60px] sm:w-[72px] sm:h-[72px] mx-auto mb-3 rounded-full flex items-center justify-center"
-                        :class="example.allowed
-                          ? 'bg-[#E8F5E9] text-[#4CAF50]'
-                          : 'bg-[#FFEBEE] text-[#F44336]'
-                          ">
-                        <svg v-if="example.allowed" class="w-8 h-8 sm:w-9 sm:h-9" fill="none" viewBox="0 0 24 24"
-                          stroke="currentColor">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                        </svg>
-                        <svg v-else class="w-8 h-8 sm:w-9 sm:h-9" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M6 18L18 6M6 6l12 12" />
-                        </svg>
-                      </div>
-                      <span
-                        class="text-[14px] sm:text-[16px] md:text-2xl leading-[22px] tracking-normal"
-                        :class="example.allowed
-                          ? 'text-[#4CAF50]'
-                          : 'text-[#F44336]'
-                          ">
-                        {{ example.allowed ? "允许" : "禁止" }}
-                      </span>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="absolute -top-3 left-4 px-3 py-1 rounded-full text-white text-[11px] sm:text-[12px] leading-[16px]"
-                  :class="example.allowed ? 'bg-[#4CAF50]' : 'bg-[#F44336]'
-                    ">
-                  {{ example.allowed ? "允许" : "禁止" }}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </section>
 
   </div>
