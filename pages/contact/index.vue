@@ -56,7 +56,7 @@
             <div class="flex items-start space-x-3">
               <div>
                 <button
-                  class="mt-1 bg-blue-600 text-white px-6 py-3 rounded-full font-medium flex items-center space-x-2 hover:bg-blue-700 transition-colors"
+                  class="gap-2 mt-1 text-white min-w-[180px] px-[20px] py-3 rounded-full font-medium flex items-center space-x-2  transition-colors bg-gradient-to-t from-[#6CB8FD] to-[#3A82F9]"
                 >
                   <img :src="SendIconSrc" alt="send-icon"></img>
                   <span>发送消息</span>
