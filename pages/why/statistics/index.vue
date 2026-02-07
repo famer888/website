@@ -7,12 +7,12 @@
         <div class="w-full flex flex-col md:flex-row gap-6 md:gap-12 items-center md:items-center">
           <!-- 左侧：文字内容 -->
           <div class="w-full md:flex-[0.60] text-white text-left px-[5px]">
-            <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold my-[10px] mt-5">T1数字</h1>
-            <div class="hidden md:block w-16 h-0.5 bg-white/50 mb-4"></div>
-            <p class="text-lg md:text-xl leading-relaxed mb-4  mt-9">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold my-[10px] mt-5">T1数字</h1>
+            <div class="hidden md:block w-20 h-0.5 bg-white/50 mb-6"></div>
+            <p class="text-xl md:text-2xl lg:text-3xl leading-relaxed mb-6 mt-9">
               高价值流量就是付费流量。
             </p>
-            <div class="text-white/90" style="font-family: PingFang SC; font-weight: 400; font-size: 14px; line-height: 20px; letter-spacing: 0px;">
+            <div class="text-white/90" style="font-family: PingFang SC; font-weight: 400; font-size: 16px; line-height: 24px; letter-spacing: 0px;">
               <div>我们的网络访客遍布全球;超过75%的访客来自北美和欧洲的一线流量国家。</div>
               <div>我们在亚洲也拥有相当大的市场份额。</div>
             </div>
@@ -21,22 +21,22 @@
           <!-- 右侧：两个数据圆圈容器 -->
           <div class="w-full md:flex-1 flex flex-col md:flex-row gap-6 md:gap-12 items-center md:justify-end mt-6 md:mt-0">
             <!-- 中间：数据圆圈1 -->
-            <div class="relative w-[260px] h-[260px] md:w-[258px] md:h-[258px] flex items-center justify-center ">
+            <div class="relative w-[300px] h-[300px] md:w-[320px] md:h-[320px] flex items-center justify-center ">
               <img :src="statistics3ImageSrc" alt="" class="absolute inset-0 w-full h-full object-contain" />
               <div class="relative z-10 text-center">
-                <div class="text-[#3A82F9] mb-1" style="font-family: DINPro; font-weight: 700; font-size: 60px; line-height: 60px; letter-spacing: 0px;">150</div>
-                <div class="text-[#3A82F9]" style="font-family: PingFang SC; font-weight: 500; font-size: 22px; line-height: 22px; letter-spacing: 0px;">百万</div>
-                <div class="text-[#062E57] mt-2" style="font-family: PingFang SC; font-weight: 400; font-size: 14px; line-height: 20px; letter-spacing: 0px;">每日访客</div>
+                <div class="text-[#3A82F9] mb-1" style="font-family: DINPro; font-weight: 700; font-size: 72px; line-height: 72px; letter-spacing: 0px;">150</div>
+                <div class="text-[#3A82F9]" style="font-family: PingFang SC; font-weight: 500; font-size: 26px; line-height: 26px; letter-spacing: 0px;">百万</div>
+                <div class="text-[#062E57] mt-2" style="font-family: PingFang SC; font-weight: 400; font-size: 16px; line-height: 22px; letter-spacing: 0px;">每日访客</div>
               </div>
             </div>
             
             <!-- 右边：数据圆圈2 -->
-            <div class="relative w-[260px] h-[260px] md:w-[258px] md:h-[258px] flex items-center justify-center ">
+            <div class="relative w-[300px] h-[300px] md:w-[320px] md:h-[320px] flex items-center justify-center ">
               <img :src="statistics3ImageSrc" alt="" class="absolute inset-0 w-full h-full object-contain" />
               <div class="relative z-10 text-center">
-                <div class="text-[#3A82F9] mb-1" style="font-family: DINPro; font-weight: 700; font-size: 60px; line-height: 60px; letter-spacing: 0px;">4.6</div>
-                <div class="text-[#3A82F9]" style="font-family: PingFang SC; font-weight: 500; font-size: 22px; line-height: 22px; letter-spacing: 0px;">十亿</div>
-                <div class="text-[#062E57] mt-2" style="font-family: PingFang SC; font-weight: 400; font-size: 14px; line-height: 20px; letter-spacing: 0px;">每日印象</div>
+                <div class="text-[#3A82F9] mb-1" style="font-family: DINPro; font-weight: 700; font-size: 72px; line-height: 72px; letter-spacing: 0px;">4.6</div>
+                <div class="text-[#3A82F9]" style="font-family: PingFang SC; font-weight: 500; font-size: 26px; line-height: 26px; letter-spacing: 0px;">十亿</div>
+                <div class="text-[#062E57] mt-2" style="font-family: PingFang SC; font-weight: 400; font-size: 16px; line-height: 22px; letter-spacing: 0px;">每日印象</div>
               </div>
             </div>
           </div>
@@ -116,7 +116,7 @@
     <!-- 下半部分：热门垂直行业 -->
     <div class="bg-white py-12 md:py-16">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-[#171A1D] text-left mb-8" style="font-family: PingFang SC; font-weight: 500; font-size: 38.4px; line-height: 67.2px; letter-spacing: 0px;">
+        <h2 class="text-[#626671] text-left md:text-center mb-8 font-pingfang font-medium tracking-normal text-[38.4px] leading-[67.2px] md:text-[44px] md:leading-[77px]">
           我们网络上推广的热门垂直行业
         </h2>
         

@@ -26,7 +26,7 @@
             </div>
           </div>
           <div class="flex-1 flex flex-col items-center order-2 md:order-2">
-            <img :src="advantages3ImageSrc" alt="推荐计划" class="w-full max-w-[300px] h-auto mb-6 md:mb-0" />
+            <img :src="advantages3ImageSrc" alt="推荐计划" class="w-full max-w-[300px] md:max-w-[450px] h-auto mb-6 md:mb-0" />
             <NuxtLink to="/referral" class="inline-block w-[264px] h-[48px] bg-[#3A82F9] text-white rounded-full text-base font-medium hover:bg-[#2B6FE8] transition-colors flex items-center justify-center md:hidden">
               了解更多
             </NuxtLink>

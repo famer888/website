@@ -92,8 +92,8 @@
             <div class="flex gap-8 items-center mb-12">
               <!-- 左侧：文本内容 -->
               <div class="flex-1">
-                <h2 class="text-4xl font-bold text-[#626671] mb-4">移动广告</h2>
-                <h3 class="text-2xl font-medium text-[#626671] mb-6">在所有设备上触达您的受众</h3>
+                <h2 class="font-pingfang font-medium text-[56px] leading-[96px] tracking-normal text-[#626671] mb-4">移动广告</h2>
+                <h3 class="font-pingfang font-medium text-[24px] leading-[36px] tracking-normal text-[#93959C] mb-6">在所有设备上触达您的受众</h3>
                 <p class="text-base text-[#93959C] leading-relaxed">
                   我们的广告投放技术赋能移动广告商,使他们能够针对全球数百万用户,在用户全天使用智能手机时,投放高度精准、可自动优化的广告活动。
                 </p>

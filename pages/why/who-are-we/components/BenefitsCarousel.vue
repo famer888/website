@@ -7,7 +7,7 @@
     </div>
 
     <!-- 桌面端：四个卡片在上方 -->
-    <div class="hidden md:grid grid-cols-4 gap-4 mb-8">
+    <div class="hidden md:grid grid-cols-4 gap-4 mb-8 max-w-5xl mx-auto">
       <div
         v-for="(card, index) in cards"
         :key="index"

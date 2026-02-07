@@ -20,7 +20,7 @@
                 class="flex items-center text-gray-700 hover:text-brand px-3 py-2 text-sm font-medium transition-colors rounded-[24px] h-12"
                 :class="{ 'text-brand bg-[#F7F7FA]': activeDropdown === 'why' }"
               >
-                为什么选择我们?
+                {{ getWhyMenuText }}
                 <svg class="ml-1 h-4 w-4" :class="{ 'rotate-180': activeDropdown === 'why' }" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                 </svg>
@@ -44,7 +44,7 @@
                 class="flex items-center text-gray-700 hover:text-brand px-3 py-2 text-sm font-medium transition-colors rounded-[24px] h-12"
                 :class="{ 'text-brand bg-[#F7F7FA]': activeDropdown === 'advertiser' }"
               >
-                广告商
+                {{ getAdvertiserMenuText }}
                 <svg class="ml-1 h-4 w-4" :class="{ 'rotate-180': activeDropdown === 'advertiser' }" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                 </svg>
@@ -72,7 +72,7 @@
                 class="flex items-center text-gray-700 hover:text-brand px-3 py-2 text-sm font-medium transition-colors rounded-[24px] h-12"
                 :class="{ 'text-brand bg-[#F7F7FA]': activeDropdown === 'contact' }"
               >
-                联系我们
+                {{ getContactMenuText }}
                 <svg class="ml-1 h-4 w-4" :class="{ 'rotate-180': activeDropdown === 'contact' }" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                 </svg>
@@ -217,6 +217,30 @@ const route = useRoute()
 const mobileMenuOpen = ref(false)
 const activeDropdown = ref(null)
 const mobileDropdown = ref(null)
+
+// 根据路由获取菜单显示文本
+const getWhyMenuText = computed(() => {
+  if (route.path === '/why/who-are-we') return '我们是谁'
+  if (route.path === '/why/advantages') return '我们的优势'
+  if (route.path === '/why/statistics') return '数据统计'
+  if (route.path === '/why/mobile-ads') return '移动广告'
+  return '为什么选择我们?'
+})
+
+const getAdvertiserMenuText = computed(() => {
+  if (route.path === '/advertiser/how-to-operate') return '如何操作'
+  if (route.path === '/advertiser/t1-dsp') return 'T1 DSP'
+  if (route.path === '/advertiser/target-function') return '目标功能'
+  return '广告商'
+})
+
+const getContactMenuText = computed(() => {
+  if (route.path === '/contact') return '联系我们'
+  if (route.path === '/contact/help-center') return '帮助中心'
+  if (route.path === '/contact/quality-guide') return '质量指南'
+  if (route.path === '/contact/download-media-kit') return '下载媒体资源包'
+  return '联系我们'
+})
 
 const toggleDropdown = (name) => {
   activeDropdown.value = activeDropdown.value === name ? null : name
