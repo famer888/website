@@ -109,7 +109,7 @@
               <!-- 右侧说明 -->
               <div class="p-6 sm:p-8">
                 <div class="space-y-3">
-                  <template v-for="field in metaFields" :key="field.key">
+                  <div v-for="field in metaFields" :key="field.key">
                     <div
                       v-if="field.key === 'scene'"
                       class="font-pingfang font-normal text-[14.4px] sm:text-[15.6px] leading-[21.6px] sm:leading-[24px] tracking-normal"
@@ -127,7 +127,7 @@
                         block.meta[field.key]
                       }}</span>
                     </div>
-                  </template>
+                  </div>
                 </div>
               </div>
             </div>
@@ -154,7 +154,7 @@
 
         <!-- Logos（先占位，后续替换） -->
         <div
-          class="flex flex-wrap justify-center items-center gap-10 sm:gap-14 mb-10"
+          class="flex flex-wrap justify-center items-center gap-10 md:gap-28 sm:gap-14 mb-10"
         >
           <div
             v-for="n in logos"

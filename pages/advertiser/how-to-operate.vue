@@ -33,7 +33,7 @@
         </div>
         <!-- 桌面端布局：左右布局 -->
         <div
-          class="hidden md:block bg-white rounded-[0px] shadow-sm border-none border-[#EEF0F4] overflow-hidden"
+          class="hidden md:block bg-white rounded-[0px] shadow-[0_2px_60px_0_rgba(224,235,253,1)] border-none overflow-hidden"
         >
           <div class="flex flex-row items-stretch">
             <div class="flex-1 px-6 sm:px-14 py-8 sm:py-14">
