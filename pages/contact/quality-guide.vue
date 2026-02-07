@@ -5,33 +5,26 @@
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <!-- 文章标题 -->
         <h2
-          class="font-pingfang font-medium text-[24px] sm:text-[28px] md:text-[36px] leading-[34px] sm:leading-[40px] md:leading-[52px] tracking-normal text-[#111827] mb-4"
-        >
+          class="font-pingfang font-medium text-[24px] sm:text-[28px] md:text-[36px] leading-[34px] sm:leading-[40px] md:leading-[52px] tracking-normal text-[#111827] mb-4">
           禁止广告的完整指南
         </h2>
         <p
-          class="font-pingfang font-normal text-[12px] sm:text-[14px] md:text-[16px] leading-[20px] sm:leading-[22px] md:leading-[26px] tracking-normal text-[#A2A3A5] mb-6"
-        >
-          有些广告，我们是不允许投放的。请阅读以下内容，以了解详情。
+          class="font-pingfang font-normal text-[12px] sm:text-[14px] md:text-[16px] leading-[20px] sm:leading-[22px] md:leading-[26px] tracking-normal text-[#A2A3A5] mb-6">
+          哪些优惠、落地页和创意是被禁止的，哪些是允许?
         </p>
 
         <!-- 作者信息 -->
-        <div class="flex items-center gap-3 mb-8 pb-8 border-b border-[#E6ECF5]">
-          <img
-            :src="avatarImg"
-            alt="作者头像"
-            class="w-[36px] h-[36px] sm:w-[40px] sm:h-[40px] rounded-full object-cover"
-          />
+        <div class="flex items-center gap-3 pb-8">
+          <img :src="avatarImg" alt="作者头像"
+            class="w-[36px] h-[36px] sm:w-[40px] sm:h-[40px] rounded-full object-cover" />
           <div>
             <p
-              class="font-pingfang font-medium text-[13px] sm:text-[14px] leading-[20px] tracking-normal text-[#111827]"
-            >
-              Jessica Wang
+              class="font-pingfang font-medium text-[13px] sm:text-[14px] leading-[20px] tracking-normal text-[#A2A3A5]">
+              作者:T1 Ads
             </p>
             <p
-              class="font-pingfang font-normal text-[11px] sm:text-[12px] leading-[18px] tracking-normal text-[#A2A3A5]"
-            >
-              更新于 2025年1月15日
+              class="font-pingfang font-normal text-[11px] sm:text-[12px] leading-[18px] tracking-normal text-[#A2A3A5]">
+              超过3周前更新
             </p>
           </div>
         </div>
@@ -39,211 +32,154 @@
         <!-- 关于T1 Ad 广告质量审核的指南 -->
         <div class="mb-10">
           <h3
-            class="font-pingfang font-medium text-[18px] sm:text-[20px] md:text-[24px] leading-[28px] sm:leading-[30px] md:leading-[36px] tracking-normal text-[#111827] mb-4"
-          >
-            关于T1 Ad广告"质量审核的指南
+            class="font-pingfang font-medium text-[18px] sm:text-[20px] md:text-[24px] leading-[28px] sm:leading-[30px] md:leading-[36px] tracking-normal text-[#111827] mb-4">
+            关于T1 Ads平台广告要求的完整指南
           </h3>
-          <p
-            class="font-pingfang font-normal text-[13px] sm:text-[14px] md:text-[15px] leading-[22px] sm:leading-[24px] md:leading-[26px] tracking-normal text-[#626671] mb-4"
-          >
-            总的来说，我们希望广告主遵守 Trustworthy Accountability Group 的"品牌安全框架"的准则。"品牌安全框架"定义了行业认可的安全和非安全广告分类，帮助广告主规避品牌风险。
-          </p>
-          <p
-            class="font-pingfang font-normal text-[13px] sm:text-[14px] md:text-[15px] leading-[22px] sm:leading-[24px] md:leading-[26px] tracking-normal text-[#626671] mb-4"
-          >
-            为了维护广告环境的高质量，我们对广告进行双重审核：首先是机器自动扫描，其次是人工审核团队（合规审核团队）进一步检查并确保所有广告符合平台政策和行业标准。
-          </p>
+          <div class="bg-[#EFF6FF] p-4 sm:p-5 md:p-6 mb-10">
+            <p
+              class="font-pingfang font-normal text-[13px] sm:text-[14px] md:text-[15px] leading-[22px] sm:leading-[24px] md:leading-[26px] tracking-normal text-[#626671]">
+              请注意，如果您的广告活动违反了HiltopAds的任何广告规则，T1Ads团队有权立即暂停广告活动或封锁账户，而不退还剩余的存款。
+            </p>
+          </div>
         </div>
 
         <!-- 审核过程 -->
         <div class="mb-10">
           <h3
-            class="font-pingfang font-medium text-[18px] sm:text-[20px] md:text-[24px] leading-[28px] sm:leading-[30px] md:leading-[36px] tracking-normal text-[#111827] mb-4"
-          >
+            class="font-pingfang font-medium text-[18px] sm:text-[20px] md:text-[24px] leading-[28px] sm:leading-[30px] md:leading-[36px] tracking-normal text-[#111827] mb-4">
             审核过程
           </h3>
           <p
-            class="font-pingfang font-normal text-[13px] sm:text-[14px] md:text-[15px] leading-[22px] sm:leading-[24px] md:leading-[26px] tracking-normal text-[#626671] mb-4"
-          >
-            在发布前，我们的合规审核团队会审核所有广告创意。通常需要24小时完成审核，不过部分创意可能需要更长时间来处理。在此过程中，广告创意的状态会显示为"等待审核"。
+            class="font-pingfang font-normal text-[13px] sm:text-[14px] md:text-[15px] leading-[22px] sm:leading-[24px] md:leading-[26px] tracking-normal text-[#626671] mb-4">
+            在您创建新的广告活动后，质量保证部门将在2-3个工作小时内对其进行审核(周末可能需要更长时间)，但不超过24小时。
           </p>
           <p
-            class="font-pingfang font-normal text-[13px] sm:text-[14px] md:text-[15px] leading-[22px] sm:leading-[24px] md:leading-[26px] tracking-normal text-[#626671] mb-4"
-          >
-            审核通过后，广告创意将被标记为"已批准"，随即开始正常投放。如果广告创意未通过审核，则会被标记为"已拒绝"并附上拒绝原因，同时系统会通过您注册时提供的邮箱向您发送通知。
+            class="font-pingfang font-normal text-[13px] sm:text-[14px] md:text-[15px] leading-[22px] sm:leading-[24px] md:leading-[26px] tracking-normal text-[#626671] mb-4">
+
+            HilltopAds系统不断监控广告活动是否符合规定。监控广告质量的主要三个方向是1.最终目标URL中的直接域名和主URL中的后续重定向域名。2.优惠类型。
+            3.预先着陆页/创意/最终优惠页面/着陆页，
+          </p>
+          <p
+            class="font-pingfang font-normal text-[13px] sm:text-[14px] md:text-[15px] leading-[22px] sm:leading-[24px] md:leading-[26px] tracking-normal text-[#626671] mb-4">
+
+            广告主需要遵守所有区域的工作规则才能与HitopAds合作。 下面我们详细描述了允许的内容以及哪些禁止事项值得关注。
           </p>
         </div>
 
         <!-- URL规范 -->
         <div class="mb-10">
           <h3
-            class="font-pingfang font-medium text-[18px] sm:text-[20px] md:text-[24px] leading-[28px] sm:leading-[30px] md:leading-[36px] tracking-normal text-[#111827] mb-4"
-          >
+            class="font-pingfang font-medium text-[18px] sm:text-[20px] md:text-[24px] leading-[28px] sm:leading-[30px] md:leading-[36px] tracking-normal text-[#111827] mb-4">
             URL规范
           </h3>
           <p
-            class="font-pingfang font-normal text-[13px] sm:text-[14px] md:text-[15px] leading-[22px] sm:leading-[24px] md:leading-[26px] tracking-normal text-[#626671] mb-4"
-          >
-            广告素材对应的着陆页必须能够正确访问。仅有可访问的着陆页链接方可通过合规审核。
+            class="font-pingfang font-normal text-[13px] sm:text-[14px] md:text-[15px] leading-[22px] sm:leading-[24px] md:leading-[26px] tracking-normal text-[#626671] mb-4">
+
+            您的广告活动域名的主要要求是它们不应被标记为恶意，并且不应被反病毒软件和浏览器阻止。
           </p>
           <p
-            class="font-pingfang font-normal text-[13px] sm:text-[14px] md:text-[15px] leading-[22px] sm:leading-[24px] md:leading-[26px] tracking-normal text-[#626671] mb-4"
-          >
-            每条广告的着陆页需满足合规要求。不会强制跳转到与展示内容不符的页面。对不包含潜在的欺诈性或恶意行为的着陆页将被批准。
+            class="font-pingfang font-normal text-[13px] sm:text-[14px] md:text-[15px] leading-[22px] sm:leading-[24px] md:leading-[26px] tracking-normal text-[#626671] mb-4">
+
+            欲了解更多信息，请查看 指南。
           </p>
         </div>
 
-        <!-- 查看拒绝原因 -->
+        <!-- 提供的类型 -->
         <div class="mb-10">
           <h3
-            class="font-pingfang font-medium text-[18px] sm:text-[20px] md:text-[24px] leading-[28px] sm:leading-[30px] md:leading-[36px] tracking-normal text-[#111827] mb-4"
-          >
-            查看拒绝原因
+            class="font-pingfang font-medium text-[18px] sm:text-[20px] md:text-[24px] leading-[28px] sm:leading-[30px] md:leading-[36px] tracking-normal text-[#111827] mb-4">
+            提供的类型
           </h3>
           <p
-            class="font-pingfang font-normal text-[13px] sm:text-[14px] md:text-[15px] leading-[22px] sm:leading-[24px] md:leading-[26px] tracking-normal text-[#626671] mb-4"
-          >
-            在T1 Ad后台，您可以查看每个广告创意的审核状态。如果创意被拒绝，可在详情中查看拒绝原因。根据拒绝原因修改创意后重新提交，可加快审核通过的速度。
+            class="font-pingfang font-normal text-[13px] sm:text-[14px] md:text-[15px] leading-[22px] sm:leading-[24px] md:leading-[26px] tracking-normal text-[#626671] mb-4">
+            在T1Ads，您可以推广主流和非主流的提供、产品和服务，这些提供、产品和服务与上述规则列表不兼容，例如约会电子商务等。Gaming、OnlyFans.
           </p>
+          <div class="bg-[#EFF6FF] p-4 sm:p-5 md:p-6 mb-10">
+            <p
+              class="font-pingfang font-normal text-[13px] sm:text-[14px] md:text-[15px] leading-[22px] sm:leading-[24px] md:leading-[26px] tracking-normal text-[#626671]">
+              要了解更多关于我们建议您在HiltopAds进行测试的提供类型，请查看指南您还可以找到关于我们不建议您使用的提供的指南。
+            </p>
+          </div>
         </div>
-
-        <!-- 禁止的类别 -->
-        <div class="mb-10">
-          <h3
-            class="font-pingfang font-medium text-[18px] sm:text-[20px] md:text-[24px] leading-[28px] sm:leading-[30px] md:leading-[36px] tracking-normal text-[#111827] mb-4"
-          >
-            禁止的类别
-          </h3>
-          <p
-            class="font-pingfang font-normal text-[13px] sm:text-[14px] md:text-[15px] leading-[22px] sm:leading-[24px] md:leading-[26px] tracking-normal text-[#626671] mb-4"
-          >
-            以下类别的广告内容是被禁止投放的：
-          </p>
-          <ul class="list-disc pl-5 mb-4 space-y-2">
-            <li
-              v-for="(item, idx) in prohibitedCategories"
-              :key="idx"
-              class="font-pingfang font-normal text-[13px] sm:text-[14px] md:text-[15px] leading-[22px] sm:leading-[24px] md:leading-[26px] tracking-normal text-[#626671]"
-            >
-              {{ item }}
-            </li>
-          </ul>
-        </div>
-
-        <!-- 禁止的素材内容 -->
-        <div class="mb-10">
-          <h3
-            class="font-pingfang font-medium text-[18px] sm:text-[20px] md:text-[24px] leading-[28px] sm:leading-[30px] md:leading-[36px] tracking-normal text-[#111827] mb-4"
-          >
-            禁止的素材内容
-          </h3>
-          <p
-            class="font-pingfang font-normal text-[13px] sm:text-[14px] md:text-[15px] leading-[22px] sm:leading-[24px] md:leading-[26px] tracking-normal text-[#626671] mb-4"
-          >
-            广告中不允许出现以下类型的内容：武器或弹药、非法毒品或药物滥用、烟草、色情或成人内容、赌博、仇恨言论、种族歧视内容、暴力或血腥内容等。
-          </p>
-          <p
-            class="font-pingfang font-normal text-[13px] sm:text-[14px] md:text-[15px] leading-[22px] sm:leading-[24px] md:leading-[26px] tracking-normal text-[#626671] mb-4"
-          >
-            此外，包含侵权内容、版权违规、冒充其他品牌或组织、虚假陈述、欺诈性内容、恶意软件或间谍软件的广告也被严格禁止。
-          </p>
-        </div>
-
-        <!-- 提示信息框 -->
-        <div class="bg-[#EFF6FF] border-l-4 border-[#3A82F9] rounded-r-lg p-4 sm:p-5 md:p-6 mb-10">
-          <p
-            class="font-pingfang font-normal text-[13px] sm:text-[14px] md:text-[15px] leading-[22px] sm:leading-[24px] md:leading-[26px] tracking-normal text-[#626671]"
-          >
-            如需了解更多关于Trustworthy Accountability Group 的"品牌安全框架"的信息，可查看其官方资源。我们鼓励广告主熟悉这些行业准则，以确保广告内容符合最新的合规要求。
-          </p>
-        </div>
-
-        <!-- 创意素材标准规定（上册）：素材内容 / 着陆页面 -->
-        <div class="mb-10">
-          <h3
-            class="font-pingfang font-medium text-[18px] sm:text-[20px] md:text-[24px] leading-[28px] sm:leading-[30px] md:leading-[36px] tracking-normal text-[#111827] mb-3"
-          >
-            创意素材标准规定（上册）：素材内容 / 着陆页面
-          </h3>
-          <p
-            class="font-pingfang font-normal text-[13px] sm:text-[14px] md:text-[15px] leading-[22px] sm:leading-[24px] md:leading-[26px] tracking-normal text-[#626671] mb-6"
-          >
-            以下规定适用于不同类型的广告素材（包括图片/Banner和着陆页）。每种形式/着陆页的相应标准。
-          </p>
-        </div>
+        <h3 class="mb-6 text-xl">
+          在T1广告中，以下类型的提供/类别被禁止进行促销：
+        </h3>
+        <p class="mb-2 text-xl">
+          恶意软件、网络钓鱼或其他有害代码/软件；
+        </p>
+        <p class="mb-3 text-xl">
+          翻译病毒、“扫描分析”或“技术支持”；
+        </p>
+        <p class="mb-3 text-xl">
+          收集全民通知订阅者；
+        </p>
+        <p class="mb-3 text-xl">
+          意象的金融模型和产品；
+        </p>
+        <p class="mb-3 text-xl">
+          ​所有金融优惠必须在优惠网站的主页上提供有关其活动的法律文件。
+        </p>
+        <p class="mb-3 text-xl">
+          参考博客、新闻门户和网站；
+        </p>
+        <p class="mb-3 text-xl">
+          智能链接、标记重定向的网站；
+        </p>
+        <p class="mb-3 text-xl">
+          受版权和商标法保护的营销材料；
+        </p>
+        <p class="mb-3 text-xl">
+          欺骗、非官方、不实、欺骗、欺骗、捏造、再生产的信息（即事实、新闻、优惠、解决方案、指南）；
+        </p>
+        <p class="mb-3 text-xl">
+          冒犯、刺激或煽动仇恨的内容；
+        </p>
+        <p class="mb-3 text-xl">
+          绘画违法活动，宣扬、绘画对任何团体、个人造成身体伤害、伤害，或者宣扬、绘画对动物的残酷行为；
+        </p>
+        <p class="mb-3 text-xl">
+          非法、处方或娱乐药物；
+        </p>
+        <p class="mb-3 text-xl">
+          酒精、烟草。
+        </p>
 
         <!-- 规则带图的区块 -->
         <div class="space-y-12 sm:space-y-14 md:space-y-16">
           <!-- 规则 1：素材和着陆页内容一致性 -->
           <div v-for="(rule, idx) in contentRules" :key="idx" class="mb-8">
             <p
-              class="font-pingfang font-normal text-[13px] sm:text-[14px] md:text-[15px] leading-[22px] sm:leading-[24px] md:leading-[26px] tracking-normal text-[#626671] mb-6"
-            >
+              class="font-pingfang font-normal text-[13px] sm:text-[14px] md:text-[15px] leading-[22px] sm:leading-[24px] md:leading-[26px] tracking-normal text-[#626671] mb-6">
               {{ rule.description }}
             </p>
             <!-- 图片示例：PC端横排，移动端纵排 -->
-            <div
-              v-if="rule.examples && rule.examples.length"
-              class="flex flex-col sm:flex-row gap-4 sm:gap-6"
-            >
-              <div
-                v-for="(example, eIdx) in rule.examples"
-                :key="eIdx"
-                class="flex-1 relative"
-              >
-                <div
-                  class="rounded-lg overflow-hidden border border-[#E6ECF5] bg-[#F9FAFB]"
-                >
+            <div v-if="rule.examples && rule.examples.length" class="flex flex-col sm:flex-row gap-4 sm:gap-6">
+              <div v-for="(example, eIdx) in rule.examples" :key="eIdx" class="flex-1 relative">
+                <div class="rounded-lg overflow-hidden border border-[#E6ECF5] bg-[#F9FAFB]">
                   <!-- 示例占位图 -->
-                  <div
-                    class="w-full aspect-[4/3] bg-[#F0F2F5] flex items-center justify-center"
-                  >
+                  <div class="w-full aspect-[4/3] bg-[#F0F2F5] flex items-center justify-center">
                     <div class="text-center px-4">
                       <div
                         class="w-[60px] h-[60px] sm:w-[72px] sm:h-[72px] mx-auto mb-3 rounded-full flex items-center justify-center"
-                        :class="
-                          example.allowed
-                            ? 'bg-[#E8F5E9] text-[#4CAF50]'
-                            : 'bg-[#FFEBEE] text-[#F44336]'
-                        "
-                      >
-                        <svg
-                          v-if="example.allowed"
-                          class="w-8 h-8 sm:w-9 sm:h-9"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                        >
-                          <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            d="M5 13l4 4L19 7"
-                          />
+                        :class="example.allowed
+                          ? 'bg-[#E8F5E9] text-[#4CAF50]'
+                          : 'bg-[#FFEBEE] text-[#F44336]'
+                          ">
+                        <svg v-if="example.allowed" class="w-8 h-8 sm:w-9 sm:h-9" fill="none" viewBox="0 0 24 24"
+                          stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                         </svg>
-                        <svg
-                          v-else
-                          class="w-8 h-8 sm:w-9 sm:h-9"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                        >
-                          <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            d="M6 18L18 6M6 6l12 12"
-                          />
+                        <svg v-else class="w-8 h-8 sm:w-9 sm:h-9" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12" />
                         </svg>
                       </div>
                       <span
                         class="font-pingfang font-medium text-[14px] sm:text-[16px] md:text-[18px] leading-[22px] tracking-normal"
-                        :class="
-                          example.allowed
-                            ? 'text-[#4CAF50]'
-                            : 'text-[#F44336]'
-                        "
-                      >
+                        :class="example.allowed
+                          ? 'text-[#4CAF50]'
+                          : 'text-[#F44336]'
+                          ">
                         {{ example.allowed ? "允许" : "禁止" }}
                       </span>
                     </div>
@@ -252,69 +188,38 @@
                 <!-- 标签 -->
                 <div
                   class="absolute -top-3 left-4 px-3 py-1 rounded-full text-white font-pingfang font-medium text-[11px] sm:text-[12px] leading-[16px]"
-                  :class="
-                    example.allowed ? 'bg-[#4CAF50]' : 'bg-[#F44336]'
-                  "
-                >
+                  :class="example.allowed ? 'bg-[#4CAF50]' : 'bg-[#F44336]'
+                    ">
                   {{ example.allowed ? "允许" : "禁止" }}
                 </div>
               </div>
             </div>
             <!-- 单图示例 -->
-            <div
-              v-if="rule.singleExample"
-              class="mt-6"
-            >
+            <div v-if="rule.singleExample" class="mt-6">
               <div class="rounded-lg overflow-hidden border border-[#E6ECF5] bg-[#F9FAFB]">
-                <div
-                  class="w-full aspect-[16/9] bg-[#F0F2F5] flex items-center justify-center"
-                >
+                <div class="w-full aspect-[16/9] bg-[#F0F2F5] flex items-center justify-center">
                   <div class="text-center px-4">
                     <div
                       class="w-[60px] h-[60px] sm:w-[72px] sm:h-[72px] mx-auto mb-3 rounded-full flex items-center justify-center"
-                      :class="
-                        rule.singleExample.allowed
-                          ? 'bg-[#E8F5E9] text-[#4CAF50]'
-                          : 'bg-[#FFEBEE] text-[#F44336]'
-                      "
-                    >
-                      <svg
-                        v-if="rule.singleExample.allowed"
-                        class="w-8 h-8 sm:w-9 sm:h-9"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M5 13l4 4L19 7"
-                        />
+                      :class="rule.singleExample.allowed
+                        ? 'bg-[#E8F5E9] text-[#4CAF50]'
+                        : 'bg-[#FFEBEE] text-[#F44336]'
+                        ">
+                      <svg v-if="rule.singleExample.allowed" class="w-8 h-8 sm:w-9 sm:h-9" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                       </svg>
-                      <svg
-                        v-else
-                        class="w-8 h-8 sm:w-9 sm:h-9"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M6 18L18 6M6 6l12 12"
-                        />
+                      <svg v-else class="w-8 h-8 sm:w-9 sm:h-9" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M6 18L18 6M6 6l12 12" />
                       </svg>
                     </div>
                     <span
                       class="font-pingfang font-medium text-[14px] sm:text-[16px] md:text-[18px] leading-[22px] tracking-normal"
-                      :class="
-                        rule.singleExample.allowed
-                          ? 'text-[#4CAF50]'
-                          : 'text-[#F44336]'
-                      "
-                    >
+                      :class="rule.singleExample.allowed
+                        ? 'text-[#4CAF50]'
+                        : 'text-[#F44336]'
+                        ">
                       {{ rule.singleExample.allowed ? "允许" : "禁止" }}
                     </span>
                   </div>
@@ -330,13 +235,11 @@
     <section class="bg-[#F5F7FB] py-10 sm:py-14 lg:py-16">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <h3
-          class="font-pingfang font-medium text-[18px] sm:text-[20px] md:text-[24px] leading-[28px] sm:leading-[30px] md:leading-[36px] tracking-normal text-[#111827] mb-3"
-        >
+          class="font-pingfang font-medium text-[18px] sm:text-[20px] md:text-[24px] leading-[28px] sm:leading-[30px] md:leading-[36px] tracking-normal text-[#111827] mb-3">
           创意素材标准规定（下册）：弹窗 / 推送通知
         </h3>
         <p
-          class="font-pingfang font-normal text-[13px] sm:text-[14px] md:text-[15px] leading-[22px] sm:leading-[24px] md:leading-[26px] tracking-normal text-[#626671] mb-8"
-        >
+          class="font-pingfang font-normal text-[13px] sm:text-[14px] md:text-[15px] leading-[22px] sm:leading-[24px] md:leading-[26px] tracking-normal text-[#626671] mb-8">
           以下规定适用于弹窗和推送通知类型的广告。
         </p>
 
@@ -344,72 +247,36 @@
         <div class="space-y-12 sm:space-y-14 md:space-y-16">
           <div v-for="(rule, idx) in popupRules" :key="idx" class="mb-8">
             <p
-              class="font-pingfang font-normal text-[13px] sm:text-[14px] md:text-[15px] leading-[22px] sm:leading-[24px] md:leading-[26px] tracking-normal text-[#626671] mb-6"
-            >
+              class="font-pingfang font-normal text-[13px] sm:text-[14px] md:text-[15px] leading-[22px] sm:leading-[24px] md:leading-[26px] tracking-normal text-[#626671] mb-6">
               {{ rule.description }}
             </p>
             <!-- 图片示例 -->
-            <div
-              v-if="rule.examples && rule.examples.length"
-              class="flex flex-col sm:flex-row gap-4 sm:gap-6"
-            >
-              <div
-                v-for="(example, eIdx) in rule.examples"
-                :key="eIdx"
-                class="flex-1 relative"
-              >
-                <div
-                  class="rounded-lg overflow-hidden border border-[#E6ECF5] bg-white"
-                >
-                  <div
-                    class="w-full aspect-[4/3] bg-[#F0F2F5] flex items-center justify-center"
-                  >
+            <div v-if="rule.examples && rule.examples.length" class="flex flex-col sm:flex-row gap-4 sm:gap-6">
+              <div v-for="(example, eIdx) in rule.examples" :key="eIdx" class="flex-1 relative">
+                <div class="rounded-lg overflow-hidden border border-[#E6ECF5] bg-white">
+                  <div class="w-full aspect-[4/3] bg-[#F0F2F5] flex items-center justify-center">
                     <div class="text-center px-4">
                       <div
                         class="w-[60px] h-[60px] sm:w-[72px] sm:h-[72px] mx-auto mb-3 rounded-full flex items-center justify-center"
-                        :class="
-                          example.allowed
-                            ? 'bg-[#E8F5E9] text-[#4CAF50]'
-                            : 'bg-[#FFEBEE] text-[#F44336]'
-                        "
-                      >
-                        <svg
-                          v-if="example.allowed"
-                          class="w-8 h-8 sm:w-9 sm:h-9"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                        >
-                          <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            d="M5 13l4 4L19 7"
-                          />
+                        :class="example.allowed
+                          ? 'bg-[#E8F5E9] text-[#4CAF50]'
+                          : 'bg-[#FFEBEE] text-[#F44336]'
+                          ">
+                        <svg v-if="example.allowed" class="w-8 h-8 sm:w-9 sm:h-9" fill="none" viewBox="0 0 24 24"
+                          stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                         </svg>
-                        <svg
-                          v-else
-                          class="w-8 h-8 sm:w-9 sm:h-9"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                        >
-                          <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            d="M6 18L18 6M6 6l12 12"
-                          />
+                        <svg v-else class="w-8 h-8 sm:w-9 sm:h-9" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12" />
                         </svg>
                       </div>
                       <span
                         class="font-pingfang font-medium text-[14px] sm:text-[16px] md:text-[18px] leading-[22px] tracking-normal"
-                        :class="
-                          example.allowed
-                            ? 'text-[#4CAF50]'
-                            : 'text-[#F44336]'
-                        "
-                      >
+                        :class="example.allowed
+                          ? 'text-[#4CAF50]'
+                          : 'text-[#F44336]'
+                          ">
                         {{ example.allowed ? "允许" : "禁止" }}
                       </span>
                     </div>
@@ -417,10 +284,8 @@
                 </div>
                 <div
                   class="absolute -top-3 left-4 px-3 py-1 rounded-full text-white font-pingfang font-medium text-[11px] sm:text-[12px] leading-[16px]"
-                  :class="
-                    example.allowed ? 'bg-[#4CAF50]' : 'bg-[#F44336]'
-                  "
-                >
+                  :class="example.allowed ? 'bg-[#4CAF50]' : 'bg-[#F44336]'
+                    ">
                   {{ example.allowed ? "允许" : "禁止" }}
                 </div>
               </div>
@@ -434,31 +299,26 @@
     <section class="bg-white py-10 sm:py-14 lg:py-16">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <h3
-          class="font-pingfang font-medium text-[18px] sm:text-[20px] md:text-[24px] leading-[28px] sm:leading-[30px] md:leading-[36px] tracking-normal text-[#111827] mb-4"
-        >
+          class="font-pingfang font-medium text-[18px] sm:text-[20px] md:text-[24px] leading-[28px] sm:leading-[30px] md:leading-[36px] tracking-normal text-[#111827] mb-4">
           额外说明和合规要求
         </h3>
         <p
-          class="font-pingfang font-normal text-[13px] sm:text-[14px] md:text-[15px] leading-[22px] sm:leading-[24px] md:leading-[26px] tracking-normal text-[#626671] mb-4"
-        >
+          class="font-pingfang font-normal text-[13px] sm:text-[14px] md:text-[15px] leading-[22px] sm:leading-[24px] md:leading-[26px] tracking-normal text-[#626671] mb-4">
           您的所有创意素材和着陆页面在通过广告质量审核后，仍需持续符合以上标准。如果在投放过程中发现违规行为，我们有权随时暂停或终止相关广告的投放。
         </p>
         <p
-          class="font-pingfang font-normal text-[13px] sm:text-[14px] md:text-[15px] leading-[22px] sm:leading-[24px] md:leading-[26px] tracking-normal text-[#626671] mb-4"
-        >
+          class="font-pingfang font-normal text-[13px] sm:text-[14px] md:text-[15px] leading-[22px] sm:leading-[24px] md:leading-[26px] tracking-normal text-[#626671] mb-4">
           如您对审核结果有疑问或希望申诉，请通过帮助中心与我们的合规团队取得联系。我们承诺在2个工作日内回复您的问题。
         </p>
 
         <!-- 提示框 -->
         <div class="bg-[#FFF8E1] border-l-4 border-[#FFC107] rounded-r-lg p-4 sm:p-5 md:p-6 mt-6">
           <p
-            class="font-pingfang font-medium text-[13px] sm:text-[14px] md:text-[15px] leading-[22px] sm:leading-[24px] md:leading-[26px] tracking-normal text-[#626671] mb-2"
-          >
+            class="font-pingfang font-medium text-[13px] sm:text-[14px] md:text-[15px] leading-[22px] sm:leading-[24px] md:leading-[26px] tracking-normal text-[#626671] mb-2">
             重要提醒
           </p>
           <p
-            class="font-pingfang font-normal text-[13px] sm:text-[14px] md:text-[15px] leading-[22px] sm:leading-[24px] md:leading-[26px] tracking-normal text-[#626671]"
-          >
+            class="font-pingfang font-normal text-[13px] sm:text-[14px] md:text-[15px] leading-[22px] sm:leading-[24px] md:leading-[26px] tracking-normal text-[#626671]">
             违反以上规定的广告将被立即下架，严重或反复违规可能导致账户被暂停或永久封禁。请确保您的所有广告内容均符合本指南的要求。
           </p>
         </div>
@@ -469,20 +329,16 @@
     <section class="bg-[#F5F7FB] py-12 sm:py-14 lg:py-16">
       <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h3
-          class="font-pingfang font-medium text-[22px] sm:text-[24px] md:text-[28px] leading-[32px] sm:leading-[36px] md:leading-[40px] tracking-normal text-[#3A82F9] mb-3"
-        >
+          class="font-pingfang font-medium text-[22px] sm:text-[24px] md:text-[28px] leading-[32px] sm:leading-[36px] md:leading-[40px] tracking-normal text-[#3A82F9] mb-3">
           让我们联系
         </h3>
         <p
-          class="font-pingfang font-normal text-[12px] sm:text-[14px] leading-[18px] sm:leading-[22px] tracking-normal text-[#A2A3A5] mb-6"
-        >
+          class="font-pingfang font-normal text-[12px] sm:text-[14px] leading-[18px] sm:leading-[22px] tracking-normal text-[#A2A3A5] mb-6">
           如有更多问题，请随时联系我们的广告合规团队。
         </p>
         <div class="flex justify-center">
-          <NuxtLink
-            to="/contact"
-            class="register-btn inline-flex items-center justify-center text-white rounded-full font-pingfang font-medium text-[14px] sm:text-[16px] leading-[20px] tracking-normal transition-colors shadow-lg hover:shadow-xl w-[160px] h-[44px] sm:w-[180px] sm:h-[48px]"
-          >
+          <NuxtLink to="/contact"
+            class="register-btn inline-flex items-center justify-center text-white rounded-full font-pingfang font-medium text-[14px] sm:text-[16px] leading-[20px] tracking-normal transition-colors shadow-lg hover:shadow-xl w-[160px] h-[44px] sm:w-[180px] sm:h-[48px]">
             立即了解 →
           </NuxtLink>
         </div>
@@ -632,4 +488,3 @@ const popupRules = [
   },
 ];
 </script>
-
