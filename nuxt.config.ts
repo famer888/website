@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   devtools: { enabled: true },
-  
+
   modules: [
     '@nuxtjs/tailwindcss'
   ],
@@ -27,13 +27,52 @@ export default defineNuxtConfig({
     }
   },
 
-  // SSR 配置，有利于 SEO
+  // SSG 配置（静态站点生成）
+  // 注意：SSG 仍然需要 ssr: true，因为需要在构建时进行服务端渲染
   ssr: true,
+
+  // Nitro 配置 - 启用静态站点生成
+  // @ts-ignore - nitro 配置在运行时有效
+  nitro: {
+    prerender: {
+      crawlLinks: true,
+      routes: [
+        '/',
+        '/why/who-are-we',
+        '/why/advantages',
+        '/why/statistics',
+        '/why/mobile-ads',
+        '/advertiser/how-to-operate',
+        '/advertiser/t1-dsp',
+        '/advertiser/target-function',
+        '/ad-styles',
+        '/contact',
+        '/contact/help-center',
+        '/contact/quality-guide',
+        '/contact/download-media-kit',
+        '/video'
+      ],
+      // 忽略不存在的路由，避免构建失败
+      ignore: [
+        '/login',
+        '/register',
+        '/learn-more',
+        '/how-it-works',
+        '/download-media-kit',
+        '/terms',
+        '/privacy',
+        '/cookie',
+        '/sitemap',
+        '/brand-protection',
+        '/referral'
+      ]
+    }
+  },
 
   // 运行时配置
   runtimeConfig: {
     public: {
-      siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'http://localhost:3000'
+      siteUrl: (process as any).env?.NUXT_PUBLIC_SITE_URL || 'http://localhost:3000'
     }
   }
 })
