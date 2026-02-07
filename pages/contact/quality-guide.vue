@@ -1,29 +1,24 @@
 <template>
   <div class="bg-white">
     <!-- 主体文章内容 -->
-    <section class="bg-white py-10 sm:py-14 lg:py-16">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section class="py-10">
+      <div class="max-w-4xl mx-auto px-4">
         <!-- 文章标题 -->
-        <h2
-          class="text-3xl mb-4 fw-500">
+        <h2 class="text-3xl mb-4 font-semibold">
           禁止广告的完整指南
         </h2>
-        <p
-          class="text-1xl mb-6">
+        <p class="text-1xl mb-6">
           哪些优惠、落地页和创意是被禁止的，哪些是允许?
         </p>
 
         <!-- 作者信息 -->
         <div class="flex items-center gap-3 pb-8">
-          <img :src="avatarImg" alt="作者头像"
-            class="w-11 h-11 rounded-full object-cover" />
+          <img :src="avatarImg" alt="作者头像" class="w-11 h-11 rounded-full object-cover" />
           <div>
-            <p
-              class="text-[13px] text-[#626671]">
+            <p class="text-[13px] text-[#626671]">
               作者:T1 Ads
             </p>
-            <p
-              class="text-[11px] text-[#626671]">
+            <p class="text-[11px] text-[#626671]">
               超过3周前更新
             </p>
           </div>
@@ -31,13 +26,11 @@
 
         <!-- 关于T1 Ad 广告质量审核的指南 -->
         <div class="mb-10">
-          <h3
-            class="text-xl mb-4 fw-500">
+          <h3 class="text-xl mb-4 font-semibold">
             关于T1 Ads平台广告要求的完整指南
           </h3>
           <div class="bg-[#EFF6FF] p-4 sm:p-5 md:p-6 mb-10">
-            <p
-              class="">
+            <p class="">
               请注意，如果您的广告活动违反了HiltopAds的任何广告规则，T1Ads团队有权立即暂停广告活动或封锁账户，而不退还剩余的存款。
             </p>
           </div>
@@ -45,22 +38,18 @@
 
         <!-- 审核过程 -->
         <div class="mb-10">
-          <h3
-            class="text-2xl fw-500 mb-4">
+          <h3 class="text-2xl font-semibold mb-4">
             审核过程
           </h3>
-          <p
-            class=" mb-4">
+          <p class=" mb-4">
             在您创建新的广告活动后，质量保证部门将在2-3个工作小时内对其进行审核(周末可能需要更长时间)，但不超过24小时。
           </p>
-          <p
-            class=" mb-4">
+          <p class=" mb-4">
 
             HilltopAds系统不断监控广告活动是否符合规定。监控广告质量的主要三个方向是1.最终目标URL中的直接域名和主URL中的后续重定向域名。2.优惠类型。
             3.预先着陆页/创意/最终优惠页面/着陆页，
           </p>
-          <p
-            class=" mb-4">
+          <p class=" mb-4">
 
             广告主需要遵守所有区域的工作规则才能与HitopAds合作。 下面我们详细描述了允许的内容以及哪些禁止事项值得关注。
           </p>
@@ -68,17 +57,14 @@
 
         <!-- URL规范 -->
         <div class="mb-10">
-          <h3
-            class="text-2xl fw-500 mb-4">
+          <h3 class="text-2xl font-semibold mb-4">
             URL规范
           </h3>
-          <p
-            class=" mb-4">
+          <p class=" mb-4">
 
             您的广告活动域名的主要要求是它们不应被标记为恶意，并且不应被反病毒软件和浏览器阻止。
           </p>
-          <p
-            class=" mb-4">
+          <p class=" mb-4">
 
             欲了解更多信息，请查看 指南。
           </p>
@@ -86,17 +72,14 @@
 
         <!-- 提供的类型 -->
         <div class="mb-10">
-          <h3
-            class="text-2xl fw-500 mb-4">
+          <h3 class="text-2xl font-semibold mb-4">
             提供的类型
           </h3>
-          <p
-            class=" mb-4">
+          <p class=" mb-4">
             在T1Ads，您可以推广主流和非主流的提供、产品和服务，这些提供、产品和服务与上述规则列表不兼容，例如约会电子商务等。Gaming、OnlyFans.
           </p>
           <div class="bg-[#EFF6FF] p-4 sm:p-5 md:p-6 mb-10">
-            <p
-              class="">
+            <p class="">
               要了解更多关于我们建议您在HiltopAds进行测试的提供类型，请查看指南您还可以找到关于我们不建议您使用的提供的指南。
             </p>
           </div>
@@ -148,28 +131,197 @@
           此列表不受限制。HilltopAds 的版本主可以在任何时候拒绝一项广告活动，如果发现该广告活动的细节违反了规定。
         </div>
 
-        前期登陆页面 / 创意 / 最终优惠页面 / 登陆页面
+        <div class="mb-10">
+          <h4 class="text-xl mb-8">
+            前期登陆页面 / 创意 / 最终优惠页面 / 登陆页面
+          </h4>
 
-        在T1广告中，您可以使用弹出式、页面内、视频和横幅广告格式进行工作。上述的众多格式都有其配置的具体要求（例如图片大小、视频文件格式等）。
+          <p class="mb-3">
+            在T1广告中，您可以使用弹出式、页面内、视频和横幅广告格式进行工作。上述的众多格式都有其配置的具体要求（例如图片大小、视频文件格式等）。
+          </p>
+          <p class="mb-3">
+            请查看我们关于终端广告格式的指南：
+          </p>
+          <p class="mb-3">
+            弹出式格式指南
+          </p>
+          <p class="mb-3">
+            页面内格式指南
+          </p>
+          <p class="mb-3">
+            视频格式指南
+          </p>
+          <p class="mb-3">
+            横幅格式指南
+          </p>
+        </div>
 
-        请查看我们关于终端广告格式的指南：
+        <div>
+          <h4 class="text-xl mb-8">
+            以下规则适用于预着陆页面 / 创意 / 最终优惠页面 / 着陆页面。
+          </h4>
 
-        弹出式格式指南
+          <div class="mb-10">
+            <p class="mb-3">
+              ​​禁止
+            </p>
+            <div>
+              <p class="mb-3">
+                1.登陆页面不得包含拼写错误、错误图片、空白页面等。
+              </p>
+              <img class="my-10" src="~/assets/imgaes/contact/prohibitionGuide/1.jpg">
+            </div>
+            <div>
+              <p class="mb-6">
+                2.使用知名品牌（包括但不限于通讯应用、社交媒体品牌、防病毒软件公司、应用程序、支付系统、体育品牌、邮政服务、报纸在线版本、国家政府、公共机构等）。
+              </p>
+              <p class="mb-6">
+                - 知名品牌的标志（包括按钮、箭头等）
+              </p>
+              <p class="mb-6">
+                - 品牌名称拼写错误或有隐藏字母。
+              </p>
+              <p class="mb-6">
+                - 促销优惠由知名品牌提供的声明。
+              </p>
+              <p class="mb-6">
+                - 模仿知名网站和公司的界面。
+              </p>
+              <img class="mb-10" src="~/assets/imgaes/contact/prohibitionGuide/2.jpg">
+            </div>
+            <div>
+              <p class="mb-6">
+                3.使用名人或名人的个人详细信息和图片。
+              </p>
+              <img class="mb-10" src="~/assets/imgaes/contact/prohibitionGuide/3.jpg">
+            </div>
+            <div>
+              <p class="mb-6">
+                4.自动下载（点击）适用于桌面和移动设备。
+              </p>
+              <img class="mb-10" src="~/assets/imgaes/contact/prohibitionGuide/4.jpg">
+            </div>
+            <div>
+              <p class="mb-6">
+                5.修改浏览器、操作系统或服务的系统更新、通知和消息。
+              </p>
+              <img class="mb-10" src="~/assets/imgaes/contact/prohibitionGuide/5.jpg">
+            </div>
+            <div>
+              <p class="mb-6">
+                6.使用关于病毒、垃圾文件、设备问题等的可怕陈述，以及利用浏览器漏洞的实现页。
+              </p>
+              <img class="mb-10" src="~/assets/imgaes/contact/prohibitionGuide/6.jpg">
+            </div>
+            <div>
+              <p class="mb-6">
+                7.没有关闭选项的广告。
+              </p>
+              <img class="mb-10" src="~/assets/imgaes/contact/prohibitionGuide/7.jpg">
+            </div>
+            <div>
+              <p class="mb-6">
+                8.通过欺骗性通知（通过重新加载或阻止提供页面，错误的用户订阅报价）收集订阅的落地页面。
+              </p>
+              <img class="mb-10" src="~/assets/imgaes/contact/prohibitionGuide/8.jpg">
+            </div>
+            <div>
+              <p class="mb-6">
+                9.代表知名银行的修改电子邮件。
+              </p>
+              <img class="mb-10" src="~/assets/imgaes/contact/prohibitionGuide/9.jpg">
+            </div>
+            <div>
+              <p class="mb-6">
+                10.有关存款或转移资金的网络钓鱼消息。
+              </p>
+              <img class="mb-10" src="~/assets/imgaes/contact/prohibitionGuide/10.jpg">
+            </div>
+            <div>
+              <p class="mb-6">
+                11.提前领取/收到大量和礼品以及有关奖金支付的网络钓鱼消息。
+              </p>
+              <img class="mb-10" src="~/assets/imgaes/contact/prohibitionGuide/11.jpg">
+            </div>
+            <div>
+              <p class="mb-6">
+                12.在报价页面上额外嵌入返回按钮。
+              </p>
+            </div>
+            <div>
+              <p class="mb-6">
+                13.使用性挑逗内容。
+              </p>
+            </div>
+            <div>
+              <p class="mb-6">
+                14.使用令人震惊的成人内容。
+              </p>
+            </div>
+            <div>
+              <p class="mb-6">
+                - 儿童教育、动物园（动物）教育、比赛等。
+              </p>
+            </div>
+            <div>
+              <p class="mb-6">
+                - 尸骸、遗物、遗液、鼻涕、遗骸或呕吐）的。
+              </p>
+            </div>
+            <div>
+              <p class="mb-6">
+                15.使用任何与雕像和武器有关的材料，暴力和残忍的视频和图像。
+              </p>
+            </div>
+            <div>
+              <p class="mb-6">
+                16.宣传任何政党或人物，要求国家必须进行暴力更换，并利用这些人物进行广告宣传。
+              </p>
+            </div>
+            <div>
+              <p class="mb-6">
+                17.推广被各州指称为“虚假性”、“可疑性”或“欺骗性”的品牌。
+              </p>
+            </div>
+          </div>
 
-        页面内格式指南
 
-        视频格式指南
+          <p class="mb-3 text-xl font-semibold">
+            允许的
+          </p>
 
-        横幅格式指
+          <p class="mb-6">
+            1.使用高质量、易于理解的创意/着陆页面。
+          </p>
 
-        以下规则适用于预着陆页面 / 创意 / 最终优惠页面 / 着陆页面。
+          <p class="mb-6">
+            2.询问用户是否同意下载推广产品。
+          </p>
 
-        ​​禁止
-        1.登陆页面不得包含拼写错误、错误图片、空白页面等。
+          <p class="mb-6">
+            3.使用关于获得获奖者或小奖品（如优惠券）的声明。例如：“您可能赢得了 iPhone / 钱”，“您赢得了一张优惠券”。
+          </p>
+          <p class="mb-6">
+            4.不要在创意、文本和着陆页面中使用任何有关可能病毒、潜在威胁、文件损坏等信息，这可能会吓到用户。
+          </p>
+
+          <p class="mb-6">
+            例如：“病毒可能会损害”，“您可能存在病毒/问题/..”，“扫描已完成”，“点击此处修复”。
+          </p>
+
+          <p class="mb-6">
+            5.使用用户可以轻松关闭的登陆页面。
+          </p>
+        </div>
       </div>
+
     </section>
 
-    <section class="bg-[#F5F7FB] py-10 sm:py-14 lg:py-16">
+    <section class="">
+      <div class="max-w-4xl mx-auto border-t border-[#C3C4C8] flex flex-col items-center pt-5 pb-20 gap-6">
+        <p class="text-[#3A82F9]">在最适合广告主的广告网络T1 Ads上打造您的第一条广告！</p>
+        <button class="text-xl text-[#fff] bg-[#3A82F9] px-6 py-2 rounded">注册T1广告</button>
+      </div>
     </section>
 
   </div>
@@ -190,129 +342,4 @@ useHead({
     },
   ],
 });
-
-// 禁止的类别列表
-const prohibitedCategories = [
-  "武器、弹药及爆炸物",
-  "非法毒品或药物滥用相关内容",
-  "烟草及电子烟产品",
-  "色情、成人内容或露骨的性暗示",
-  "赌博或博彩（未经合法授权的）",
-  "仇恨言论或歧视性内容（包括种族、宗教、性别等）",
-  "暴力、血腥或令人不适的内容",
-  "虚假医疗声明或未经证实的健康产品",
-  "恶意软件、间谍软件或欺诈性软件下载",
-  "侵犯版权或知识产权的内容",
-  "冒充其他品牌或组织的行为",
-  "加密货币和 ICO（初始代币发行）相关广告（需经特殊审批）",
-];
-
-// 上册：素材内容/着陆页面规则
-const contentRules = [
-  {
-    description:
-      "1. 广告素材的内容必须与着陆页内容一致。例如，广告中提到的产品或服务必须在着陆页中能够找到。广告不得使用误导性内容吸引用户点击后跳转至无关页面。",
-    examples: [
-      { allowed: false, label: "素材与着陆页内容不匹配" },
-      { allowed: true, label: "素材与着陆页内容一致" },
-    ],
-  },
-  {
-    description:
-      "2. 广告素材中不得包含模仿系统通知、对话框或错误消息的内容。此类设计可能误导用户，使其误认为是设备或系统发出的真实通知，从而点击广告。",
-    examples: [
-      { allowed: false, label: "模仿系统通知的广告" },
-      { allowed: true, label: "正常的广告创意" },
-    ],
-  },
-  {
-    description:
-      "3. 着陆页不得强制触发文件下载。如需提供文件下载，必须在页面上清楚标明，并由用户主动选择下载。不允许自动触发下载行为。",
-    examples: [
-      { allowed: true, label: "明确标示的下载按钮" },
-      { allowed: true, label: "用户主动选择下载" },
-    ],
-  },
-  {
-    description:
-      "4. 着陆页如果请求浏览器权限（如通知权限、位置权限等），必须在用户执行某个操作后才能弹出请求，不能在页面加载时自动弹出权限请求。",
-    singleExample: { allowed: false, label: "页面加载自动弹出权限请求" },
-  },
-  {
-    description:
-      "5. 广告素材不得包含恶意代码、自动重定向脚本或试图在未经用户同意的情况下收集个人信息的行为。",
-    examples: [
-      { allowed: false, label: "包含恶意重定向的广告" },
-      { allowed: true, label: "正常跳转的广告" },
-    ],
-  },
-  {
-    description:
-      "6. 广告图片和视频素材必须清晰、不模糊、不包含过多文字覆盖（文字占比不得超过素材面积的20%）。素材不得出现明显的拉伸、变形或低分辨率的情况。",
-    examples: [
-      { allowed: false, label: "模糊低质量的素材" },
-      { allowed: true, label: "清晰高质量的素材" },
-    ],
-  },
-  {
-    description:
-      "7. 所有广告素材不得侵犯第三方知识产权，包括但不限于：未经授权使用商标、品牌标识或版权材料。",
-    examples: [
-      { allowed: false, label: "未经授权使用品牌商标" },
-      { allowed: true, label: "使用自有品牌素材" },
-    ],
-  },
-  {
-    description:
-      `8. 着陆页不得包含欺诈性的\u201C关闭\u201D按钮或虚假的互动元素，这些元素在用户点击时会触发非预期的操作（如额外的弹窗或下载）。`,
-    examples: [
-      { allowed: false, label: "虚假关闭按钮" },
-      { allowed: true, label: "真实可用的关闭功能" },
-    ],
-  },
-];
-
-// 下册：弹窗/推送通知规则
-const popupRules = [
-  {
-    description:
-      "1. 弹窗广告的着陆页不得模仿系统软件更新页面或安全警告页面。此类页面会误导用户认为需要下载软件或采取紧急操作。",
-    examples: [
-      { allowed: false, label: "模仿系统更新的弹窗" },
-      { allowed: true, label: "正常的产品展示弹窗" },
-    ],
-  },
-  {
-    description:
-      "2. 弹窗广告不得包含自动播放的音频或视频，除非用户明确选择播放。自动播放会干扰用户体验，并可能被视为骚扰行为。",
-    examples: [
-      { allowed: false, label: "自动播放音频的弹窗" },
-      { allowed: true, label: "用户主动触发播放" },
-    ],
-  },
-  {
-    description:
-      "3. 推送通知广告必须真实反映通知来源，不得模仿操作系统原生通知样式或冒充系统/应用通知来误导用户。",
-    examples: [
-      { allowed: false, label: "模仿系统通知样式" },
-      { allowed: true, label: "清晰标明广告来源" },
-    ],
-  },
-  {
-    description:
-      "4. 弹窗着陆页不得引导用户进入欺诈性金融页面（如假冒银行登录页面）。此类行为被视为严重违规，将导致账户立即封禁。",
-    examples: [
-      { allowed: false, label: "假冒银行登录页面" },
-      { allowed: false, label: "假冒金融交易页面" },
-    ],
-  },
-  {
-    description:
-      "5. 弹窗广告着陆页中的所有可见元素（文字、图片、按钮等）不得包含透明的覆盖层或隐藏的点击区域，以防止用户误操作。",
-    examples: [
-      { allowed: false, label: "包含透明覆盖层的页面" },
-      { allowed: true, label: "清晰无隐藏元素的页面" },
-    ],
-  },
-];
 </script>
