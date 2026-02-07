@@ -1,0 +1,143 @@
+```js
+server {
+    listen 80;
+    server_name your-domain.com;  # 替换为你的域名
+
+    root /path/to/your/project/.output/public;  # Nuxt 构建后的输出目录
+    index index.html;
+
+    # 启用 gzip 压缩
+    gzip on;
+    gzip_vary on;
+    gzip_min_length 1024;
+    gzip_types text/plain text/css text/xml text/javascript application/x-javascript application/xml+rss application/json application/javascript;
+
+    # 处理 Nuxt 静态资源（必须放在路由规则之前，优先级最高）
+    # 处理 /nuxt/ 路径（匹配实际构建输出）
+    location /nuxt/ {
+        alias /path/to/your/project/.output/public/nuxt/;
+        expires 1y;
+        add_header Cache-Control "public, immutable";
+        access_log off;
+        # 确保 JavaScript 文件的 MIME 类型正确
+        default_type application/javascript;
+        types {
+            application/javascript js mjs;
+            text/css css;
+            image/png png;
+            image/jpeg jpg jpeg;
+            image/svg+xml svg;
+        }
+    }
+
+    # 兼容处理 /_nuxt/ 路径（Nuxt 3 默认路径）
+    location /_nuxt/ {
+        alias /path/to/your/project/.output/public/nuxt/;
+        expires 1y;
+        add_header Cache-Control "public, immutable";
+        access_log off;
+        default_type application/javascript;
+        types {
+            application/javascript js mjs;
+            text/css css;
+            image/png png;
+            image/jpeg jpg jpeg;
+            image/svg+xml svg;
+        }
+    }
+
+    # 静态资源缓存
+    location ~* \.(jpg|jpeg|png|gif|ico|css|js|svg|woff|woff2|ttf|eot)$ {
+        expires 1y;
+        add_header Cache-Control "public, immutable";
+        access_log off;
+    }
+
+    # 处理 Nuxt 路由
+    # 对于 SSG 模式，先尝试查找对应的 HTML 文件
+    # 如果不存在，则回退到 index.html（用于客户端路由）
+    location / {
+        try_files $uri $uri/ $uri.html /index.html;
+    }
+
+    # 处理 404 错误
+    error_page 404 /index.html;
+
+    # 安全头
+    add_header X-Frame-Options "SAMEORIGIN" always;
+    add_header X-Content-Type-Options "nosniff" always;
+    add_header X-XSS-Protection "1; mode=block" always;
+}
+```
+
+修复nginx资源路径问题 
+server {
+    listen 80;
+    server_name your-domain.com;  # 替换为你的域名
+    
+    root /path/to/your/project/.output/public;  # Nuxt 构建后的输出目录
+    index index.html;
+    
+    # 启用 gzip 压缩
+    gzip on;
+    gzip_vary on;
+    gzip_min_length 1024;
+    gzip_types text/plain text/css text/xml text/javascript application/x-javascript application/xml+rss application/json application/javascript;
+    
+    # 处理 Nuxt 静态资源（必须放在路由规则之前，优先级最高）
+    # 处理 /nuxt/ 路径（匹配实际构建输出）
+    location /nuxt/ {
+        alias /path/to/your/project/.output/public/nuxt/;
+        expires 1y;
+        add_header Cache-Control "public, immutable";
+        access_log off;
+        # 确保 JavaScript 文件的 MIME 类型正确
+        default_type application/javascript;
+        types {
+            application/javascript js mjs;
+            text/css css;
+            image/png png;
+            image/jpeg jpg jpeg;
+            image/svg+xml svg;
+        }
+    }
+    
+    # 兼容处理 /_nuxt/ 路径（Nuxt 3 默认路径）
+    location /_nuxt/ {
+        alias /path/to/your/project/.output/public/nuxt/;
+        expires 1y;
+        add_header Cache-Control "public, immutable";
+        access_log off;
+        default_type application/javascript;
+        types {
+            application/javascript js mjs;
+            text/css css;
+            image/png png;
+            image/jpeg jpg jpeg;
+            image/svg+xml svg;
+        }
+    }
+    
+    # 静态资源缓存
+    location ~* \.(jpg|jpeg|png|gif|ico|css|js|svg|woff|woff2|ttf|eot)$ {
+        expires 1y;
+        add_header Cache-Control "public, immutable";
+        access_log off;
+    }
+    
+    # 处理 Nuxt 路由
+    # 对于 SSG 模式，先尝试查找对应的 HTML 文件
+    # 如果不存在，则回退到 index.html（用于客户端路由）
+    location / {
+        try_files $uri $uri/ $uri.html /index.html;
+    }
+    
+    # 处理 404 错误
+    error_page 404 /index.html;
+    
+    # 安全头
+    add_header X-Frame-Options "SAMEORIGIN" always;
+    add_header X-Content-Type-Options "nosniff" always;
+    add_header X-XSS-Protection "1; mode=block" always;
+}
+

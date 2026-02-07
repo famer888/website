@@ -109,7 +109,7 @@
               <!-- 右侧说明 -->
               <div class="p-6 sm:p-8">
                 <div class="space-y-3">
-                  <template v-for="field in metaFields" :key="field.key">
+                  <div v-for="field in metaFields" :key="field.key">
                     <div
                       v-if="field.key === 'scene'"
                       class="font-pingfang font-normal text-[14.4px] sm:text-[15.6px] leading-[21.6px] sm:leading-[24px] tracking-normal"
@@ -127,7 +127,7 @@
                         block.meta[field.key]
                       }}</span>
                     </div>
-                  </template>
+                  </div>
                 </div>
               </div>
             </div>
@@ -154,7 +154,7 @@
 
         <!-- Logos（先占位，后续替换） -->
         <div
-          class="flex flex-wrap justify-center items-center gap-10 sm:gap-14 mb-10"
+          class="flex flex-wrap justify-center items-center gap-10 md:gap-28 sm:gap-14 mb-10"
         >
           <div
             v-for="n in logos"
@@ -179,201 +179,203 @@
         </div>
       </div>
     </section>
+    <!-- 页脚 -->
+    <Footer />
   </div>
 </template>
 
 <script setup>
-import img_ggxs9 from "~/assets/imgaes/advertiser/img_ggxs9.jpg";
-import img_ggxs10 from "~/assets/imgaes/advertiser/img_ggxs10.png";
-import img_ggxs11 from "~/assets/imgaes/advertiser/img_ggxs11.png";
-import img_ggxs12 from "~/assets/imgaes/advertiser/img_ggxs12.png";
-import img_ggxs14 from "~/assets/imgaes/advertiser/img_ggxs14.png";
-import img_ggxs13 from "~/assets/imgaes/advertiser/img_ggxs13.png";
-import img_ggxs15 from "~/assets/imgaes/advertiser/img_ggxs15.png";
-import img_ggxs16 from "~/assets/imgaes/advertiser/img_ggxs16.png";
-import img_ggxs17 from "~/assets/imgaes/advertiser/img_ggxs17.png";
-import img_ggxs18 from "~/assets/imgaes/advertiser/img_ggxs18.png";
-import img_ggxs19 from "~/assets/imgaes/advertiser/img_ggxs19.png";
+import img_ggxs9 from '~/assets/imgaes/advertiser/img_ggxs9.jpg'
+import img_ggxs10 from '~/assets/imgaes/advertiser/img_ggxs10.png'
+import img_ggxs11 from '~/assets/imgaes/advertiser/img_ggxs11.png'
+import img_ggxs12 from '~/assets/imgaes/advertiser/img_ggxs12.png'
+import img_ggxs14 from '~/assets/imgaes/advertiser/img_ggxs14.png'
+import img_ggxs13 from '~/assets/imgaes/advertiser/img_ggxs13.png'
+import img_ggxs15 from '~/assets/imgaes/advertiser/img_ggxs15.png'
+import img_ggxs16 from '~/assets/imgaes/advertiser/img_ggxs16.png'
+import img_ggxs17 from '~/assets/imgaes/advertiser/img_ggxs17.png'
+import img_ggxs18 from '~/assets/imgaes/advertiser/img_ggxs18.png'
+import img_ggxs19 from '~/assets/imgaes/advertiser/img_ggxs19.png'
 
 // SEO 配置
 useHead({
-  title: "广告形式 - T1",
+  title: '广告形式 - T1',
   meta: [
     {
-      name: "description",
+      name: 'description',
       content:
-        "了解我们提供的多种广告形式：开屏、信息流、Banner、插屏、竖屏与九宫格等。",
+        '了解我们提供的多种广告形式：开屏、信息流、Banner、插屏、竖屏与九宫格等。',
     },
   ],
-});
+})
 
 const navItems = [
-  { id: "open-screen", label: "开屏广告" },
-  { id: "feed", label: "信息流广告" },
-  { id: "banner", label: "Banner广告" },
-  { id: "interstitial", label: "插屏广告" },
-  { id: "vertical", label: "竖屏广告" },
-  { id: "grid", label: "九宫格广告" },
-];
+  { id: 'open-screen', label: '开屏广告' },
+  { id: 'feed', label: '信息流广告' },
+  { id: 'banner', label: 'Banner广告' },
+  { id: 'interstitial', label: '插屏广告' },
+  { id: 'vertical', label: '竖屏广告' },
+  { id: 'grid', label: '九宫格广告' },
+]
 
 // 元数据字段配置
 const metaFields = [
-  { key: "type", label: "广告类型" },
-  { key: "scene", label: "应用开发会员展示位" },
-  { key: "steps", label: "展示步骤" },
-  { key: "format", label: "支持格式" },
-  { key: "size", label: "样式尺寸" },
-  { key: "impression", label: "预估曝光量" },
-  { key: "model", label: "模式" },
-];
+  { key: 'type', label: '广告类型' },
+  { key: 'scene', label: '应用开发会员展示位' },
+  { key: 'steps', label: '展示步骤' },
+  { key: 'format', label: '支持格式' },
+  { key: 'size', label: '样式尺寸' },
+  { key: 'impression', label: '预估曝光量' },
+  { key: 'model', label: '模式' },
+]
 
 const logos = [
-  { id: "logo1", image: img_ggxs16 },
-  { id: "logo2", image: img_ggxs17 },
-  { id: "logo3", image: img_ggxs18 },
-  { id: "logo4", image: img_ggxs19 },
-];
+  { id: 'logo1', image: img_ggxs16 },
+  { id: 'logo2', image: img_ggxs17 },
+  { id: 'logo3', image: img_ggxs18 },
+  { id: 'logo4', image: img_ggxs19 },
+]
 // 占位数据：后续你替换 image、文案与字段即可
 const adBlocks = [
   {
-    id: "open-screen",
-    sectionTitle: "开屏广告",
+    id: 'open-screen',
+    sectionTitle: '开屏广告',
     image: img_ggxs10,
     meta: {
-      type: "Banner广告",
-      scene: "应用开发会员展示位，开屏品牌资产营销模式，填充点，点击率更高。",
-      steps: "所有应用的启动页",
-      format: "jpg、JPEG、PNG等静态图片",
-      size: "宽高比 9:16",
-      impression: "3200万/日",
-      model: "CPT",
+      type: 'Banner广告',
+      scene: '应用开发会员展示位，开屏品牌资产营销模式，填充点，点击率更高。',
+      steps: '所有应用的启动页',
+      format: 'jpg、JPEG、PNG等静态图片',
+      size: '宽高比 9:16',
+      impression: '3200万/日',
+      model: 'CPT',
     },
   },
   {
-    id: "feed",
-    sectionTitle: "信息流广告",
+    id: 'feed',
+    sectionTitle: '信息流广告',
     image: img_ggxs11,
     meta: {
-      type: "信息流广告",
+      type: '信息流广告',
       scene:
-        "契合应用原生环境的样式，提供优质一致的用户体验，助您最大程度获取收益。",
-      steps: "资讯页、视频详情页、信息列表页等",
-      format: "单图、组图、视频",
-      size: "4:2、7:5 等",
-      impression: "3200万/日",
-      model: "CPT",
+        '契合应用原生环境的样式，提供优质一致的用户体验，助您最大程度获取收益。',
+      steps: '资讯页、视频详情页、信息列表页等',
+      format: '单图、组图、视频',
+      size: '4:2、7:5 等',
+      impression: '3200万/日',
+      model: 'CPT',
     },
   },
   {
-    id: "banner",
-    sectionTitle: "Banner广告",
+    id: 'banner',
+    sectionTitle: 'Banner广告',
     image: img_ggxs12,
     meta: {
-      type: "Banner广告",
-      scene: "在APP页/外/底部固定位置广告，展示时间长，曝光优先于其它。",
-      steps: "APP页面页底/顶部、视频播放页、活动页、资讯页等",
-      format: "jpg、JPEG、PNG等静态图片",
-      size: "4:2、7:5 等",
-      impression: "—",
-      model: "CPT",
+      type: 'Banner广告',
+      scene: '在APP页/外/底部固定位置广告，展示时间长，曝光优先于其它。',
+      steps: 'APP页面页底/顶部、视频播放页、活动页、资讯页等',
+      format: 'jpg、JPEG、PNG等静态图片',
+      size: '4:2、7:5 等',
+      impression: '—',
+      model: 'CPT',
     },
   },
   {
-    id: "interstitial",
-    sectionTitle: "插屏广告",
+    id: 'interstitial',
+    sectionTitle: '插屏广告',
     image: img_ggxs13,
     meta: {
-      type: "插屏广告",
+      type: '插屏广告',
       scene:
-        "在APP功能使用过程中的最佳时机展示，能够同时兼顾高收益和用户体验。",
-      steps: "APP页面、详情页、活动页等",
-      format: "jpg、JPEG、PNG、GIF等静/动态图",
-      size: "4:2、7:5 等",
-      impression: "—",
-      model: "CPT",
+        '在APP功能使用过程中的最佳时机展示，能够同时兼顾高收益和用户体验。',
+      steps: 'APP页面、详情页、活动页等',
+      format: 'jpg、JPEG、PNG、GIF等静/动态图',
+      size: '4:2、7:5 等',
+      impression: '—',
+      model: 'CPT',
     },
   },
   {
-    id: "vertical",
-    sectionTitle: "竖屏广告",
+    id: 'vertical',
+    sectionTitle: '竖屏广告',
     image: img_ggxs14,
     meta: {
-      type: "竖屏广告",
+      type: '竖屏广告',
       scene:
-        "竖版视频流全屏播放的视角信息流样式，提供沉浸式更大用户体验，转化率更高。",
-      steps: "竖版视频列表页、竖版视频信息流、直播间页等",
-      format: "视频",
-      size: "9:16、3:2、2:3 等",
-      impression: "—",
-      model: "CPT",
+        '竖版视频流全屏播放的视角信息流样式，提供沉浸式更大用户体验，转化率更高。',
+      steps: '竖版视频列表页、竖版视频信息流、直播间页等',
+      format: '视频',
+      size: '9:16、3:2、2:3 等',
+      impression: '—',
+      model: 'CPT',
     },
   },
   {
-    id: "grid",
-    sectionTitle: "九宫格广告",
+    id: 'grid',
+    sectionTitle: '九宫格广告',
     image: img_ggxs15,
     meta: {
-      type: "九宫格广告",
+      type: '九宫格广告',
       scene:
-        "固定位置展示，广告的曝光机会大大增加。支持批量位置展示及动态展示方式，动态化的展示方式带来更多用户触达，刺激点击。",
-      steps: "APP首页、活动页等",
-      format: "jpg、JPEG、PNG、GIF等动/静态",
-      size: "1:1",
-      impression: "—",
-      model: "CPT",
+        '固定位置展示，广告的曝光机会大大增加。支持批量位置展示及动态展示方式，动态化的展示方式带来更多用户触达，刺激点击。',
+      steps: 'APP首页、活动页等',
+      format: 'jpg、JPEG、PNG、GIF等动/静态',
+      size: '1:1',
+      impression: '—',
+      model: 'CPT',
     },
   },
-];
+]
 
-const activeId = ref(navItems[0].id);
-const sectionEls = ref([]);
-const isUserScrolling = ref(false);
+const activeId = ref(navItems[0].id)
+const sectionEls = ref([])
+const isUserScrolling = ref(false)
 
 const setSectionRef = (el, idx) => {
-  if (!el) return;
-  sectionEls.value[idx] = el;
-};
+  if (!el) return
+  sectionEls.value[idx] = el
+}
 
 const scrollToSection = (id) => {
-  const el = document.getElementById(id);
-  if (!el) return;
+  const el = document.getElementById(id)
+  if (!el) return
   // 设置用户正在滚动标志，防止 IntersectionObserver 干扰
-  isUserScrolling.value = true;
-  activeId.value = id;
-  el.scrollIntoView({ behavior: "smooth", block: "start" });
+  isUserScrolling.value = true
+  activeId.value = id
+  el.scrollIntoView({ behavior: 'smooth', block: 'start' })
   // 滚动完成后，延迟恢复 IntersectionObserver 的自动更新
   setTimeout(() => {
-    isUserScrolling.value = false;
-  }, 1000);
-};
+    isUserScrolling.value = false
+  }, 1000)
+}
 
 onMounted(() => {
   // 监听滚动，自动高亮当前区块（IntersectionObserver）
   const observer = new IntersectionObserver(
     (entries) => {
       // 如果用户正在手动滚动，忽略 IntersectionObserver 的更新
-      if (isUserScrolling.value) return;
+      if (isUserScrolling.value) return
 
       const visible = entries
         .filter((e) => e.isIntersecting)
         .sort(
           (a, b) => (b.intersectionRatio || 0) - (a.intersectionRatio || 0),
-        )[0];
+        )[0]
 
-      if (!visible?.target?.id) return;
-      activeId.value = visible.target.id;
+      if (!visible?.target?.id) return
+      activeId.value = visible.target.id
     },
     {
       root: null,
-      rootMargin: "-35% 0px -55% 0px",
+      rootMargin: '-35% 0px -55% 0px',
       threshold: [0.1, 0.2, 0.3, 0.4],
     },
-  );
+  )
 
-  sectionEls.value.forEach((el) => el && observer.observe(el));
+  sectionEls.value.forEach((el) => el && observer.observe(el))
 
   onUnmounted(() => {
-    observer.disconnect();
-  });
-});
+    observer.disconnect()
+  })
+})
 </script>

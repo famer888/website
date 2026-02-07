@@ -92,8 +92,8 @@
             <div class="flex gap-8 items-center mb-12">
               <!-- 左侧：文本内容 -->
               <div class="flex-1">
-                <h2 class="text-4xl font-bold text-[#626671] mb-4">移动广告</h2>
-                <h3 class="text-2xl font-medium text-[#626671] mb-6">在所有设备上触达您的受众</h3>
+                <h2 class="font-pingfang font-medium text-[56px] leading-[96px] tracking-normal text-[#626671] mb-4">移动广告</h2>
+                <h3 class="font-pingfang font-medium text-[24px] leading-[36px] tracking-normal text-[#93959C] mb-6">在所有设备上触达您的受众</h3>
                 <p class="text-base text-[#93959C] leading-relaxed">
                   我们的广告投放技术赋能移动广告商,使他们能够针对全球数百万用户,在用户全天使用智能手机时,投放高度精准、可自动优化的广告活动。
                 </p>
@@ -144,11 +144,9 @@
         
         <!-- 为什么选择T1部分 - 移动端 -->
         <div class="bg-white py-8">
-          <h2 class="text-left text-2xl font-bold mb-8 px-4">
-
-            <h1 class="text-[36px] font-bold text-[#171A1D] mb-6 text-left">为什么选择</h1>
-            <h1 class="text-[36px] font-bold text-[#3A82F9] mb-6 text-left">T1 DSP?</h1>
-
+          <h2 class="text-[36px] font-bold mb-6 text-left px-4">
+            <span class="text-[#171A1D]">为什么选择</span>
+            <span class="text-[#3A82F9]">T1 DSP?</span>
           </h2>
           
           <!-- 大图片 -->

@@ -13,17 +13,17 @@
           <div class="flex-1">
             <!-- 导航链接 - 自动换行 -->
             <div class="flex flex-wrap items-center gap-1 md:gap-2 mb-2 text-[#EAEBED] font-pingfang font-normal text-[12px] leading-[20px] tracking-normal">
-              <NuxtLink to="/terms" class="hover:text-blue-300 transition-colors">使用条款</NuxtLink>
+              <NuxtLink to="/terms?tab=terms" class="hover:text-blue-300 transition-colors">使用条款</NuxtLink>
               <span class="text-gray-400">|</span>
-              <NuxtLink to="/privacy" class="hover:text-blue-300 transition-colors">隐私声明</NuxtLink>
+              <NuxtLink to="/terms?tab=privacy" class="hover:text-blue-300 transition-colors">隐私声明</NuxtLink>
               <span class="text-gray-400">|</span>
-              <NuxtLink to="/cookie" class="hover:text-blue-300 transition-colors">Cookie 政策</NuxtLink>
+              <NuxtLink to="/terms?tab=cookie" class="hover:text-blue-300 transition-colors">Cookie 政策</NuxtLink>
               <span class="text-gray-400">|</span>
               <NuxtLink to="/contact/help-center" class="hover:text-blue-300 transition-colors">帮助中心</NuxtLink>
               <span class="text-gray-400">|</span>
-              <NuxtLink to="/sitemap" class="hover:text-blue-300 transition-colors">网站地图</NuxtLink>
+              <NuxtLink to="/terms?tab=sitemap" class="hover:text-blue-300 transition-colors">网站地图</NuxtLink>
               <span class="text-gray-400">|</span>
-              <NuxtLink to="/contact" class="hover:text-blue-300 transition-colors">联系我们</NuxtLink>
+              <NuxtLink to="/terms?tab=contact" class="hover:text-blue-300 transition-colors">联系我们</NuxtLink>
             </div>
             
             <!-- 版权信息 -->
