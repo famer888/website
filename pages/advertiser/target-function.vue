@@ -88,15 +88,15 @@
         </p>
 
         <!-- PC：2x2 -->
-        <div class="hidden md:grid grid-cols-2 gap-8">
+        <div class="hidden md:grid grid-cols-2 gap-8 max-w-6xl mx-auto">
           <div
             v-for="item in deviceNetworkFeatures"
             :key="item.title"
-            class="bg-white rounded-[12px] shadow-[0_5px_8px_-2px_rgba(0,0,0,0.025),0_2px_3px_-1px_rgba(0,0,0,0.01)] border border-[#EEF0F4] p-8 flex gap-6 items-start"
+            class="bg-white rounded-[12px] w-[582px] h-[220px] shadow-[0_2px_24px_0_rgba(0,0,0,0.096)] border-none p-8 flex gap-6 items-center"
           >
             <SvgIcon
               :name="item.icon"
-              class="w-16 h-16 object-contain flex-shrink-0"
+              class="w-[160px] h-[160px] object-contain flex-shrink-0"
               alt="图标"
             />
             <div class="flex-1">
@@ -178,11 +178,11 @@
           <div
             v-for="item in browserOsFeatures"
             :key="item.title"
-            class="bg-white rounded-[12px] shadow-[0_4px_6px_rgba(0,0,0,0.1)] p-8 flex flex-col items-center text-center"
+            class="bg-white rounded-[12px] w-[373px] h-[480px] shadow-[0_2px_24px_0_rgba(0,0,0,0.096)] border-none p-8 flex flex-col items-center text-center mx-auto"
           >
             <SvgIcon
               :name="item.icon"
-              class="w-16 h-16 object-contain mb-4"
+              class="w-[160px] h-[160px] object-contain mb-4"
               alt="图标"
             />
             <div class="flex-1">

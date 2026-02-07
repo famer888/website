@@ -43,13 +43,13 @@
           v-for="item in items"
           :key="item.title"
           :class="[
-            'bg-white rounded-[12px] shadow-[0_5px_8px_-2px_rgba(0,0,0,0.025),0_2px_3px_-1px_rgba(0,0,0,0.01)] border border-[#EEF0F4] p-8',
+            'bg-white rounded-[12px] p-8',
             id === 'unique' ||
             id === 'target' ||
             id === 'optimization' ||
             id === 'browser'
-              ? 'py-32 flex flex-col items-center justify-center'
-              : 'py-28',
+              ? 'xl:w-[373px] xl:h-[480px] shadow-[0_2px_24px_0_rgba(0,0,0,0.096)] border-none flex flex-col items-center justify-center mx-auto'
+              : 'py-28 shadow-[0_5px_8px_-2px_rgba(0,0,0,0.025),0_2px_3px_-1px_rgba(0,0,0,0.01)] border border-[#EEF0F4]',
           ]"
         >
           <SvgIcon
@@ -132,7 +132,7 @@ const props = defineProps({
   items: Array,
   bgColor: String,
   scrollRef: Object,
-  cardRefs: Array,
+  cardRefs: Object,
   activeIndex: Object,
   onScroll: Function,
   setCardRef: Function,
