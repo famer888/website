@@ -11,13 +11,13 @@
             </NuxtLink>
           </div>
           
-          <!-- PC端导航 -->
-          <div class="hidden md:flex items-center space-x-6">
+          <!-- PC端导航 - 居中 -->
+          <div class="hidden md:flex items-center space-x-12 absolute left-1/2 transform -translate-x-1/2">
             <!-- 为什么选择我们 -->
             <div class="relative group">
               <button 
                 @click="toggleDropdown('why')"
-                class="flex items-center text-gray-700 hover:text-brand px-3 py-2 text-sm font-medium transition-colors rounded-[24px] h-12"
+                class="flex items-center text-gray-700 hover:text-brand px-3 py-2 text-sm font-medium transition-colors rounded-[24px] h-12 w-[180px] justify-center whitespace-nowrap"
                 :class="{ 'text-brand bg-[#F7F7FA]': activeDropdown === 'why' }"
               >
                 {{ getWhyMenuText }}
@@ -41,7 +41,7 @@
             <div class="relative group">
               <button 
                 @click="toggleDropdown('advertiser')"
-                class="flex items-center text-gray-700 hover:text-brand px-3 py-2 text-sm font-medium transition-colors rounded-[24px] h-12"
+                class="flex items-center text-gray-700 hover:text-brand px-3 py-2 text-sm font-medium transition-colors rounded-[24px] h-12 w-[100px] justify-center"
                 :class="{ 'text-brand bg-[#F7F7FA]': activeDropdown === 'advertiser' }"
               >
                 {{ getAdvertiserMenuText }}
@@ -61,7 +61,7 @@
             </div>
 
             <!-- 广告样式 -->
-            <NuxtLink to="/ad-styles" class="text-gray-700 hover:text-brand px-3 py-2 text-sm font-medium transition-colors rounded-[24px] h-12 flex items-center" :class="{ 'text-brand bg-[#F7F7FA]': route.path === '/ad-styles' }">
+            <NuxtLink to="/ad-styles" class="text-gray-700 hover:text-brand px-3 py-2 text-sm font-medium transition-colors rounded-[24px] h-12 flex items-center justify-center w-[100px]" :class="{ 'text-brand bg-[#F7F7FA]': route.path === '/ad-styles' }">
               广告样式
             </NuxtLink>
 
@@ -69,7 +69,7 @@
             <div class="relative group">
               <button 
                 @click="toggleDropdown('contact')"
-                class="flex items-center text-gray-700 hover:text-brand px-3 py-2 text-sm font-medium transition-colors rounded-[24px] h-12"
+                class="flex items-center text-gray-700 hover:text-brand px-3 py-2 text-sm font-medium transition-colors rounded-[24px] h-12 w-[120px] justify-center"
                 :class="{ 'text-brand bg-[#F7F7FA]': activeDropdown === 'contact' }"
               >
                 {{ getContactMenuText }}
@@ -85,19 +85,19 @@
                 <NuxtLink to="/contact" :class="route.path === '/contact' ? 'block mx-2 px-3 py-2 text-sm text-brand rounded-lg hover:bg-[#5380DD19]' : 'block mx-2 px-3 py-2 text-sm text-gray-700 rounded-lg hover:bg-[#5380DD19]'">联系我们</NuxtLink>
                 <NuxtLink to="/contact/help-center" :class="route.path === '/contact/help-center' ? 'block mx-2 px-3 py-2 text-sm text-brand rounded-lg hover:bg-[#5380DD19]' : 'block mx-2 px-3 py-2 text-sm text-gray-700 rounded-lg hover:bg-[#5380DD19]'">帮助中心</NuxtLink>
                 <NuxtLink to="/contact/quality-guide" :class="route.path === '/contact/quality-guide' ? 'block mx-2 px-3 py-2 text-sm text-brand rounded-lg hover:bg-[#5380DD19]' : 'block mx-2 px-3 py-2 text-sm text-gray-700 rounded-lg hover:bg-[#5380DD19]'">质量指南</NuxtLink>
-                <NuxtLink to="/contact/download-media-kit" :class="route.path === '/contact/download-media-kit' ? 'block mx-2 px-3 py-2 text-sm text-brand rounded-lg hover:bg-[#5380DD19]' : 'block mx-2 px-3 py-2 text-sm text-gray-700 rounded-lg hover:bg-[#5380DD19]'">下载媒体资源包</NuxtLink>
+                <!-- <NuxtLink to="/contact/download-media-kit" :class="route.path === '/contact/download-media-kit' ? 'block mx-2 px-3 py-2 text-sm text-brand rounded-lg hover:bg-[#5380DD19]' : 'block mx-2 px-3 py-2 text-sm text-gray-700 rounded-lg hover:bg-[#5380DD19]'">下载媒体资源包</NuxtLink> -->
               </div>
             </div>
+          </div>
 
-            <!-- 登录和注册 -->
-            <div class="flex items-center space-x-4 ml-4">
-              <NuxtLink to="/login" class="text-gray-700 hover:text-brand px-3 py-2 text-sm font-medium transition-colors">
-                登陆
-              </NuxtLink>
-              <NuxtLink to="/register" class="bg-brand text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-brand transition-colors">
-                注册
-              </NuxtLink>
-            </div>
+          <!-- 登录和注册 -->
+          <div class="hidden md:flex items-center space-x-4 ml-4">
+            <NuxtLink to="/login" class="text-gray-700 hover:text-brand px-3 py-2 text-sm font-medium transition-colors">
+              登陆
+            </NuxtLink>
+            <NuxtLink to="/register" class="bg-brand text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-brand transition-colors">
+              注册
+            </NuxtLink>
           </div>
 
           <!-- 移动端菜单按钮 -->
@@ -186,7 +186,7 @@
               <NuxtLink to="/contact" @click="mobileMenuOpen = false" class="block px-8 py-3.5 font-pingfang font-normal text-[14px] leading-[20px] tracking-normal text-justify text-[#93959c]">联系我们</NuxtLink>
               <NuxtLink to="/contact/help-center" @click="mobileMenuOpen = false" class="block px-8 py-3.5 font-pingfang font-normal text-[14px] leading-[20px] tracking-normal text-justify text-[#93959c]">帮助中心</NuxtLink>
               <NuxtLink to="/contact/quality-guide" @click="mobileMenuOpen = false" class="block px-8 py-3.5 font-pingfang font-normal text-[14px] leading-[20px] tracking-normal text-justify text-[#93959c]">质量指南</NuxtLink>
-              <NuxtLink to="/contact/download-media-kit" @click="mobileMenuOpen = false" class="block px-8 py-3.5 font-pingfang font-normal text-[14px] leading-[20px] tracking-normal text-justify text-[#93959c]">下载媒体资源包</NuxtLink>
+              <!-- <NuxtLink to="/contact/download-media-kit" @click="mobileMenuOpen = false" class="block px-8 py-3.5 font-pingfang font-normal text-[14px] leading-[20px] tracking-normal text-justify text-[#93959c]">下载媒体资源包</NuxtLink> -->
             </div>
           </div>
           
@@ -238,7 +238,7 @@ const getContactMenuText = computed(() => {
   if (route.path === '/contact') return '联系我们'
   if (route.path === '/contact/help-center') return '帮助中心'
   if (route.path === '/contact/quality-guide') return '质量指南'
-  if (route.path === '/contact/download-media-kit') return '下载媒体资源包'
+  // if (route.path === '/contact/download-media-kit') return '下载媒体资源包'
   return '联系我们'
 })
 
