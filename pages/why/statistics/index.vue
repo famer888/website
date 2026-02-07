@@ -192,32 +192,6 @@ import statistics13ImageSrc from '~/assets/imgaes/why/statistics13.svg'
 import statistics14ImageSrc from '~/assets/imgaes/why/statistics14.svg'
 import statistics15ImageSrc from '~/assets/imgaes/why/statistics15.svg'
 
-// 国家流量数据
-const countriesLeft = [
-  { name: 'United States', traffic: '1.21 billion' },
-  { name: 'Japan', traffic: '378.0 million' },
-  { name: 'United Kingdom', traffic: '218.0 million' },
-  { name: 'Germany', traffic: '211.4 million' },
-  { name: 'France', traffic: '200.8 million' },
-  { name: 'Philippines', traffic: '142.6 million' },
-  { name: 'Canada', traffic: '136.4 million' },
-  { name: 'Italy', traffic: '135.7 million' },
-  { name: 'Mexico', traffic: '126.6 million' },
-  { name: 'Russian Federation', traffic: '120.0 million' }
-]
-
-const countriesRight = [
-  { name: 'Brazil', traffic: '105.2 million' },
-  { name: 'Spain', traffic: '94.3 million' },
-  { name: 'Poland', traffic: '89.8 million' },
-  { name: 'Netherlands', traffic: '87.3 million' },
-  { name: 'Thailand', traffic: '82.2 million' },
-  { name: 'Australia', traffic: '75.5 million' },
-  { name: 'Ukraine', traffic: '58.7 million' },
-  { name: 'Argentina', traffic: '49.9 million' },
-  { name: 'Republic of Korea', traffic: '45.6 million' },
-  { name: 'Hong Kong', traffic: '44.8 million' }
-]
 
 // 行业数据
 const industriesForPC = [

@@ -2006,68 +2006,68 @@ export const WetmentbMap = {
   lastUpdated: '',
   intro: '',
   content: `
-    <div class="sitemap-container ml-[50px]">
+    <div class="w-full ml-[50px]">
       <div class="flex flex-wrap mt-8 -mx-2 md:-mx-6">
         <!-- 第一列 -->
-        <div class="sitemap-column flex-[0_0_50%] md:flex-[0_0_33.333%] px-2 md:px-6">
-          <div class="sitemap-section mb-8">
-            <h3 class="sitemap-heading">
-              <a href="/why/advantages" class="text-blue-600 hover:text-blue-700 border-b-2 border-blue-600 pb-1">为什么选择我们?</a>
+        <div class="flex flex-col box-border flex-[0_0_50%] md:flex-[0_0_33.333%] px-2 md:px-6">
+          <div class="mb-8">
+            <h3 class="mb-4">
+              <a href="/why/advantages" class="text-blue-600 hover:text-blue-700 border-b-2 border-blue-600 pb-1 text-base md:text-lg font-medium inline-block no-underline">为什么选择我们?</a>
             </h3>
-            <ul class="sitemap-list">
-              <li><a href="/why/advantages" class="text-gray-700 hover:text-blue-600">我们的优势</a></li>
-              <li><a href="/why/statistics" class="text-gray-700 hover:text-blue-600">数据统计</a></li>
-              <li><a href="/why/mobile-ads" class="text-gray-700 hover:text-blue-600">移动广告</a></li>
+            <ul class="list-none pl-0 mt-4 space-y-2">
+              <li class="text-gray-700 text-sm md:text-base mb-2 list-none"><a href="/why/advantages" class="text-gray-700 hover:text-blue-600 transition-colors no-underline">我们的优势</a></li>
+              <li class="text-gray-700 text-sm md:text-base mb-2 list-none"><a href="/why/statistics" class="text-gray-700 hover:text-blue-600 transition-colors no-underline">数据统计</a></li>
+              <li class="text-gray-700 text-sm md:text-base mb-2 list-none"><a href="/why/mobile-ads" class="text-gray-700 hover:text-blue-600 transition-colors no-underline">移动广告</a></li>
             </ul>
           </div>
-          <div class="sitemap-section">
-            <h3 class="sitemap-heading">
-              <a href="/advertiser/how-to-operate" class="text-blue-600 hover:text-blue-700 border-b-2 border-blue-600 pb-1">广告商</a>
+          <div class="mb-6">
+            <h3 class="mb-4">
+              <a href="/advertiser/how-to-operate" class="text-blue-600 hover:text-blue-700 border-b-2 border-blue-600 pb-1 text-base md:text-lg font-medium inline-block no-underline">广告商</a>
             </h3>
-            <ul class="sitemap-list">
-              <li><a href="/advertiser/how-to-operate" class="text-gray-700 hover:text-blue-600">如何操作?</a></li>
-              <li><a href="/advertiser/t1-dsp" class="text-gray-700 hover:text-blue-600">T1 DSP</a></li>
-              <li><a href="/advertiser/target-function" class="text-gray-700 hover:text-blue-600">目标功能</a></li>
+            <ul class="list-none pl-0 mt-4 space-y-2">
+              <li class="text-gray-700 text-sm md:text-base mb-2 list-none"><a href="/advertiser/how-to-operate" class="text-gray-700 hover:text-blue-600 transition-colors no-underline">如何操作?</a></li>
+              <li class="text-gray-700 text-sm md:text-base mb-2 list-none"><a href="/advertiser/t1-dsp" class="text-gray-700 hover:text-blue-600 transition-colors no-underline">T1 DSP</a></li>
+              <li class="text-gray-700 text-sm md:text-base mb-2 list-none"><a href="/advertiser/target-function" class="text-gray-700 hover:text-blue-600 transition-colors no-underline">目标功能</a></li>
             </ul>
           </div>
         </div>
 
         <!-- 第二列 -->
-        <div class="sitemap-column flex-[0_0_50%] md:flex-[0_0_33.333%] px-2 md:px-6">
-          <div class="sitemap-section mb-8">
-            <h3 class="sitemap-heading">
-              <a href="/register" class="text-blue-600 hover:text-blue-700 border-b-2 border-blue-600 pb-1">账户</a>
+        <div class="flex flex-col box-border flex-[0_0_50%] md:flex-[0_0_33.333%] px-2 md:px-6">
+          <div class="mb-8">
+            <h3 class="mb-4">
+              <a href="/register" class="text-blue-600 hover:text-blue-700 border-b-2 border-blue-600 pb-1 text-base md:text-lg font-medium inline-block no-underline">账户</a>
             </h3>
-            <ul class="sitemap-list">
-              <li><a href="/register" class="text-gray-700 hover:text-blue-600">注册</a></li>
-              <li><a href="/login" class="text-gray-700 hover:text-blue-600">登录</a></li>
-              <li><a href="/login" class="text-gray-700 hover:text-blue-600">忘记密码?</a></li>
+            <ul class="list-none pl-0 mt-4 space-y-2">
+              <li class="text-gray-700 text-sm md:text-base mb-2 list-none"><a href="/register" class="text-gray-700 hover:text-blue-600 transition-colors no-underline">注册</a></li>
+              <li class="text-gray-700 text-sm md:text-base mb-2 list-none"><a href="/login" class="text-gray-700 hover:text-blue-600 transition-colors no-underline">登录</a></li>
+              <li class="text-gray-700 text-sm md:text-base mb-2 list-none"><a href="/login" class="text-gray-700 hover:text-blue-600 transition-colors no-underline">忘记密码?</a></li>
             </ul>
           </div>
-          <div class="sitemap-section">
-            <h3 class="sitemap-heading">
-              <a href="/ad-styles" class="text-blue-600 hover:text-blue-700 border-b-2 border-blue-600 pb-1">广告样式</a>
+          <div class="mb-6">
+            <h3 class="mb-4">
+              <a href="/ad-styles" class="text-blue-600 hover:text-blue-700 border-b-2 border-blue-600 pb-1 text-base md:text-lg font-medium inline-block no-underline">广告样式</a>
             </h3>
-            <ul class="sitemap-list">
-              <li><a href="/ad-styles" class="text-gray-700 hover:text-blue-600">开屏广告</a></li>
-              <li><a href="/ad-styles" class="text-gray-700 hover:text-blue-600">信息流广告</a></li>
-              <li><a href="/ad-styles" class="text-gray-700 hover:text-blue-600">横幅广告插屏广告</a></li>
-              <li><a href="/ad-styles" class="text-gray-700 hover:text-blue-600">沉浸式信息流广告</a></li>
-              <li><a href="/ad-styles" class="text-gray-700 hover:text-blue-600">九宫格广告</a></li>
+            <ul class="list-none pl-0 mt-4 space-y-2">
+              <li class="text-gray-700 text-sm md:text-base mb-2 list-none"><a href="/ad-styles" class="text-gray-700 hover:text-blue-600 transition-colors no-underline">开屏广告</a></li>
+              <li class="text-gray-700 text-sm md:text-base mb-2 list-none"><a href="/ad-styles" class="text-gray-700 hover:text-blue-600 transition-colors no-underline">信息流广告</a></li>
+              <li class="text-gray-700 text-sm md:text-base mb-2 list-none"><a href="/ad-styles" class="text-gray-700 hover:text-blue-600 transition-colors no-underline">横幅广告插屏广告</a></li>
+              <li class="text-gray-700 text-sm md:text-base mb-2 list-none"><a href="/ad-styles" class="text-gray-700 hover:text-blue-600 transition-colors no-underline">沉浸式信息流广告</a></li>
+              <li class="text-gray-700 text-sm md:text-base mb-2 list-none"><a href="/ad-styles" class="text-gray-700 hover:text-blue-600 transition-colors no-underline">九宫格广告</a></li>
             </ul>
           </div>
         </div>
 
         <!-- 第三列 -->
-        <div class="sitemap-column flex-[0_0_50%] md:flex-[0_0_33.333%] px-2 md:px-6">
-          <div class="sitemap-section">
-            <h3 class="sitemap-heading">
-              <a href="/contact/help-center" class="text-blue-600 hover:text-blue-700 border-b-2 border-blue-600 pb-1">联系我们</a>
+        <div class="flex flex-col box-border flex-[0_0_50%] md:flex-[0_0_33.333%] px-2 md:px-6">
+          <div class="mb-6">
+            <h3 class="mb-4">
+              <a href="/contact/help-center" class="text-blue-600 hover:text-blue-700 border-b-2 border-blue-600 pb-1 text-base md:text-lg font-medium inline-block no-underline">联系我们</a>
             </h3>
-            <ul class="sitemap-list">
-              <li><a href="/contact/help-center" class="text-gray-700 hover:text-blue-600">帮助中心</a></li>
-              <li><a href="/contact/quality-guide" class="text-gray-700 hover:text-blue-600">质量指南</a></li>
-              <li><a href="/contact/download-media-kit" class="text-gray-700 hover:text-blue-600">下载媒体资源包</a></li>
+            <ul class="list-none pl-0 mt-4 space-y-2">
+              <li class="text-gray-700 text-sm md:text-base mb-2 list-none"><a href="/contact/help-center" class="text-gray-700 hover:text-blue-600 transition-colors no-underline">帮助中心</a></li>
+              <li class="text-gray-700 text-sm md:text-base mb-2 list-none"><a href="/contact/quality-guide" class="text-gray-700 hover:text-blue-600 transition-colors no-underline">质量指南</a></li>
+              <li class="text-gray-700 text-sm md:text-base mb-2 list-none"><a href="/contact/download-media-kit" class="text-gray-700 hover:text-blue-600 transition-colors no-underline">下载媒体资源包</a></li>
             </ul>
           </div>
         </div>

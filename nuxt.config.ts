@@ -13,6 +13,9 @@ export default defineNuxtConfig({
 
   // SEO 配置
   app: {
+    // 确保构建资源路径正确 - 使用 /nuxt/ 匹配实际请求路径
+    buildAssetsDir: '/nuxt/',
+    baseURL: '/',
     head: {
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',
@@ -30,6 +33,22 @@ export default defineNuxtConfig({
   // SSG 配置（静态站点生成）
   // 注意：SSG 仍然需要 ssr: true，因为需要在构建时进行服务端渲染
   ssr: true,
+
+  // 确保客户端 JavaScript 正确加载和 hydration
+  experimental: {
+    payloadExtraction: false
+  },
+
+  // 确保客户端脚本正确加载
+  vite: {
+    build: {
+      rollupOptions: {
+        output: {
+          manualChunks: undefined
+        }
+      }
+    }
+  },
 
   // Nitro 配置 - 启用静态站点生成
   // @ts-ignore - nitro 配置在运行时有效
@@ -50,7 +69,7 @@ export default defineNuxtConfig({
         '/contact/help-center',
         '/contact/quality-guide',
         '/contact/download-media-kit',
-        '/video'
+
       ],
       // 忽略不存在的路由，避免构建失败
       ignore: [
@@ -66,7 +85,15 @@ export default defineNuxtConfig({
         '/brand-protection',
         '/referral'
       ]
-    }
+    },
+    // 确保静态资源正确输出
+    publicAssets: [
+      {
+        baseURL: '/',
+        dir: 'public',
+        maxAge: 60 * 60 * 24 * 7 // 7 days
+      }
+    ]
   },
 
   // 运行时配置

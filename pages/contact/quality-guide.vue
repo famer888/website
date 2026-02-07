@@ -8,7 +8,7 @@
         <!-- 这里可以添加业务内容 -->
         <div class="mt-8">
           <p class="text-lg text-gray-700 leading-relaxed">
-            在这里添加您的业务内容...
+            在这里添加您的业务内容....
           </p>
         </div>
       </div>
