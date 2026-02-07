@@ -17,7 +17,7 @@
             <div class="relative group">
               <button 
                 @click="toggleDropdown('why')"
-                class="flex items-center text-gray-700 hover:text-brand px-3 py-2 text-sm font-medium transition-colors bg-[#F7F7FA] rounded-[24px] hover:bg-[#5380DD19] h-12"
+                class="flex items-center text-gray-700 hover:text-brand px-3 py-2 text-sm font-medium transition-colors rounded-[24px] h-12"
                 :class="{ 'text-brand bg-[#F7F7FA]': activeDropdown === 'why' }"
               >
                 为什么选择我们?
@@ -41,7 +41,7 @@
             <div class="relative group">
               <button 
                 @click="toggleDropdown('advertiser')"
-                class="flex items-center text-gray-700 hover:text-brand px-3 py-2 text-sm font-medium transition-colors bg-[#F7F7FA] rounded-[24px] hover:bg-[#5380DD19] h-12"
+                class="flex items-center text-gray-700 hover:text-brand px-3 py-2 text-sm font-medium transition-colors rounded-[24px] h-12"
                 :class="{ 'text-brand bg-[#F7F7FA]': activeDropdown === 'advertiser' }"
               >
                 广告商
@@ -61,7 +61,7 @@
             </div>
 
             <!-- 广告样式 -->
-            <NuxtLink to="/ad-styles" class="text-gray-700 hover:text-brand px-3 py-2 text-sm font-medium transition-colors bg-[#F7F7FA] rounded-[24px] hover:bg-[#5380DD19] h-12 flex items-center" :class="{ 'text-brand bg-[#F7F7FA]': route.path === '/ad-styles' }">
+            <NuxtLink to="/ad-styles" class="text-gray-700 hover:text-brand px-3 py-2 text-sm font-medium transition-colors rounded-[24px] h-12 flex items-center" :class="{ 'text-brand bg-[#F7F7FA]': route.path === '/ad-styles' }">
               广告样式
             </NuxtLink>
 
@@ -69,7 +69,7 @@
             <div class="relative group">
               <button 
                 @click="toggleDropdown('contact')"
-                class="flex items-center text-gray-700 hover:text-brand px-3 py-2 text-sm font-medium transition-colors bg-[#F7F7FA] rounded-[24px] hover:bg-[#5380DD19] h-12"
+                class="flex items-center text-gray-700 hover:text-brand px-3 py-2 text-sm font-medium transition-colors rounded-[24px] h-12"
                 :class="{ 'text-brand bg-[#F7F7FA]': activeDropdown === 'contact' }"
               >
                 联系我们

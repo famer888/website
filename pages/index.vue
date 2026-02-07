@@ -28,7 +28,7 @@
             <!-- 统计数据 -->
             <div class="space-y-2 sm:space-y-3 mb-4 sm:mb-6">
               <p class="font-pingfang font-normal text-[16px] sm:text-[20px] md:text-[22px] lg:text-[24px] leading-[24px] sm:leading-[30px] md:leading-[33px] lg:leading-[36px] tracking-normal text-center text-[#A2A3A5]">
-                每日平均拥有1.02亿访问量,10938 用户量
+                每日平均拥有1.02亿访问量,10938 用户量!
               </p>
               <p class="font-pingfang font-normal text-[16px] sm:text-[20px] md:text-[22px] lg:text-[24px] leading-[24px] sm:leading-[30px] md:leading-[33px] lg:leading-[36px] tracking-normal text-center text-[#A2A3A5]">
                 每日平均实现1.02亿广告展示量
