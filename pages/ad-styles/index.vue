@@ -179,6 +179,8 @@
         </div>
       </div>
     </section>
+    <!-- 页脚 -->
+    <Footer />
   </div>
 </template>
 
