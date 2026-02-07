@@ -57,9 +57,9 @@
 </template>
 
 <script setup>
-import techIcon1 from "~/assets/imgaes/why/mobile-ads/tech-section-1.png";
-import techIcon2 from "~/assets/imgaes/why/mobile-ads/tech-section-2.png";
-import rightIllustrationSrc from "~/assets/imgaes/why/mobile-ads/tech-section-right.png";
+import techIcon1 from "~/assets/imgaes/why/mobile-ads/tech-section-1.svg";
+import techIcon2 from "~/assets/imgaes/why/mobile-ads/tech-section-2.svg";
+import rightIllustrationSrc from "~/assets/imgaes/why/mobile-ads/tech-section-right.svg";
 
 const sectionData = {
 	items: [
