@@ -38,7 +38,7 @@
       <div class="p-0 md:p-8 mb-8">
         <div class="flex flex-col md:flex-row gap-8 items-center">
           <div class="flex-1 flex justify-center order-2 md:order-1">
-            <img :src="advantages2ImageSrc" alt="账户安全" class="w-full max-w-[300px] h-auto" />
+            <img :src="advantages2ImageSrc" alt="账户安全" class="w-full max-w-[240px] h-auto" />
           </div>
           <div class="flex-1 order-1 md:order-2">
             <h2 class="text-3xl font-bold text-[#626671] mb-4">账户安全</h2>
