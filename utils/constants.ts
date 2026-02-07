@@ -816,7 +816,6 @@ export const TermsTermsContent = {
   content: `
     <section class="mb-8">
     <pre class="font-pingfang whitespace-pre-wrap break-words text-[#626671] text-[12px] md:text-[16px] leading-[18px] md:leading-[24px] m-0">
-    最后更新日期：2026年1月5日
 
 访问本网站即表示您已同意本使用条款以及我们的各项政策，包括但不限于我们的推荐计划条款及细则、我们的商品广告政策和我们的隐私声明（以下统称“条款”）。如果您不打算受本条款的法律约束，则不得访问或使用我们的网站及任何服务。
 
@@ -1239,9 +1238,6 @@ export const TermsDepartmentContent = {
   content: `
     <section class="mb-8">
     <pre class="font-pingfang whitespace-pre-wrap break-words text-[#626671] text-[12px] md:text-[16px] leading-[18px] md:leading-[24px] m-0">
-    最后更新日期： 2024年4月16日
-
-
 
 1. 一般程序
 
@@ -2006,8 +2002,8 @@ export const WetmentbMap = {
   lastUpdated: '',
   intro: '',
   content: `
-    <div class="w-full ml-[50px]">
-      <div class="flex flex-wrap mt-8 -mx-2 md:-mx-6">
+    <div class="w-full md:ml-[50px] overflow-x-hidden">
+      <div class="flex flex-wrap mt-8 -mx-2 md:-mx-6 ml-5 md:ml-0">
         <!-- 第一列 -->
         <div class="flex flex-col box-border flex-[0_0_50%] md:flex-[0_0_33.333%] px-2 md:px-6">
           <div class="mb-8">
