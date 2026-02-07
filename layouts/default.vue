@@ -1,9 +1,9 @@
 <template>
   <div class="min-h-screen bg-white">
     <!-- 导航栏 -->
-    <nav class="bg-white shadow-sm sticky top-0 z-50">
+    <nav class="bg-white shadow-sm sticky top-0 z-50 relative">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-center h-16">
+        <div class="flex justify-between items-center h-16 relative">
           <!-- Logo -->
           <div class="flex-shrink-0 flex items-center">
             <NuxtLink to="/" class="flex items-center space-x-2">
@@ -17,22 +17,23 @@
             <div class="relative group">
               <button 
                 @click="toggleDropdown('why')"
-                class="flex items-center text-gray-700 hover:text-brand px-3 py-2 text-sm font-medium transition-colors"
-                :class="{ 'text-brand border-b-2 border-brand': activeDropdown === 'why' }"
+                class="flex items-center text-gray-700 hover:text-brand px-3 py-2 text-sm font-medium transition-colors bg-[#F7F7FA] rounded-[24px] hover:bg-[#5380DD19] h-12"
+                :class="{ 'text-brand bg-[#F7F7FA]': activeDropdown === 'why' }"
               >
                 为什么选择我们?
                 <svg class="ml-1 h-4 w-4" :class="{ 'rotate-180': activeDropdown === 'why' }" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
+              <div v-if="activeDropdown === 'why'" class="absolute left-0 right-0 h-0.5 bg-brand" style="bottom: -64px;"></div>
               <div 
                 v-if="activeDropdown === 'why'"
-                class="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50"
+                class="absolute top-full left-0 mt-2 w-52 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50"
               >
-                <NuxtLink to="/why/who-are-we" :class="route.path === '/why/who-are-we' ? 'block px-4 py-2 text-sm text-brand hover:bg-gray-50' : 'block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50'">我们是谁</NuxtLink>
-                <NuxtLink to="/why/advantages" :class="route.path === '/why/advantages' ? 'block px-4 py-2 text-sm text-brand hover:bg-gray-50' : 'block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50'">我们的优势</NuxtLink>
-                <NuxtLink to="/why/statistics" :class="route.path === '/why/statistics' ? 'block px-4 py-2 text-sm text-brand hover:bg-gray-50' : 'block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50'">数据统计</NuxtLink>
-                <NuxtLink to="/why/mobile-ads" :class="route.path === '/why/mobile-ads' ? 'block px-4 py-2 text-sm text-brand hover:bg-gray-50' : 'block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50'">移动广告</NuxtLink>
+                <NuxtLink to="/why/who-are-we" :class="route.path === '/why/who-are-we' ? 'block mx-2 px-3 py-2 text-sm text-brand rounded-lg hover:bg-[#5380DD19]' : 'block mx-2 px-3 py-2 text-sm text-gray-700 rounded-lg hover:bg-[#5380DD19]'">我们是谁</NuxtLink>
+                <NuxtLink to="/why/advantages" :class="route.path === '/why/advantages' ? 'block mx-2 px-3 py-2 text-sm text-brand rounded-lg hover:bg-[#5380DD19]' : 'block mx-2 px-3 py-2 text-sm text-gray-700 rounded-lg hover:bg-[#5380DD19]'">我们的优势</NuxtLink>
+                <NuxtLink to="/why/statistics" :class="route.path === '/why/statistics' ? 'block mx-2 px-3 py-2 text-sm text-brand rounded-lg hover:bg-[#5380DD19]' : 'block mx-2 px-3 py-2 text-sm text-gray-700 rounded-lg hover:bg-[#5380DD19]'">数据统计</NuxtLink>
+                <NuxtLink to="/why/mobile-ads" :class="route.path === '/why/mobile-ads' ? 'block mx-2 px-3 py-2 text-sm text-brand rounded-lg hover:bg-[#5380DD19]' : 'block mx-2 px-3 py-2 text-sm text-gray-700 rounded-lg hover:bg-[#5380DD19]'">移动广告</NuxtLink>
               </div>
             </div>
 
@@ -40,26 +41,27 @@
             <div class="relative group">
               <button 
                 @click="toggleDropdown('advertiser')"
-                class="flex items-center text-gray-700 hover:text-brand px-3 py-2 text-sm font-medium transition-colors"
-                :class="{ 'text-brand border-b-2 border-brand': activeDropdown === 'advertiser' }"
+                class="flex items-center text-gray-700 hover:text-brand px-3 py-2 text-sm font-medium transition-colors bg-[#F7F7FA] rounded-[24px] hover:bg-[#5380DD19] h-12"
+                :class="{ 'text-brand bg-[#F7F7FA]': activeDropdown === 'advertiser' }"
               >
                 广告商
                 <svg class="ml-1 h-4 w-4" :class="{ 'rotate-180': activeDropdown === 'advertiser' }" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
+              <div v-if="activeDropdown === 'advertiser'" class="absolute left-0 right-0 h-0.5 bg-brand" style="bottom: -64px;"></div>
               <div 
                 v-if="activeDropdown === 'advertiser'"
-                class="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50"
+                class="absolute top-full left-0 mt-2 w-40 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50"
               >
-                <NuxtLink to="/advertiser/how-to-operate" :class="route.path === '/advertiser/how-to-operate' ? 'block px-4 py-2 text-sm text-brand hover:bg-gray-50' : 'block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50'">如何操作</NuxtLink>
-                <NuxtLink to="/advertiser/t1-dsp" :class="route.path === '/advertiser/t1-dsp' ? 'block px-4 py-2 text-sm text-brand hover:bg-gray-50' : 'block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50'">T1 DSP</NuxtLink>
-                <NuxtLink to="/advertiser/target-function" :class="route.path === '/advertiser/target-function' ? 'block px-4 py-2 text-sm text-brand hover:bg-gray-50' : 'block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50'">目标功能</NuxtLink>
+                <NuxtLink to="/advertiser/how-to-operate" :class="route.path === '/advertiser/how-to-operate' ? 'block mx-2 px-3 py-2 text-sm text-brand rounded-lg hover:bg-[#5380DD19]' : 'block mx-2 px-3 py-2 text-sm text-gray-700 rounded-lg hover:bg-[#5380DD19]'">如何操作</NuxtLink>
+                <NuxtLink to="/advertiser/t1-dsp" :class="route.path === '/advertiser/t1-dsp' ? 'block mx-2 px-3 py-2 text-sm text-brand rounded-lg hover:bg-[#5380DD19]' : 'block mx-2 px-3 py-2 text-sm text-gray-700 rounded-lg hover:bg-[#5380DD19]'">T1 DSP</NuxtLink>
+                <NuxtLink to="/advertiser/target-function" :class="route.path === '/advertiser/target-function' ? 'block mx-2 px-3 py-2 text-sm text-brand rounded-lg hover:bg-[#5380DD19]' : 'block mx-2 px-3 py-2 text-sm text-gray-700 rounded-lg hover:bg-[#5380DD19]'">目标功能</NuxtLink>
               </div>
             </div>
 
             <!-- 广告样式 -->
-            <NuxtLink to="/ad-styles" class="text-gray-700 hover:text-brand px-3 py-2 text-sm font-medium transition-colors">
+            <NuxtLink to="/ad-styles" class="text-gray-700 hover:text-brand px-3 py-2 text-sm font-medium transition-colors bg-[#F7F7FA] rounded-[24px] hover:bg-[#5380DD19] h-12 flex items-center" :class="{ 'text-brand bg-[#F7F7FA]': route.path === '/ad-styles' }">
               广告样式
             </NuxtLink>
 
@@ -67,22 +69,23 @@
             <div class="relative group">
               <button 
                 @click="toggleDropdown('contact')"
-                class="flex items-center text-gray-700 hover:text-brand px-3 py-2 text-sm font-medium transition-colors"
-                :class="{ 'text-brand border-b-2 border-brand': activeDropdown === 'contact' }"
+                class="flex items-center text-gray-700 hover:text-brand px-3 py-2 text-sm font-medium transition-colors bg-[#F7F7FA] rounded-[24px] hover:bg-[#5380DD19] h-12"
+                :class="{ 'text-brand bg-[#F7F7FA]': activeDropdown === 'contact' }"
               >
                 联系我们
                 <svg class="ml-1 h-4 w-4" :class="{ 'rotate-180': activeDropdown === 'contact' }" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
+              <div v-if="activeDropdown === 'contact'" class="absolute left-0 right-0 h-0.5 bg-brand" style="bottom: -64px;"></div>
               <div 
                 v-if="activeDropdown === 'contact'"
-                class="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50"
+                class="absolute top-full left-0 mt-2 w-44 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50"
               >
-                <NuxtLink to="/contact" :class="route.path === '/contact' ? 'block px-4 py-2 text-sm text-brand hover:bg-gray-50' : 'block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50'">联系我们</NuxtLink>
-                <NuxtLink to="/contact/help-center" :class="route.path === '/contact/help-center' ? 'block px-4 py-2 text-sm text-brand hover:bg-gray-50' : 'block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50'">帮助中心</NuxtLink>
-                <NuxtLink to="/contact/quality-guide" :class="route.path === '/contact/quality-guide' ? 'block px-4 py-2 text-sm text-brand hover:bg-gray-50' : 'block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50'">质量指南</NuxtLink>
-                <NuxtLink to="/contact/download-media-kit" :class="route.path === '/contact/download-media-kit' ? 'block px-4 py-2 text-sm text-brand hover:bg-gray-50' : 'block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50'">下载媒体资源包</NuxtLink>
+                <NuxtLink to="/contact" :class="route.path === '/contact' ? 'block mx-2 px-3 py-2 text-sm text-brand rounded-lg hover:bg-[#5380DD19]' : 'block mx-2 px-3 py-2 text-sm text-gray-700 rounded-lg hover:bg-[#5380DD19]'">联系我们</NuxtLink>
+                <NuxtLink to="/contact/help-center" :class="route.path === '/contact/help-center' ? 'block mx-2 px-3 py-2 text-sm text-brand rounded-lg hover:bg-[#5380DD19]' : 'block mx-2 px-3 py-2 text-sm text-gray-700 rounded-lg hover:bg-[#5380DD19]'">帮助中心</NuxtLink>
+                <NuxtLink to="/contact/quality-guide" :class="route.path === '/contact/quality-guide' ? 'block mx-2 px-3 py-2 text-sm text-brand rounded-lg hover:bg-[#5380DD19]' : 'block mx-2 px-3 py-2 text-sm text-gray-700 rounded-lg hover:bg-[#5380DD19]'">质量指南</NuxtLink>
+                <NuxtLink to="/contact/download-media-kit" :class="route.path === '/contact/download-media-kit' ? 'block mx-2 px-3 py-2 text-sm text-brand rounded-lg hover:bg-[#5380DD19]' : 'block mx-2 px-3 py-2 text-sm text-gray-700 rounded-lg hover:bg-[#5380DD19]'">下载媒体资源包</NuxtLink>
               </div>
             </div>
 
