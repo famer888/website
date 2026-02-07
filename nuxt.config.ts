@@ -13,8 +13,8 @@ export default defineNuxtConfig({
 
   // SEO 配置
   app: {
-    // 确保构建资源路径正确
-    buildAssetsDir: '/_nuxt/',
+    // 确保构建资源路径正确 - 使用 /nuxt/ 匹配实际请求路径
+    buildAssetsDir: '/nuxt/',
     baseURL: '/',
     head: {
       charset: 'utf-8',
@@ -69,7 +69,7 @@ export default defineNuxtConfig({
         '/contact/help-center',
         '/contact/quality-guide',
         '/contact/download-media-kit',
-        '/video'
+
       ],
       // 忽略不存在的路由，避免构建失败
       ignore: [
