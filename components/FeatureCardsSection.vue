@@ -5,12 +5,12 @@
         :class="[
           'font-pingfang font-medium tracking-normal text-[#111827] text-center',
           id === 'target'
-            ? 'text-[22px] sm:text-[26px] md:text-[32px] leading-[28px] sm:leading-[32px] md:leading-[34px] mb-2'
+            ? 'text-[36px] sm:text-[26px] md:text-[56px] leading-[56px] sm:leading-[32px] md:leading-[96px] mb-4'
             : id === 'optimization' || id === 'browser'
-              ? 'text-[20px] sm:text-[22px] md:text-[24px] leading-[28px] sm:leading-[32px] md:leading-[34px] mb-2'
+              ? 'text-[36px] sm:text-[22px] md:text-[56px] leading-[56px] sm:leading-[32px] md:leading-[96px] mb-4'
               : id === 'digital'
-                ? 'text-[22px] sm:text-[24px] md:text-[28px] leading-[32px] sm:leading-[36px] md:leading-[40px] mb-2'
-                : 'text-[28px] sm:text-[32px] md:text-[48px] leading-[40px] sm:leading-[46px] md:leading-[62px] mb-6',
+                ? 'text-[36px] sm:text-[24px] md:text-[56px] leading-[56px] sm:leading-[36px] md:leading-[56px] mb-12'
+                : 'text-[36px] sm:text-[32px] md:text-[56px] leading-[36px] sm:leading-[46px] md:leading-[56px] mb-12',
         ]"
       >
         {{ title }}
@@ -123,7 +123,7 @@
 </template>
 
 <script setup>
-import SvgIcon from "~/components/SvgIcon.vue";
+import SvgIcon from '~/components/SvgIcon.vue'
 
 const props = defineProps({
   id: String,
@@ -138,7 +138,7 @@ const props = defineProps({
   setCardRef: Function,
   ctaLink: String,
   ctaText: String,
-});
+})
 
-const currentActiveIndex = computed(() => props.activeIndex?.value ?? 0);
+const currentActiveIndex = computed(() => props.activeIndex?.value ?? 0)
 </script>

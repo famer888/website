@@ -5,10 +5,37 @@
       class="bg-gradient-to-b from-[#DFE9FB] to-[#FFFFFF] py-8 sm:py-12 lg:py-16"
     >
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- 移动端布局：文本 -> 图片 -> 按钮 -->
+        <div class="md:hidden">
+          <div class="flex flex-col items-center text-left">
+            <div class="w-full px-6 sm:px-14 py-8 sm:py-14">
+              <h1 :class="styles.h1">如何成为广告商?</h1>
+              <p :class="styles.subtitle">
+                您的广告距离您想要触达的受众群体只有几步之遥。
+              </p>
+              <p :class="styles.body">
+                我们的自助服务界面、高级定位选项、CPM竞价平台和高流量发布商网站是制胜的组合，将帮助您为您的在线电子商务业务开展成功的营销活动。
+              </p>
+            </div>
+            <div
+              class="w-full px-6 sm:px-10 pb-8 sm:pb-12 flex items-center justify-center"
+            >
+              <img
+                :src="images.hero"
+                alt="如何成为广告商"
+                class="w-full h-auto max-w-[400px] object-contain b p-4"
+              />
+            </div>
+            <div class="w-full px-6 sm:px-14 pb-8 sm:pb-14 flex justify-center">
+              <NuxtLink to="/contact" :class="styles.btn"> 联系我们 </NuxtLink>
+            </div>
+          </div>
+        </div>
+        <!-- 桌面端布局：左右布局 -->
         <div
-          class="bg-white rounded-[0px] shadow-sm border-none border-[#EEF0F4] overflow-hidden"
+          class="hidden md:block bg-white rounded-[0px] shadow-sm border-none border-[#EEF0F4] overflow-hidden"
         >
-          <div class="flex flex-col md:flex-row items-stretch">
+          <div class="flex flex-row items-stretch">
             <div class="flex-1 px-6 sm:px-14 py-8 sm:py-14">
               <h1 :class="styles.h1">如何成为广告商?</h1>
               <p :class="styles.subtitle">
