@@ -2,8 +2,8 @@
   <div class="w-full">
     <!-- 标题 -->
     <div class="text-center mb-8">
-      <h2 class="text-3xl font-bold text-gray-900 mb-4">所有好处尽在此处!</h2>
-      <p class="text-gray-600">我们能为您提供很多,以下是一些我们相信您会喜欢的其他福利!</p>
+      <h2 class="text-[#626671] font-bold text-4xl mb-4" style=" letter-spacing: 0px; text-align: center;">所有好处尽在此处!</h2>
+      <p class="text-gray-600">我们能为您提供很多，以下是一些我们相信您会喜欢的其他福利!</p>
     </div>
 
     <!-- 桌面端：四个卡片在上方 -->
@@ -17,8 +17,8 @@
           ? 'bg-[#3A82F9] text-white border-[#3A82F9]' 
           : 'bg-white text-gray-900 border-gray-200 hover:border-[#3A82F9]'"
       >
-        <h3 class="font-bold text-lg mb-3">{{ card.title }}</h3>
-        <p class="text-sm leading-relaxed" :class="activeIndex === index ? 'text-white' : 'text-gray-600'">
+        <h3 class="font-bold text-lg mb-3" :class="activeIndex === index ? 'text-white' : 'text-[#626671]'">{{ card.title }}</h3>
+        <p class="text-sm leading-relaxed" :class="activeIndex === index ? 'text-white' : 'text-[#626671]'">
           {{ card.description }}
         </p>
       </div>
