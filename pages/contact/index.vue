@@ -56,10 +56,10 @@
             <div class="flex items-start space-x-3">
               <div>
                 <button
-                  class="gap-2 mt-1 text-white min-w-[180px] px-[20px] py-3 rounded-full font-medium flex items-center space-x-2  transition-colors bg-gradient-to-t from-[#6CB8FD] to-[#3A82F9]"
+                  class="mt-1 text-white w-[204px] md:w-[210px] h-[60px] rounded-full pl-[18.5px] font-medium flex items-center justify-start transition-colors bg-gradient-to-t from-[#6CB8FD] to-[#3A82F9]"
                 >
-                  <img :src="SendIconSrc" alt="send-icon"></img>
-                  <span>发送消息</span>
+                  <img :src="SendIconSrc" alt="send-icon" />
+                  <span class="font-pingfang font-normal tracking-[0px] text-[20px] leading-[30px] ml-[18.5px]">发送消息</span>
                 </button>
               </div>
             </div>
