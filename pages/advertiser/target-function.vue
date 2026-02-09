@@ -14,7 +14,7 @@
         <div class="h-full flex items-center">
           <div class="w-full text-start">
             <h1
-              class="font-pingfang font-medium text-[28px] sm:text-[36px] md:text-[56px] leading-[60px] sm:leading-[72px] md:leading-[96px] tracking-normal text-white mb-4"
+              class="font-pingfang font-medium text-[28px] md:text-[56px] leading-[60px] md:leading-[96px] tracking-normal text-white mb-4"
             >
               目标功能
             </h1>
@@ -23,7 +23,7 @@
               class="w-[120px] sm:w-[160px] md:w-[200px] h-[2px] bg-white/60 my-8"
             ></div>
             <p
-              class="font-pingfang font-normal text-[12px] sm:text-[14px] md:text-[16px] leading-[18px] sm:leading-[20px] tracking-normal text-white"
+              class="font-pingfang font-normal text-[14px] md:text-[16px] leading-[20px] md:leading-[24px] tracking-normal text-white"
             >
               了解更多关于 T1 更多功能
             </p>
@@ -36,19 +36,19 @@
     <section class="bg-white py-10 sm:py-14 lg:py-16">
       <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2
-          class="font-pingfang font-medium text-[36px] sm:text-[26px] md:text-[56px] leading-[56px] sm:leading-[36px] md:leading-[96px] tracking-normal text-[#111827] mb-3"
+          class="font-pingfang font-medium text-[36px] md:text-[56px] leading-[56px] md:leading-[96px] tracking-normal text-[#111827] mb-6 mt-0 md:mt-14"
         >
           了解你的受众
         </h2>
         <p
-          class="font-pingfang font-normal text-[12px] sm:text-[14px] md:text-[16px] md:text-[16px] leading-[20px] sm:leading-[22px] md:leading-[26px] tracking-normal text-[#A2A3A5] max-w-[820px] mx-auto mb-6"
+          class="font-pingfang font-normal text-[16px] md:text-[18px] leading-[24px] md:leading-[26px] tracking-normal text-[#93959C] max-w-[820px] mx-auto mb-12"
         >
           我们提供覆盖各种地区和设备的多种定向功能。凭借我们成熟的定向技术和专业知识，我们能够利用算法帮助您发现、定位并优化最能提升品牌转化率的受众群体。
         </p>
         <div class="flex justify-center">
           <NuxtLink
             to="/register"
-            class="register-btn inline-flex items-center justify-center text-white rounded-[30px] font-pingfang font-medium text-[14px] sm:text-[16px] leading-[20px] tracking-normal transition-colors shadow-lg hover:shadow-xl w-[160px] h-[44px] sm:w-[200px] sm:h-[48px]"
+            class="register-btn inline-flex items-center justify-center text-white rounded-full font-pingfang font-normal text-[16px] md:text-[20px] leading-[24px] md:leading-[30px] tracking-normal transition-colors shadow-lg hover:shadow-xl w-[160px] h-[40px] md:w-[240px] md:h-[60px]"
           >
             创建您的账户
           </NuxtLink>
@@ -73,15 +73,15 @@
     />
 
     <!-- 设备和网络功能（4 卡片） -->
-    <section class="bg-white py-12 sm:py-14 lg:py-16">
+    <section class="bg-white py-14 md:py-28">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h3
-          class="font-pingfang font-medium text-[36px] sm:text-[22px] md:text-[56px] leading-[56px] sm:leading-[32px] md:leading-[96px] tracking-normal text-[#111827] text-center mb-2"
+          class="font-pingfang font-medium tracking-normal text-[#111827] text-center text-[36px] md:text-[56px] leading-[56px] md:leading-[96px] mb-6"
         >
           设备和网络功能
         </h3>
         <p
-          class="font-pingfang font-normal text-[12px] sm:text-[14px] md:text-[16px] leading-[18px] sm:leading-[22px] tracking-normal text-[#A2A3A5] text-center max-w-[760px] mx-auto mb-8"
+          class="font-pingfang font-normal text-left text-[16px] md:text-[18px] leading-[24px] md:leading-[26px] tracking-normal text-[#93959C] max-w-[560px] mx-auto mb-8"
         >
           此功能允许您根据特定条件（例如 ISP、移动设备、IP
           地址和设备）来定向投放广告，深入了解并精准触达目标受众。
@@ -92,21 +92,21 @@
           <div
             v-for="item in deviceNetworkFeatures"
             :key="item.title"
-            class="bg-white rounded-[12px] w-[582px] h-[220px] shadow-[0_2px_24px_0_rgba(0,0,0,0.096)] border-none p-8 flex gap-6 items-center"
+            class="bg-white rounded-[12px] xl:w-[582px] xl:h-[220px] shadow-[0_2px_24px_0_rgba(0,0,0,0.096)] border-none p-8 flex gap-6 items-center max-w-[90vw]"
           >
             <SvgIcon
               :name="item.icon"
-              class="w-[160px] h-[160px] object-contain flex-shrink-0"
+              class="w-[100px] h-[100px] lg:w-[160px] lg:h-[160px] object-contain flex-shrink-0"
               alt="图标"
             />
             <div class="flex-1">
               <h4
-                class="font-pingfang font-medium text-[20px] leading-[30px] tracking-normal text-[#111827] mb-2"
+                class="font-pingfang font-medium text-[28px] leading-[36px] tracking-normal text-[#111827] mb-4"
               >
                 {{ item.title }}
               </h4>
               <p
-                class="font-pingfang font-normal text-[14px] leading-[22px] tracking-normal text-[#A2A3A5]"
+                class="font-pingfang font-normal text-[18px] leading-[26px] tracking-normal text-[#626671]"
               >
                 {{ item.desc }}
               </p>
@@ -125,26 +125,23 @@
               v-for="(item, idx) in deviceNetworkFeatures"
               :key="item.title"
               :ref="(el) => setDeviceCardRef(el, idx)"
-              class="snap-center shrink-0 w-[86%] bg-white rounded-[12px] shadow-sm border border-[#EEF0F4] p-6 flex gap-4"
+              class="w-[260px] h-[266px] snap-center shrink-0 bg-white rounded-[12px] shadow-[0_5px_8px_-2px_rgba(0,0,0,0.025),0_2px_3px_-1px_rgba(0,0,0,0.01)] border border-[#EEF0F4] p-4 py-12 flex flex-col items-center justify-center"
             >
-              <!-- <img :src="item.icon" :alt="item.title" class="w-10 h-10 object-contain mt-1" /> -->
               <SvgIcon
                 :name="item.icon"
-                class="w-10 h-10 object-contain mt-1"
+                class="w-[80px] h-[80px] mx-auto mb-6 object-contain"
                 alt="图标"
               />
-              <div>
-                <h4
-                  class="font-pingfang font-medium text-[16px] leading-[24px] tracking-normal text-[#111827] mb-1"
-                >
-                  {{ item.title }}
-                </h4>
-                <p
-                  class="font-pingfang font-normal text-[12px] leading-[20px] tracking-normal text-[#A2A3A5]"
-                >
-                  {{ item.desc }}
-                </p>
-              </div>
+              <h4
+                class="font-pingfang font-medium text-[18px] leading-[27px] tracking-normal text-[#111827] mb-3 text-center w-full"
+              >
+                {{ item.title }}
+              </h4>
+              <p
+                class="font-pingfang font-normal text-[14px] leading-[21px] tracking-normal text-[#626671] text-left w-full"
+              >
+                {{ item.desc }}
+              </p>
             </div>
           </div>
           <div class="flex justify-center gap-2 mt-2">
@@ -160,43 +157,41 @@
     </section>
 
     <!-- 浏览器和操作系统功能（3 卡片） -->
-    <section class="bg-white py-12 sm:py-14 lg:py-16">
+    <section class="bg-[#F5F7FB] py-14 md:py-28">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h3
-          class="font-pingfang font-medium text-[36px] sm:text-[22px] md:text-[56px] leading-[56px] sm:leading-[32px] md:leading-[96px] tracking-normal text-[#111827] text-center mb-2"
+          class="font-pingfang font-medium text-[36px] md:text-[56px] leading-[56px] md:leading-[96px] tracking-normal text-[#111827] text-center mb-2"
         >
           浏览器和操作系统功能
         </h3>
         <p
-          class="font-pingfang font-normal text-[12px] sm:text-[14px] md:text-[16px] leading-[18px] sm:leading-[22px] tracking-normal text-[#A2A3A5] text-center max-w-[760px] mx-auto mb-8"
+          class="font-pingfang font-normal text-left text-[16px] md:text-[18px] leading-[24px] md:leading-[26px] tracking-normal text-[#93959C] max-w-[560px] mx-auto mb-8"
         >
           充分利用我们的浏览器和操作系统功能，根据用户使用的技术找到合适的受众。
         </p>
 
         <!-- PC：3 列 -->
-        <div class="hidden md:grid grid-cols-3 gap-8">
+        <div class="hidden md:grid grid-cols-3 gap-6">
           <div
             v-for="item in browserOsFeatures"
             :key="item.title"
-            class="bg-white rounded-[12px] w-[373px] h-[480px] shadow-[0_2px_24px_0_rgba(0,0,0,0.096)] border-none p-8 flex flex-col items-center text-center mx-auto"
+            class="bg-white rounded-[12px] xl:w-[373px] xl:h-[480px] shadow-[0_2px_24px_0_rgba(0,0,0,0.096)] border-none p-8 flex flex-col items-center justify-center mx-auto max-w-[90vw]"
           >
             <SvgIcon
               :name="item.icon"
-              class="w-[160px] h-[160px] object-contain mb-4"
+              class="w-[100px] h-[100px] lg:w-[160px] lg:h-[160px] mx-auto mb-4 object-contain"
               alt="图标"
             />
-            <div class="flex-1">
-              <h4
-                class="font-pingfang font-medium text-[18px] leading-[26px] tracking-normal text-[#111827] mb-3"
-              >
-                {{ item.title }}
-              </h4>
-              <p
-                class="font-pingfang font-normal text-[14px] leading-[22px] tracking-normal text-[#A2A3A5]"
-              >
-                {{ item.desc }}
-              </p>
-            </div>
+            <h4
+              class="font-pingfang font-medium text-[18px] sm:text-[20px] md:text-[24px] leading-[27px] sm:leading-[30px] md:leading-[36px] tracking-normal text-[#111827] mb-3 text-center w-full"
+            >
+              {{ item.title }}
+            </h4>
+            <p
+              class="font-pingfang font-normal text-[14px] sm:text-[16px] md:text-[18px] leading-[21px] sm:leading-[24px] md:leading-[27px] tracking-normal text-[#626671] text-left w-full"
+            >
+              {{ item.desc }}
+            </p>
           </div>
         </div>
 
@@ -211,25 +206,23 @@
               v-for="(item, idx) in browserOsFeatures"
               :key="item.title"
               :ref="(el) => setBrowserCardRef(el, idx)"
-              class="snap-center shrink-0 w-[86%] bg-white rounded-[12px] shadow-[0_4px_6px_rgba(0,0,0,0.05)] p-6 flex flex-col items-center text-center"
+              class="w-[260px] h-[266px] snap-center shrink-0 bg-white rounded-[12px] shadow-[0_5px_8px_-2px_rgba(0,0,0,0.025),0_2px_3px_-1px_rgba(0,0,0,0.01)] border border-[#EEF0F4] p-4 py-12 flex flex-col items-center justify-center"
             >
               <SvgIcon
                 :name="item.icon"
-                class="w-12 h-12 object-contain mb-3"
+                class="w-[80px] h-[80px] mx-auto mb-6 object-contain"
                 alt="图标"
               />
-              <div>
-                <h4
-                  class="font-pingfang font-medium text-[16px] leading-[24px] tracking-normal text-[#111827] mb-2"
-                >
-                  {{ item.title }}
-                </h4>
-                <p
-                  class="font-pingfang font-normal text-[12px] leading-[20px] tracking-normal text-[#A2A3A5]"
-                >
-                  {{ item.desc }}
-                </p>
-              </div>
+              <h4
+                class="font-pingfang font-medium text-[18px] leading-[27px] tracking-normal text-[#111827] mb-3 text-center w-full"
+              >
+                {{ item.title }}
+              </h4>
+              <p
+                class="font-pingfang font-normal text-[14px] leading-[21px] tracking-normal text-[#626671] text-left w-full"
+              >
+                {{ item.desc }}
+              </p>
             </div>
           </div>
           <div class="flex justify-center gap-2 mt-2">
@@ -245,15 +238,15 @@
     </section>
 
     <!-- 底部 CTA（双按钮） -->
-    <section class="bg-white py-12 sm:py-14 lg:py-16">
+    <section class="bg-white py-14 md:py-28">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h3
-          class="font-pingfang font-medium text-[36px] sm:text-[24px] md:text-[56px] leading-[56px] sm:leading-[34px] md:leading-[96px] tracking-normal mb-3"
+          class="font-pingfang font-medium text-[36px] md:text-[56px] leading-[56px] md:leading-[96px] tracking-normal mb-3"
         >
           需要解答您的疑问吗? <br class="sm:hidden" />想了解更多?
         </h3>
         <p
-          class="font-pingfang font-normal text-[14px] sm:text-[16px] md:text-[18px] leading-[20px] sm:leading-[24px] md:leading-[28px] tracking-normal text-[#A2A3A5] max-w-[760px] mx-auto mb-8"
+          class="font-pingfang font-normal text-left text-[16px] md:text-[18px] leading-[24px] md:leading-[26px] tracking-normal text-[#93959C] max-w-[560px] mx-auto mb-8"
         >
           如果您对我们的平台功能有任何疑问，请随时通过以下方式联系我们！请查看我们的常见问题解答。
         </p>
@@ -262,13 +255,13 @@
         >
           <NuxtLink
             to="/contact"
-            class="register-btn inline-flex items-center justify-center text-white rounded-[30px] font-pingfang font-medium text-[14px] sm:text-[16px] leading-[20px] tracking-normal transition-colors shadow-lg hover:shadow-xl w-[200px] h-[44px] sm:w-[180px] sm:h-[48px]"
+            class="inline-flex items-center justify-center text-white bg-brand rounded-[30px] font-pingfang font-normal text-[14px] sm:text-[16px] leading-[20px] tracking-normal transition-colors shadow-lg hover:shadow-xl w-[200px] h-[44px] sm:w-[180px] sm:h-[48px]"
           >
             联系我们
           </NuxtLink>
           <NuxtLink
             to="/contact/help-center"
-            class="register-btn inline-flex items-center justify-center text-white rounded-[30px] font-pingfang font-medium text-[14px] sm:text-[16px] leading-[20px] tracking-normal transition-colors shadow-lg hover:shadow-xl w-[200px] h-[44px] sm:w-[180px] sm:h-[48px]"
+            class="inline-flex items-center justify-center text-brand bg-white border-2 border-brand rounded-[30px] font-pingfang font-normal text-[14px] sm:text-[16px] leading-[20px] tracking-normal transition-colors w-[200px] h-[44px] sm:w-[180px] sm:h-[48px]"
           >
             常见问题
           </NuxtLink>
@@ -360,17 +353,17 @@ const deviceNetworkFeatures = [
 const browserOsFeatures = [
   {
     title: '操作系统目标',
-    desc: '按操作系统与版本精确定位受众，例如 Windows、macOS、iOS、Android 等。',
+    desc: '此功能允许您按操作系统(例如 Windows.macOS、iOS、Android等)对受众进行细分。',
     icon: 'advertiser-svg24',
   },
   {
     title: '浏览器语言定向',
-    desc: '可选择语言目标受众，选择合适的语言偏好并覆盖更多场景。',
+    desc: '您可以根据目标受众，选择包含或排除最多 5 种语言。',
     icon: 'advertiser-svg25',
   },
   {
     title: '浏览器定位',
-    desc: '根据受众使用的浏览器与版本定位受众，提升体验与投放一致性。',
+    desc: '根据用户选择的浏览器定位目标受众。如果您的广告素材不符合Google的广告体验滥用规则，此功能非常有用。',
     icon: 'advertiser-svg26',
   },
 ]

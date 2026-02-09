@@ -8,9 +8,7 @@ export const PrivacyStatement = {
   <pre class="font-pingfang whitespace-pre-wrap break-words text-[#626671] text-[12px] md:text-[16px] leading-[18px] md:leading-[24px] m-0">
 介绍
 
-Aylo Freesites Ltd（以下简称“我们”）运营网站https://www.TrafficJunky.com（以下简称“TrafficJunky”），并且是TrafficJunky收集或提供信息的控制者。
-
-请仔细阅读本隐私声明，因为您访问和使用TrafficJunky即表示您已阅读并理解本隐私声明中的所有条款。我们尊重您的隐私，并致力于保护您的个人数据。
+请仔细阅读本隐私声明，因为您访问和使用T1即表示您已阅读并理解本隐私声明中的所有条款。我们尊重您的隐私，并致力于保护您的个人数据。
 
 如果您对我们的隐私保护措施有任何疑问，请参阅下文的“联系信息”部分，了解如何联系我们。
 
@@ -196,7 +194,7 @@ Cookie 和自动数据收集技术
 
 如果我们请求同意处理您的个人数据，您可以随时撤回您的同意，但撤回仅对未来有效。但是，请注意，在这种情况下，您可能无法再使用或访问 TrafficJunky 的一项或灌溉功能。
 
-您可以通过发送电子邮件至support@trafficjunky.com来获得明确的上述权利。请注意，我们会在一个月内回复您的首次请求。
+您可以通过发送电子邮件至T1t1adx@gmail.com来获得明确的上述权利。请注意，我们会在一个月内回复您的首次请求。
 
 在处理您访问或数据的请求时，我们需要事先验证您的身份并确认您有权访问或删除相关信息。这是一项适当且有效的安全措施，旨在确保个人数据删除不会以未经授权的方式泄露给任何无权接收或删除的人员。
 
@@ -216,29 +214,13 @@ Cookie 和自动数据收集技术
 
 加州居民无罪这些权利不应受到禁止。我们不会因加州居民无罪《加州消费者隐私法案》(CCPA) 赋予的任何权利而拒绝其使用我们的服务，也不会降低其服务水平或质量，除非有 CCPA 规定。
 
-您可以通过发送电子邮件至support@trafficjunky.com，并在邮件主题中签署“CCPA请求”来获得您的无偿权利。如果您在无偿权利的过程中需要帮助，也可以发送电子邮件至support@trafficjunky.com，将协助您完成相关流程。
+您可以通过发送电子邮件至T1t1adx@gmail.com，并在邮件主题中签署“CCPA请求”来获得您的无偿权利。如果您在无偿权利的过程中需要帮助，也可以发送电子邮件至T1t1adx@gmail.com，将协助您完成相关流程。
 
  
 
 居民权利——美国各司法管辖区（如适用）
 
 我们绝不会为了金钱而将商业广告商的个人信息出售、交易或交换给任何人。
-
- 
-
- 
-
-致执法部门的通知
-
-以下信息旨在为寻求披露记录的执法人员提供指导。您可以通过遵守以下条件，向我们送达有效的法院命令、传票、搜查令或同等效力的法律或官方行政文件：
-
-文件已上传，所有必填字段均已在我们的法律服务流程平台上填写完整，该平台网址为：https://legalservice.aylo.com/legal/datarequest；
-
-您向 Aylo Freesites Ltd 提供的文件是由有效的法院或同等法律或行政机构签发的；
-
-文件写入到以下地址： 胎儿 2540，达利工业区 1 区，旧尼科西亚-利马索尔路 195-197 号。
-
-我们保留拒绝通过 TrafficJunky 提供在线服务的权利，尤其是在上述要求未得到满足且需要通过正式法律程序送达至上述地址的情况下。届时，我们将通知您。我们可以自行决定提出或放弃任何可用的法律异议或权利。
 
  
 
@@ -296,21 +278,11 @@ TrafficJunky 已采取安全措施，保护并防止我们控制下的信息遭�
 
  
 
-国际支付处理
-
-Aylo Freesites Ltd 已注册为武汉集团的一部分，该集团的代表成员是 Aylo CY Holdings Ltd。其武汉注册号为CY99000217P。
-
- 
-
  
 
 联系信息
 
 如果您对本隐私声明或我们的信息处理方式有任何疑问，请发送电子邮件至support@trafficjunky.com与我们联系。
-
-您也可以通过以下方式联系我们：胎儿2540，达利工业区1区，旧尼科西亚-利马索尔路195-197号；电话：+357 22662 320；传真：+357 22343 282。
-
-您可以通过以下电子邮件地址联系我们的数据保护官：support@trafficjunky.com。
       </pre>
        <section
     `
@@ -324,7 +296,7 @@ export const CookiePolicy = {
   content: `
       <section class="mb-8">
       <pre class="font-pingfang whitespace-pre-wrap break-words text-[#626671] text-[12px] md:text-[16px] leading-[18px] md:leading-[24px] m-0">
-      本Cookie通知适用于您访问www.trafficjunky.com（以下简称“网站”）不同页面时可能放置的Cookie及其他类似技术。该网站由Aylo Freesites Ltd（以下简称“我们”）运营。本Cookie通知将解释什么是Cookie、我们如何使用Cookie以及您如何管理Cookie。
+      本Cookie通知适用于您访问www.T1T1.com（以下简称“网站”）不同页面时可能放置的Cookie及其他类似技术。本Cookie通知将解释什么是Cookie、我们如何使用Cookie以及您如何管理Cookie。
 
 什么是饼干？
 
@@ -368,7 +340,7 @@ GA_OPT_OUT
 
 对于存储用户选择退出 Google Analytics（分析）跟踪的决定。
 
-www.trafficjunky.com
+www.T1T1.com
 
 cookie同意
 
@@ -378,7 +350,7 @@ cookie同意
 
 会议
 
-www.trafficjunky.com
+www.T1T1.com
 
 laravel_session
 
@@ -388,9 +360,9 @@ laravel_session
 
 1小时
 
-www.trafficjunky.com
+www.T1T1.com
 
-trafficjunky_session
+T1T1_session
 
 用于存储用户的活动会话（会员区）。
 
@@ -398,7 +370,7 @@ trafficjunky_session
 
 1小时
 
-www.trafficjunky.com
+www.T1T1.com
 
 XSRF令牌
 
@@ -408,7 +380,7 @@ XSRF令牌
 
 1小时
 
-www.trafficjunky.com
+www.T1T1.com
 
 cookieConsentMeta
 
@@ -418,7 +390,7 @@ cookieConsentMeta
 
 1年
 
-www.trafficjunky.com
+www.T1T1.com
 
 年龄门显示
 
@@ -474,7 +446,7 @@ Cookie 用于 Google 广告产品（包括 Campaign Manager、Display & Video 36
 
 30分钟
 
-www.trafficjunky.com
+www.T1T1.com
 
 折叠菜单
 
@@ -484,7 +456,7 @@ www.trafficjunky.com
 
 1年
 
-www.trafficjunky.com
+www.T1T1.com
 
 url_intended
 
@@ -1247,7 +1219,7 @@ export const TermsDepartmentContent = {
 
 “成员”指网站的任何账户，包括买家和卖家。
 
-“网站”是指域名为 https://www.trafficjunky.com/ 的 Trafficjunky 网站。
+“网站”是指域名为 https://www.T1T1.com/ 的 Trafficjunky 网站。
 
 
 
