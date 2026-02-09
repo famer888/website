@@ -88,7 +88,7 @@
           
           <!-- 移动广告组件 - PC端 -->
           <div class="mt-[80px] max-w-5xl mx-auto">
-            <!-- 上部分：左右布局 -->
+            <!-- 上部分：右侧图片固定420px宽、420px高 -->
             <div class="flex gap-8 items-center mb-12">
               <!-- 左侧：文本内容 -->
               <div class="flex-1">
@@ -98,18 +98,18 @@
                   我们的广告投放技术赋能移动广告商,使他们能够针对全球数百万用户,在用户全天使用智能手机时,投放高度精准、可自动优化的广告活动。
                 </p>
               </div>
-              
+
               <!-- 右侧：图片 -->
-              <div class="flex-1 flex items-center justify-center">
-                <img :src="why8ImageSrc" alt="移动广告" class="w-full h-auto" />
+              <div class="w-[420px] h-[420px] flex items-center justify-center flex-shrink-0">
+                <img :src="why8ImageSrc" alt="移动广告" class="w-full h-full object-cover" />
               </div>
             </div>
             
             <!-- 下部分：居中显示 -->
             <div class="text-center">
-              <h2 class="text-4xl font-bold text-[#3A82F9] mb-4">立即开始!</h2>
-              <p class="text-xl font-medium text-[#626671] mb-2">免费加入!</p>
-              <p class="text-base text-[#93959C] mb-8">来看看我们能为您做些什么。</p>
+              <h2 class="text-4xl font-medium text-[#3A82F9] mb-4">立即开始!</h2>
+              <p class="text-sm font-medium text-[#93959C] mb-2">免费加入!</p>
+              <p class="text-sm text-[#93959C] mb-8">来看看我们能为您做些什么。</p>
               <!-- 行动号召按钮 -->
               <NuxtLink to="/register" class="inline-block w-[200px] h-[50px] bg-gradient-to-r from-[#3A82F9] to-[#2B6FE8] text-white rounded-full text-lg font-medium hover:opacity-90 transition-opacity flex items-center justify-center mx-auto">
                 立即加入
