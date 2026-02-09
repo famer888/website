@@ -15,17 +15,17 @@
           <div class="hidden md:flex items-center space-x-12 absolute left-1/2 transform -translate-x-1/2">
             <!-- 为什么选择我们 -->
             <div class="relative group">
-              <button 
+              <button
                 @click="toggleDropdown('why')"
-                class="flex items-center text-gray-700 hover:text-brand px-3 py-2 text-sm font-medium transition-colors rounded-[24px] h-12 w-[180px] justify-center whitespace-nowrap"
-                :class="{ 'text-brand bg-[#F7F7FA]': activeDropdown === 'why' }"
+                class="flex items-center hover:text-brand px-3 py-2 text-sm font-medium transition-colors rounded-[24px] h-12 w-[180px] justify-center whitespace-nowrap"
+                :class="activeDropdown === 'why' || route.path.startsWith('/why/') ? 'text-brand' : 'text-gray-700'"
               >
                 {{ getWhyMenuText }}
                 <svg class="ml-1 h-4 w-4" :class="{ 'rotate-180': activeDropdown === 'why' }" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
-              <div v-if="activeDropdown === 'why'" class="absolute left-0 right-0 h-0.5 bg-brand" style="bottom: -64px;"></div>
+              <div v-if="activeDropdown === 'why' || route.path.startsWith('/why/')" class="absolute left-1/2 transform -translate-x-1/2 w-12 h-1 bg-brand" style="bottom: -8px;"></div>
               <div 
                 v-if="activeDropdown === 'why'"
                 class="absolute top-full left-0 mt-2 w-52 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50"
