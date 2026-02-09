@@ -166,7 +166,7 @@
     <!-- 媒体资料部分 -->
     <section class="bg-[#F5F5F5] py-12 sm:py-16 lg:py-24">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex flex-col lg:grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+        <div class="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center lg:justify-center">
           <!-- 移动端标题居中 -->
           <div class="order-1 lg:hidden w-full text-center">
             <h2 class="font-pingfang font-medium text-[24px] xs:text-[28px] sm:text-[32px] leading-[36px] xs:leading-[42px] sm:leading-[48px] tracking-normal text-[#707273]">
@@ -176,13 +176,11 @@
 
           <!-- 图片 - 移动端在标题后，PC端在右侧 -->
           <div class="order-2 lg:order-2 flex justify-center lg:justify-end w-full px-[10px] lg:px-0">
-            <div class="w-full max-w-md lg:max-w-lg">
-              <img 
-                :src="center3ImageSrc" 
-                alt="媒体资料" 
-                class="w-full h-auto object-contain"
-              />
-            </div>
+            <img
+              :src="center3ImageSrc"
+              alt="媒体资料"
+              class="w-full max-w-md h-auto lg:w-[703px] lg:h-[540px] lg:max-w-none object-cover"
+            />
           </div>
 
           <!-- 内容 - 移动端在图片后，PC端在左侧 -->
