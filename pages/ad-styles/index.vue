@@ -76,7 +76,7 @@
 							</div>
 
 							<!-- 右侧说明 -->
-							<div class="px-[24px]  md:pt-[71px] md:pl-[48px] bg-transparent md:bg-white">
+							<div class="p-6 sm:p-8">
 								<div class="space-y-3">
 									<div v-for="field in metaFields" :key="field.key">
 										<div v-if="field.key === 'scene'"
