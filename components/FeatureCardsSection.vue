@@ -24,9 +24,7 @@
               ? 'text-[12px] sm:text-[14px] md:text-[16px] leading-[18px] sm:leading-[22px] max-w-[760px] mb-8'
               : id === 'browser'
                 ? 'text-[12px] sm:text-[14px] md:text-[16px] leading-[18px] sm:leading-[22px] max-w-[760px] mb-8'
-                : id === 'digital'
-                  ? 'text-[12px] sm:text-[14px] leading-[18px] sm:leading-[22px] max-w-[760px] mb-8'
-                  : 'text-[12px] sm:text-[14px] md:text-[18px] leading-[20px] sm:leading-[22px] md:leading-[38px] max-w-4xl mb-12',
+                : 'text-[12px] sm:text-[14px] md:text-[18px] leading-[20px] sm:leading-[22px] md:leading-[38px] max-w-4xl mb-12',
         ]"
       >
         {{ description }}
@@ -45,6 +43,7 @@
           :class="[
             'bg-white rounded-[12px]',
             id === 'unique' ||
+            id === 'digital' ||
             id === 'target' ||
             id === 'optimization' ||
             id === 'browser'
