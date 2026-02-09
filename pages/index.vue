@@ -152,9 +152,9 @@
             </div>
 
             <!-- 工作原理按钮 -->
-            <div class="flex justify-center lg:justify-start px-[10%] md:px-0 lg:pl-[80px]">
-              <NuxtLink 
-                to="/how-it-works" 
+            <div class="flex justify-center lg:justify-start px-[10%] md:px-0 lg:ml-[80px]">
+              <NuxtLink
+                to="/how-it-works"
                 class="register-btn inline-flex items-center justify-center text-white rounded-[30px] font-pingfang font-normal text-[16px] sm:text-[18px] md:text-[19px] lg:text-[20px] leading-[24px] sm:leading-[27px] md:leading-[28.5px] lg:leading-[30px] tracking-normal transition-colors shadow-lg hover:shadow-xl w-[200px] h-[50px] md:w-[240px] md:h-[60px]"
               >
                 工作原理
