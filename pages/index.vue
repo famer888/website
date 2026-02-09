@@ -63,9 +63,9 @@
     <!-- 成为一名广告商部分 -->
     <section class="bg-[#F5F5F5] py-12 sm:py-16 lg:py-24">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex flex-col lg:grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+        <div class="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center lg:justify-center">
           <!-- 标题 - 移动端在最上面 -->
-          <div class="order-1 lg:order-none w-full lg:col-span-2 text-center lg:hidden">
+          <div class="order-1 lg:order-none w-full text-center lg:hidden">
             <h2 class="font-pingfang font-medium text-[24px] xs:text-[28px] sm:text-[32px] leading-[36px] xs:leading-[42px] sm:leading-[48px] tracking-normal text-[#707273] w-[235px] h-[48px] mx-auto">
               成为一名广告商!
             </h2>
@@ -73,20 +73,18 @@
 
           <!-- 左侧插图 - 移动端在标题后，PC端在左侧 -->
           <div class="order-2 lg:order-1 flex justify-center lg:justify-start w-full px-[10px] lg:px-0">
-            <div class="w-full max-w-md lg:max-w-lg">
-              <img 
-                :src="center2ImageSrc" 
-                alt="成为一名广告商" 
-                class="w-full h-auto object-contain"
-              />
-            </div>
+            <img
+              :src="center2ImageSrc"
+              alt="成为一名广告商"
+              class="w-full max-w-md h-auto lg:w-[730px] lg:h-[540px] lg:max-w-none object-cover"
+            />
           </div>
 
           <!-- 右侧内容 - 移动端在图片后，PC端在右侧 -->
           <div class="order-3 lg:order-2 w-full max-w-[500px]">
             <!-- PC端标题 -->
-            <div class="hidden lg:flex justify-center mb-8">
-              <h2 class="font-pingfang font-medium text-[64px] leading-[96px] tracking-normal text-[#707273]">
+            <div class="hidden lg:flex justify-end mb-8">
+              <h2 class="font-pingfang font-medium text-[64px] leading-[96px] tracking-normal text-[#707273] whitespace-nowrap">
                 成为一名广告商!
               </h2>
             </div>
