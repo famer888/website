@@ -48,9 +48,9 @@
               >
                 注册
               </NuxtLink>
-              <NuxtLink 
-                to="/learn-more" 
-                class="learn-more-btn inline-flex items-center justify-center bg-white border-2 rounded-full text-sm sm:text-base font-semibold transition-colors w-[124px] h-[40px] md:w-[200px] md:h-[60px]"
+              <NuxtLink
+                to="/learn-more"
+                class="learn-more-btn inline-flex items-center justify-center bg-white border rounded-full text-sm sm:text-base font-semibold transition-colors w-[124px] h-[40px] md:w-[200px] md:h-[60px]"
               >
                 了解更多
               </NuxtLink>
@@ -197,9 +197,9 @@
               本文档概述了T1的广告和优质广告资源。了解我们的广告格式、T1 DSP、热门垂直市场、T1经验以及最新统计数据。只需几次点击即可触达全球受众。
             </p>
             <div class="flex justify-center lg:justify-start">
-              <NuxtLink 
-                to="/download-media-kit" 
-                class="learn-more-btn inline-flex items-center justify-center bg-[#F5F5F5] border-2 rounded-[30px] font-pingfang font-normal text-[16px] sm:text-[18px] md:text-[19px] lg:text-[20px] leading-[24px] sm:leading-[27px] md:leading-[28.5px] lg:leading-[30px] tracking-normal transition-colors w-[200px] h-[50px] md:w-[240px] md:h-[60px]"
+              <NuxtLink
+                to="/download-media-kit"
+                class="learn-more-btn inline-flex items-center justify-center bg-[#F5F5F5] border rounded-[30px] font-pingfang font-normal text-[16px] sm:text-[18px] md:text-[19px] lg:text-[20px] leading-[24px] sm:leading-[27px] md:leading-[28.5px] lg:leading-[30px] tracking-normal transition-colors w-[200px] h-[50px] md:w-[240px] md:h-[60px]"
               >
                 立即下载
               </NuxtLink>
