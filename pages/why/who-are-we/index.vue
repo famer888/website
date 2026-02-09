@@ -107,9 +107,9 @@
             
             <!-- 下部分：居中显示 -->
             <div class="text-center">
-              <h2 class="text-4xl font-bold text-[#3A82F9] mb-4">立即开始!</h2>
-              <p class="text-xl font-medium text-[#626671] mb-2">免费加入!</p>
-              <p class="text-base text-[#93959C] mb-8">来看看我们能为您做些什么。</p>
+              <h2 class="text-4xl font-medium text-[#3A82F9] mb-4">立即开始!</h2>
+              <p class="text-sm font-medium text-[#93959C] mb-2">免费加入!</p>
+              <p class="text-sm text-[#93959C] mb-8">来看看我们能为您做些什么。</p>
               <!-- 行动号召按钮 -->
               <NuxtLink to="/register" class="inline-block w-[200px] h-[50px] bg-gradient-to-r from-[#3A82F9] to-[#2B6FE8] text-white rounded-full text-lg font-medium hover:opacity-90 transition-opacity flex items-center justify-center mx-auto">
                 立即加入
