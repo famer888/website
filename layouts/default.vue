@@ -91,14 +91,14 @@
           </div>
 
           <!-- 登录和注册 -->
-          <div class="hidden md:flex items-center space-x-4 ml-4">
+          <!-- <div class="hidden md:flex items-center space-x-4 ml-4">
             <NuxtLink to="/login" class="text-gray-700 hover:text-brand px-3 py-2 text-sm font-medium transition-colors">
               登陆
             </NuxtLink>
             <NuxtLink to="/register" class="bg-brand text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-brand transition-colors">
               注册
             </NuxtLink>
-          </div>
+          </div> -->
 
           <!-- 移动端菜单按钮 -->
           <div class="md:hidden">
@@ -191,10 +191,10 @@
           </div>
           
           <!-- 登录和注册按钮 -->
-          <div class="px-4 py-4 space-y-3 border-t border-gray-200">
+          <!-- <div class="px-4 py-4 space-y-3 border-t border-gray-200">
             <NuxtLink to="/login" @click="mobileMenuOpen = false" class="block w-full text-center bg-brand text-white px-4 py-3 rounded-full text-base font-medium">登陆</NuxtLink>
             <NuxtLink to="/register" @click="mobileMenuOpen = false" class="block w-full text-center border-2 border-brand text-brand bg-white px-4 py-3 rounded-full text-base font-medium">注册</NuxtLink>
-          </div>
+          </div> -->
           </div>
         </div>
       </div>
