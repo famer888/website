@@ -88,7 +88,7 @@
           
           <!-- 移动广告组件 - PC端 -->
           <div class="mt-[80px] max-w-5xl mx-auto">
-            <!-- 上部分：左右布局 -->
+            <!-- 上部分：右侧图片固定420px宽、420px高 -->
             <div class="flex gap-8 items-center mb-12">
               <!-- 左侧：文本内容 -->
               <div class="flex-1">
@@ -98,10 +98,10 @@
                   我们的广告投放技术赋能移动广告商,使他们能够针对全球数百万用户,在用户全天使用智能手机时,投放高度精准、可自动优化的广告活动。
                 </p>
               </div>
-              
+
               <!-- 右侧：图片 -->
-              <div class="flex-1 flex items-center justify-center">
-                <img :src="why8ImageSrc" alt="移动广告" class="w-full h-auto" />
+              <div class="w-[420px] h-[420px] flex items-center justify-center flex-shrink-0">
+                <img :src="why8ImageSrc" alt="移动广告" class="w-full h-full object-cover" />
               </div>
             </div>
             
