@@ -102,14 +102,14 @@
                 <img
                   :src="block.image"
                   :alt="block.sectionTitle"
-                  class="w-full h-auto max-w-[320px] max-h-[548px] object-contain"
+                  class="w-full h-auto max-w-[280px] max-h-[480px] md:max-w-[320px] md:max-h-[548px] object-contain"
                 />
               </div>
 
               <!-- 右侧说明 -->
               <div class="p-6 sm:p-8 flex flex-col justify-center">
                 <div
-                  class="space-y-3 font-pingfang font-normal text-[14px] md:text-[24px] leading-[20px] md:leading-[44px] tracking-normal"
+                  class="space-y-3 font-pingfang font-normal text-[14px] md:text-[24px] leading-[30px] md:leading-[44px] tracking-normal"
                 >
                   <div v-for="field in metaFields" :key="field.key">
                     <div v-if="field.key === 'scene'">
@@ -150,7 +150,7 @@
 
         <!-- Logos（先占位，后续替换） -->
         <div
-          class="flex flex-wrap justify-center items-center gap-10 md:gap-28 sm:gap-14 mb-10"
+          class="flex flex-wrap justify-center items-center gap-10 md:gap-28 sm:gap-14 mb-12"
         >
           <div
             v-for="n in logos"
@@ -168,7 +168,7 @@
         <div class="flex justify-center">
           <NuxtLink
             to="/register"
-            class="register-btn inline-flex items-center justify-center text-white rounded-full font-pingfang font-medium text-[16.8px] sm:text-[19.2px] leading-[24px] tracking-normal transition-colors shadow-lg hover:shadow-xl w-[180px] h-[44px] sm:w-[200px] sm:h-[48px]"
+            class="register-btn inline-flex items-center justify-center text-white rounded-full font-pingfang font-normal text-[16px] md:text-[20px] leading-[24px] md:leading-[30px] tracking-normal transition-colors shadow-lg hover:shadow-xl w-[160px] h-[40px] md:w-[240px] md:h-[60px]"
           >
             报名
           </NuxtLink>
