@@ -25,8 +25,9 @@
           v-for="item in items"
           :key="item.title"
           :class="[
-            'bg-white rounded-[12px] p-8',
+            'bg-white rounded-[12px]',
             id === 'unique' ||
+            id === 'digital' ||
             id === 'target' ||
             id === 'optimization' ||
             id === 'browser' ||
@@ -41,7 +42,7 @@
             alt="图标"
           />
           <h4
-            class="font-pingfang font-medium text-[18px] sm:text-[20px] md:text-[24px] leading-[27px] sm:leading-[30px] md:leading-[36px] tracking-normal text-[#111827] mb-3 text-center w-full"
+            class="font-pingfang font-medium text-[18px] sm:text-[20px] md:text-[24px] leading-[27px] sm:leading-[30px] md:leading-[36px] tracking-normal text-[#111827] mb-[25px] text-center w-full"
           >
             {{ item.title }}
           </h4>

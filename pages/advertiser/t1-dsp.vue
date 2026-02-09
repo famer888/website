@@ -136,7 +136,7 @@
           >
             <button
               type="button"
-              class="w-full flex items-center justify-between py-4 text-left"
+              class="w-full flex items-center justify-between py-4 text-left border-b border-[#3A82F9]"
               @click="toggleFaq(idx)"
             >
               <span
