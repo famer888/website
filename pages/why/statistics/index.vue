@@ -21,7 +21,7 @@
           <!-- 右侧：两个数据圆圈容器 -->
           <div class="w-full md:flex-1 flex flex-col md:flex-row gap-6 md:gap-12 items-center md:justify-end mt-6 md:mt-0">
             <!-- 中间：数据圆圈1 -->
-            <div class="relative w-[300px] h-[300px] md:w-[320px] md:h-[320px] flex items-center justify-center ">
+            <div class="relative w-[335px] h-[335px] md:w-[320px] md:h-[320px] flex items-center justify-center ">
               <img :src="statistics3ImageSrc" alt="" class="absolute inset-0 w-full h-full object-contain" />
               <div class="relative z-10 text-center">
                 <div class="text-[#3A82F9] mb-1" style="font-family: DINPro; font-weight: 700; font-size: 72px; line-height: 72px; letter-spacing: 0px;">150</div>
@@ -31,7 +31,7 @@
             </div>
             
             <!-- 右边：数据圆圈2 -->
-            <div class="relative w-[300px] h-[300px] md:w-[320px] md:h-[320px] flex items-center justify-center ">
+            <div class="relative w-[335px] h-[335px] md:w-[320px] md:h-[320px] flex items-center justify-center ">
               <img :src="statistics3ImageSrc" alt="" class="absolute inset-0 w-full h-full object-contain" />
               <div class="relative z-10 text-center">
                 <div class="text-[#3A82F9] mb-1" style="font-family: DINPro; font-weight: 700; font-size: 72px; line-height: 72px; letter-spacing: 0px;">4.6</div>
