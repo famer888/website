@@ -5,27 +5,27 @@
       <div class="px-3 md:px-6 pt-2 md:pt-6 pb-1 md:pb-4 sticky top-0 bg-white z-10">
         <h3 class="text-sm md:text-xl font-bold text-gray-900">Daily Ad Impressions</h3>
       </div>
-      
+
       <!-- 表格 -->
       <div class="px-3 md:px-6 pb-2 md:pb-6">
         <table class="w-full">
           <thead class="sticky top-[45px] md:static z-10">
             <tr class="bg-[#CEF7FF]">
-              <th class="text-left py-1 md:py-3 px-1.5 md:px-4 text-[10px] md:text-sm font-semibold text-gray-700">#</th>
-              <th class="text-left py-1 md:py-3 px-1.5 md:px-4 text-[10px] md:text-sm font-semibold text-gray-700">Country</th>
-              <th class="text-left py-1 md:py-3 px-1.5 md:px-4 text-[10px] md:text-sm font-semibold text-gray-700">Daily Ad Impressions</th>
+              <th class="text-left py-1 md:py-3 px-1.5 md:px-4 text-[10px] md:text-sm font-semibold text-gray-700">#
+              </th>
+              <th class="text-left py-1 md:py-3 px-1.5 md:px-4 text-[10px] md:text-sm font-semibold text-gray-700">
+                Country</th>
+              <th class="text-left py-1 md:py-3 px-1.5 md:px-4 text-[10px] md:text-sm font-semibold text-gray-700">Daily
+                Ad Impressions</th>
             </tr>
           </thead>
           <tbody>
-            <tr
-              v-for="(row, index) in tableData"
-              :key="index"
-              :class="index % 2 === 0 ? 'bg-white' : 'bg-[#CEF7FF]'"
-              class="border-b border-gray-200"
-            >
+            <tr v-for="(row, index) in tableData" :key="index" :class="index % 2 === 0 ? 'bg-white' : 'bg-[#CEF7FF]'"
+              class="border-b border-gray-200">
               <td class="py-1 md:py-3 px-1.5 md:px-4 text-[10px] md:text-sm text-gray-700">{{ row.rank }}</td>
               <td class="py-1 md:py-3 px-1.5 md:px-4 text-[10px] md:text-sm text-gray-700">{{ row.country }}</td>
-              <td class="py-1 md:py-3 px-1.5 md:px-4 text-[10px] md:text-sm text-gray-700">{{ formatNumber(row.impressions) }}</td>
+              <td class="py-1 md:py-3 px-1.5 md:px-4 text-[10px] md:text-sm text-gray-700">{{
+                formatNumber(row.impressions) }}</td>
             </tr>
           </tbody>
         </table>
@@ -64,4 +64,3 @@ const formatNumber = (num) => {
   return num.toString()
 }
 </script>
-
