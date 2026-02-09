@@ -1,30 +1,14 @@
 <template>
-  <section :class="[bgColor, 'py-12 sm:py-14 lg:py-16']">
+  <section :class="[bgColor, 'py-14  md:py-28']">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <h3
-        :class="[
-          'font-pingfang font-medium tracking-normal text-[#111827] text-center',
-          id === 'target'
-            ? 'text-[36px] sm:text-[26px] md:text-[56px] leading-[56px] sm:leading-[32px] md:leading-[96px] mb-4'
-            : id === 'optimization' || id === 'browser'
-              ? 'text-[36px] sm:text-[22px] md:text-[56px] leading-[56px] sm:leading-[32px] md:leading-[96px] mb-4'
-              : id === 'digital'
-                ? 'text-[36px] sm:text-[24px] md:text-[56px] leading-[56px] sm:leading-[36px] md:leading-[56px] mb-12'
-                : 'text-[36px] sm:text-[32px] md:text-[56px] leading-[36px] sm:leading-[46px] md:leading-[56px] mb-12',
-        ]"
+        class="font-pingfang font-medium tracking-normal text-[#111827] text-center text-[36px] md:text-[56px] leading-[56px] md:leading-[96px] mb-6"
       >
         {{ title }}
       </h3>
       <p
         :class="[
-          'font-pingfang font-normal tracking-normal text-[#A2A3A5] text-center mx-auto',
-          id === 'target'
-            ? 'text-[12px] sm:text-[14px] md:text-[16px] leading-[20px] sm:leading-[22px] md:leading-[26px] max-w-[760px] mb-8'
-            : id === 'optimization'
-              ? 'text-[12px] sm:text-[14px] md:text-[16px] leading-[18px] sm:leading-[22px] max-w-[760px] mb-8'
-              : id === 'browser'
-                ? 'text-[12px] sm:text-[14px] md:text-[16px] leading-[18px] sm:leading-[22px] max-w-[760px] mb-8'
-                : 'text-[12px] sm:text-[14px] md:text-[18px] leading-[20px] sm:leading-[22px] md:leading-[38px] max-w-4xl mb-12',
+          'font-pingfang font-normal text-left text-[16px] md:text-[18px] leading-[24px] md:leading-[26px] tracking-normal text-[#93959C] max-w-[560px] mx-auto mb-8',
         ]"
       >
         {{ description }}
@@ -46,14 +30,15 @@
             id === 'digital' ||
             id === 'target' ||
             id === 'optimization' ||
-            id === 'browser'
-              ? 'xl:w-[373px] xl:h-[480px] shadow-[0_2px_24px_0_rgba(0,0,0,0.096)] border-none flex flex-col items-center mx-auto pt-[55px] px-8 pb-8'
-              : 'py-28 px-8 shadow-[0_5px_8px_-2px_rgba(0,0,0,0.025),0_2px_3px_-1px_rgba(0,0,0,0.01)] border border-[#EEF0F4]',
+            id === 'browser' ||
+            id === 'digital'
+              ? 'xl:w-[373px] xl:h-[480px] shadow-[0_2px_24px_0_rgba(0,0,0,0.096)] border-none flex flex-col items-center justify-center mx-auto max-w-[90vw]'
+              : 'py-28 shadow-[0_5px_8px_-2px_rgba(0,0,0,0.025),0_2px_3px_-1px_rgba(0,0,0,0.01)] border border-[#EEF0F4]',
           ]"
         >
           <SvgIcon
             :name="item.icon"
-            class="w-[160px] h-[160px] mx-auto mb-[44px] object-contain"
+            class="w-[100px] h-[100px] lg:w-[160px] lg:h-[160px] mx-auto mb-4 object-contain"
             alt="图标"
           />
           <h4
@@ -62,7 +47,7 @@
             {{ item.title }}
           </h4>
           <p
-            class="font-pingfang font-normal text-[14px] sm:text-[16px] md:text-[18px] leading-[21px] sm:leading-[24px] md:leading-[27px] tracking-normal text-[#A2A3A5] text-left w-full"
+            class="font-pingfang font-normal text-[14px] sm:text-[16px] md:text-[18px] leading-[21px] sm:leading-[24px] md:leading-[27px] tracking-normal text-[#626671] text-left w-full"
           >
             {{ item.desc }}
           </p>
@@ -80,7 +65,7 @@
             v-for="(item, idx) in items"
             :key="item.title"
             :ref="(el) => setCardRef(el, idx)"
-            class="snap-center shrink-0 w-[78%] bg-white rounded-[12px] shadow-[0_5px_8px_-2px_rgba(0,0,0,0.025),0_2px_3px_-1px_rgba(0,0,0,0.01)] border border-[#EEF0F4] p-8 py-12 flex flex-col items-center justify-center min-h-[400px]"
+            class="w-[260px] h-[266px] snap-center shrink-0 bg-white rounded-[12px] shadow-[0_5px_8px_-2px_rgba(0,0,0,0.025),0_2px_3px_-1px_rgba(0,0,0,0.01)] border border-[#EEF0F4] p-4 py-12 flex flex-col items-center justify-center"
           >
             <SvgIcon
               :name="item.icon"
@@ -93,7 +78,7 @@
               {{ item.title }}
             </h4>
             <p
-              class="font-pingfang font-normal text-[14px] leading-[21px] tracking-normal text-[#A2A3A5] text-left w-full"
+              class="font-pingfang font-normal text-[14px] leading-[21px] tracking-normal text-[#626671] text-left w-full"
             >
               {{ item.desc }}
             </p>
@@ -109,10 +94,10 @@
         </div>
       </div>
 
-      <div v-if="ctaLink" class="flex justify-center">
+      <div v-if="ctaLink" class="flex justify-center md:mt-20">
         <NuxtLink
           :to="ctaLink"
-          class="register-btn inline-flex items-center justify-center text-white rounded-full font-pingfang font-medium text-[14px] sm:text-[16px] leading-[20px] tracking-normal transition-colors shadow-lg hover:shadow-xl w-[160px] h-[44px] sm:w-[180px] sm:h-[48px]"
+          class="register-btn inline-flex items-center justify-center text-white rounded-full font-pingfang font-normal text-[16px] md:text-[20px] leading-[24px] md:leading-[30px] tracking-normal transition-colors shadow-lg hover:shadow-xl w-[160px] h-[40px] md:w-[240px] md:h-[60px]"
         >
           {{ ctaText }}
         </NuxtLink>
