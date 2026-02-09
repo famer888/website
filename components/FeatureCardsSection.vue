@@ -43,22 +43,22 @@
           v-for="item in items"
           :key="item.title"
           :class="[
-            'bg-white rounded-[12px] p-8',
+            'bg-white rounded-[12px]',
             id === 'unique' ||
             id === 'target' ||
             id === 'optimization' ||
             id === 'browser'
-              ? 'xl:w-[373px] xl:h-[480px] shadow-[0_2px_24px_0_rgba(0,0,0,0.096)] border-none flex flex-col items-center justify-center mx-auto'
-              : 'py-28 shadow-[0_5px_8px_-2px_rgba(0,0,0,0.025),0_2px_3px_-1px_rgba(0,0,0,0.01)] border border-[#EEF0F4]',
+              ? 'xl:w-[373px] xl:h-[480px] shadow-[0_2px_24px_0_rgba(0,0,0,0.096)] border-none flex flex-col items-center mx-auto pt-[55px] px-8 pb-8'
+              : 'py-28 px-8 shadow-[0_5px_8px_-2px_rgba(0,0,0,0.025),0_2px_3px_-1px_rgba(0,0,0,0.01)] border border-[#EEF0F4]',
           ]"
         >
           <SvgIcon
             :name="item.icon"
-            class="w-[160px] h-[160px] mx-auto mb-4 object-contain"
+            class="w-[160px] h-[160px] mx-auto mb-[44px] object-contain"
             alt="图标"
           />
           <h4
-            class="font-pingfang font-medium text-[18px] sm:text-[20px] md:text-[24px] leading-[27px] sm:leading-[30px] md:leading-[36px] tracking-normal text-[#111827] mb-3 text-center w-full"
+            class="font-pingfang font-medium text-[18px] sm:text-[20px] md:text-[24px] leading-[27px] sm:leading-[30px] md:leading-[36px] tracking-normal text-[#111827] mb-[25px] text-center w-full"
           >
             {{ item.title }}
           </h4>
