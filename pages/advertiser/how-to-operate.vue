@@ -2,13 +2,13 @@
   <div class="bg-white">
     <!-- Hero：如何成为广告商 -->
     <section
-      class="bg-gradient-to-b from-[#DFE9FB] to-[#FFFFFF] py-8 sm:py-12 lg:py-16"
+      class="bg-gradient-to-b from-[#DFE9FB] to-[#FFFFFF] py-12 lg:py-16"
     >
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-7xl mx-auto px-4 lg:px-8">
         <!-- 移动端布局：文本 -> 图片 -> 按钮 -->
         <div class="md:hidden">
           <div class="flex flex-col items-center text-left">
-            <div class="w-full px-6 sm:px-14 py-8 sm:py-14">
+            <div class="w-full px-6 py-8">
               <h1 :class="styles.h1">如何成为广告商?</h1>
               <p :class="styles.subtitle">
                 您的广告距离您想要触达的受众群体只有几步之遥。
@@ -18,7 +18,7 @@
               </p>
             </div>
             <div
-              class="w-full px-6 sm:px-10 pb-8 sm:pb-12 flex items-center justify-center"
+              class="w-full px-6 md:px-10 pb-8 md:pb-12 flex items-center justify-center"
             >
               <img
                 :src="images.hero"
@@ -26,7 +26,7 @@
                 class="w-full h-auto max-w-[400px] object-contain b p-4"
               />
             </div>
-            <div class="w-full px-6 sm:px-14 pb-8 sm:pb-14 flex justify-center">
+            <div class="w-full px-6 md:px-14 pb-8 md:pb-14 flex justify-center">
               <NuxtLink to="/contact" :class="styles.btn"> 联系我们 </NuxtLink>
             </div>
           </div>
@@ -80,9 +80,7 @@
           </div>
 
           <!-- 图片 - 移动端在下，桌面端根据配置 -->
-          <div
-            :class="['w-full md:w-1/2 relative', 'order-2', step.imageOrder]"
-          >
+          <div :class="['w-4/5 md:w-1/2 relative', 'order-2', step.imageOrder]">
             <img
               :src="step.image"
               :alt="step.title"
@@ -130,7 +128,7 @@ const styles = {
   subtitle:
     'font-pingfang font-normal text-[21px] sm:text-[24px] leading-[33px] sm:leading-[36px] tracking-normal text-[#626671] max-w-[560px] mb-6',
   body: 'font-pingfang font-normal text-[18px] sm:text-[18px] leading-[33px] sm:leading-[28px] tracking-normal text-[#93959C] max-w-[560px] mb-12',
-  btn: 'register-btn inline-flex items-center justify-center text-white rounded-full font-pingfang font-normal text-[21px] sm:text-[20px] leading-[30px] tracking-normal transition-colors shadow-lg hover:shadow-xl w-[160px] h-[44px] sm:w-[240px] sm:h-[60px]',
+  btn: 'register-btn inline-flex items-center justify-center text-white rounded-full font-pingfang font-normal text-[18px] md:text-[20px] stext-[20px] leading-[30px] tracking-normal transition-colors shadow-lg hover:shadow-xl w-[264px] h-[48px] md:w-[240px] md:h-[60px]',
   stepTitle:
     'font-pingfang font-medium text-[42px] sm:text-[48px] md:text-[64px] leading-[60px] sm:leading-[69px] md:leading-[96px] tracking-normal text-[#171A1D] mb-12',
   stepSubtitle:
@@ -158,7 +156,7 @@ const steps = [
     title: '上传您的横幅广告。',
     subtitle: '让你的信息表达更有创意！',
     description:
-      '您可以上传横幅图片，也可以从图库中选择之前使用过的图片展示给您的受众。如果您是网站广告新手，不知道该推广什么内容，不妨看看我们的合作伙伴Adultforce，他们提供各种各样的产品供您选择。',
+      '您可以上传横幅图片，也可以从图库中选择之前使用过的图片展示给您的受众。如果您是网站广告新手，不知道该推广什么内容，敬请联系T1 Ads官方，我们将提供各种各样的产品供您选择。',
     image: images.step2,
     imageOrder: 'md:order-2',
     textOrder: 'md:order-1',

@@ -46,12 +46,12 @@
     <section class="bg-white py-12 sm:py-28">
       <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2
-          class="font-pingfang font-medium text-[36px] md:text-[56px] leading-[36px] md:leading-[96px] tracking-normal text-[#111827] mb-8"
+          class="font-pingfang font-medium text-[36px] md:text-[56px] leading-[36px] md:leading-[96px] tracking-normal text-[#111827] mb-6"
         >
           T1 DSP
         </h2>
         <p
-          class="font-pingfang font-normal text-[18px] sm:text-[14px] md:text-[18px] leading-[26px] sm:leading-[22px] md:leading-[26px] tracking-normal text-[#93959C] max-w-[760px] mx-auto mb-8 md:mb12"
+          class="font-pingfang font-normal text-left md:text-center text-[16px] md:text-[18px] leading-[24px] md:leading-[26px] tracking-normal text-[#93959C] max-w-[560px] mx-auto mb-8 md:mb12"
         >
           T1 DSP
           是一个需求方平台，允许广告商通过程序化方式从我们独家的高质量发布商处购买广告位。广告商可以购买视频、展示和其他广告格式，以实现他们的广告目标。
@@ -59,7 +59,7 @@
         <div class="flex justify-center">
           <NuxtLink
             to="/register"
-            class="register-btn inline-flex items-center justify-center text-white rounded-full font-pingfang font-medium text-[14px] leading-[60px] tracking-normal transition-colors shadow-lg hover:shadow-xl w-[160px] h-[40px] md:w-[240px] md:h-[60px]"
+            class="register-btn inline-flex items-center justify-center text-white rounded-full font-pingfang font-normal text-[16px] md:text-[20px] leading-[24px] md:leading-[30px] tracking-normal transition-colors shadow-lg hover:shadow-xl w-[160px] h-[40px] md:w-[240px] md:h-[60px]"
           >
             立即开始
           </NuxtLink>
@@ -74,13 +74,12 @@
           <!-- 左侧文案 -->
           <div class="w-full md:w-1/2">
             <h3
-              class="font-pingfang font-medium text-[36px] sm:text-[32px] md:text-[56px] leading-[36px] sm:leading-[46px] md:leading-[80px] tracking-normal text-[#111827] mb-4"
+              class="font-pingfang font-medium text-[36px] sm:text-[32px] md:text-[56px] leading-[36px] sm:leading-[46px] md:leading-[80px] tracking-normal text-[#111827] mb-6"
             >
-              借助 T1 DSP 拓展<br class="hidden sm:block" />
-              您的广告业务
+              借助 T1 DSP 拓展您的广告业务
             </h3>
             <p
-              class="font-pingfang font-normal text-[12px] sm:text-[14px] md:text-[16px] leading-[20px] sm:leading-[22px] md:leading-[26px] tracking-normal text-[#93959C] max-w-[560px]"
+              class="font-pingfang font-normal text-left text-[16px] md:text-[18px] leading-[24px] md:leading-[28px] tracking-normal text-[#93959C] max-w-[560px] mx-auto"
             >
               通过接入我们的交易平台，您可以访问我们的优质广告资源，触达更多潜在客户，并制定更具创新性的营销策略。评估您的广告系列效果，了解哪些系列能够真正推动线上线下业务增长，创造实际价值。
             </p>
@@ -118,18 +117,22 @@
 
     <!-- FAQ -->
     <section class="bg-white py-12 sm:py-14 lg:py-16">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h3
           class="font-pingfang font-medium text-[36px] sm:text-[24px] md:text-[56px] leading-[36px] sm:leading-[32px] md:leading-[56px] tracking-normal text-[#111827] text-center mb-12"
         >
           DSP常见问题解答
         </h3>
 
-        <div class="">
+        <div>
           <div
             v-for="(item, idx) in faqItems"
             :key="item.q"
-            class=""
+            :class="[
+              'border-b',
+              idx === 0 ? 'border-t-[0]' : '',
+              'border-[#3A82F9]',
+            ]"
           >
             <button
               type="button"
@@ -137,7 +140,7 @@
               @click="toggleFaq(idx)"
             >
               <span
-                class="font-pingfang font-normal text-[14px] sm:text-[16px] leading-[22px] tracking-normal text-[#111827]"
+                class="font-pingfang font-normal text-[16px] md:text-[24px] leading-[32px] md:leading-[48px] tracking-normal text-[#111827]"
               >
                 {{ item.q }}
               </span>
@@ -156,22 +159,23 @@
                 />
               </svg>
             </button>
-            <div v-if="openFaqIndex === idx" class="py-4 ">
-              <div class="bg-[#F5F7FB] p-4">
-                <p
-                  class="font-pingfang font-normal text-[12px] sm:text-[14px] leading-[20px] sm:leading-[22px] tracking-normal text-[#93959C]"
-                >
-                  {{ item.a }}
-                </p>
-              </div>
+            <div
+              v-if="openFaqIndex === idx"
+              class="px-4 py-3 my-3 md:px-8 md:py-6 md:my-6 bg-[#F4F5F9]"
+            >
+              <p
+                class="font-pingfang font-normal text-[16px] md:text-[24px] leading-[32px] md:leading-[48px] tracking-normal text-[#626671]"
+              >
+                {{ item.a }}
+              </p>
             </div>
           </div>
         </div>
 
-        <div class="flex justify-center mt-8">
+        <div class="flex justify-center mt-8 md:mt-20">
           <NuxtLink
             to="/contact/help-center"
-            class="register-btn inline-flex items-center justify-center text-white rounded-full font-pingfang font-medium text-[14px] sm:text-[16px] leading-[20px] tracking-normal transition-colors shadow-lg hover:shadow-xl w-[160px] h-[44px] sm:w-[180px] sm:h-[48px]"
+            class="register-btn inline-flex items-center justify-center text-white rounded-full font-pingfang font-normal text-[16px] md:text-[20px] leading-[24px] md:leading-[30px] tracking-normal transition-colors shadow-lg hover:shadow-xl w-[160px] h-[40px] md:w-[240px] md:h-[60px]"
           >
             更多问题
           </NuxtLink>
@@ -188,14 +192,14 @@
           成为广告商！！
         </h3>
         <p
-          class="font-pingfang font-normal text-[12px] sm:text-[14px] leading-[18px] sm:leading-[22px] tracking-normal text-[#93959C] mb-6"
+          class="font-pingfang font-normal text-[12px] sm:text-[14px] leading-[18px] sm:leading-[22px] tracking-normal text-[#93959C]"
         >
           让我们协助您实现最核心的营销目标。
         </p>
-        <div class="flex justify-center">
+        <div class="flex justify-center mt-10">
           <NuxtLink
             to="/register"
-            class="register-btn inline-flex items-center justify-center text-white rounded-full font-pingfang font-medium text-[14px] sm:text-[16px] leading-[20px] tracking-normal transition-colors shadow-lg hover:shadow-xl w-[160px] h-[44px] sm:w-[180px] sm:h-[48px]"
+            class="register-btn inline-flex items-center justify-center text-white rounded-full font-pingfang font-normal text-[16px] md:text-[20px] leading-[24px] md:leading-[30px] tracking-normal transition-colors shadow-lg hover:shadow-xl w-[160px] h-[40px] md:w-[240px] md:h-[60px]"
           >
             报名
           </NuxtLink>
