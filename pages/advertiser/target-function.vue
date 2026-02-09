@@ -96,7 +96,7 @@
           >
             <SvgIcon
               :name="item.icon"
-              class="w-[160px] h-[160px] object-contain flex-shrink-0"
+              class="w-[120px] h-[120px] object-contain flex-shrink-0"
               alt="图标"
             />
             <div class="flex-1">
