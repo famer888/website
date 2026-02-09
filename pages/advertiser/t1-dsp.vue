@@ -125,15 +125,15 @@
           DSP常见问题解答
         </h3>
 
-        <div class="border-t border-[#E6ECF5]">
+        <div class="">
           <div
             v-for="(item, idx) in faqItems"
             :key="item.q"
-            class="border-b border-[#E6ECF5]"
+            class=""
           >
             <button
               type="button"
-              class="w-full flex items-center justify-between py-4 text-left"
+              class="w-full flex items-center justify-between py-4 text-left border-b border-[#3A82F9]"
               @click="toggleFaq(idx)"
             >
               <span
@@ -156,12 +156,14 @@
                 />
               </svg>
             </button>
-            <div v-if="openFaqIndex === idx" class="pb-4">
-              <p
-                class="font-pingfang font-normal text-[12px] sm:text-[14px] leading-[20px] sm:leading-[22px] tracking-normal text-[#93959C]"
-              >
-                {{ item.a }}
-              </p>
+            <div v-if="openFaqIndex === idx" class="py-4 ">
+              <div class="bg-[#F5F7FB] p-4">
+                <p
+                  class="font-pingfang font-normal text-[12px] sm:text-[14px] leading-[20px] sm:leading-[22px] tracking-normal text-[#93959C]"
+                >
+                  {{ item.a }}
+                </p>
+              </div>
             </div>
           </div>
         </div>
