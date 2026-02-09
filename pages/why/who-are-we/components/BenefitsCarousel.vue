@@ -12,7 +12,7 @@
         v-for="(card, index) in cards"
         :key="index"
         @click="activeIndex = index"
-        class="cursor-pointer transition-all duration-300 p-6 rounded-lg border-2"
+        class="cursor-pointer transition-all duration-300 p-6 rounded-lg border"
         :class="activeIndex === index 
           ? 'bg-[#3A82F9] text-white border-[#3A82F9]' 
           : 'bg-white text-gray-900 border-gray-200 hover:border-[#3A82F9]'"
