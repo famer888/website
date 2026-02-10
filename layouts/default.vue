@@ -244,31 +244,80 @@ const getContactMenuText = computed(() => {
 
 const toggleDropdown = (name) => {
   activeDropdown.value = activeDropdown.value === name ? null : name
+  // 如果用户手动关闭了下拉菜单，记录到 sessionStorage
+  if (activeDropdown.value === null) {
+    if (process.client) {
+      sessionStorage.setItem('dropdownClosed', 'true')
+      sessionStorage.setItem('closedDropdownPath', route.path)
+    }
+  }
 }
 
 const toggleMobileDropdown = (name) => {
   mobileDropdown.value = mobileDropdown.value === name ? null : name
 }
 
+// 标记是否是首次加载
+const isFirstLoad = ref(true)
+
 // 根据当前路由自动打开对应的下拉菜单
 watch(() => route.path, (newPath) => {
+  // 首次加载时，不在这里处理，由 onMounted 处理
+  if (isFirstLoad.value) {
+    return
+  }
+  
+  // 非首次加载（路由变化），清除关闭标记
+  if (process.client) {
+    sessionStorage.removeItem('dropdownClosed')
+    sessionStorage.removeItem('closedDropdownPath')
+  }
+  
+  // 根据路由决定是否打开下拉菜单
   if (newPath.startsWith('/why/')) {
     activeDropdown.value = 'why'
   } else if (newPath.startsWith('/advertiser/')) {
     activeDropdown.value = 'advertiser'
   } else if (newPath.startsWith('/contact')) {
     activeDropdown.value = 'contact'
+  } else {
+    activeDropdown.value = null
   }
 }, { immediate: true })
 
 // 点击外部关闭下拉菜单
 onMounted(() => {
   if (process.client) {
+    // 刷新时，先关闭所有下拉菜单（模拟点击外部的行为）
+    activeDropdown.value = null
+    
+    // 检查用户是否在当前路径手动关闭了下拉菜单
+    const dropdownClosed = sessionStorage.getItem('dropdownClosed') === 'true'
+    const closedDropdownPath = sessionStorage.getItem('closedDropdownPath')
+    
+    // 如果用户在当前路径手动关闭过下拉菜单，则不自动打开
+    if (!(dropdownClosed && closedDropdownPath === route.path)) {
+      // 如果用户没有手动关闭过，根据路由决定是否打开下拉菜单
+      if (route.path.startsWith('/why/')) {
+        activeDropdown.value = 'why'
+      } else if (route.path.startsWith('/advertiser/')) {
+        activeDropdown.value = 'advertiser'
+      } else if (route.path.startsWith('/contact')) {
+        activeDropdown.value = 'contact'
+      }
+    }
+    
+    // 标记首次加载完成
+    isFirstLoad.value = false
+    
     const handleClickOutside = (event) => {
       const target = event.target
       // 检查点击是否在下拉菜单相关元素外部（包括按钮和下拉菜单本身）
       if (!target.closest('.relative.group')) {
         activeDropdown.value = null
+        // 记录用户手动关闭了下拉菜单
+        sessionStorage.setItem('dropdownClosed', 'true')
+        sessionStorage.setItem('closedDropdownPath', route.path)
       }
     }
     document.addEventListener('click', handleClickOutside)
