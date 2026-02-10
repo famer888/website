@@ -386,7 +386,7 @@
 				<button class="text-xl text-[#fff] bg-[#3A82F9] w-[160px] h-[40px] md:w-[240px] md:h-[60px] rounded-full">注册T1广告</button>
 			</div>
 		</section>
-
+	<Footer />
 	</div>
 </template>
 
