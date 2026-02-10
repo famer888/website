@@ -11,16 +11,18 @@
 					{{ ctaData.line1 }}
 				</p>
 			</div>
-			<NuxtLink to="/register"
-				class="w-[160px] h-[40px] md:w-[240px] md:h-[60px] bg-[#3A82F9] text-white rounded-full font-pingfang font-normal tracking-[0px] text-[16px] md:text-[20px] leading-[24px] md:leading-[30px] text-center hover:opacity-90 transition-opacity flex items-center justify-center mx-auto">
-				<span class="md:hidden">{{ ctaData.buttonH5 }}</span>
-				<span class="hidden md:inline">{{ ctaData.buttonPC }}</span>
-			</NuxtLink>
+		<button @click="navigateToAuthOrDashboard('/auth/register')"
+			class="cursor-pointer w-[160px] h-[40px] md:w-[240px] md:h-[60px] bg-[#3A82F9] text-white rounded-full font-pingfang font-normal tracking-[0px] text-[16px] md:text-[20px] leading-[24px] md:leading-[30px] text-center hover:opacity-90 transition-opacity flex items-center justify-center mx-auto">
+			<span class="md:hidden">{{ ctaData.buttonH5 }}</span>
+			<span class="hidden md:inline">{{ ctaData.buttonPC }}</span>
+		</button>
 		</div>
 	</section>
 </template>
 
 <script setup>
+const { navigateToAuthOrDashboard } = useAuth()
+
 const ctaData = {
 	title: '立即开始!',
 	line1: '让我们助您实现最雄心勃勃的网络营销目标。',

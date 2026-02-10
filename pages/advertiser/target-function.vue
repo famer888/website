@@ -46,12 +46,12 @@
           我们提供覆盖各种地区和设备的多种定向功能。凭借我们成熟的定向技术和专业知识，我们能够利用算法帮助您发现、定位并优化最能提升品牌转化率的受众群体。
         </p>
         <div class="flex justify-center">
-          <NuxtLink
-            to="/register"
-            class="register-btn inline-flex items-center justify-center text-white rounded-full font-pingfang font-normal text-[16px] md:text-[20px] leading-[24px] md:leading-[30px] tracking-normal transition-colors shadow-lg hover:shadow-xl w-[160px] h-[40px] md:w-[240px] md:h-[60px]"
+          <button
+            @click="navigateToAuthOrDashboard('/auth/register')"
+            class="cursor-pointer register-btn inline-flex items-center justify-center text-white rounded-full font-pingfang font-normal text-[16px] md:text-[20px] leading-[24px] md:leading-[30px] tracking-normal transition-colors shadow-lg hover:shadow-xl w-[160px] h-[40px] md:w-[240px] md:h-[60px]"
           >
             创建您的账户
-          </NuxtLink>
+          </button>
         </div>
       </div>
     </section>
@@ -277,6 +277,8 @@
 import FeatureCardsSection from '~/components/FeatureCardsSection.vue'
 import SvgIcon from '~/components/SvgIcon.vue'
 import img_mbgn8 from '~/assets/imgaes/advertiser/img_mbgn8.jpg'
+
+const { navigateToAuthOrDashboard } = useAuth()
 
 // SEO 配置
 useHead({

@@ -33,17 +33,19 @@
 					class="font-normal text-[24px] leading-[36px] tracking-normal text-[#626671] whitespace-pre-line">
 					{{ ctaDataPC.description }}
 				</p>
-				<!-- 按钮 -->
-				<NuxtLink :to="ctaDataPC.btn.link"
-					class="inline-flex items-center justify-center bg-[#3A82F9] text-white rounded-full font-normal text-[20px] leading-[30px] tracking-[0px] transition-colors hover:bg-[#2B6FE8] w-[240px] h-[60px]">
-					{{ ctaDataPC.btn.text }}
-				</NuxtLink>
+			<!-- 按钮 -->
+			<button @click="navigateToAuthOrDashboard('/auth/register')"
+				class="cursor-pointer inline-flex items-center justify-center bg-[#3A82F9] text-white rounded-full font-normal text-[20px] leading-[30px] tracking-[0px] transition-colors hover:bg-[#2B6FE8] w-[240px] h-[60px]">
+				{{ ctaDataPC.btn.text }}
+			</button>
 			</div>
 		</div>
 	</section>
 </template>
 
 <script setup>
+const { navigateToAuthOrDashboard } = useAuth();
+
 // H5 数据
 const ctaDataH5 = {
 	title: "想了解更多？",

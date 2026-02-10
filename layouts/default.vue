@@ -90,15 +90,27 @@
             </div>
           </div>
 
-          <!-- 登录和注册 -->
-          <!-- <div class="hidden md:flex items-center space-x-4 ml-4">
-            <NuxtLink to="/login" class="text-gray-700 hover:text-brand px-3 py-2 text-sm font-medium transition-colors">
-              登陆
-            </NuxtLink>
-            <NuxtLink to="/register" class="bg-brand text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-brand transition-colors">
-              注册
-            </NuxtLink>
-          </div> -->
+          <!-- 登录和注册 / 广告主管理 -->
+          <div class="hidden md:flex items-center space-x-4 ml-4">
+            <!-- 未登录状态：显示登录和注册按钮 -->
+            <template v-if="!isLoggedIn">
+              <NuxtLink to="/auth/login" class="text-gray-700 hover:text-brand px-3 py-2 text-sm font-medium transition-colors">
+                登陆
+              </NuxtLink>
+              <NuxtLink to="/auth/register" class="bg-brand text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-brand transition-colors">
+                注册
+              </NuxtLink>
+            </template>
+            <!-- 已登录状态：显示广告主管理按钮 -->
+            <template v-else>
+              <button
+                @click="goToAdminDashboard"
+                class="bg-brand text-white px-6 py-2 rounded-full text-sm font-medium hover:opacity-90 transition-opacity"
+              >
+                广告主管理
+              </button>
+            </template>
+          </div>
 
           <!-- 移动端菜单按钮 -->
           <div class="md:hidden">
@@ -190,11 +202,23 @@
             </div>
           </div>
           
-          <!-- 登录和注册按钮 -->
-          <!-- <div class="px-4 py-4 space-y-3 border-t border-gray-200">
-            <NuxtLink to="/login" @click="mobileMenuOpen = false" class="block w-full text-center bg-brand text-white px-4 py-3 rounded-full text-base font-medium">登陆</NuxtLink>
-            <NuxtLink to="/register" @click="mobileMenuOpen = false" class="block w-full text-center border-2 border-brand text-brand bg-white px-4 py-3 rounded-full text-base font-medium">注册</NuxtLink>
-          </div> -->
+          <!-- 登录和注册按钮 / 广告主管理 -->
+          <div class="px-4 py-4 space-y-3 border-t border-gray-200">
+            <!-- 未登录状态：显示登录和注册按钮 -->
+            <template v-if="!isLoggedIn">
+              <NuxtLink to="/auth/login" @click="mobileMenuOpen = false" class="block w-full text-center bg-brand text-white px-4 py-3 rounded-full text-base font-medium">登陆</NuxtLink>
+              <NuxtLink to="/auth/register" @click="mobileMenuOpen = false" class="block w-full text-center border-2 border-brand text-brand bg-white px-4 py-3 rounded-full text-base font-medium">注册</NuxtLink>
+            </template>
+            <!-- 已登录状态：显示广告主管理按钮 -->
+            <template v-else>
+              <button
+                @click="mobileMenuOpen = false; goToAdminDashboard()"
+                class="block w-full text-center bg-brand text-white px-4 py-3 rounded-full text-base font-medium"
+              >
+                广告主管理
+              </button>
+            </template>
+          </div>
           </div>
         </div>
       </div>
@@ -217,6 +241,9 @@ const route = useRoute()
 const mobileMenuOpen = ref(false)
 const activeDropdown = ref(null)
 const mobileDropdown = ref(null)
+
+// 认证状态
+const { isLoggedIn, goToAdminDashboard } = useAuth()
 
 // 根据路由获取菜单显示文本
 const getWhyMenuText = computed(() => {

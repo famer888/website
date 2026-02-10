@@ -36,13 +36,13 @@
 							</div>
 
 						</div>
-						<!-- 报名按钮 -->
-						<div class="flex justify-center md:justify-start md:ml-[151px] ">
-							<NuxtLink :to="sectionData.ctaLink"
-								class="inline-flex items-center justify-center bg-[#3A82F9] text-white rounded-full font-medium md:font-normal text-[18px] md:text-[20px] leading-[26px] md:leading-[30px] tracking-[0px] transition-colors hover:bg-[#2B6FE8] w-[160px] h-[48px] md:w-[180px] md:h-[50px]">
-								{{ sectionData.ctaText }}
-							</NuxtLink>
-						</div>
+					<!-- 报名按钮 -->
+					<div class="flex justify-center md:justify-start md:ml-[151px] ">
+						<button @click="navigateToAuthOrDashboard('/auth/register')"
+							class="cursor-pointer inline-flex items-center justify-center bg-[#3A82F9] text-white rounded-full font-medium md:font-normal text-[18px] md:text-[20px] leading-[26px] md:leading-[30px] tracking-[0px] transition-colors hover:bg-[#2B6FE8] w-[160px] h-[48px] md:w-[180px] md:h-[50px]">
+							{{ sectionData.ctaText }}
+						</button>
+					</div>
 					</div>
 				</div>
 
@@ -60,6 +60,8 @@
 import techIcon1 from "~/assets/imgaes/why/mobile-ads/tech-section-1.svg";
 import techIcon2 from "~/assets/imgaes/why/mobile-ads/tech-section-2.svg";
 import rightIllustrationSrc from "~/assets/imgaes/why/mobile-ads/tech-section-right.svg";
+
+const { navigateToAuthOrDashboard } = useAuth();
 
 const sectionData = {
 	items: [

@@ -7,6 +7,9 @@ definePageMeta({
 import loginBgSrc from '~/assets/imgaes/login/login_bg.jpg'
 import logoImageSrc from '~/assets/imgaes/logo.png'
 
+// 认证
+const { login, goToAdminDashboard } = useAuth()
+
 // 表单数据
 const form = reactive({
   account: '',
@@ -17,15 +20,39 @@ const form = reactive({
 // 显示/隐藏密码
 const showPassword = ref(false)
 
+// 加载状态
+const loading = ref(false)
+
 // 表单提交
-const handleSubmit = () => {
+const handleSubmit = async () => {
   if (form.password !== form.confirmPassword) {
     alert('两次输入的密码不一致')
     return
   }
   
-  // TODO: 实现注册逻辑
-  console.log('注册', form)
+  loading.value = true
+  
+  try {
+    // TODO: 替换为实际的 API 调用
+    // const response = await $fetch('/api/auth/register', {
+    //   method: 'POST',
+    //   body: { account: form.account, password: form.password }
+    // })
+    
+    // 模拟注册成功（实际项目中替换为真实 API 响应）
+    const mockToken = 'mock_token_' + Date.now()
+    
+    // 保存登录状态
+    login(mockToken, { account: form.account })
+    
+    // 注册成功后，跳转到广告主管理后台
+    goToAdminDashboard()
+  } catch (error) {
+    console.error('注册失败', error)
+    alert('注册失败，请稍后重试')
+  } finally {
+    loading.value = false
+  }
 }
 
 // SEO 配置
@@ -120,9 +147,10 @@ useHead({
               <!-- 提交按钮 -->
               <button
                 type="submit"
-                class="w-full bg-gradient-to-r from-blue-400 to-blue-600 text-white py-3 rounded-lg font-medium hover:from-blue-500 hover:to-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl"
+                :disabled="loading"
+                class="w-full bg-gradient-to-r from-blue-400 to-blue-600 text-white py-3 rounded-lg font-medium hover:from-blue-500 hover:to-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                注册
+                {{ loading ? '处理中...' : '注册' }}
               </button>
             </form>
 
@@ -130,7 +158,7 @@ useHead({
             <div class="mt-6 text-center text-gray-600">
               <span>
                 已有账号?请点此
-                <NuxtLink to="/login" class="text-blue-600 hover:text-blue-700 font-medium">登陆</NuxtLink>
+                <NuxtLink to="/auth/login" class="text-blue-600 hover:text-blue-700 font-medium">登陆</NuxtLink>
               </span>
             </div>
           </div>

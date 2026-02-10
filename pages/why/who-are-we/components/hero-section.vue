@@ -16,18 +16,20 @@
 			</div>
 
 		</div>
-		<!-- 按钮 -->
-		<div class="flex justify-center">
-			<NuxtLink to="/register"
-				class="w-[160px] h-[40px] md:w-[240px] md:h-[60px] bg-[#3A82F9] text-white rounded-full font-pingfang font-normal tracking-[0px] text-[16px] md:text-[20px] leading-[24px] md:leading-[30px] text-center hover:opacity-90 transition-opacity flex items-center justify-center">
-				免费注册
-			</NuxtLink>
-		</div>
+	<!-- 按钮 -->
+	<div class="flex justify-center">
+		<button @click="navigateToAuthOrDashboard('/auth/register')"
+			class="cursor-pointer w-[160px] h-[40px] md:w-[240px] md:h-[60px] bg-[#3A82F9] text-white rounded-full font-pingfang font-normal tracking-[0px] text-[16px] md:text-[20px] leading-[24px] md:leading-[30px] text-center hover:opacity-90 transition-opacity flex items-center justify-center">
+			免费注册
+		</button>
+	</div>
 	</section>
 </template>
 
 <script setup>
 import why1ImageSrc from '~/assets/imgaes/why/why1.svg'
+
+const { navigateToAuthOrDashboard } = useAuth()
 
 const data = {
 	description1: 'T1 是一家创新型网络广告和数字营销公司,于2008年在加拿大蒙特利尔成立。T1的使命是通过每一次网络营销广告活动提升您公司和产品的业绩。',

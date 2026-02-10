@@ -75,6 +75,10 @@ export default defineNuxtConfig({
       ignore: [
         '/login',
         '/register',
+        '/auth/login',
+        '/auth/register',
+        '/auth/logout',
+        '/admin',
         '/learn-more',
         '/how-it-works',
         '/download-media-kit',
@@ -99,7 +103,9 @@ export default defineNuxtConfig({
   // 运行时配置
   runtimeConfig: {
     public: {
-      siteUrl: (process as any).env?.NUXT_PUBLIC_SITE_URL || 'http://localhost:3000'
+      siteUrl: (process as any).env?.NUXT_PUBLIC_SITE_URL || 'http://localhost:3000',
+      // 广告主管理后台地址，可通过环境变量 NUXT_PUBLIC_ADMIN_DASHBOARD_URL 配置
+      adminDashboardUrl: (process as any).env?.NUXT_PUBLIC_ADMIN_DASHBOARD_URL || '/admin'
     }
   }
 })

@@ -57,12 +57,12 @@
           是一个需求方平台，允许广告商通过程序化方式从我们独家的高质量发布商处购买广告位。广告商可以购买视频、展示和其他广告格式，以实现他们的广告目标。
         </p>
         <div class="flex justify-center">
-          <NuxtLink
-            to="/register"
-            class="register-btn inline-flex items-center justify-center text-white rounded-full font-pingfang font-normal text-[16px] md:text-[20px] leading-[24px] md:leading-[30px] tracking-normal transition-colors shadow-lg hover:shadow-xl w-[160px] h-[40px] md:w-[240px] md:h-[60px]"
+          <button
+            @click="navigateToAuthOrDashboard('/auth/register')"
+            class="cursor-pointer register-btn inline-flex items-center justify-center text-white rounded-full font-pingfang font-normal text-[16px] md:text-[20px] leading-[24px] md:leading-[30px] tracking-normal transition-colors shadow-lg hover:shadow-xl w-[160px] h-[40px] md:w-[240px] md:h-[60px]"
           >
             立即开始
-          </NuxtLink>
+          </button>
         </div>
       </div>
     </section>
@@ -197,12 +197,12 @@
           让我们助您实现最雄心勃勃的 网络营销目标
         </p>
         <div class="flex justify-center mt-10">
-          <NuxtLink
-            to="/register"
-            class="register-btn inline-flex items-center justify-center text-white rounded-full font-pingfang font-normal text-[16px] md:text-[20px] leading-[24px] md:leading-[30px] tracking-normal transition-colors shadow-lg hover:shadow-xl w-[160px] h-[40px] md:w-[240px] md:h-[60px]"
+          <button
+            @click="navigateToAuthOrDashboard('/auth/register')"
+            class="cursor-pointer register-btn inline-flex items-center justify-center text-white rounded-full font-pingfang font-normal text-[16px] md:text-[20px] leading-[24px] md:leading-[30px] tracking-normal transition-colors shadow-lg hover:shadow-xl w-[160px] h-[40px] md:w-[240px] md:h-[60px]"
           >
             报名
-          </NuxtLink>
+          </button>
         </div>
       </div>
     </section>
@@ -215,6 +215,8 @@
 import FeatureCardsSection from '~/components/FeatureCardsSection.vue'
 import img_dsp7 from '~/assets/imgaes/advertiser/DSP7.png'
 import img_t1dsp6x from '~/assets/imgaes/advertiser/img_t1dsp6x.jpg'
+
+const { navigateToAuthOrDashboard } = useAuth()
 
 // SEO 配置
 useHead({

@@ -54,14 +54,14 @@
 
               <!-- 按钮组 - 移动端左右布局，PC端左右布局 -->
               <div class="flex flex-row gap-4 justify-center items-center">
-                <NuxtLink
-                  to="/register"
-                  class="register-btn inline-flex items-center justify-center text-white rounded-full text-sm sm:text-base font-semibold transition-colors shadow-lg hover:shadow-xl w-[124px] h-[40px] md:w-[200px] md:h-[60px]"
+                <button
+                  @click="navigateToAuthOrDashboard('/auth/register')"
+                  class="cursor-pointer register-btn inline-flex items-center justify-center text-white rounded-full text-sm sm:text-base font-semibold transition-colors shadow-lg hover:shadow-xl w-[124px] h-[40px] md:w-[200px] md:h-[60px]"
                 >
                   注册
-                </NuxtLink>
+                </button>
                 <NuxtLink
-                  to="/learn-more"
+                  to="/auth/login"
                   class="learn-more-btn inline-flex items-center justify-center bg-white border-2 rounded-full text-sm sm:text-base font-semibold transition-colors w-[124px] h-[40px] md:w-[200px] md:h-[60px]"
                 >
                   了解更多
@@ -270,12 +270,12 @@
             拓展您的在线商机! 使用 T1 吸引新的网站访客，提升您的在线销售额。
           </p>
           <div class="flex justify-center">
-            <NuxtLink
-              to="/register"
-              class="register-btn inline-flex items-center justify-center text-white rounded-[30px] font-pingfang font-normal text-[16px] sm:text-[18px] md:text-[19px] lg:text-[20px] leading-[24px] sm:leading-[27px] md:leading-[28.5px] lg:leading-[30px] tracking-normal transition-colors shadow-lg hover:shadow-xl w-[200px] h-[50px] md:w-[240px] md:h-[60px]"
+            <button
+              @click="navigateToAuthOrDashboard('/auth/register')"
+              class="cursor-pointer register-btn inline-flex items-center justify-center text-white rounded-[30px] font-pingfang font-normal text-[16px] sm:text-[18px] md:text-[19px] lg:text-[20px] leading-[24px] sm:leading-[27px] md:leading-[28.5px] lg:leading-[30px] tracking-normal transition-colors shadow-lg hover:shadow-xl w-[200px] h-[50px] md:w-[240px] md:h-[60px]"
             >
               立即注册
-            </NuxtLink>
+            </button>
           </div>
         </div>
       </section>
@@ -295,6 +295,9 @@ import icon1Src from '~/assets/imgaes/home/icon1.png'
 import icon2Src from '~/assets/imgaes/home/icon2.png'
 import icon3Src from '~/assets/imgaes/home/icon3.png'
 import logoImageSrc from '~/assets/imgaes/logo.png'
+
+// 认证状态
+const { navigateToAuthOrDashboard } = useAuth()
 
 // SEO 配置
 useHead({

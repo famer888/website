@@ -123,12 +123,12 @@
 					</div>
 				</div>
 
-				<div class="flex justify-center">
-					<NuxtLink to="/register"
-						class="register-btn inline-flex items-center justify-center text-white rounded-full font-pingfang font-medium text-[16.8px] sm:text-[19.2px] leading-[24px] tracking-normal transition-colors shadow-lg hover:shadow-xl w-[180px] h-[44px] sm:w-[200px] sm:h-[48px]">
-						报名
-					</NuxtLink>
-				</div>
+			<div class="flex justify-center">
+				<button @click="navigateToAuthOrDashboard('/auth/register')"
+					class="cursor-pointer register-btn inline-flex items-center justify-center text-white rounded-full font-pingfang font-medium text-[16.8px] sm:text-[19.2px] leading-[24px] tracking-normal transition-colors shadow-lg hover:shadow-xl w-[180px] h-[44px] sm:w-[200px] sm:h-[48px]">
+					报名
+				</button>
+			</div>
 			</div>
 		</section>
 		<!-- 页脚 -->
@@ -137,6 +137,8 @@
 </template>
 
 <script setup>
+const { navigateToAuthOrDashboard } = useAuth()
+
 import img_ggxs9 from '~/assets/imgaes/advertiser/img_ggxs9.jpg'
 import img_ggxs10 from '~/assets/imgaes/advertiser/img_ggxs10.png'
 import img_ggxs11 from '~/assets/imgaes/advertiser/img_ggxs11.png'
