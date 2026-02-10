@@ -1,9 +1,9 @@
 <template>
 	<section class="bg-[#ffffff] pt-[48px] md:pt-[75px] pb-0 md:pb-[98px]">
 		<div class="w-full max-w-[1200px] mx-auto px-[24px] md:px-0">
-			<div class="flex flex-col md:flex-row gap-8 lg:gap-16 items-center">
+			<div class="flex flex-col md:flex-row gap-8 md:gap-0 items-center">
 				<!-- 左侧内容区 -->
-				<div class="flex-1 order-2 md:order-1 ">
+				<div class="flex-1 order-2 md:order-1 flex-shrink-0">
 					<div class="flex  flex-col gap-[36px] md:gap-[48px]">
 						<!-- 内容列表 -->
 						<div class="flex flex-col gap-[36px] md:gap-[58px]">
@@ -28,7 +28,7 @@
 											{{ item.title }}
 										</h3>
 										<p
-											class="font-normal text-[14px] md:text-[18px] leading-[20px] md:leading-[28px] tracking-normal text-[#93959C] text-justify md:text-left">
+											class="font-normal text-[14px] md:text-[18px]  leading-[20px] md:leading-[28px] tracking-normal text-[#93959C] text-justify md:text-left">
 											{{ item.description }}
 										</p>
 									</div>
@@ -36,20 +36,20 @@
 							</div>
 
 						</div>
-					<!-- 报名按钮 -->
-					<div class="flex justify-center md:justify-start md:ml-[151px] ">
-						<button @click="navigateToAuthOrDashboard('/auth/register')"
-							class="cursor-pointer inline-flex items-center justify-center bg-[#3A82F9] text-white rounded-full font-medium md:font-normal text-[18px] md:text-[20px] leading-[26px] md:leading-[30px] tracking-[0px] transition-colors hover:bg-[#2B6FE8] w-[160px] h-[48px] md:w-[180px] md:h-[50px]">
-							{{ sectionData.ctaText }}
-						</button>
-					</div>
+						<!-- 报名按钮 -->
+						<div class="flex justify-center md:justify-start md:ml-[151px] ">
+							<button @click="navigateToAuthOrDashboard('/auth/register')"
+								class="cursor-pointer inline-flex items-center justify-center bg-[#3A82F9] text-white rounded-full font-medium md:font-normal text-[18px] md:text-[20px] leading-[26px] md:leading-[30px] tracking-[0px] transition-colors hover:bg-[#2B6FE8] w-[180px] h-[48px] md:w-[240px] md:h-[60px]">
+								{{ sectionData.ctaText }}
+							</button>
+						</div>
 					</div>
 				</div>
 
 				<!-- 右侧插图 -->
-				<div class="flex-1 order-1 md:order-2 flex justify-center">
+				<div class="flex-1 order-1 md:order-2 flex justify-center w-[280px] md:max-w-[480px]">
 					<img :src="rightIllustrationSrc" alt="移动广告技术"
-						class="w-[280px] md:w-[488px] h-auto object-contain" />
+						class=" h-auto object-contain w-full" />
 				</div>
 			</div>
 		</div>
@@ -75,7 +75,7 @@ const sectionData = {
 			icon: techIcon2,
 			title: "触达目标受众",
 			description:
-				"明确目标受众、触达核心市场、实现利润最大化。您可以根据地理位置、人口统计特征和时间段来精准投放移动广告。我们的精准投放策略旨在确保在合适的时间、合适的地点、将合适的广告推送给合适的受众。",
+				"明确目标受众，触达核心市场，实现利润最大化。您可以根据地理位置人口统计特征和时间段来精准投放移动广告。我们的精准投放策略旨在确保在合适的时间、合适的地点，将合适的广告推送给合适的受众。",
 		},
 	],
 	ctaLink: "/register",

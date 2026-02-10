@@ -30,7 +30,7 @@
 				</h2>
 				<!-- 描述 -->
 				<p
-					class="font-normal text-[24px] leading-[36px] tracking-normal text-[#626671] whitespace-pre-line">
+					class="font-normal text-[24px] leading-[36px] tracking-normal text-[#93959C] whitespace-pre-line">
 					{{ ctaDataPC.description }}
 				</p>
 			<!-- 按钮 -->
