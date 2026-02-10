@@ -36,7 +36,7 @@
                 class="cursor-pointer relative"
                 @click="handleTabClick(tab.id)"
               >
-                <span class="font-bold">{{ tab.name }}</span>
+                <span class="font-pingfang font-normal md:font-medium tracking-[0px] text-[16px] md:text-[32px] leading-[24px] md:leading-[48px]">{{ tab.name }}</span>
                 <label
                   v-if="activeTab === tab.id"
                   class="absolute bottom-[-10px] sm:bottom-[-15px] left-[50%] transform translate-x-[-50%] w-[25px] sm:w-[100px] h-[3px] sm:h-[4px] bg-[#3982F9]"
@@ -66,7 +66,7 @@
           <div class="mt-5 sm:mt-10">
             <div class="flex flex-col py-10 bg-[#F4F5F9] justify-center">
               <div class="text-center">这是否解答了您的问题？</div>
-              <div class="flex mt-3 gap-4 items-center justify-center">
+              <div class="flex mt-3 gap-[14px] md:gap-6 items-center justify-center">
                 <img
                   :src="getEmoIcon(1)"
                   alt=""
