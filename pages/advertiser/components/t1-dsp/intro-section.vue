@@ -1,27 +1,23 @@
 <template>
-  <section class="bg-white py-12 sm:py-28">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2
-        class="font-pingfang font-medium text-[36px] md:text-[56px] leading-[36px] md:leading-[96px] tracking-normal text-[#111827] mb-6"
-      >
-        T1 DSP
-      </h2>
-      <p
-        class="font-pingfang font-normal text-left md:text-center text-[16px] md:text-[18px] leading-[24px] md:leading-[26px] tracking-normal text-[#93959C] max-w-[560px] mx-auto mb-8 md:mb12"
-      >
-        T1 DSP
-        是一个需求方平台，允许广告商通过程序化方式从我们独家的高质量发布商处购买广告位。广告商可以购买视频、展示和其他广告格式，以实现他们的广告目标。
-      </p>
-      <div class="flex justify-center">
-        <button
-          @click="navigateToAuthOrDashboard('/auth/register')"
-          class="cursor-pointer register-btn inline-flex items-center justify-center text-white rounded-full font-pingfang font-normal text-[16px] md:text-[20px] leading-[24px] md:leading-[30px] tracking-normal transition-colors shadow-lg hover:shadow-xl w-[160px] h-[40px] md:w-[240px] md:h-[60px]"
-        >
-          立即开始
-        </button>
-      </div>
-    </div>
-  </section>
+	<section class="bg-white py-12 sm:py-28">
+		<div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+			<h2
+				class="font-pingfang font-medium text-[36px] md:text-[56px] leading-[36px] md:leading-[96px] tracking-normal text-[#111827] mb-6">
+				T1 DSP
+			</h2>
+			<p
+				class="font-pingfang font-normal text-left md:text-center text-[16px] md:text-[18px] leading-[24px] md:leading-[26px] tracking-normal text-[#93959C] max-w-[560px] mx-auto mb-8 md:mb12">
+				T1 DSP
+				是一个需求方平台，允许广告商通过程序化方式从我们独家的高质量发布商处购买广告位。广告商可以购买视频、展示和其他广告格式，以实现他们的广告目标。
+			</p>
+			<div class="flex justify-center">
+			<button @click="navigateToAuthOrDashboard('/auth/register')"
+				class="cursor-pointer w-[160px] h-[40px] md:w-[240px] md:h-[60px] bg-[#3A82F9] text-white rounded-full font-pingfang font-normal tracking-[0px] text-[16px] md:text-[20px] leading-[24px] md:leading-[30px] text-center hover:opacity-90 transition-opacity flex items-center justify-center">
+				立即开始
+			</button>
+			</div>
+		</div>
+	</section>
 </template>
 
 <script setup>
