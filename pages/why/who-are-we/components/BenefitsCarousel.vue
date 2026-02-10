@@ -31,19 +31,19 @@
 					<div class="flex transition-transform duration-500 ease-in-out h-full"
 						:style="{ transform: `translateX(-${activeIndex * 100}%)` }">
 						<div v-for="(card, index) in cards" :key="index" class="w-full h-full flex-shrink-0">
-							<!-- 第一张图显示 why6.svg -->
+							<!-- 第一张图显示 why6.png -->
 							<div v-if="index === 0" class="w-full h-full flex items-center justify-center">
 								<img :src="why6ImageSrc" alt="Benefits" class="w-full h-full object-contain" />
 							</div>
-							<!-- 第二张图显示 why7.svg -->
+							<!-- 第二张图显示 why7.png -->
 							<div v-else-if="index === 1" class="w-full h-full flex items-center justify-center">
 								<img :src="why7ImageSrc" alt="Benefits" class="w-full h-full object-contain" />
 							</div>
-							<!-- 第三张图显示 why9.svg -->
+							<!-- 第三张图显示 why9.png -->
 							<div v-else-if="index === 2" class="w-full h-full flex items-center justify-center">
 								<img :src="why9ImageSrc" alt="综合统计与分析" class="w-full h-full object-contain" />
 							</div>
-							<!-- 第四张图显示 why10.svg -->
+							<!-- 第四张图显示 why10.png -->
 							<div v-else-if="index === 3" class="w-full h-full flex items-center justify-center">
 								<img :src="why10ImageSrc" alt="人口统计数据" class="w-full h-full object-contain" />
 							</div>
@@ -59,11 +59,11 @@
 				<div class="flex transition-transform duration-500 ease-in-out h-full"
 					:style="{ transform: `translateX(-${activeIndex * 100}%)` }">
 					<div v-for="(card, index) in cards" :key="index" class="w-full h-full flex-shrink-0">
-						<!-- 第一张图显示 why6.svg -->
+						<!-- 第一张图显示 why6.png -->
 						<div v-if="index === 0" class="w-full h-full flex items-center justify-center">
 							<img :src="why6ImageSrc" alt="Benefits" class="w-full h-full object-contain" />
 						</div>
-						<!-- 第二张图显示 why7.svg -->
+						<!-- 第二张图显示 why7.png -->
 						<div v-else-if="index === 1" class="w-full h-full flex items-center justify-center">
 							<img :src="why7ImageSrc" alt="Benefits" class="w-full h-full object-contain" />
 						</div>
@@ -243,10 +243,10 @@
 
 <script setup>
 // 导入图片
-import why6ImageSrc from '~/assets/imgaes/why/why6.svg'
-import why7ImageSrc from '~/assets/imgaes/why/why7.svg'
-import why9ImageSrc from '~/assets/imgaes/why/why9.svg'
-import why10ImageSrc from '~/assets/imgaes/why/why10.svg'
+import why6ImageSrc from '~/assets/imgaes/why/why6.png'
+import why7ImageSrc from '~/assets/imgaes/why/why7.png'
+import why9ImageSrc from '~/assets/imgaes/why/why9.png'
+import why10ImageSrc from '~/assets/imgaes/why/why10.png'
 // 导入 ECharts
 import * as echarts from 'echarts'
 // 导入表格组件

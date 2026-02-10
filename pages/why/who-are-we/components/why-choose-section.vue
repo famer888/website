@@ -32,7 +32,7 @@
 import why2ImageSrc from '~/assets/imgaes/why/why2.svg'
 import why3ImageSrc from '~/assets/imgaes/why/why3.svg'
 import why4ImageSrc from '~/assets/imgaes/why/why4.svg'
-import why5ImageSrc from '~/assets/imgaes/why/why5.svg'
+import why5ImageSrc from '~/assets/imgaes/why/why5.png'
 
 const features = [
 	{
