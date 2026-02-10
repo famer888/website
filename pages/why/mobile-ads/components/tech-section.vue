@@ -59,7 +59,7 @@
 <script setup>
 import techIcon1 from "~/assets/imgaes/why/mobile-ads/tech-section-1.svg";
 import techIcon2 from "~/assets/imgaes/why/mobile-ads/tech-section-2.svg";
-import rightIllustrationSrc from "~/assets/imgaes/why/mobile-ads/tech-section-right.svg";
+import rightIllustrationSrc from "~/assets/imgaes/why/mobile-ads/tech-section-right.png";
 
 const { navigateToAuthOrDashboard } = useAuth();
 
