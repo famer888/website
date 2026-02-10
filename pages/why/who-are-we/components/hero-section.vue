@@ -27,7 +27,7 @@
 </template>
 
 <script setup>
-import why1ImageSrc from '~/assets/imgaes/why/why1.svg'
+import why1ImageSrc from '~/assets/imgaes/why/why1.png'
 
 const data = {
 	description1: 'T1 是一家创新型网络广告和数字营销公司,于2008年在加拿大蒙特利尔成立。T1的使命是通过每一次网络营销广告活动提升您公司和产品的业绩。',
