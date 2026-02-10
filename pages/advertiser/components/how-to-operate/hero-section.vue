@@ -7,7 +7,7 @@
 					class="font-pingfang font-medium tracking-[0px] text-[36px] md:text-[64px] leading-[56px] md:leading-[96px] text-[#171A1D] mb-6 md:mb-12">
 					如何成为广告商?</h2>
 				<h3
-					class="font-pingfang font-medium tracking-[0px] text-[16px] md:text-[24px] leading-[24px] md:leading-[36px] text-[#171A1D] pr-[95px] md:pr-0 mb-6">
+					class="font-pingfang font-medium tracking-[0px] text-[16px] md:text-[24px] leading-[24px] md:leading-[36px] text-[#171A1D] pr-[95px] md:pr-0 mb-6 md:text-[#626671]">
 					{{ data.subtitle }}</h3>
 				<p
 					class="font-pingfang font-normal tracking-[0px] text-[14px] md:text-[18px] leading-[20px] md:leading-[28px] text-[#93959C] mb-0 md:mb-12 md:max-w-[527px]">
