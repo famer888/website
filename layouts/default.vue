@@ -15,17 +15,17 @@
           <div class="hidden md:flex items-center space-x-12 absolute left-1/2 transform -translate-x-1/2">
             <!-- 为什么选择我们 -->
             <div class="relative group">
-              <button 
+              <button
                 @click="toggleDropdown('why')"
-                class="flex items-center text-gray-700 hover:text-brand px-3 py-2 text-sm font-medium transition-colors rounded-[24px] h-12 w-[180px] justify-center whitespace-nowrap"
-                :class="{ 'text-brand bg-[#F7F7FA]': activeDropdown === 'why' }"
+                class="flex items-center hover:text-brand px-3 py-2 text-sm font-medium transition-colors rounded-[24px] h-12 w-[180px] justify-center whitespace-nowrap"
+                :class="activeDropdown === 'why' || route.path.startsWith('/why/') ? 'text-brand' : 'text-gray-700'"
               >
                 {{ getWhyMenuText }}
                 <svg class="ml-1 h-4 w-4" :class="{ 'rotate-180': activeDropdown === 'why' }" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
-              <div v-if="activeDropdown === 'why'" class="absolute left-0 right-0 h-0.5 bg-brand" style="bottom: -64px;"></div>
+              <div v-if="activeDropdown === 'why' || route.path.startsWith('/why/')" class="absolute left-1/2 transform -translate-x-1/2 w-12 h-1 bg-brand" style="bottom: -8px;"></div>
               <div 
                 v-if="activeDropdown === 'why'"
                 class="absolute top-full left-0 mt-2 w-52 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50"
@@ -39,17 +39,17 @@
 
             <!-- 广告商 -->
             <div class="relative group">
-              <button 
+              <button
                 @click="toggleDropdown('advertiser')"
-                class="flex items-center text-gray-700 hover:text-brand px-3 py-2 text-sm font-medium transition-colors rounded-[24px] h-12 w-[100px] justify-center"
-                :class="{ 'text-brand bg-[#F7F7FA]': activeDropdown === 'advertiser' }"
+                class="flex items-center hover:text-brand px-3 py-2 text-sm font-medium transition-colors rounded-[24px] h-12 w-[100px] justify-center"
+                :class="activeDropdown === 'advertiser' || route.path.startsWith('/advertiser/') ? 'text-brand' : 'text-gray-700'"
               >
                 {{ getAdvertiserMenuText }}
                 <svg class="ml-1 h-4 w-4" :class="{ 'rotate-180': activeDropdown === 'advertiser' }" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
-              <div v-if="activeDropdown === 'advertiser'" class="absolute left-0 right-0 h-0.5 bg-brand" style="bottom: -64px;"></div>
+              <div v-if="activeDropdown === 'advertiser' || route.path.startsWith('/advertiser/')" class="absolute left-1/2 transform -translate-x-1/2 w-12 h-1 bg-brand" style="bottom: -8px;"></div>
               <div 
                 v-if="activeDropdown === 'advertiser'"
                 class="absolute top-full left-0 mt-2 w-40 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50"
@@ -67,17 +67,17 @@
 
             <!-- 联系我们 -->
             <div class="relative group">
-              <button 
+              <button
                 @click="toggleDropdown('contact')"
-                class="flex items-center text-gray-700 hover:text-brand px-3 py-2 text-sm font-medium transition-colors rounded-[24px] h-12 w-[120px] justify-center"
-                :class="{ 'text-brand bg-[#F7F7FA]': activeDropdown === 'contact' }"
+                class="flex items-center hover:text-brand px-3 py-2 text-sm font-medium transition-colors rounded-[24px] h-12 w-[120px] justify-center"
+                :class="activeDropdown === 'contact' || route.path.startsWith('/contact') ? 'text-brand' : 'text-gray-700'"
               >
                 {{ getContactMenuText }}
                 <svg class="ml-1 h-4 w-4" :class="{ 'rotate-180': activeDropdown === 'contact' }" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
-              <div v-if="activeDropdown === 'contact'" class="absolute left-0 right-0 h-0.5 bg-brand" style="bottom: -64px;"></div>
+              <div v-if="activeDropdown === 'contact' || route.path.startsWith('/contact')" class="absolute left-1/2 transform -translate-x-1/2 w-12 h-1 bg-brand" style="bottom: -8px;"></div>
               <div 
                 v-if="activeDropdown === 'contact'"
                 class="absolute top-full left-0 mt-2 w-44 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50"
@@ -91,14 +91,14 @@
           </div>
 
           <!-- 登录和注册 -->
-          <div class="hidden md:flex items-center space-x-4 ml-4">
+          <!-- <div class="hidden md:flex items-center space-x-4 ml-4">
             <NuxtLink to="/login" class="text-gray-700 hover:text-brand px-3 py-2 text-sm font-medium transition-colors">
               登陆
             </NuxtLink>
             <NuxtLink to="/register" class="bg-brand text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-brand transition-colors">
               注册
             </NuxtLink>
-          </div>
+          </div> -->
 
           <!-- 移动端菜单按钮 -->
           <div class="md:hidden">
@@ -191,10 +191,10 @@
           </div>
           
           <!-- 登录和注册按钮 -->
-          <div class="px-4 py-4 space-y-3 border-t border-gray-200">
+          <!-- <div class="px-4 py-4 space-y-3 border-t border-gray-200">
             <NuxtLink to="/login" @click="mobileMenuOpen = false" class="block w-full text-center bg-brand text-white px-4 py-3 rounded-full text-base font-medium">登陆</NuxtLink>
             <NuxtLink to="/register" @click="mobileMenuOpen = false" class="block w-full text-center border-2 border-brand text-brand bg-white px-4 py-3 rounded-full text-base font-medium">注册</NuxtLink>
-          </div>
+          </div> -->
           </div>
         </div>
       </div>

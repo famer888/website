@@ -67,9 +67,30 @@
             <div class="flex flex-col py-10 bg-[#F4F5F9] justify-center">
               <div class="text-center">这是否解答了您的问题？</div>
               <div class="flex mt-3 gap-2 items-center justify-center">
-                <img :src="Emo1Src" alt="" class="w-[32px]" />
-                <img :src="Emo2Src" alt="" class="w-[32px]" />
-                <img :src="Emo3Src" alt="" class="w-[32px]" />
+                <img
+                  :src="getEmoIcon(1)"
+                  alt=""
+                  class="w-[32px] cursor-pointer"
+                  @mouseenter="handleEmoHover(1)"
+                  @mouseleave="handleEmoLeave"
+                  @click="handleEmoClick(1)"
+                />
+                <img
+                  :src="getEmoIcon(2)"
+                  alt=""
+                  class="w-[32px] cursor-pointer"
+                  @mouseenter="handleEmoHover(2)"
+                  @mouseleave="handleEmoLeave"
+                  @click="handleEmoClick(2)"
+                />
+                <img
+                  :src="getEmoIcon(3)"
+                  alt=""
+                  class="w-[32px] cursor-pointer"
+                  @mouseenter="handleEmoHover(3)"
+                  @mouseleave="handleEmoLeave"
+                  @click="handleEmoClick(3)"
+                />
               </div>
             </div>
             <div class="mt-10">
@@ -91,6 +112,9 @@ import ArrowUpSrc from "~/assets/imgaes/help/arrow-t-icon.svg";
 import Emo1Src from "~/assets/imgaes/help/emo1-icon.svg";
 import Emo2Src from "~/assets/imgaes/help/emo2-icon.svg";
 import Emo3Src from "~/assets/imgaes/help/emo3-icon.svg";
+import Emo1GraySrc from "~/assets/imgaes/help/emo1-1-icon.svg";
+import Emo2GraySrc from "~/assets/imgaes/help/emo2-1-icon.svg";
+import Emo3GraySrc from "~/assets/imgaes/help/emo3-1-icon.svg";
 import ServiceSrc from "~/assets/imgaes/help/service-icon.svg";
 
 // SEO 配置
@@ -101,6 +125,8 @@ useHead({
 
 const activeTab = ref(1);
 const infoActive = ref(-1);
+const selectedEmo = ref(null); // 选中的表情图标
+const hoveredEmo = ref(null); // 鼠标悬停的表情图标
 
 const tabs = [
   {
@@ -141,4 +167,43 @@ const handleInfoClick = (infoKey) => {
     infoActive.value = infoKey;
   }
 }
+
+// 表情图标处理函数
+const handleEmoHover = (emoId) => {
+  // 如果已经选中了某个图标，则不响应hover
+  if (selectedEmo.value === null) {
+    hoveredEmo.value = emoId;
+  }
+};
+
+const handleEmoLeave = () => {
+  hoveredEmo.value = null;
+};
+
+const handleEmoClick = (emoId) => {
+  selectedEmo.value = emoId;
+  hoveredEmo.value = null; // 选中后清除hover状态
+};
+
+// 获取表情图标的函数
+const getEmoIcon = (emoId) => {
+  const icons = {
+    1: { gray: Emo1GraySrc, highlight: Emo1Src },
+    2: { gray: Emo2GraySrc, highlight: Emo2Src },
+    3: { gray: Emo3GraySrc, highlight: Emo3Src },
+  };
+
+  // 如果有选中的图标
+  if (selectedEmo.value !== null) {
+    return selectedEmo.value === emoId ? icons[emoId].highlight : icons[emoId].gray;
+  }
+
+  // 如果没有选中，但有hover
+  if (hoveredEmo.value === emoId) {
+    return icons[emoId].highlight;
+  }
+
+  // 默认显示灰色
+  return icons[emoId].gray;
+};
 </script>

@@ -14,7 +14,7 @@
         <div class="h-full flex items-center">
           <div class="w-full text-start">
             <h1
-              class="font-pingfang font-medium text-[33.6px] sm:text-[43.2px] md:text-[52.8px] leading-[45.6px] sm:leading-[57.6px] md:leading-[67.2px] tracking-normal text-white mb-4"
+              class="font-pingfang font-medium text-[36px] md:text-[80px] leading-[66px] md:leading-[110px] tracking-normal text-white mb-8"
             >
               广告形式
             </h1>
@@ -33,21 +33,21 @@
     </section>
 
     <!-- 介绍 + 快速导航 -->
-    <section class="bg-white py-10 sm:py-14 lg:py-16">
+    <section class="bg-white py-16 md:py-28">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2
-          class="font-pingfang font-medium text-[26.4px] sm:text-[31.2px] md:text-[38.4px] leading-[38.4px] sm:leading-[43.2px] md:leading-[52.8px] tracking-normal text-[#111827] mb-3"
+          class="font-pingfang font-medium text-[30px] md:text-[56px] leading-[44px] md:leading-[96px] tracking-normal text-[#111827] mb-6"
         >
           经济高效的曝光，带来显著成效!
         </h2>
         <p
-          class="font-pingfang font-normal text-[14.4px] sm:text-[16.8px] md:text-[19.2px] leading-[24px] sm:leading-[26.4px] md:leading-[31.2px] tracking-normal text-[#A2A3A5]"
+          class="font-pingfang font-normal text-[14px] md:text-[24px] leading-[24px] md:leading-[36px] tracking-normal text-[#93959C]"
         >
           通过桌面电脑、手机和平板电脑等多设备吸引您的受众、注意力，大多数移动设备的规模也适用于平板电脑。
           <span class="text-brand cursor-pointer">规则与条款</span>
         </p>
         <p
-          class="font-pingfang font-normal text-[14.4px] sm:text-[16.8px] md:text-[19.2px] leading-[24px] sm:leading-[26.4px] md:leading-[31.2px] tracking-normal text-[#A2A3A5] mt-4"
+          class="font-pingfang font-normal text-[14px] md:text-[24px] leading-[24px] md:leading-[36px] tracking-normal text-[#93959C] mt-6"
         >
           欢迎浏览 T1 上最受欢迎的广告形式和投放位置。
         </p>
@@ -96,32 +96,28 @@
           <div
             class="bg-white border border-[#EEF0F4] rounded-[8px] overflow-hidden"
           >
-            <div class="grid grid-cols-1 md:grid-cols-[320px_1fr]">
+            <div class="grid grid-cols-1 md:grid-cols-[460px_1fr]">
               <!-- 左侧手机示意图（占位图，后续替换） -->
               <div class="bg-[#EAF1FF] flex items-center justify-center p-6">
                 <img
                   :src="block.image"
                   :alt="block.sectionTitle"
-                  class="w-full h-auto max-w-[220px] object-contain"
+                  class="w-full h-auto max-w-[280px] max-h-[480px] md:max-w-[320px] md:max-h-[548px] object-contain"
                 />
               </div>
 
               <!-- 右侧说明 -->
-              <div class="p-6 sm:p-8">
-                <div class="space-y-3">
+              <div class="p-6 sm:p-8 flex flex-col justify-center">
+                <div
+                  class="space-y-3 font-pingfang font-normal text-[14px] md:text-[24px] leading-[30px] md:leading-[44px] tracking-normal"
+                >
                   <div v-for="field in metaFields" :key="field.key">
-                    <div
-                      v-if="field.key === 'scene'"
-                      class="font-pingfang font-normal text-[14.4px] sm:text-[15.6px] leading-[21.6px] sm:leading-[24px] tracking-normal"
-                    >
+                    <div v-if="field.key === 'scene'">
                       <span class="text-[#111827]">{{
                         block.meta[field.key]
                       }}</span>
                     </div>
-                    <div
-                      v-else
-                      class="font-pingfang font-normal text-[14.4px] sm:text-[15.6px] leading-[21.6px] sm:leading-[24px] tracking-normal"
-                    >
+                    <div v-else>
                       <span class="text-[#111827]">{{ field.label }}:</span>
                       <span class="ml-2 text-[#6B7280]">{{
                         block.meta[field.key]
@@ -147,14 +143,14 @@
           在顶级成人网站上投放广告!
         </h3>
         <p
-          class="font-pingfang font-normal text-[14.4px] sm:text-[16.8px] leading-[21.6px] sm:leading-[26.4px] tracking-normal text-[#A2A3A5] mb-8"
+          class="font-pingfang font-normal text-[14.4px] sm:text-[16.8px] leading-[21.6px] sm:leading-[26.4px] tracking-normal text-[#93959C] mb-8"
         >
           T1助您实现最雄心勃勃的网络营销目标。
         </p>
 
         <!-- Logos（先占位，后续替换） -->
         <div
-          class="flex flex-wrap justify-center items-center gap-10 md:gap-28 sm:gap-14 mb-10"
+          class="flex flex-wrap justify-center items-center gap-10 md:gap-28 sm:gap-14 mb-12"
         >
           <div
             v-for="n in logos"
@@ -172,7 +168,7 @@
         <div class="flex justify-center">
           <NuxtLink
             to="/register"
-            class="register-btn inline-flex items-center justify-center text-white rounded-full font-pingfang font-medium text-[16.8px] sm:text-[19.2px] leading-[24px] tracking-normal transition-colors shadow-lg hover:shadow-xl w-[180px] h-[44px] sm:w-[200px] sm:h-[48px]"
+            class="register-btn inline-flex items-center justify-center text-white rounded-full font-pingfang font-normal text-[16px] md:text-[20px] leading-[24px] md:leading-[30px] tracking-normal transition-colors shadow-lg hover:shadow-xl w-[160px] h-[40px] md:w-[240px] md:h-[60px]"
           >
             报名
           </NuxtLink>
