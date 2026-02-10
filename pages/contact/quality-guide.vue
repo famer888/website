@@ -204,7 +204,7 @@
 								class="text-[#171A1D] text-[12px] leading-[26px] tracking-[0px] text-justify md:text-[24px] md:leading-[52px] mb-6 md:mb-12">
 								1.登陆页面不得包含拼写错误、错误图片、空白页面等。
 							</p>
-							<img class="w-full my-10" src="~/assets/imgaes/contact/prohibitionGuide/1.svg">
+							<img class="w-full my-10" src="~/assets/imgaes/contact/prohibitionGuide/1.png">
 						</div>
 						<div>
 							<p
@@ -227,70 +227,70 @@
 								class="text-[#171A1D] text-[12px] leading-[26px] tracking-[0px] text-justify md:text-[24px] md:leading-[52px] pl-1 mb-3 md:mb-6">
 								- 模仿知名网站和公司的界面。
 							</p>
-							<img class="w-full mb-10" src="~/assets/imgaes/contact/prohibitionGuide/2.svg">
+							<img class="w-full mb-10" src="~/assets/imgaes/contact/prohibitionGuide/2.png">
 						</div>
 						<div>
 							<p
 								class="text-[#171A1D] text-[12px] leading-[26px] tracking-[0px] text-justify md:text-[24px] md:leading-[52px] mb-6 md:mb-12">
 								3.使用名人或名人的个人详细信息和图片。
 							</p>
-							<img class="w-full mb-10" src="~/assets/imgaes/contact/prohibitionGuide/3.svg">
+							<img class="w-full mb-10" src="~/assets/imgaes/contact/prohibitionGuide/3.png">
 						</div>
 						<div>
 							<p
 								class="text-[#171A1D] text-[12px] leading-[26px] tracking-[0px] text-justify md:text-[24px] md:leading-[52px] mb-6 md:mb-12">
 								4.自动下载（点击）适用于桌面和移动设备。
 							</p>
-							<img class="w-full mb-10" src="~/assets/imgaes/contact/prohibitionGuide/4.svg">
+							<img class="w-full mb-10" src="~/assets/imgaes/contact/prohibitionGuide/4.png">
 						</div>
 						<div>
 							<p
 								class="text-[#171A1D] text-[12px] leading-[26px] tracking-[0px] text-justify md:text-[24px] md:leading-[52px] mb-6 md:mb-12">
 								5.修改浏览器、操作系统或服务的系统更新、通知和消息。
 							</p>
-							<img class="w-full mb-10" src="~/assets/imgaes/contact/prohibitionGuide/5.svg">
+							<img class="w-full mb-10" src="~/assets/imgaes/contact/prohibitionGuide/5.png">
 						</div>
 						<div>
 							<p
 								class="text-[#171A1D] text-[12px] leading-[26px] tracking-[0px] text-justify md:text-[24px] md:leading-[52px] mb-6 md:mb-12">
 								6.使用关于病毒、垃圾文件、设备问题等的可怕陈述，以及利用浏览器漏洞的实现页。
 							</p>
-							<img class="w-full mb-10" src="~/assets/imgaes/contact/prohibitionGuide/6.svg">
+							<img class="w-full mb-10" src="~/assets/imgaes/contact/prohibitionGuide/6.png">
 						</div>
 						<div>
 							<p
 								class="text-[#171A1D] text-[12px] leading-[26px] tracking-[0px] text-justify md:text-[24px] md:leading-[52px] mb-6 md:mb-12">
 								7.没有关闭选项的广告。
 							</p>
-							<img class="w-full mb-10" src="~/assets/imgaes/contact/prohibitionGuide/7.svg">
+							<img class="w-full mb-10" src="~/assets/imgaes/contact/prohibitionGuide/7.png">
 						</div>
 						<div>
 							<p
 								class="text-[#171A1D] text-[12px] leading-[26px] tracking-[0px] text-justify md:text-[24px] md:leading-[52px] mb-6 md:mb-12">
 								8.通过欺骗性通知（通过重新加载或阻止提供页面，错误的用户订阅报价）收集订阅的落地页面。
 							</p>
-							<img class="w-full mb-10" src="~/assets/imgaes/contact/prohibitionGuide/8.svg">
+							<img class="w-full mb-10" src="~/assets/imgaes/contact/prohibitionGuide/8.png">
 						</div>
 						<div>
 							<p
 								class="text-[#171A1D] text-[12px] leading-[26px] tracking-[0px] text-justify md:text-[24px] md:leading-[52px] mb-6 md:mb-12">
 								9.代表知名银行的修改电子邮件。
 							</p>
-							<img class="w-full mb-10" src="~/assets/imgaes/contact/prohibitionGuide/9.svg">
+							<img class="w-full mb-10" src="~/assets/imgaes/contact/prohibitionGuide/9.png">
 						</div>
 						<div>
 							<p
 								class="text-[#171A1D] text-[12px] leading-[26px] tracking-[0px] text-justify md:text-[24px] md:leading-[52px] mb-6 md:mb-12">
 								10.有关存款或转移资金的网络钓鱼消息。
 							</p>
-							<img class="w-full mb-10" src="~/assets/imgaes/contact/prohibitionGuide/10.svg">
+							<img class="w-full mb-10" src="~/assets/imgaes/contact/prohibitionGuide/10.png">
 						</div>
 						<div>
 							<p
 								class="text-[#171A1D] text-[12px] leading-[26px] tracking-[0px] text-justify md:text-[24px] md:leading-[52px] mb-6 md:mb-12">
 								11.提前领取/收到大量和礼品以及有关奖金支付的网络钓鱼消息。
 							</p>
-							<img class="mb-10 w-full" src="~/assets/imgaes/contact/prohibitionGuide/11.svg">
+							<img class="mb-10 w-full" src="~/assets/imgaes/contact/prohibitionGuide/11.png">
 						</div>
 						<div>
 							<p
@@ -392,7 +392,7 @@
 
 <script setup>
 // 图片导入
-import avatarImg from "~/assets/imgaes/contact/avatar.svg";
+import avatarImg from "~/assets/imgaes/contact/avatar.png";
 
 // SEO 配置
 useHead({

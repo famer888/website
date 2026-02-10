@@ -58,10 +58,10 @@
     </section>
 </template>
 <script setup>
-import why6ImageSrc from '~/assets/imgaes/why/why6.svg'
-import why7ImageSrc from '~/assets/imgaes/why/why7.svg'
-import why9ImageSrc from '~/assets/imgaes/why/why9.svg'
-import why10ImageSrc from '~/assets/imgaes/why/why10.svg'
+import why6ImageSrc from '~/assets/imgaes/why/why6.png'
+import why7ImageSrc from '~/assets/imgaes/why/why7.png'
+import why9ImageSrc from '~/assets/imgaes/why/why9.png'
+import why10ImageSrc from '~/assets/imgaes/why/why10.png'
 
 const activeIndex = ref(0)
 const scrollContainer = ref(null)
