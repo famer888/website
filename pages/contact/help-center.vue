@@ -64,8 +64,8 @@
 
           <!-- 联系客服 -->
           <div class="mt-5 sm:mt-10">
-            <div class="flex flex-col py-10 bg-[#F4F5F9] justify-center">
-              <div class="text-center">这是否解答了您的问题？</div>
+            <div class="flex flex-col py-10 bg-[#F4F5F9] justify-center gap-4 md:gap-6">
+              <div class="text-center font-normal text-[14px] leading-[20px] md:text-[24px] md:leading-[48px] tracking-[0px] text-[#626671]">这是否解答了您的问题？</div>
               <div class="flex mt-3 gap-[14px] md:gap-6 items-center justify-center">
                 <img
                   :src="getEmoIcon(1)"
@@ -103,6 +103,7 @@
         </div>
       </div>
     </div>
+    <Footer />
   </div>
 </template>
 

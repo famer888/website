@@ -1,6 +1,7 @@
 <template>
-  <div class="min-h-screen bg-white">
+  <div class="min-h-screen bg-white flex flex-col">
     <!-- 页面内容 -->
+    <div class="flex-1">
     <div class="w-full relative h-[540px] sm:h-[380px] bg-[url(~/assets/imgaes/contact/m-banner.jpg)] sm:bg-[url(~/assets/imgaes/contact/banner.jpg)] bg-cover bg-center">
       <div class="max-w-7xl mx-auto relative h-[100%]">
         <div class="absolute left-0 top-[50%] transform translate-y-[-50%]">
@@ -67,6 +68,8 @@
         </div>
       </div>
     </div>
+    </div>
+    <Footer />
   </div>
 </template>
 
