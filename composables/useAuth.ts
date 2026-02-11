@@ -78,17 +78,11 @@ export const useAuth = () => {
 
   /**
    * 跳转到广告主管理后台
+   * 直接使用当前域名拼接 /admin
    */
   const goToAdminDashboard = () => {
-    const url = adminDashboardUrl.value
-    if (url.startsWith('http://') || url.startsWith('https://')) {
-      // 外部地址，使用 window.location
-      if (process.client) {
-        window.location.href = url
-      }
-    } else {
-      // 内部路由
-      navigateTo(url)
+    if (process.client) {
+      window.location.href = `${window.location.origin}/admin`
     }
   }
 
