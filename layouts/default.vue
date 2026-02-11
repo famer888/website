@@ -254,12 +254,11 @@ const authUrl = computed(() => {
   if (isDev) {
     return 'https://officialauth.adcs01.top/'
   }
+  console.log('生产环境');
+  // return 
   // 如果是生产环境，使用当前域名拼接 /login
-  if (process.client) {
-    return `${window.location.origin}/login`
-  }
-  // 服务端渲染时，返回默认值（会在客户端重新计算）
-  return '/login'
+  return `${window.location.origin}/login`
+
 })
 
 // 获取链接的 target 属性
