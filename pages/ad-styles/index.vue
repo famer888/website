@@ -59,34 +59,39 @@
 
 		<!-- 广告类型列表 -->
 		<section class="bg-white pb-12 sm:pb-14 lg:pb-16">
+     
 			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+         
 				<div v-for="(block, idx) in adBlocks" :key="block.id" :ref="(el) => setSectionRef(el, idx)"
 					:id="block.id" class="scroll-mt-24">
 					<h3
 						class="font-pingfang font-medium text-[21.6px] sm:text-[24px] md:text-[26.4px] leading-[31.2px] sm:leading-[36px] md:leading-[38.4px] tracking-normal text-[#111827] mb-4 sm:mb-6">
 						{{ block.sectionTitle }}
 					</h3>
-
+					<p 
+					class="font-pingfang font-normal hidden md:block text-[14.4px] sm:text-[16.8px] md:text-[19.2px] leading-[24px] sm:leading-[26.4px] md:leading-[31.2px] tracking-normal text-[#A2A3A5] mt-4 mb-6">
+					T1 提供展示位置为资讯页、视频详情页、信息列表页等的开屏广告，具体要求如下:
+				</p>
 					<div class="bg-white border border-[#EEF0F4] rounded-[8px] overflow-hidden">
 						<div class="grid grid-cols-1 md:grid-cols-[460px_1fr]">
 							<!-- 左侧手机示意图（占位图，后续替换） -->
 							<div class="bg-[#EAF1FF] flex items-center justify-center py-[24px] px-[48px] md:py-[40px] md:px-[70px] md:flex-shrink-0">
 								<img :src="block.image" :alt="block.sectionTitle"
-									class="w-full h-auto md:max-w-[320px] object-contain" />
+									class="max-w-[280px] h-auto md:max-w-[320px] lg:max-w-[320px] object-contain" />
 							</div>
 
 							<!-- 右侧说明 -->
-							<div class="p-6 sm:p-8">
+							<div class="p-6 sm:p-8 flex flex-col justify-center">
 								<div class="space-y-3">
 									<div v-for="field in metaFields" :key="field.key">
 										<div v-if="field.key === 'scene'"
-											class="font-pingfang font-normal text-[14.4px] sm:text-[15.6px] leading-[21.6px] sm:leading-[24px] tracking-normal">
+											class="font-pingfang font-normal text-[14px] md:text-[24px] leading-[20px] md:leading-[36px] tracking-normal mb-6">
 											<span class="text-[#111827]">{{
 												block.meta[field.key]
 											}}</span>
 										</div>
 										<div v-else
-											class="font-pingfang font-normal text-[14.4px] sm:text-[15.6px] leading-[21.6px] sm:leading-[24px] tracking-normal">
+											class="font-pingfang font-normal text-[14px] md:text-[24px] leading-[20px] md:leading-[36px] tracking-normal mb-6">
 											<span class="text-[#111827]">{{ field.label }}:</span>
 											<span class="ml-2 text-[#6B7280]">{{
 												block.meta[field.key]

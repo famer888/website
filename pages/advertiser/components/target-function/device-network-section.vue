@@ -8,7 +8,7 @@
         设备和网络功能
       </h3>
       <p
-        class="font-pingfang font-normal text-left text-[16px] md:text-[18px] leading-[24px] md:leading-[26px] tracking-normal text-[#93959C] max-w-[560px] mx-auto mb-8"
+        class="font-pingfang font-normal text-left md:text-center text-[16px] md:text-[18px] leading-[26px] md:leading-[26px] tracking-normal text-[#93959C] max-w-[560px] mx-auto mb-12 md:mb-24"
       >
         此功能允许您根据特定条件（例如 ISP、移动设备、IP
         地址和设备）来定向投放广告，深入了解并精准触达目标受众。
@@ -19,7 +19,7 @@
         <div
           v-for="item in deviceNetworkFeatures"
           :key="item.title"
-          class="bg-white rounded-[12px] xl:w-[582px] xl:h-[220px] shadow-[0_2px_24px_0_rgba(0,0,0,0.096)] border-none p-8 flex gap-6 items-center max-w-[90vw]"
+          class="bg-white rounded-[12px]  shadow-[0_2px_24px_0_rgba(0,0,0,0.096)] border-none p-8 flex gap-6 items-center max-w-[90vw]"
         >
           <SvgIcon
             :name="item.icon"

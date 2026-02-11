@@ -3,12 +3,12 @@
   <section class="bg-[#F5F7FB] py-14 md:py-28">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <h3
-        class="font-pingfang font-medium text-[36px] md:text-[56px] leading-[56px] md:leading-[96px] tracking-normal text-[#111827] text-center mb-2"
+        class="font-pingfang font-medium text-[36px] md:text-[56px] leading-[56px] md:leading-[96px] tracking-normal text-[#111827] text-center mb-2 md:mb-6"
       >
         浏览器和操作系统功能
       </h3>
       <p
-        class="font-pingfang font-normal text-left text-[16px] md:text-[18px] leading-[24px] md:leading-[26px] tracking-normal text-[#93959C] max-w-[560px] mx-auto mb-8"
+        class="font-pingfang font-normal text-left md:text-center text-[16px] md:text-[18px] leading-[26px] md:leading-[26px] tracking-normal text-[#93959C] max-w-[560px] mx-auto mb-12 md:mb-24"
       >
         充分利用我们的浏览器和操作系统功能，根据用户使用的技术找到合适的受众。
       </p>

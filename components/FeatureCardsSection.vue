@@ -8,7 +8,7 @@
       </h3>
       <p
         :class="[
-          'font-pingfang font-normal text-left text-[16px] md:text-[18px] leading-[24px] md:leading-[26px] tracking-normal text-[#93959C] max-w-[560px] mx-auto mb-8',
+          'font-pingfang font-normal text-left md:text-center text-[16px] md:text-[18px] leading-[26px] md:leading-[26px] tracking-normal text-[#93959C] max-w-[560px] mx-auto mb-12 md:mb-24',
         ]"
       >
         {{ description }}
