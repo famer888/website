@@ -106,7 +106,7 @@
 </template>
 
 <script setup>
-import SvgIcon from '~/components/SvgIcon.vue'
+import SvgIcon from "~/components/SvgIcon.vue";
 
 const props = defineProps({
   id: String,
@@ -116,12 +116,12 @@ const props = defineProps({
   bgColor: String,
   scrollRef: Object,
   cardRefs: Object,
-  activeIndex: Object,
+  activeIndex: Number | Object,
   onScroll: Function,
   setCardRef: Function,
   ctaLink: String,
   ctaText: String,
-})
+});
 
-const currentActiveIndex = computed(() => props.activeIndex?.value ?? 0)
+const currentActiveIndex = computed(() => props.activeIndex?.value ?? 0);
 </script>
