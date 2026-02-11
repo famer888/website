@@ -4,7 +4,8 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
 
   modules: [
-    '@nuxtjs/tailwindcss'
+    '@nuxtjs/tailwindcss',
+    '@pinia/nuxt'
   ],
 
   css: [
@@ -47,12 +48,31 @@ export default defineNuxtConfig({
           manualChunks: undefined
         }
       }
+    },
+    // Vite 开发服务器代理配置 - 类似 Vue CLI 的 devServer.proxy
+    server: {
+      proxy: {
+        '/api': {
+          target: 'https://official.adcs01.top',
+          changeOrigin: true,
+          secure: true, // 如果是 https，需要设置为 true
+          rewrite: (path) => path, // 保持路径不变，/api/userinfo -> https://official.adcs01.top/api/userinfo
+        }
+      }
     }
   },
 
   // Nitro 配置 - 启用静态站点生成
   // @ts-ignore - nitro 配置在运行时有效
   nitro: {
+    // Nitro 开发代理配置 - 处理服务端渲染时的 API 请求
+    devProxy: {
+      '/api': {
+        target: 'https://official.adcs01.top',
+        changeOrigin: true,
+        prependPath: true,
+      }
+    },
     prerender: {
       crawlLinks: true,
       routes: [
@@ -107,9 +127,10 @@ export default defineNuxtConfig({
       // 广告主管理后台地址，可通过环境变量 NUXT_PUBLIC_ADMIN_DASHBOARD_URL 配置
       adminDashboardUrl: (process as any).env?.NUXT_PUBLIC_ADMIN_DASHBOARD_URL || '/admin',
       // API 基础地址，可通过环境变量 NUXT_PUBLIC_API_BASE_URL 配置
-      // 开发环境：https://official.adcs01.top/
+      // 开发环境：使用相对路径，通过 Vite 代理到 https://official.adcs01.top
       // 生产环境：自动使用当前域名
-      apiBaseUrl: (process as any).env?.NUXT_PUBLIC_API_BASE_URL || 'https://official.adcs01.top'
+      // 注意：实际请求时，开发环境会通过 Vite 代理，生产环境使用当前域名
+      apiBaseUrl: (process as any).env?.NUXT_PUBLIC_API_BASE_URL || ''
     }
   }
 })

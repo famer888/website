@@ -1,6 +1,10 @@
 /**
  * 初始化用户信息插件
- * 在客户端初始化时调用用户信息接口，并将状态打印到控制台
+ * 在客户端初始化时调用用户信息接口，校验登录状态并更新 Pinia store
+ * 
+ * 逻辑：
+ * - code === 0: 已登录，保存用户信息到 Pinia store
+ * - code === 401: 未登录或登录失效，清空 Pinia store 中的用户信息
  */
 
 export default defineNuxtPlugin(async () => {
@@ -8,44 +12,71 @@ export default defineNuxtPlugin(async () => {
     if (process.server) return
 
     try {
-        // 导入用户信息接口
+        // 导入用户信息接口和 Pinia store
         const { getUserInfo } = await import('~/api/user')
+        const { useUserStore } = await import('~/stores/user')
+
+        // 获取用户 store
+        const userStore = useUserStore()
+
+        // 先尝试从 localStorage 恢复用户信息（快速显示）
+        userStore.restoreUserInfo()
 
         // 调用接口获取用户信息（通过 Cookie 自动携带 Session ID）
         const result = await getUserInfo()
 
         // 获取 API 地址用于日志显示
-        const config = useRuntimeConfig()
         const apiBaseUrl = import.meta.dev
-            ? config.public.apiBaseUrl
+            ? '' // 开发环境使用相对路径，通过 Vite 代理
             : window.location.origin
-        const apiUrl = `${apiBaseUrl}/api/userinfo`
+        const apiUrl = apiBaseUrl ? `${apiBaseUrl}/api/userinfo` : '/api/userinfo'
 
-        // 打印到控制台
-        console.log('========== 用户状态信息 ==========')
-        console.log('接口地址:', apiUrl)
-        console.log('当前域名:', window.location.origin)
-        console.log('Cookie 会自动携带（credentials: include）')
-
-
-        if (result.code === 200 && result.data) {
+        // 处理接口响应
+        if (result.code === 0 && result.data) {
+            // 登录成功：保存用户信息到 Pinia store
+            const { loginEmail, userId, userName } = result.data
+            userStore.setUserInfo({
+                loginEmail,
+                userId,
+                userName,
+            })
+            console.log('========== 用户状态信息 ==========')
+            console.log('接口地址:', apiUrl)
+            console.log('当前域名:', window.location.origin)
             console.log('登录状态:', '已登录')
+            console.log('用户信息:', { userId, userName, loginEmail })
+            console.log('================================')
+        } else if (result.code === 401) {
+            // 登录失效：清空用户信息
+            userStore.clearUserInfo()
+            console.log('========== 用户状态信息 ==========')
+            console.log('接口地址:', apiUrl)
+            console.log('当前域名:', window.location.origin)
+            console.log('登录状态:', '未登录（登录失效）')
+            console.log('响应信息:', result.msg)
+            console.log('================================')
         } else {
+            // 其他错误情况：清空用户信息
+            userStore.clearUserInfo()
+            console.log('========== 用户状态信息 ==========')
+            console.log('接口地址:', apiUrl)
+            console.log('当前域名:', window.location.origin)
             console.log('登录状态:', '未登录')
-            console.log('用户数据:', result.data)
-        }
-
-        console.log('完整响应:', JSON.stringify(result, null, 2))
-        console.log('================================')
-
-        // 如果用户已登录，可以更新认证状态
-        if (result.code === 200 && result.data) {
-            // 这里可以根据实际需求更新 useAuth 的状态
-            // const { login } = useAuth()
-            // login(token, result.data)
+            console.log('响应码:', result.code)
+            console.log('响应信息:', result.msg)
+            console.log('完整响应:', JSON.stringify(result, null, 2))
+            console.log('================================')
         }
     } catch (error) {
         console.error('初始化用户信息失败:', error)
+        // 发生错误时，清空用户信息以确保状态一致
+        try {
+            const { useUserStore } = await import('~/stores/user')
+            const userStore = useUserStore()
+            userStore.clearUserInfo()
+        } catch (e) {
+            console.error('清空用户信息失败:', e)
+        }
     }
 })
 
