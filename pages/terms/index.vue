@@ -21,35 +21,40 @@
 
     <!-- 主要内容区域 - 使用 flex-1 占据剩余空间 -->
     <div class="flex-1">
-      <!-- 联系我们组件 -->
+      <!-- 联系我们组件 (当activeTab为contact时) -->
       <div v-if="activeTab === 'contact'" class="w-full">
         <ContactUsComponent />
       </div>
       
       <!-- 其他内容 -->
-      <div v-else class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12" :class="{ 'max-w-7xl': activeTab === 'sitemap' }">
-        <!-- 标题和日期 -->
-        <div class="mb-8">
-          <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            {{ currentTab.title }}
-          </h1>
-          <p v-if="activeTab !== 'sitemap' && activeTab !== 'contact'" class="text-gray-600 text-sm md:text-base">
-            最后更新日期: {{ currentTab.lastUpdated }}
-          </p>
-        </div>
-
-        <!-- 内容区域 -->
-        <div class="prose max-w-none">
-          <div class="text-gray-700 leading-relaxed space-y-6">
-            <!-- 介绍段落 -->
-            <p class="text-base mb-4 text-gray-700 leading-relaxed">
-              {{ currentTab.intro }}
+      <div v-else>
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12" :class="{ 'max-w-7xl': activeTab === 'sitemap' }">
+          <!-- 标题和日期 -->
+          <div class="mb-8">
+            <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              {{ currentTab.title }}
+            </h1>
+            <p v-if="activeTab !== 'sitemap' && activeTab !== 'contact'" class="text-gray-600 text-sm md:text-base">
+              最后更新日期: {{ currentTab.lastUpdated }}
             </p>
+          </div>
 
-            <!-- 动态内容 -->
-            <div v-html="currentTab.content"></div>
+          <!-- 内容区域 -->
+          <div class="prose max-w-none">
+            <div class="text-gray-700 leading-relaxed space-y-6">
+              <!-- 介绍段落 -->
+              <p class="text-base mb-4 text-gray-700 leading-relaxed">
+                {{ currentTab.intro }}
+              </p>
+
+              <!-- 动态内容 -->
+              <div v-html="currentTab.content"></div>
+            </div>
           </div>
         </div>
+        
+        <!-- 联系我们组件 -->
+        <ContactSection />
       </div>
     </div>
     
@@ -61,6 +66,7 @@
 <script setup>
 import { PrivacyStatement } from '@/utils/constants'
 import ContactUsComponent from './components/index.vue'
+import ContactSection from '@/components/ContactSection.vue'
 const route = useRoute()
 
 // Tab 配置
