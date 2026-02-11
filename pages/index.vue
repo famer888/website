@@ -4,11 +4,11 @@
     <div class="flex-1">
       <section class="relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16 lg:py-24">
-          <div class="flex flex-col gap-6 sm:gap-8 lg:gap-12">
+          <div class="flex flex-col gap-6 sm:gap-8 ">
             <!-- 标题 - 始终在最顶部 -->
             <div class="text-center px-[15%] sm:px-0">
               <h1
-                class="font-pingfang font-medium text-[32px] sm:text-[48px] md:text-[56px] lg:text-[64px] leading-[48px] sm:leading-[72px] md:leading-[84px] lg:leading-[96px] tracking-normal text-gray-900 mb-4 sm:mb-6">
+                class="font-pingfang font-medium text-[32px] sm:text-[48px] md:text-[56px] lg:text-[64px] leading-[48px] sm:leading-[72px] md:leading-[84px] lg:leading-[96px] tracking-normal text-gray-900 mb-4 md:mb-[24px]">
                 在全球顶级网站上投放广告
               </h1>
             </div>
