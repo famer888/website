@@ -23,7 +23,7 @@
   
   .learn-more-btn {
     color: #3A82F9;
-    border-color: #3A82F9;
+    border: 1px solid #3A82F9;
   }
   .learn-more-btn:hover {
     background-color: #E8F2FF;
