@@ -13,20 +13,20 @@
 					class="font-pingfang font-normal tracking-[0px] text-[14px] md:text-[18px] leading-[20px] md:leading-[28px] text-[#93959C] mb-0 md:mb-12 md:max-w-[527px]">
 					{{ data.body }}</p>
 				<!-- PC 按钮 -->
-				<button @click="navigateToAuthOrDashboard('/auth/register')"
+				<NuxtLink to="/contact"
 					class="hidden md:flex w-[240px] h-[60px] bg-[#3A82F9] text-white rounded-full font-pingfang font-normal tracking-[0px] text-[20px] leading-[30px] text-center transition-colors items-center justify-center cursor-pointer">
 					联系我们
-				</button>
+				</NuxtLink>
 			</div>
 			<div
 				class="flex flex-col flex-shrink-0 md:flex-row items-center justify-center  md:p-[36px] md:pl-[24px] bg-transparent md:bg-white">
 				<img :src="heroImage" alt="如何成为广告商"
 					class="w-[240px] h-[207px] md:w-[528px] md:h-[456px] object-contain  mb-[35px] md:mb-0" />
 				<!-- H5 按钮 -->
-				<button @click="navigateToAuthOrDashboard('/auth/register')"
+				<NuxtLink to="/contact"
 					class="md:hidden flex items-center justify-center w-[264px] h-[48px] bg-[#3A82F9] rounded-full text-white font-pingfang font-medium text-[18px] leading-[26px] tracking-[0px] text-center cursor-pointer">
 					联系我们
-				</button>
+				</NuxtLink>
 			</div>
 		</div>
 	</section>
