@@ -14,7 +14,7 @@
 </template>
 
 <script setup>
-import FeatureCardsSection from '~/components/FeatureCardsSection.vue'
+import FeatureCardsSection from './FeatureCardsSection.vue'
 
 const description =
   '借助我们强大的技术，助您实现广告目标，该技术可帮助您以程序化方式购买广告位。利用我们全新优化的引擎，把握最适合您广告系列的机遇。'
