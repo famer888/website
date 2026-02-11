@@ -19,7 +19,7 @@
     <FaqSection />
 
     <!-- 底部 CTA -->
-    <CtaSection />
+    <!-- <CtaSection /> -->
 
     <!-- 页脚 -->
     <Footer />
