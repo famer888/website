@@ -7,20 +7,10 @@
     <AudienceSection />
 
     <!-- 卡片列表部分 -->
-    <FeatureCardsSection
-      v-for="section in cardSections"
-      :key="section.id"
-      :id="section.id"
-      :title="section.title"
-      :description="section.description"
-      :items="section.items"
-      :bg-color="section.bgColor"
-      :scroll-ref="section.scrollRef"
-      :card-refs="section.cardRefs"
-      :active-index="section.activeIndex"
-      :on-scroll="section.onScroll"
-      :set-card-ref="section.setCardRef"
-    />
+    <FeatureCardsSection v-for="section in cardSections" :key="section.id" :id="section.id" :title="section.title"
+      :description="section.description" :items="section.items" :bg-color="section.bgColor"
+      :scroll-ref="section.scrollRef" :card-refs="section.cardRefs" :active-index="section.activeIndex"
+      :on-scroll="section.onScroll" :set-card-ref="section.setCardRef" />
 
     <!-- 设备和网络功能（4 卡片） -->
     <DeviceNetworkSection />
@@ -37,7 +27,7 @@
 </template>
 
 <script setup>
-import FeatureCardsSection from '~/components/FeatureCardsSection.vue'
+import FeatureCardsSection from './components/target-function/FeatureCardsSection.vue'
 import HeroSection from './components/target-function/hero-section.vue'
 import AudienceSection from './components/target-function/audience-section.vue'
 import DeviceNetworkSection from './components/target-function/device-network-section.vue'
