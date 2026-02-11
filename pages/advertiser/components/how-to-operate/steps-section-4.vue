@@ -11,7 +11,7 @@
 					v-html="'开始看到点击量、潜在客户和销售额的增长。<br/>分析您的统计数据并进行优化，以获得更好的结果。'"></p>
 			</div>
 			<!-- 右侧图片 -->
-			<img src="~/assets/imgaes/advertiser/img_kb1.png" alt="" class="w-[280px] h-[280px] md:w-[600px] md:h-[600px] object-contain order-2 mx-auto md:mx-0">
+			<img src="~/assets/imgaes/advertiser/img_kb1.webp" alt="" class="w-[280px] h-[280px] md:w-[600px] md:h-[600px] object-contain order-2 mx-auto md:mx-0">
 		</div>
 	</section>
 </template>

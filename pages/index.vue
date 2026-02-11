@@ -288,13 +288,12 @@
 
 <script setup>
 // 导入图片
-import centerImageSrc from '~/assets/imgaes/home/center.png'
-import center2ImageSrc from '~/assets/imgaes/home/center2.png'
-import center3ImageSrc from '~/assets/imgaes/home/center3.png'
+import centerImageSrc from '~/assets/imgaes/home/center.webp'
+import center2ImageSrc from '~/assets/imgaes/home/center2.webp'
+import center3ImageSrc from '~/assets/imgaes/home/center3.webp'
 import icon1Src from '~/assets/imgaes/home/icon1.png'
 import icon2Src from '~/assets/imgaes/home/icon2.png'
 import icon3Src from '~/assets/imgaes/home/icon3.png'
-import logoImageSrc from '~/assets/imgaes/logo.png'
 
 // 认证状态
 const { navigateToAuthOrDashboard } = useAuth()

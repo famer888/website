@@ -2,7 +2,7 @@
 	<section class="w-full md:p-0">
 		<div class="w-full md:max-w-[1200px] mx-auto px-6 md:px-0 grid grid-cols-1 md:grid-cols-2 gap-[16px] md:gap-0">
 			<!-- 左侧图片 -->
-			<img src="~/assets/imgaes/advertiser/img_wd4.png" alt="" class="w-[280px] h-[280px] md:w-[600px] md:h-[600px] object-contain order-2 md:order-1 mx-auto md:mx-0">
+			<img src="~/assets/imgaes/advertiser/img_wd4.webp" alt="" class="w-[280px] h-[280px] md:w-[600px] md:h-[600px] object-contain order-2 md:order-1 mx-auto md:mx-0">
 			<!-- 右侧文字 -->
 			<div class="pt-[48px] md:pt-[101px] md:pl-[40px] order-1 md:order-2">
 				<h2

@@ -31,7 +31,7 @@
 </template>
 
 <script setup>
-import why8ImageSrc from '~/assets/imgaes/why/why8.png'
+import why8ImageSrc from '~/assets/imgaes/why/why8.webp'
 
 const data = {
 	title: '移动广告',

@@ -14,7 +14,7 @@
 					您可以上传横幅图片，也可以从图库中选择之前使用过的图片展示给您的受众。如果您是网站广告新手，不知道该推广什么内容，敬请联系T1 Ads官方，我们将提供各种各样的产品供您选择。</p>
 			</div>
 			<!-- 右侧图片 -->
-			<img src="~/assets/imgaes/advertiser/img_ad3.png" alt="" class="w-[280px] h-[280px] md:w-[600px] md:h-[600px] object-contain order-2 mx-auto md:mx-0">
+			<img src="~/assets/imgaes/advertiser/img_ad3.webp" alt="" class="w-[280px] h-[280px] md:w-[600px] md:h-[600px] object-contain order-2 mx-auto md:mx-0">
 		</div>
 	</section>
 </template>

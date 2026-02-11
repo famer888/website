@@ -30,5 +30,5 @@
 </template>
 
 <script setup>
-import img_t1dsp6x from '~/assets/imgaes/advertiser/img_t1dsp6x.jpg'
+import img_t1dsp6x from '~/assets/imgaes/advertiser/img_t1dsp6x.webp'
 </script>

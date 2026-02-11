@@ -2,7 +2,7 @@
   <div class="min-h-screen bg-white">
     <!-- 页面内容 -->
     <div
-      class="w-full relative h-[255px] sm:h-[540px] bg-[url(~/assets/imgaes/help/m-banner.jpg)] sm:bg-[url(~/assets/imgaes/help/banner.jpg)] bg-cover bg-center"
+      class="w-full relative h-[255px] sm:h-[540px] bg-[url(~/assets/imgaes/help/m-banner.jpg)] sm:bg-[url(~/assets/imgaes/help/banner.webp)] bg-cover bg-center"
     >
       <div class="max-w-7xl mx-auto">
         <div
@@ -31,7 +31,7 @@
           <div
             class="grid sm:flex sm:gap-20 grid-cols-3 sm:justify-start justify-center text-[#626671] text-[16px] sm:text-[32px] text-center sm:text-start"
           >
-            <template v-for="tab in tabs" :key="tab.id">
+            <div v-for="tab in tabs" :key="tab.id">
               <div
                 class="cursor-pointer relative"
                 @click="handleTabClick(tab.id)"
@@ -42,7 +42,7 @@
                   class="absolute bottom-[-10px] sm:bottom-[-15px] left-[50%] transform translate-x-[-50%] w-[25px] sm:w-[100px] h-[3px] sm:h-[4px] bg-[#3982F9]"
                 ></label>
               </div>
-            </template>
+            </div>
           </div>
 
           <!-- 展开文本内容 -->
@@ -95,7 +95,7 @@
             </div>
             <div class="mt-10">
               <div class="w-[160px] h-[40px] sm:w-[250px] sm:h-[60px] mx-auto rounded-[20px] sm:rounded-[30px] bg-[#3A82F9] text-[16px] sm:text-[20px] text-white flex items-center justify-center gap-2 cursor-pointer">
-                <img :src="ServiceSrc" alt="" class="w-[10px] sm:w-[15px]"></img>
+                <img :src="ServiceSrc" alt="" class="w-[10px] sm:w-[15px]"/>
                 <span>联系客服</span>
               </div>
             </div>
