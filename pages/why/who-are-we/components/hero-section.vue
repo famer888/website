@@ -20,7 +20,7 @@
 		<!-- 按钮 -->
 		<div class="flex justify-center">
 			<button @click="navigateToAuthOrDashboard('/auth/register')"
-				class="cursor-pointer w-[160px] h-[40px] md:w-[240px] md:h-[60px] bg-[#3A82F9] text-white rounded-full font-pingfang font-normal tracking-[0px] text-[16px] md:text-[20px] leading-[24px] md:leading-[30px] text-center hover:opacity-90 transition-opacity flex items-center justify-center">
+				class="cursor-pointer w-[160px] h-[40px] md:w-[240px] md:h-[60px] bg-[#3A82F9] text-white rounded-full font-pingfang font-normal tracking-[0px] text-[16px] md:text-[20px] leading-[24px] md:leading-[30px] text-center transition-colors flex items-center justify-center">
 				免费注册
 			</button>
 		</div>

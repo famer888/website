@@ -9,7 +9,7 @@
 					<p>T1 愿意奖励您,只要您推荐其他人使用我们的平台!</p>
 				</div>
 				<NuxtLink to="/referral"
-					class="hidden md:flex w-[160px] h-[40px] md:w-[240px] md:h-[60px] bg-[#3A82F9] text-white rounded-full font-pingfang font-normal tracking-[0px] text-[16px] md:text-[20px] leading-[24px] md:leading-[30px] text-center hover:opacity-90 transition-opacity items-center justify-center">
+					class="hidden md:flex w-[160px] h-[40px] md:w-[240px] md:h-[60px] bg-[#3A82F9] text-white rounded-full font-pingfang font-normal tracking-[0px] text-[16px] md:text-[20px] leading-[24px] md:leading-[30px] text-center transition-colors items-center justify-center">
 					了解更多
 				</NuxtLink> 
 			</div>

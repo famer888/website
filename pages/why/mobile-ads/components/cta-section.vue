@@ -16,7 +16,7 @@
 				</p>
 				<!-- 按钮 -->
 				<NuxtLink :to="ctaDataH5.btn.link"
-					class="inline-flex items-center justify-center bg-[#3A82F9] text-white rounded-[30px] font-normal text-[16px] leading-[24px] tracking-[0px] transition-colors hover:bg-[#2B6FE8] w-[160px] h-[40px]">
+					class="inline-flex items-center justify-center bg-[#3A82F9] text-white rounded-[30px] font-normal text-[16px] leading-[24px] tracking-[0px] transition-colors w-[160px] h-[40px]">
 					{{ ctaDataH5.btn.text }}
 				</NuxtLink>
 			</div>
@@ -35,7 +35,7 @@
 				</p>
 			<!-- 按钮 -->
 			<button @click="navigateToAuthOrDashboard('/auth/register')"
-				class="cursor-pointer inline-flex items-center justify-center bg-[#3A82F9] text-white rounded-full font-normal text-[20px] leading-[30px] tracking-[0px] transition-colors hover:bg-[#2B6FE8] w-[240px] h-[60px]">
+				class="cursor-pointer inline-flex items-center justify-center bg-[#3A82F9] text-white rounded-full font-normal text-[20px] leading-[30px] tracking-[0px] transition-colors w-[240px] h-[60px]">
 				{{ ctaDataPC.btn.text }}
 			</button>
 			</div>

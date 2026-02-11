@@ -14,7 +14,7 @@
 					{{ data.body }}</p>
 				<!-- PC 按钮 -->
 				<button @click="navigateToAuthOrDashboard('/auth/register')"
-					class="hidden md:flex w-[240px] h-[60px] bg-[#3A82F9] text-white rounded-full font-pingfang font-normal tracking-[0px] text-[20px] leading-[30px] text-center hover:opacity-90 transition-opacity items-center justify-center cursor-pointer">
+					class="hidden md:flex w-[240px] h-[60px] bg-[#3A82F9] text-white rounded-full font-pingfang font-normal tracking-[0px] text-[20px] leading-[30px] text-center transition-colors items-center justify-center cursor-pointer">
 					联系我们
 				</button>
 			</div>

@@ -196,7 +196,7 @@
 				</p>
 				<p class="text-lg text-[#93959C] mb-8">找不到想要的答案?</p>
 				<NuxtLink to="/contact"
-					class="inline-block w-[200px] h-[50px] md:w-[240px] md:h-[60px] bg-[#3A82F9] text-white rounded-full text-base md:text-lg font-medium hover:bg-[#2B6FE8] transition-colors flex items-center justify-center mx-auto">
+					class="inline-block w-[200px] h-[50px] md:w-[240px] md:h-[60px] bg-[#3A82F9] text-white rounded-full text-base md:text-lg font-medium transition-colors flex items-center justify-center mx-auto">
 					联系我们
 				</NuxtLink>
 			</div>

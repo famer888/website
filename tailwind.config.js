@@ -16,7 +16,7 @@ export default {
       colors: {
         'brand': {
           DEFAULT: '#3A82F9',
-          hover: '#2B6FE8',
+          hover: '#2F69CA',
           light: '#E8F2FF',
         },
         'text-gray': '#A2A3A5',

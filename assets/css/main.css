@@ -18,7 +18,8 @@
     background-color: #3A82F9;
   }
   .register-btn:hover {
-    background-color: #2B6FE8;
+    background-color: #2F69CA;
+    box-shadow: 0px 2px 4px 0px #002D961A !important; ;
   }
   
   .learn-more-btn {
@@ -55,7 +56,24 @@
   }
   
   .bg-brand:hover {
-    background-color: #2B6FE8;
+    background-color: #2F69CA;
+    box-shadow: 0px 2px 4px 0px #002D961A !important;;
+  }
+}
+
+/* 统一所有蓝色品牌按钮的 hover 效果（放在 @layer 外确保优先级最高） */
+.register-btn:hover,
+.bg-brand:hover,
+.bg-\[\#3A82F9\]:not(.md\:bg-white):hover {
+  background-color: #2F69CA;
+  box-shadow: 0px 2px 4px 0px #002D961A !important;;
+}
+
+/* 移动端蓝底按钮（桌面端切换为白底蓝边的）仅在移动端应用蓝色 hover */
+@media (max-width: 767px) {
+  .bg-\[\#3A82F9\].md\:bg-white:hover {
+    background-color: #2F69CA;
+    box-shadow: 0px 2px 4px 0px #002D961A !important;;
   }
 }
 
