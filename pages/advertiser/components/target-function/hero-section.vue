@@ -33,5 +33,5 @@
 </template>
 
 <script setup>
-import img_mbgn8 from '~/assets/imgaes/advertiser/img_mbgn8.jpg'
+import img_mbgn8 from '~/assets/imgaes/advertiser/img_mbgn8.webp'
 </script>

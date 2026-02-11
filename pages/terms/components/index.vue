@@ -1,7 +1,7 @@
 <template>
     <div class="bg-white">
       <!-- 页面内容 -->
-      <div class="w-full relative h-[540px] sm:h-[380px] bg-[url(~/assets/imgaes/contact/m-banner.jpg)] sm:bg-[url(~/assets/imgaes/contact/banner.jpg)] bg-cover bg-center">
+      <div class="w-full relative h-[540px] sm:h-[380px] bg-[url(~/assets/imgaes/contact/m-banner.jpg)] sm:bg-[url(~/assets/imgaes/contact/banner.webp)] bg-cover bg-center">
         <div class="max-w-7xl mx-auto relative h-[100%]">
           <div class="absolute left-0 top-[50%] transform translate-y-[-50%]">
             <div class="p-8 sm:p-15">
@@ -22,7 +22,7 @@
                 <div
                   class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600"
                 >
-                  <img :src="CallIconSrc" alt="call-icon"></img>
+                  <img :src="CallIconSrc" alt="call-icon"/>
                 </div>
                 <div>
                   <h3 class="text-lg font-medium text-gray-900">致电给我们</h3>
@@ -33,7 +33,7 @@
                 <div
                   class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600"
                 >
-                  <img :src="EditIconSrc" alt="edit-icon"></img>
+                  <img :src="EditIconSrc" alt="edit-icon"/>
                 </div>
                 <div>
                   <h3 class="text-lg font-medium text-gray-900">商务合作</h3>
@@ -44,7 +44,7 @@
                 <div
                   class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600"
                 >
-                  <img :src="EmailIconSrc" alt="email-icon"></img>
+                  <img :src="EmailIconSrc" alt="email-icon"/>
                 </div>
                 <div>
                   <h3 class="text-lg font-medium text-gray-900">
@@ -58,7 +58,7 @@
                   <button
                     class="mt-1 bg-blue-600 text-white px-6 py-3 rounded-full font-medium flex items-center space-x-2 hover:bg-blue-700 transition-colors"
                   >
-                    <img :src="SendIconSrc" alt="send-icon"></img>
+                    <img :src="SendIconSrc" alt="send-icon"/>
                     <span>发送消息</span>
                   </button>
                 </div>
@@ -81,7 +81,5 @@
   import EmailIconSrc from "~/assets/imgaes/contact/email-icon.svg";
   import EditIconSrc from "~/assets/imgaes/contact/edit-icon.svg";
   import SendIconSrc from "~/assets/imgaes/contact/send-icon.svg";
-  import BannerSrc from "~/assets/imgaes/contact/banner.jpg";
-  import MBannerSrc from "~/assets/imgaes/contact/m-banner.jpg";
   </script>
   

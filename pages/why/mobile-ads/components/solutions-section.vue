@@ -72,7 +72,7 @@
 
 <script setup>
 // 左侧大图
-import leftIllustrationSrc from "~/assets/imgaes/why/mobile-ads/solution-left.svg";
+import leftIllustrationSrc from "~/assets/imgaes/why/mobile-ads/solution-left.png";
 
 // 图标
 import iconSrc1 from "~/assets/imgaes/why/mobile-ads/solution-1.svg";

@@ -33,7 +33,7 @@
 </template>
 
 <script setup>
-import heroImage from '~/assets/imgaes/advertiser/img_ggs5.png'
+import heroImage from '~/assets/imgaes/advertiser/img_ggs5.webp'
 
 const { navigateToAuthOrDashboard } = useAuth()
 

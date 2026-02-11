@@ -1,30 +1,32 @@
 <template>
-	<section v-for="(step, index) in steps" :key="index" class="bg-white py-10 sm:py-14 lg:py-18">
-		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-			<div class="relative flex flex-col md:flex-row items-center gap-8 lg:gap-12">
-				<!-- 文案 - 移动端在上，桌面端根据配置 -->
-				<div :class="['w-full md:w-1/2', 'order-1', step.textOrder]">
-					<h2 :class="styles.stepTitle" v-html="step.title"></h2>
-					<p v-if="step.subtitle" :class="styles.stepSubtitle">
-						{{ step.subtitle }}
-					</p>
-					<p :class="styles.stepBody" v-html="step.description"></p>
-				</div>
+	<div>
+		<section v-for="(step, index) in steps" :key="`step-${index}`" class="bg-white py-10 sm:py-14 lg:py-18">
+				<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+						<div class="relative flex flex-col md:flex-row items-center gap-8 lg:gap-12">
+							<!-- 文案 - 移动端在上，桌面端根据配置 -->
+							<div :class="['w-full md:w-1/2', 'order-1', step.textOrder]">
+								<h2 :class="styles.stepTitle" v-html="step.title"></h2>
+								<p v-if="step.subtitle" :class="styles.stepSubtitle">
+									{{ step.subtitle }}
+								</p>
+								<p :class="styles.stepBody" v-html="step.description"></p>
+							</div>
 
-				<!-- 图片 - 移动端在下，桌面端根据配置 -->
-				<div :class="['w-4/5 md:w-1/2 relative', 'order-2', step.imageOrder]">
-					<img :src="step.image" :alt="step.title" class="relative w-full h-auto object-contain" />
+							<!-- 图片 - 移动端在下，桌面端根据配置 -->
+							<div :class="['w-4/5 md:w-1/2 relative', 'order-2', step.imageOrder]">
+								<img :src="step.image" :alt="step.title" class="relative w-full h-auto object-contain" />
+							</div>
+						</div>
 				</div>
-			</div>
-		</div>
-	</section>
+		</section>
+	</div>
 </template>
 
 <script setup>
-import img_hd2 from '~/assets/imgaes/advertiser/img_hd2.png'
+import img_hd2 from '~/assets/imgaes/advertiser/img_hd2.webp'
 import img_ad3 from '~/assets/imgaes/advertiser/img_ad3.png'
-import img_wd4 from '~/assets/imgaes/advertiser/img_wd4.png'
-import img_kb1 from '~/assets/imgaes/advertiser/img_kb1.png'
+import img_wd4 from '~/assets/imgaes/advertiser/img_wd4.webp'
+import img_kb1 from '~/assets/imgaes/advertiser/img_kb1.webp'
 
 const styles = {
 	stepTitle:

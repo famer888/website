@@ -211,7 +211,7 @@
 // 导入图片
 import statistics1ImageSrc from '~/assets/imgaes/why/statistics1.svg'
 import statistics2ImageSrc from '~/assets/imgaes/why/statistics2.svg'
-import statistics3ImageSrc from '~/assets/imgaes/why/statistics3.png'
+import statistics3ImageSrc from '~/assets/imgaes/why/statistics3.webp'
 import statistics4ImageSrc from '~/assets/imgaes/why/statistics4.svg'
 import statistics5ImageSrc from '~/assets/imgaes/why/statistics5.svg'
 import statistics6ImageSrc from '~/assets/imgaes/why/statistics6.svg'
