@@ -2,7 +2,7 @@
   <div class="min-h-screen bg-white">
     <!-- 页面内容 -->
     <div
-      class="w-full relative h-[255px] sm:h-[540px] bg-[url(~/assets/imgaes/help/m-banner.jpg)] sm:bg-[url(~/assets/imgaes/help/banner.jpg)] bg-cover bg-center"
+      class="w-full relative h-[255px] sm:h-[540px] bg-[url(~/assets/imgaes/help/m-banner.jpg)] sm:bg-[url(~/assets/imgaes/help/banner.webp)] bg-cover bg-center"
     >
       <div class="max-w-7xl mx-auto">
         <div

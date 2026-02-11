@@ -28,7 +28,7 @@
 </template>
 
 <script setup>
-import why1ImageSrc from '~/assets/imgaes/why/why1.png'
+import why1ImageSrc from '~/assets/imgaes/why/why1.webp'
 
 const { navigateToAuthOrDashboard } = useAuth()
 

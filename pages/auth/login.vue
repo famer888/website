@@ -4,7 +4,7 @@ definePageMeta({
 })
 
 // 导入图片
-import loginBgSrc from '~/assets/imgaes/login/login_bg.jpg'
+import loginBgSrc from '~/assets/imgaes/login/login_bg.webp'
 import logoImageSrc from '~/assets/imgaes/logo.png'
 
 // 认证

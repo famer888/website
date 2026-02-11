@@ -27,5 +27,5 @@
 </template>
 
 <script setup>
-import advantages1ImageSrc from '~/assets/imgaes/why/advantages1.png'
+import advantages1ImageSrc from '~/assets/imgaes/why/advantages1.webp'
 </script>
