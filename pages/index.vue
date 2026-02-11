@@ -85,16 +85,10 @@
               </h2>
             </div>
 
-            <!-- 左侧插图 - 移动端在标题后，PC端在左侧 -->
-            <div
-              class="order-2 lg:order-1 flex justify-center lg:justify-start w-full px-[10px] lg:px-0"
-            >
-              <div class="w-full max-w-md lg:max-w-lg">
-                <img
-                  :src="center2ImageSrc"
-                  alt="成为一名广告商"
-                  class="w-full h-auto object-contain"
-                />
+           <!-- 左侧插图 - 移动端在标题后，PC端在左侧 -->
+            <div class="order-2 lg:order-1 flex justify-center lg:justify-start w-full px-[10px] lg:px-0">
+              <div class="w-full max-w-md lg:max-w-none lg:w-[730px] lg:h-[540px]">
+                <img :src="center2ImageSrc" alt="成为一名广告商" class="w-full h-full object-contain" />
               </div>
             </div>
 
