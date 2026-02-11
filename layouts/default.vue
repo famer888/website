@@ -94,12 +94,12 @@
           <div class="hidden md:flex items-center space-x-4 ml-4">
             <!-- 未登录状态：显示登录和注册按钮 -->
             <template v-if="!isLoggedIn">
-              <NuxtLink to="/auth/login" class="text-gray-700 hover:text-brand px-3 py-2 text-sm font-medium transition-colors">
+              <a :href="authUrl" :target="linkTarget" :rel="linkRel" class="text-gray-700 hover:text-brand px-3 py-2 text-sm font-medium transition-colors">
                 登陆
-              </NuxtLink>
-              <NuxtLink to="/auth/register" class="bg-brand text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-brand transition-colors">
+              </a>
+              <a :href="authUrl" :target="linkTarget" :rel="linkRel" class="bg-brand text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-brand transition-colors">
                 注册
-              </NuxtLink>
+              </a>
             </template>
             <!-- 已登录状态：显示广告主管理按钮 -->
             <template v-else>
@@ -206,8 +206,8 @@
           <div class="px-4 py-4 space-y-3 border-t border-gray-200">
             <!-- 未登录状态：显示登录和注册按钮 -->
             <template v-if="!isLoggedIn">
-              <NuxtLink to="/auth/login" @click="mobileMenuOpen = false" class="block w-full text-center bg-brand text-white px-4 py-3 rounded-full text-base font-medium">登陆</NuxtLink>
-              <NuxtLink to="/auth/register" @click="mobileMenuOpen = false" class="block w-full text-center border-2 border-brand text-brand bg-white px-4 py-3 rounded-full text-base font-medium">注册</NuxtLink>
+              <a :href="authUrl" :target="linkTarget" :rel="linkRel" @click="mobileMenuOpen = false" class="block w-full text-center bg-brand text-white px-4 py-3 rounded-full text-base font-medium">登陆</a>
+              <a :href="authUrl" :target="linkTarget" :rel="linkRel" @click="mobileMenuOpen = false" class="block w-full text-center border-2 border-brand text-brand bg-white px-4 py-3 rounded-full text-base font-medium">注册</a>
             </template>
             <!-- 已登录状态：显示广告主管理按钮 -->
             <template v-else>
@@ -244,6 +244,29 @@ const mobileDropdown = ref(null)
 
 // 认证状态
 const { isLoggedIn, goToAdminDashboard } = useAuth()
+
+// 判断是否是开发环境
+const isDev = import.meta.dev
+
+// 获取登录/注册跳转地址
+const authUrl = computed(() => {
+  // 如果是开发环境，使用原来的地址
+  if (isDev) {
+    return 'https://officialauth.adcs01.top/'
+  }
+  // 如果是生产环境，使用当前域名拼接 /login
+  if (process.client) {
+    return `${window.location.origin}/login`
+  }
+  // 服务端渲染时，返回默认值（会在客户端重新计算）
+  return '/login'
+})
+
+// 获取链接的 target 属性
+const linkTarget = computed(() => isDev ? '_blank' : '_self')
+
+// 获取链接的 rel 属性
+const linkRel = computed(() => isDev ? 'noopener noreferrer' : '')
 
 // 根据路由获取菜单显示文本
 const getWhyMenuText = computed(() => {
