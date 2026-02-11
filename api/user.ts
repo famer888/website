@@ -5,17 +5,14 @@
  */
 
 // 获取 API 基础地址
-// 开发环境：使用环境变量配置的地址（默认 https://official.adcs01.top/）
+// 开发环境：使用相对路径（通过 Vite 代理到 https://official.adcs01.top）
 // 生产环境：使用当前域名
 const getApiBaseUrl = (): string => {
     // 在客户端，可以通过 useRuntimeConfig 获取配置
     if (process.client) {
-        const config = useRuntimeConfig()
-        const apiBaseUrl = config.public.apiBaseUrl
-
-        // 如果是开发环境，直接返回配置的地址
+        // 开发环境使用相对路径，通过 Vite 代理转发
         if (import.meta.dev) {
-            return apiBaseUrl
+            return '' // 返回空字符串，使用相对路径 /api/userinfo，通过 Vite 代理
         }
 
         // 如果是生产环境，使用当前域名
@@ -23,10 +20,7 @@ const getApiBaseUrl = (): string => {
     }
 
     // 服务端渲染时，返回默认值（会在客户端重新计算）
-    // 开发环境返回配置的地址，生产环境返回相对路径
-    if (import.meta.dev) {
-        return 'https://official.adcs01.top'
-    }
+    // 开发环境返回空字符串（使用相对路径），生产环境也返回空字符串（使用相对路径）
     return ''
 }
 
@@ -52,7 +46,7 @@ export interface UserInfoResponse {
  * 获取用户信息
  * 
  * 接口地址：GET {API_BASE_URL}/api/userinfo
- * - 开发环境：https://official.adcs01.top/api/userinfo
+ * - 开发环境：/api/userinfo（通过 Vite 代理到 https://official.adcs01.top/api/userinfo）
  * - 生产环境：{当前域名}/api/userinfo
  * 请求参数：无（通过 Cookie 自动携带 Session ID）
  * 
@@ -66,9 +60,9 @@ export interface UserInfoResponse {
  * @example
  * ```typescript
  * const result = await getUserInfo()
- * if (result.code === 200) {
+ * if (result.code === 0) {
  *   console.log('用户信息:', result.data)
- * } else {
+ * } else if (result.code === 401) {
  *   console.log('未登录:', result.msg)
  * }
  * ```
