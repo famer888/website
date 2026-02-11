@@ -18,8 +18,8 @@
 				<StepsSection4 />
 			</div>
 
-			<!-- 底部 CTA -->
-			<CtaSection />
+			<!-- 底部 CTA (成为广告商区域已隐藏) -->
+			<!-- <CtaSection /> -->
 		</div>
 		<!-- 页脚 -->
 		<Footer />

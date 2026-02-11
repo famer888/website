@@ -9,8 +9,8 @@
 		<!-- 移动广告解决方案 -->
 		<SolutionsSection />
 
-		<!-- CTA 行动号召区 -->
-		<CtaSection />
+		<!-- CTA 行动号召区 (报名按钮隐藏，整个区域不展示) -->
+		<!-- <CtaSection /> -->
 
 		<Footer />
 	</div>

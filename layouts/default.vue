@@ -106,21 +106,10 @@
             </div>
           </div>
 
-          <!-- 登录和注册 / 广告主管理 -->
+          <!-- 登录和注册 / 广告主管理 (已隐藏注册登录) -->
           <div class="hidden md:flex items-center space-x-4 ml-4">
-            <!-- 未登录状态：显示登录和注册按钮 -->
-            <template v-if="!isLoggedIn">
-              <a :href="authUrl" :target="linkTarget" :rel="linkRel"
-                class="text-gray-700 hover:text-brand px-3 py-2 text-sm font-medium transition-colors">
-                登陆
-              </a>
-              <a :href="authUrl" :target="linkTarget" :rel="linkRel"
-                class="bg-brand text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-brand transition-colors">
-                注册
-              </a>
-            </template>
             <!-- 已登录状态：显示广告主管理按钮 -->
-            <template v-else>
+            <template v-if="isLoggedIn">
               <button @click="goToAdminDashboard"
                 class="bg-brand text-white px-6 py-2 rounded-full text-sm font-medium hover:opacity-90 transition-opacity">
                 广告主管理
@@ -225,17 +214,10 @@
               </div>
             </div>
 
-            <!-- 登录和注册按钮 / 广告主管理 -->
+            <!-- 登录和注册按钮 / 广告主管理 (已隐藏注册登录) -->
             <div class="px-[2px] pt-12 pb-4 flex flex-col gap-4 border-gray-200">
-              <!-- 未登录状态：显示登录和注册按钮 -->
-              <template v-if="!isLoggedIn">
-                <a :href="authUrl" :target="linkTarget" :rel="linkRel" @click="mobileMenuOpen = false"
-                  class="block w-full text-center bg-brand text-white px-4 py-3 rounded-full text-base font-medium">登陆</a>
-                <a :href="authUrl" :target="linkTarget" :rel="linkRel" @click="mobileMenuOpen = false"
-                  class="block w-full text-center border-[1px] border-brand text-brand bg-white px-4 py-3 rounded-full text-base font-medium">注册</a>
-              </template>
               <!-- 已登录状态：显示广告主管理按钮 -->
-              <template v-else>
+              <template v-if="isLoggedIn">
                 <button @click="mobileMenuOpen = false; goToAdminDashboard()"
                   class="block w-full text-center bg-brand text-white px-4 py-3 rounded-full text-base font-medium">
                   广告主管理

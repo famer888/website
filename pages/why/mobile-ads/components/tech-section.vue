@@ -37,12 +37,12 @@
 
 						</div>
 						<!-- 报名按钮 -->
-						<div class="flex justify-center md:justify-start md:ml-[151px] ">
+						<!-- <div class="flex justify-center md:justify-start md:ml-[151px] ">
 							<button @click="navigateToAuthOrDashboard('/auth/register')"
 								class="cursor-pointer inline-flex items-center justify-center bg-[#3A82F9] text-white rounded-full font-medium md:font-normal text-[18px] md:text-[20px] leading-[26px] md:leading-[30px] tracking-[0px] transition-colors w-[180px] h-[48px] md:w-[240px] md:h-[60px]">
 								{{ sectionData.ctaText }}
 							</button>
-						</div>
+						</div> -->
 					</div>
 				</div>
 

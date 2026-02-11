@@ -2002,16 +2002,7 @@ export const WetmentbMap = {
 
         <!-- 第二列 -->
         <div class="flex flex-col box-border flex-[0_0_50%] md:flex-[0_0_33.333%] px-2 md:px-6">
-          <div class="mb-8">
-            <h3 class="mb-4">
-              <a href="/register" class="text-blue-600 hover:text-blue-700 border-b-2 border-blue-600 pb-1 text-base md:text-lg font-medium inline-block no-underline">账户</a>
-            </h3>
-            <ul class="list-none pl-0 mt-4 space-y-2">
-              <li class="text-gray-700 text-sm md:text-base mb-2 list-none"><a href="/register" class="text-gray-700 hover:text-blue-600 transition-colors no-underline">注册</a></li>
-              <li class="text-gray-700 text-sm md:text-base mb-2 list-none"><a href="/login" class="text-gray-700 hover:text-blue-600 transition-colors no-underline">登录</a></li>
-              <li class="text-gray-700 text-sm md:text-base mb-2 list-none"><a href="/login" class="text-gray-700 hover:text-blue-600 transition-colors no-underline">忘记密码?</a></li>
-            </ul>
-          </div>
+          <!-- 账户板块 (已隐藏) -->
           <div class="mb-6">
             <h3 class="mb-4">
               <a href="/ad-styles" class="text-blue-600 hover:text-blue-700 border-b-2 border-blue-600 pb-1 text-base md:text-lg font-medium inline-block no-underline">广告样式</a>

@@ -380,12 +380,7 @@
 
 		</section>
 
-		<section class="">
-			<div class="max-w-4xl mx-auto border-t border-[#C3C4C8] flex flex-col items-center pt-5 pb-20 gap-6">
-				<p class="text-[#3A82F9] text-center max-w-xs mb-12 md:mb-16">在最适合广告主的广告网络T1 Ads上打造您的第一条广告！</p>
-				<button class="text-xl text-[#fff] bg-[#3A82F9] w-[160px] h-[40px] md:w-[240px] md:h-[60px] rounded-full">注册T1广告</button>
-			</div>
-		</section>
+	<!-- 底部文案和注册T1广告按钮 (已隐藏) -->
 	<Footer />
 	</div>
 </template>

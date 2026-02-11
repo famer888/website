@@ -10,12 +10,7 @@
 				T1 DSP
 				是一个需求方平台，允许广告商通过程序化方式从我们独家的高质量发布商处购买广告位。广告商可以购买视频、展示和其他广告格式，以实现他们的广告目标。
 			</p>
-			<div class="flex justify-center">
-			<button @click="navigateToAuthOrDashboard('/auth/register')"
-				class="cursor-pointer w-[160px] h-[40px] md:w-[240px] md:h-[60px] bg-[#3A82F9] text-white rounded-full font-pingfang font-normal tracking-[0px] text-[16px] md:text-[20px] leading-[24px] md:leading-[30px] text-center transition-colors flex items-center justify-center">
-				立即开始
-			</button>
-			</div>
+		<!-- 立即开始按钮 (已隐藏) -->
 		</div>
 	</section>
 </template>

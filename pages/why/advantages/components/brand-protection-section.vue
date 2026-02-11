@@ -18,7 +18,7 @@
 					<img :src="advantages1ImageSrc" alt="品牌保护" class="w-[240px] h-[240px] md:w-[400px] md:h-[400px]" />
 				</div>
 			</div>
-			<NuxtLink to="/brand-protection"
+			<NuxtLink to="/"
 				class="flex w-[160px] h-[40px] md:w-[240px] md:h-[60px] bg-[#3A82F9] md:bg-white md:border md:border-[#3A82F9] rounded-full md:rounded-[30px] font-pingfang font-normal tracking-[0px] text-[16px] md:text-[20px] leading-[24px] md:leading-[30px] text-center text-white md:text-[#3A82F9] md:hover:bg-[#E8F2FF] transition-colors items-center justify-center mt-[24px] md:mt-[34px] mx-auto md:mx-0">
 				了解更多
 			</NuxtLink>

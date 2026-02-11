@@ -40,13 +40,9 @@
                 大家都在T1上投放,就差你了!
               </p>
 
-              <!-- 按钮组 - 移动端左右布局，PC端左右布局 -->
+              <!-- 按钮组 - 隐藏注册按钮，了解更多居中 -->
               <div class="flex flex-row gap-4 justify-center items-center">
-                <button @click="navigateToAuthOrDashboard('/auth/register')"
-                  class="cursor-pointer register-btn inline-flex items-center justify-center text-white rounded-full text-sm sm:text-base font-semibold transition-colors shadow-none hover:shadow-xl w-[124px] h-[40px] md:w-[200px] md:h-[60px]">
-                  注册
-                </button>
-                <NuxtLink to="/auth/login"
+                <NuxtLink to="/"
                   class="learn-more-btn inline-flex items-center justify-center bg-white rounded-full text-sm sm:text-base font-semibold transition-colors w-[124px] h-[40px] md:w-[200px] md:h-[60px]">
                   了解更多
                 </NuxtLink>
@@ -140,7 +136,7 @@
 
               <!-- 工作原理按钮 -->
               <div class="flex justify-center lg:justify-start px-[10%] md:px-0 lg:pl-[80px]">
-                <NuxtLink to="/how-it-works"
+                <NuxtLink to="/"
                   class="register-btn inline-flex items-center justify-center text-white rounded-[30px] font-pingfang font-normal text-[16px] sm:text-[18px] md:text-[19px] lg:text-[20px] leading-[24px] sm:leading-[27px] md:leading-[28.5px] lg:leading-[30px] tracking-normal transition-colors shadow-lg hover:shadow-xl w-[200px] h-[50px] md:w-[240px] md:h-[60px]">
                   工作原理
                 </NuxtLink>
@@ -182,7 +178,7 @@
                 DSP、热门垂直市场、T1经验以及最新统计数据。只需几次点击即可触达全球受众。
               </p>
               <div class="flex justify-center lg:justify-start">
-                <NuxtLink to="/download-media-kit"
+                <NuxtLink to="/"
                   class="learn-more-btn inline-flex items-center justify-center bg-[#F5F5F5] rounded-[30px] font-pingfang font-normal text-[16px] sm:text-[18px] md:text-[19px] lg:text-[20px] leading-[24px] sm:leading-[27px] md:leading-[28.5px] lg:leading-[30px] tracking-normal transition-colors w-[200px] h-[50px] md:w-[240px] md:h-[60px]">
                   立即下载
                 </NuxtLink>
@@ -192,25 +188,7 @@
         </div>
       </section>
 
-      <!-- 立即开始部分 -->
-      <section class="bg-[#F5F5F5] py-12 sm:py-16 lg:py-24">
-        <div class="max-w-2xl mx-auto px-[20%] sm:px-6 lg:px-8 text-center">
-          <h2
-            class="font-pingfang font-medium text-[32px] sm:text-[40px] md:text-[48px] lg:text-[64px] leading-[48px] sm:leading-[60px] md:leading-[72px] lg:leading-[96px] tracking-normal text-center text-[#3A82F9] mb-6">
-            立即开始!
-          </h2>
-          <p
-            class="font-pingfang font-normal text-[16px] leading-[24px] tracking-normal text-center text-[#A2A3A5] mb-8">
-            拓展您的在线商机! 使用 T1 吸引新的网站访客，提升您的在线销售额。
-          </p>
-          <div class="flex justify-center">
-            <button @click="navigateToAuthOrDashboard('/auth/register')"
-              class="cursor-pointer register-btn inline-flex items-center justify-center text-white rounded-[30px] font-pingfang font-normal text-[16px] sm:text-[18px] md:text-[19px] lg:text-[20px] leading-[24px] sm:leading-[27px] md:leading-[28.5px] lg:leading-[30px] tracking-normal transition-colors shadow-lg hover:shadow-xl w-[200px] h-[50px] md:w-[240px] md:h-[60px]">
-              立即注册
-            </button>
-          </div>
-        </div>
-      </section>
+      <!-- 立即开始部分 (已隐藏) -->
     </div>
 
     <!-- 页脚 -->

@@ -128,12 +128,7 @@
 					</div>
 				</div>
 
-			<div class="flex justify-center">
-				<button @click="navigateToAuthOrDashboard('/auth/register')"
-					class="cursor-pointer register-btn inline-flex items-center justify-center text-white rounded-full font-pingfang font-medium text-[16.8px] sm:text-[19.2px] leading-[24px] tracking-normal transition-colors shadow-lg hover:shadow-xl w-[180px] h-[44px] sm:w-[200px] sm:h-[48px]">
-					报名
-				</button>
-			</div>
+		<!-- 报名按钮 (已隐藏) -->
 			</div>
 		</section>
 		<!-- 页脚 -->

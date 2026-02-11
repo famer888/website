@@ -8,14 +8,14 @@
 					<p>何不赚点外快呢?</p>
 					<p>T1 愿意奖励您,只要您推荐其他人使用我们的平台!</p>
 				</div>
-				<NuxtLink to="/referral"
+				<NuxtLink to="/"
 					class="hidden md:flex w-[160px] h-[40px] md:w-[240px] md:h-[60px] bg-[#3A82F9] text-white rounded-full font-pingfang font-normal tracking-[0px] text-[16px] md:text-[20px] leading-[24px] md:leading-[30px] text-center transition-colors items-center justify-center">
 					了解更多
 				</NuxtLink> 
 			</div>
 			<div class="bg-transparent md:bg-white col-span-1 h-full px-6 py-0 md:py-[53px] md:pr-[130px] flex items-center flex-col gap-[40px] justify-center md:justify-end">
 				<img :src="advantages3ImageSrc" alt="推荐计划" class="w-[200px] h-[200px] md:w-auto md:h-auto" />
-				<NuxtLink to="/referral"
+				<NuxtLink to="/"
 					class="md:hidden flex items-center justify-center w-[264px] h-[48px] bg-[#3A82F9] rounded-full text-white font-pingfang font-medium text-[18px] leading-[26px] tracking-[0px] text-center">
 					了解更多
 				</NuxtLink>

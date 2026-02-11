@@ -8,7 +8,7 @@
 			<WhyChooseSection />
 			<ShowCase />
 			<MobileAdsSection />
-			<CtaSection />
+			<!-- <CtaSection /> --> <!-- 立即开始区域已隐藏 -->
 		</div>
 		<Footer />
 	</div>
