@@ -47,7 +47,7 @@
                   注册
                 </button>
                 <NuxtLink to="/auth/login"
-                  class="learn-more-btn inline-flex items-center justify-center bg-white border rounded-full text-sm sm:text-base font-semibold transition-colors w-[124px] h-[40px] md:w-[200px] md:h-[60px]">
+                  class="learn-more-btn inline-flex items-center justify-center bg-white rounded-full text-sm sm:text-base font-semibold transition-colors w-[124px] h-[40px] md:w-[200px] md:h-[60px]">
                   了解更多
                 </NuxtLink>
               </div>
@@ -183,7 +183,7 @@
               </p>
               <div class="flex justify-center lg:justify-start">
                 <NuxtLink to="/download-media-kit"
-                  class="learn-more-btn inline-flex items-center justify-center bg-[#F5F5F5] border rounded-[30px] font-pingfang font-normal text-[16px] sm:text-[18px] md:text-[19px] lg:text-[20px] leading-[24px] sm:leading-[27px] md:leading-[28.5px] lg:leading-[30px] tracking-normal transition-colors w-[200px] h-[50px] md:w-[240px] md:h-[60px]">
+                  class="learn-more-btn inline-flex items-center justify-center bg-[#F5F5F5] rounded-[30px] font-pingfang font-normal text-[16px] sm:text-[18px] md:text-[19px] lg:text-[20px] leading-[24px] sm:leading-[27px] md:leading-[28.5px] lg:leading-[30px] tracking-normal transition-colors w-[200px] h-[50px] md:w-[240px] md:h-[60px]">
                   立即下载
                 </NuxtLink>
               </div>
