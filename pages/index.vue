@@ -157,7 +157,7 @@
             <!-- 移动端标题居中 -->
             <div class="order-1 lg:hidden w-full text-center">
               <h2
-                class="font-pingfang font-medium text-[24px] xs:text-[28px] sm:text-[32px] leading-[36px] xs:leading-[42px] sm:leading-[48px] tracking-normal text-[#707273]">
+                class="font-pingfang font-medium text-[32px] leading-[48px] tracking-[0px] text-center text-[#707273]">
                 媒体资料
               </h2>
             </div>
@@ -177,7 +177,7 @@
                 媒体资料
               </h2>
               <p
-                class="font-pingfang font-normal text-[14px] sm:text-[16px] md:text-[17px] lg:text-[18px] text-[#A2A3A5] leading-relaxed mb-8">
+                class="font-pingfang font-normal text-[14px] md:text-[18px] leading-[20px] md:leading-relaxed tracking-[0px] text-[#A2A3A5] mb-8">
                 本文档概述了T1的广告和优质广告资源。了解我们的广告格式、T1
                 DSP、热门垂直市场、T1经验以及最新统计数据。只需几次点击即可触达全球受众。
               </p>
