@@ -105,7 +105,11 @@ export default defineNuxtConfig({
     public: {
       siteUrl: (process as any).env?.NUXT_PUBLIC_SITE_URL || 'http://localhost:3000',
       // 广告主管理后台地址，可通过环境变量 NUXT_PUBLIC_ADMIN_DASHBOARD_URL 配置
-      adminDashboardUrl: (process as any).env?.NUXT_PUBLIC_ADMIN_DASHBOARD_URL || '/admin'
+      adminDashboardUrl: (process as any).env?.NUXT_PUBLIC_ADMIN_DASHBOARD_URL || '/admin',
+      // API 基础地址，可通过环境变量 NUXT_PUBLIC_API_BASE_URL 配置
+      // 开发环境：https://official.adcs01.top/
+      // 生产环境：自动使用当前域名
+      apiBaseUrl: (process as any).env?.NUXT_PUBLIC_API_BASE_URL || 'https://official.adcs01.top'
     }
   }
 })

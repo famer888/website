@@ -14,21 +14,20 @@ export default defineNuxtPlugin(async () => {
         // 调用接口获取用户信息（通过 Cookie 自动携带 Session ID）
         const result = await getUserInfo()
 
+        // 获取 API 地址用于日志显示
+        const config = useRuntimeConfig()
+        const apiBaseUrl = import.meta.dev
+            ? config.public.apiBaseUrl
+            : window.location.origin
+        const apiUrl = `${apiBaseUrl}/api/userinfo`
+
         // 打印到控制台
         console.log('========== 用户状态信息 ==========')
-        console.log('接口地址:', 'https://bff.ad-test.cc/api/userinfo')
-        console.log('请求方式:', 'GET')
-        console.log('认证方式:', 'Cookie (Session ID)')
-        console.log('当前域名:', window.location.origin)
-        console.log('Cookie 信息:', document.cookie || '无 Cookie')
-        console.log('响应状态码:', result.code)
-        console.log('响应消息:', result.msg)
+        console.log('接口地址:', apiUrl)
+
 
         if (result.code === 200 && result.data) {
             console.log('登录状态:', '已登录')
-            console.log('用户ID:', result.data.userId)
-            console.log('用户名:', result.data.userName)
-            console.log('登录邮箱:', result.data.loginEmail)
         } else {
             console.log('登录状态:', '未登录')
             console.log('用户数据:', result.data)

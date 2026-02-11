@@ -4,7 +4,31 @@
  * 所有用户相关的 API 接口都放在这个文件中维护
  */
 
-const API_BASE_URL = 'https://bff.ad-test.cc'
+// 获取 API 基础地址
+// 开发环境：使用环境变量配置的地址（默认 https://official.adcs01.top/）
+// 生产环境：使用当前域名
+const getApiBaseUrl = (): string => {
+    // 在客户端，可以通过 useRuntimeConfig 获取配置
+    if (process.client) {
+        const config = useRuntimeConfig()
+        const apiBaseUrl = config.public.apiBaseUrl
+
+        // 如果是开发环境，直接返回配置的地址
+        if (import.meta.dev) {
+            return apiBaseUrl
+        }
+
+        // 如果是生产环境，使用当前域名
+        return window.location.origin
+    }
+
+    // 服务端渲染时，返回默认值（会在客户端重新计算）
+    // 开发环境返回配置的地址，生产环境返回相对路径
+    if (import.meta.dev) {
+        return 'https://official.adcs01.top'
+    }
+    return ''
+}
 
 /**
  * 用户信息数据类型
@@ -27,7 +51,9 @@ export interface UserInfoResponse {
 /**
  * 获取用户信息
  * 
- * 接口地址：GET https://bff.ad-test.cc/api/userinfo
+ * 接口地址：GET {API_BASE_URL}/api/userinfo
+ * - 开发环境：https://official.adcs01.top/api/userinfo
+ * - 生产环境：{当前域名}/api/userinfo
  * 请求参数：无（通过 Cookie 自动携带 Session ID）
  * 
  * 说明：
@@ -49,9 +75,13 @@ export interface UserInfoResponse {
  */
 export const getUserInfo = async (): Promise<UserInfoResponse> => {
     try {
+        // 动态获取 API 地址（支持环境切换）
+        const apiBaseUrl = getApiBaseUrl()
+        const apiUrl = apiBaseUrl ? `${apiBaseUrl}/api/userinfo` : '/api/userinfo'
+
         // 使用原生 fetch API 确保 credentials: 'include' 正常工作
         // credentials: 'include' 的作用是让浏览器自动携带当前域名下的所有 Cookie（包括 Session ID）
-        const response = await fetch(`${API_BASE_URL}/api/userinfo`, {
+        const response = await fetch(apiUrl, {
             method: 'GET',
             credentials: 'include', // 重要：自动携带 Cookie（Session ID）
             headers: {
