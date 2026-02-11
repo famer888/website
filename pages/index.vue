@@ -54,16 +54,12 @@
 
               <!-- 按钮组 - 移动端左右布局，PC端左右布局 -->
               <div class="flex flex-row gap-4 justify-center items-center">
-                <button
-                  @click="navigateToAuthOrDashboard('/auth/register')"
-                  class="cursor-pointer register-btn inline-flex items-center justify-center text-white rounded-full text-sm sm:text-base font-semibold transition-colors shadow-lg hover:shadow-xl w-[124px] h-[40px] md:w-[200px] md:h-[60px]"
-                >
+               <button @click="navigateToAuthOrDashboard('/auth/register')"
+                  class="cursor-pointer register-btn inline-flex items-center justify-center text-white rounded-full text-sm sm:text-base font-semibold transition-colors shadow-none hover:shadow-xl w-[124px] h-[40px] md:w-[200px] md:h-[60px]">
                   注册
                 </button>
-                <NuxtLink
-                  to="/auth/login"
-                  class="learn-more-btn inline-flex items-center justify-center bg-white border-2 rounded-full text-sm sm:text-base font-semibold transition-colors w-[124px] h-[40px] md:w-[200px] md:h-[60px]"
-                >
+                <NuxtLink to="/auth/login"
+                  class="learn-more-btn inline-flex items-center justify-center bg-white border rounded-full text-sm sm:text-base font-semibold transition-colors w-[124px] h-[40px] md:w-[200px] md:h-[60px]">
                   了解更多
                 </NuxtLink>
               </div>
