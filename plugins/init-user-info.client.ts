@@ -24,6 +24,8 @@ export default defineNuxtPlugin(async () => {
         // 打印到控制台
         console.log('========== 用户状态信息 ==========')
         console.log('接口地址:', apiUrl)
+        console.log('当前域名:', window.location.origin)
+        console.log('Cookie 会自动携带（credentials: include）')
 
 
         if (result.code === 200 && result.data) {

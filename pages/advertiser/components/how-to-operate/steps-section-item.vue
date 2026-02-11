@@ -24,7 +24,7 @@
 
 <script setup>
 import img_hd2 from '~/assets/imgaes/advertiser/img_hd2.webp'
-import img_ad3 from '~/assets/imgaes/advertiser/img_ad3.png'
+import img_ad3 from '~/assets/imgaes/advertiser/img_ad3.webp'
 import img_wd4 from '~/assets/imgaes/advertiser/img_wd4.webp'
 import img_kb1 from '~/assets/imgaes/advertiser/img_kb1.webp'
 

@@ -79,21 +79,15 @@ export const getUserInfo = async (): Promise<UserInfoResponse> => {
         const apiBaseUrl = getApiBaseUrl()
         const apiUrl = apiBaseUrl ? `${apiBaseUrl}/api/userinfo` : '/api/userinfo'
 
-        // 使用原生 fetch API 确保 credentials: 'include' 正常工作
-        // credentials: 'include' 的作用是让浏览器自动携带当前域名下的所有 Cookie（包括 Session ID）
+        // 使用原生 fetch API，credentials: 'include' 会自动携带所有同域名的 Cookie
+        // 浏览器会自动将 Cookie（包括 SSO_SESSION_ID_）附加到请求头中，无需手动处理
         const response = await fetch(apiUrl, {
             method: 'GET',
-            credentials: 'include', // 重要：自动携带 Cookie（Session ID）
+            credentials: 'include', // 自动携带所有同域名的 Cookie
             headers: {
                 'Content-Type': 'application/json',
-                // 如果需要，可以添加其他请求头
-                // 'Accept': 'application/json',
             },
         })
-
-        // 打印响应状态，便于调试
-        console.log('接口响应状态:', response.status, response.statusText)
-        console.log('响应头:', Object.fromEntries(response.headers.entries()))
 
         // 检查响应状态
         if (!response.ok) {
