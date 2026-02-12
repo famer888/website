@@ -14,7 +14,7 @@
 						<!-- 水平线 -->
 						<div class="w-[120px] sm:w-[160px] md:w-[200px] h-[2px] bg-white/60 my-8"></div>
 						<p
-							class="font-pingfang font-normal text-[14.4px] sm:text-[16.8px] leading-[21.6px] sm:leading-[24px] tracking-normal text-white">
+							class="font-pingfang opacity-60 md:opacity-100 font-normal text-[14.4px] w-[140px] md:w-fit sm:text-[16.8px] leading-[21.6px] sm:leading-[24px] tracking-normal text-white">
 							你需要的所有数字格式来吸引你的受众
 						</p>
 					</div>
@@ -40,8 +40,12 @@
 				</p>
 
 				<!-- 标签导航（点击滚动到对应区块；移动端可横滑） -->
-				<!-- 标签导航：仅移动端显示 -->
-				<div class="mt-10 sm:mt-12 md:hidden">
+				<!-- 标签导航：仅移动端显示，滚动吸顶 -->
+				<div
+					id="ad-styles-nav"
+					class="mt-10 sm:mt-12 md:hidden bg-white z-20"
+					:class="isNavFixed ? 'fixed top-[24px] px-4 left-0 pt-2 pb-1 right-0' : 'relative'"
+				>
 					<div
 						class="flex items-center gap-6 overflow-x-auto -mx-4 px-4 sm:mx-0 sm:px-0 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
 						<button v-for="item in navItems" :key="item.id" type="button"
@@ -54,6 +58,8 @@
 						</button>
 					</div>
 				</div>
+				<!-- 占位高度，防止吸顶时内容跳动（仅移动端） -->
+				<div v-if="isNavFixed" class="h-[48px] md:hidden"></div>
 			</div>
 		</section>
 
@@ -284,6 +290,8 @@ const adBlocks = [
 const activeId = ref(navItems[0].id)
 const sectionEls = ref([])
 const isUserScrolling = ref(false)
+const isNavFixed = ref(false)
+const navInitialTop = ref(0)
 
 const setSectionRef = (el, idx) => {
 	if (!el) return
@@ -303,7 +311,24 @@ const scrollToSection = (id) => {
 	}, 1000)
 }
 
+const handleScroll = () => {
+	if (typeof window === 'undefined') return
+	if (!navInitialTop.value) return
+
+	const offset = 64 // 与 top-[64px] 保持一致
+	isNavFixed.value = window.scrollY >= navInitialTop.value - offset
+}
+
 onMounted(() => {
+	if (typeof window !== 'undefined') {
+		const navEl = document.getElementById('ad-styles-nav')
+		if (navEl) {
+			const rect = navEl.getBoundingClientRect()
+			navInitialTop.value = rect.top + window.scrollY
+		}
+		window.addEventListener('scroll', handleScroll)
+	}
+
 	// 监听滚动，自动高亮当前区块（IntersectionObserver）
 	const observer = new IntersectionObserver(
 		(entries) => {
@@ -330,6 +355,9 @@ onMounted(() => {
 
 	onUnmounted(() => {
 		observer.disconnect()
+		if (typeof window !== 'undefined') {
+			window.removeEventListener('scroll', handleScroll)
+		}
 	})
 })
 </script>

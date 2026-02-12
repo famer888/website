@@ -15,9 +15,9 @@
             class="bg-white p-[18px] rounded-[36px] flex gap-2 items-center text-[#93959C] mt-[50px] sm:mt-20 shadow-[0px_4px_10px_0px_rgba(0,0,0,0.1)]"
           >
             <input
-              class="border-0 p-0 outline-none"
+              class="border-0 p-0 outline-none w-full"
               type="text"
-              placeholder="请搜索我们的常见问题解答或者选择以下类别"
+              :placeholder="isMobile ? '请搜索我们的常见问题解答' : '请搜索我们的常见问题解答或者选择以下类别'"
             />
           </div>
         </div>
@@ -28,19 +28,21 @@
         <!-- 这里可以添加业务内容 -->
         <div class="mt-8">
           <!-- tab -->
-          <div
-            class="grid sm:flex sm:gap-20 grid-cols-3 sm:justify-start justify-center text-[#626671] text-[16px] sm:text-[32px] text-center sm:text-start"
-          >
-            <div v-for="tab in tabs" :key="tab.id">
-              <div
-                class="cursor-pointer relative"
-                @click="handleTabClick(tab.id)"
-              >
-                <span class="font-pingfang font-normal md:font-medium tracking-[0px] text-[16px] md:text-[32px] leading-[24px] md:leading-[48px]">{{ tab.name }}</span>
-                <label
-                  v-if="activeTab === tab.id"
-                  class="absolute bottom-[-10px] sm:bottom-[-15px] left-[50%] transform translate-x-[-50%] w-[25px] sm:w-[100px] h-[3px] sm:h-[4px] bg-[#3982F9]"
-                ></label>
+          <div class="sticky sm:static top-[64px] z-20  bg-white">
+            <div
+              class="grid sm:flex sm:gap-20 grid-cols-3 sm:justify-start justify-center text-[#626671] text-[16px] sm:text-[32px] text-center sm:text-start"
+            >
+              <div v-for="tab in tabs" :key="tab.id" class="relative pb-[10px] md:pb-0 ">
+                <div
+                  class="cursor-pointer "
+                  @click="handleTabClick(tab.id)"
+                >
+                  <span class="font-pingfang font-normal md:font-medium tracking-[0px] text-[16px] md:text-[32px] leading-[24px] md:leading-[48px]">{{ tab.name }}</span>
+                  <label
+                    v-if="activeTab === tab.id"
+                    class="absolute bottom-[0px] md:bottom-[-10px] sm:bottom-[-15px] left-[50%] transform translate-x-[-50%] w-[25px] sm:w-[100px] h-[3px] sm:h-[4px] bg-[#3982F9]"
+                  ></label>
+                </div>
               </div>
             </div>
           </div>
@@ -128,6 +130,27 @@ const activeTab = ref(1);
 const infoActive = ref(-1);
 const selectedEmo = ref(null); // 选中的表情图标
 const hoveredEmo = ref(null); // 鼠标悬停的表情图标
+
+const isMobile = ref(false);
+
+const updateIsMobile = () => {
+  if (typeof window !== "undefined") {
+    isMobile.value = window.innerWidth < 768;
+  }
+};
+
+onMounted(() => {
+  updateIsMobile();
+  if (typeof window !== "undefined") {
+    window.addEventListener("resize", updateIsMobile);
+  }
+});
+
+onBeforeUnmount(() => {
+  if (typeof window !== "undefined") {
+    window.removeEventListener("resize", updateIsMobile);
+  }
+});
 
 const tabs = [
   {

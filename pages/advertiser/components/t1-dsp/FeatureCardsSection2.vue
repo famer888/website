@@ -1,5 +1,5 @@
 <template>
-  <section :class="[bgColor, 'py-14  md:py-[120px]']">
+  <section :class="[bgColor, 'py-14  md:py-28']">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <h3
         class="font-pingfang font-medium tracking-normal text-[#111827] text-center text-[16px] md:text-[56px] leading-[56px] md:leading-[96px] mb-6"
@@ -8,7 +8,7 @@
       </h3>
       <p
         :class="[
-          'font-pingfang font-normal text-left md:text-center text-[16px] md:text-[18px] leading-[26px] md:leading-[26px] tracking-normal text-[#93959C] w-full md:max-w-[700px] mx-auto mb-[49px] md:mb-[90px]',
+          'font-pingfang font-normal text-left md:text-center text-[16px] md:text-[18px] leading-[26px] md:leading-[26px] tracking-normal text-[#93959C] max-w-[560px] mx-auto mb-12 md:mb-24',
         ]"
       >
         {{ description }}
@@ -17,7 +17,7 @@
       <!-- PC：三列卡片 -->
       <div
         :class="[
-          'hidden md:grid grid-cols-3 gap-[40px]',
+          'hidden md:grid grid-cols-3 gap-6',
           id === 'digital' && 'mb-8',
         ]"
       >
@@ -31,7 +31,7 @@
             id === 'optimization' ||
             id === 'browser' ||
             id === 'digital'
-              ? 'xl:w-[373px] xl:h-[480px] shadow-[0px_2px_24px_0px_#00000018] border-none flex flex-col items-center justify-center mx-auto max-w-[90vw]'
+              ? 'xl:w-[373px] xl:h-[480px] shadow-[0_2px_24px_0_rgba(0,0,0,0.096)] border-none flex flex-col items-center justify-center mx-auto max-w-[90vw]'
               : 'py-28 shadow-[0_5px_8px_-2px_rgba(0,0,0,0.025),0_2px_3px_-1px_rgba(0,0,0,0.01)] border border-[#EEF0F4]',
           ]"
         >

@@ -51,7 +51,7 @@
                 <h3 class="text-lg font-medium text-gray-900">
                   发送邮件给我们
                 </h3>
-                <p class="mt-1 text-gray-600">support@hilltopads.com</p>
+                <p class="mt-1 text-[#3A82F9] ">support@hilltopads.com</p>
               </div>
             </div>
             <div class="flex items-start space-x-3">
