@@ -5,7 +5,7 @@
         <!-- 左侧文案 -->
         <div class="w-full md:w-1/2">
           <h3
-            class="font-pingfang font-medium md:max-w-[520px] text-[16px] sm:text-[32px] md:text-[56px] leading-[36px] sm:leading-[46px] md:leading-[80px] tracking-normal text-[#111827] mb-6 md:mb-12">
+            class="font-pingfang font-medium md:max-w-[520px] text-[16px]  md:text-[56px] leading-[24px]  md:leading-[96px] tracking-normal text-[#111827] mb-6 md:mb-12">
             借助 T1 DSP 拓展您的广告业务
           </h3>
           <p

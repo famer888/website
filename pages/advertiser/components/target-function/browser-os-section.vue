@@ -7,7 +7,7 @@
         浏览器和操作系统功能
       </h3>
       <p
-        class="font-pingfang font-normal text-left md:text-center text-[16px] md:text-[18px] leading-[26px] md:leading-[26px] tracking-normal text-[#93959C] max-w-[560px] mx-auto mb-12 md:mb-24">
+        class="font-pingfang font-normal text-left md:text-center text-[16px] md:text-[18px] leading-[26px] md:leading-[26px] tracking-normal text-[#93959C] max-w-[760px] mx-auto mb-12 md:mb-24">
         充分利用我们的浏览器和操作系统功能，根据用户使用的技术找到合适的受众。
       </p>
 

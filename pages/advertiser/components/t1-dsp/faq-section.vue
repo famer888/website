@@ -2,7 +2,7 @@
   <section class="bg-white py-12 sm:py-14 lg:py-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <h3
-        class="font-pingfang font-medium text-[36px] sm:text-[24px] md:text-[56px] leading-[36px] sm:leading-[32px] md:leading-[56px] tracking-normal text-[#111827] text-center mb-12"
+        class="font-pingfang font-medium text-[24px]  md:text-[56px] leading-[24px]  md:leading-[96px] tracking-normal text-[#111827] text-center mb-12"
       >
         DSP常见问题解答
       </h3>
@@ -12,8 +12,8 @@
           v-for="(item, idx) in faqItems"
           :key="item.q"
           :class="[
-            'border-b',
-            idx === 0 ? 'border-t-[0]' : '',
+            'border-b-1',
+            idx === 0 ? 'border-t-0' : '',
             'border-[#3A82F9]',
           ]"
         >
@@ -28,7 +28,7 @@
               {{ item.q }}
             </span>
             <svg
-              class="w-5 h-5 text-[#7B8798] transition-transform"
+              class="w-6 h-6 md:w-12 md:h-12 text-[#93959C] transition-transform"
               :class="openFaqIndex === idx ? 'rotate-180' : 'rotate-0'"
               fill="none"
               viewBox="0 0 24 24"

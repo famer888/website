@@ -12,10 +12,10 @@
 							广告形式
 						</h1>
 						<!-- 水平线 -->
-						<div class="w-[120px] sm:w-[160px] md:w-[200px] h-[2px] bg-white/60 my-8"></div>
+						<div class="w-[72px] md:w-[148px] h-[1px] bg-white my-8"></div>
 						<p
-							class="font-pingfang opacity-60 md:opacity-100 font-normal text-[14.4px] w-[140px] md:w-fit sm:text-[16.8px] leading-[21.6px] sm:leading-[24px] tracking-normal text-white">
-							你需要的所有数字格式来吸引你的受众
+							class="font-pingfang font-normal text-[14.4px] sm:text-[16.8px] leading-[21.6px] sm:leading-[24px] tracking-normal text-white/60 md:text-white">
+							你需要的所有数字格式<br class = "visible md:hidden"/> 来吸引你的受众
 						</p>
 					</div>
 				</div>
@@ -23,7 +23,7 @@
 		</section>
 
 		<!-- 介绍 + 快速导航 -->
-		<section class="bg-white py-10 sm:py-14 lg:py-16">
+		<section class="bg-white py-10 md:py-14 lg:py-16">
 			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 				<h2
 					class="font-pingfang font-medium text-[26.4px] sm:text-[31.2px] md:text-[38.4px] leading-[38.4px] sm:leading-[43.2px] md:leading-[52.8px] tracking-normal text-[#111827] mb-3">
@@ -40,16 +40,15 @@
 				</p>
 
 				<!-- 标签导航（点击滚动到对应区块；移动端可横滑） -->
-				<!-- 标签导航：仅移动端显示，滚动吸顶 -->
-				<div
-					id="ad-styles-nav"
-					class="mt-10 sm:mt-12 md:hidden bg-white z-20"
-					:class="isNavFixed ? 'fixed top-[24px] px-4 left-0 pt-2 pb-1 right-0' : 'relative'"
-				>
+			</div>
+		</section>
+    
+    	<!-- 标签导航：仅移动端显示 -->
+    <section class="mb-6 mx-4 sticky top-[64px] bg-white z-50  md:hidden" >
 					<div
-						class="flex items-center gap-6 overflow-x-auto -mx-4 px-4 sm:mx-0 sm:px-0 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+						class="flex  items-center gap-6 overflow-x-auto -mx-4 px-4 sm:mx-0 sm:px-0 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
 						<button v-for="item in navItems" :key="item.id" type="button"
-							class="shrink-0 font-pingfang font-medium text-[16.8px] sm:text-[18px] leading-[24px] tracking-normal pb-2 transition-colors border-b-2"
+							class="shrink-0 font-pingfang font-medium text-[16px]  leading-[24px] tracking-normal py-3 transition-colors border-b-2"
 							:class="activeId === item.id
 									? 'text-brand border-brand'
 									: 'text-[#6B7280] border-transparent'
@@ -57,12 +56,7 @@
 							{{ item.label }}
 						</button>
 					</div>
-				</div>
-				<!-- 占位高度，防止吸顶时内容跳动（仅移动端） -->
-				<div v-if="isNavFixed" class="h-[48px] md:hidden"></div>
-			</div>
-		</section>
-
+    </section>
 		<!-- 广告类型列表 -->
 		<section class="bg-white pb-12 sm:pb-14 lg:pb-16">
      
