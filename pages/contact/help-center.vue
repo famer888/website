@@ -58,7 +58,7 @@
           <!-- 展开文本内容 -->
           <div class="mt-5 sm:mt-20">
             <div
-              v-for="info in informations"
+              v-for="info in information"
               :key="info.key"
               @click="handleInfoClick(info.key)"
             >
@@ -73,9 +73,10 @@
                 />
               </div>
               <div v-if="infoActive === info.key" class="my-4 p-4 bg-[#F4F5F9]">
-                <div class="text-[14px] text-[#626671] sm:min-h-[150px]">
-                  {{ info.content }}
-                </div>
+                <div
+                  class="text-[14px] text-[#626671] sm:min-h-[150px]"
+                  v-html="info.content"
+                ></div>
               </div>
             </div>
           </div>
@@ -145,6 +146,7 @@ import Emo1GraySrc from "~/assets/imgaes/help/emo1-1-icon.svg";
 import Emo2GraySrc from "~/assets/imgaes/help/emo2-1-icon.svg";
 import Emo3GraySrc from "~/assets/imgaes/help/emo3-1-icon.svg";
 import ServiceSrc from "~/assets/imgaes/help/service-icon.svg";
+import { informations } from "./useData";
 
 // SEO 配置
 useHead({
@@ -193,20 +195,7 @@ const tabs = [
   },
 ];
 
-const informations = [
-  {
-    key: 1,
-    title: "T1 Ads是什么?",
-    content:
-      "T1Ads是一家广告联盟，负责管理全球一些最大的成人视频网站的横幅广告。T1 采用自助竞价、预付费的广告平台，向广告商提供广告位。",
-  },
-  {
-    key: 2,
-    title: "T1 Ads的市场是什么?",
-    content:
-      "T1Ads是一家广告联盟，负责管理全球一些最大的成人视频网站的横幅广告。T1 采用自助竞价、预付费的广告平台，向广告商提供广告位。",
-  },
-];
+const information = computed(() => informations[activeTab.value]);
 
 const handleTabClick = (tabId) => {
   activeTab.value = tabId;

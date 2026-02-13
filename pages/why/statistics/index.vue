@@ -63,7 +63,7 @@
                     letter-spacing: 0px;
                   "
                 >
-                  1.03
+                  103
                 </div>
                 <div
                   class="text-[#3A82F9]"
@@ -75,7 +75,7 @@
                     letter-spacing: 0px;
                   "
                 >
-                  亿
+                  百万
                 </div>
                 <div
                   class="text-[#062E57] mt-2"
@@ -112,7 +112,7 @@
                     letter-spacing: 0px;
                   "
                 >
-                  12
+                  1.2
                 </div>
                 <div
                   class="text-[#3A82F9]"
@@ -344,8 +344,8 @@ import statistics2ImageSrc from "~/assets/imgaes/why/statistics2.svg";
 import statistics3ImageSrc from "~/assets/imgaes/why/statistics3.webp";
 import statistics4ImageSrc from "~/assets/imgaes/why/statistics4.svg";
 import statistics5ImageSrc from "~/assets/imgaes/why/statistics5.svg";
-import statistics6ImageSrc from "~/assets/imgaes/why/statistics6.svg";
-import statistics7ImageSrc from "~/assets/imgaes/why/statistics7.svg";
+import statistics6ImageSrc from "~/assets/imgaes/why/statistics6.png";
+import statistics7ImageSrc from "~/assets/imgaes/why/statistics7.png";
 import statistics9ImageSrc from "~/assets/imgaes/why/statistics9.svg";
 import statistics10ImageSrc from "~/assets/imgaes/why/statistics10.svg";
 import statistics11ImageSrc from "~/assets/imgaes/why/statistics11.svg";
