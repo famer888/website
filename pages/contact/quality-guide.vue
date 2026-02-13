@@ -58,7 +58,7 @@
           <p
             class="text-[#171A1D] text-[12px] leading-[20px] tracking-[0px] text-justify md:text-[24px] md:leading-[52px]"
           >
-            HilltopAds系统不断监控广告活动是否符合规定。监控广告质量的主要三个方向是1.最终目标URL中的直接域名和主URL中的后续重定向域名。2.优惠类型。
+            T1Ads系统不断监控广告活动是否符合规定。监控广告质量的主要三个方向是1.最终目标URL中的直接域名和主URL中的后续重定向域名。2.优惠类型。
             3.预先着陆页/创意/最终优惠页面/着陆页，
           </p>
           <p
@@ -178,7 +178,7 @@
         <div
           class="bg-[#F4F5F9] border border-[#C3C4C8] p-3 md:p-6 mb-10 text-[#626671] text-[14px] leading-[20px] md:text-[24px] md:leading-[48px] tracking-[0px] text-justify"
         >
-          此列表不受限制。HilltopAds
+          此列表不受限制。T1Ads
           的版本主可以在任何时候拒绝一项广告活动，如果发现该广告活动的细节违反了规定。
         </div>
 
