@@ -33,7 +33,7 @@
               class="text-white/75 md:text-white md:w-[350px] font-pingfang font-normal md:font-medium tracking-[0px] text-[14px] leading-[20px] md:text-[18px] md:leading-[28px]"
             >
               <div>
-                我们的网络访客遍布全球;超过75%的访客来自北美和欧洲的一线流量国家。
+                我们的网络访客遍布全球;超过75%的访客来自中国、北美和欧洲的一线流量国家。
               </div>
               <div>我们在亚洲也拥有相当大的市场份额。</div>
             </div>
@@ -63,7 +63,7 @@
                     letter-spacing: 0px;
                   "
                 >
-                  3800
+                  1.03
                 </div>
                 <div
                   class="text-[#3A82F9]"
@@ -75,7 +75,7 @@
                     letter-spacing: 0px;
                   "
                 >
-                  百万
+                  亿
                 </div>
                 <div
                   class="text-[#062E57] mt-2"
