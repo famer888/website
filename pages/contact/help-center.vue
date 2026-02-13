@@ -146,7 +146,7 @@ import Emo1GraySrc from "~/assets/imgaes/help/emo1-1-icon.svg";
 import Emo2GraySrc from "~/assets/imgaes/help/emo2-1-icon.svg";
 import Emo3GraySrc from "~/assets/imgaes/help/emo3-1-icon.svg";
 import ServiceSrc from "~/assets/imgaes/help/service-icon.svg";
-import { informations } from "./useData";
+import { informations } from "@/utils/constants";
 
 // SEO 配置
 useHead({
