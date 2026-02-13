@@ -2,11 +2,11 @@
     <section :class="[bgColor, 'py-14  md:py-[120px]']">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h3
-                class="font-pingfang font-medium tracking-normal text-[#111827] text-center text-[36px] md:text-[56px] leading-[56px] md:leading-[96px] mb-6">
+                class="font-pingfang font-medium tracking-normal text-[#111827] text-center text-[36px] md:text-[56px] leading-[56px] md:leading-[96px] mb-6 ">
                 {{ title }}
             </h3>
             <p :class="[
-                'font-pingfang font-normal text-left md:text-center text-[16px] md:text-[18px] leading-[26px] md:leading-[26px] tracking-normal text-[#93959C] max-w-[560px] mx-auto mb-[49px] md:mb-[90px]',
+                'font-pingfang font-normal text-left md:text-center text-[16px] md:text-[18px] leading-[26px] md:leading-[26px] tracking-normal text-[#93959C] max-w-[760px] mx-auto mb-[49px] md:mb-[90px]',
             ]">
                 {{ description }}
             </p>
@@ -23,13 +23,13 @@
                         id === 'optimization' ||
                         id === 'browser' ||
                         id === 'digital'
-                        ? 'xl:w-[373px] xl:h-[480px] shadow-[0_2px_24px_0_rgba(0,0,0,0.096)] border-none flex flex-col items-center justify-center mx-auto max-w-[90vw]'
+                        ? 'xl:w-[373px] xl:h-[480px] shadow-[0_2px_24px_0_rgba(0,0,0,0.096)] border-none flex flex-col items-center  mx-auto max-w-[90vw]'
                         : 'py-28 shadow-[0_5px_8px_-2px_rgba(0,0,0,0.025),0_2px_3px_-1px_rgba(0,0,0,0.01)] border border-[#EEF0F4]',
                 ]">
                     <SvgIcon :name="item.icon"
-                        class="w-[100px] h-[100px] lg:w-[160px] lg:h-[160px] mx-auto mb-4 object-contain" alt="图标" />
+                        class="mt-[22px] w-[100px] h-[100px] lg:w-[160px] lg:h-[160px] mx-auto mb-4 md:mb-8 lg:mb-12 object-contain" alt="图标" />
                     <h4
-                        class="font-pingfang font-medium text-[18px] sm:text-[20px] md:text-[24px] leading-[27px] sm:leading-[30px] md:leading-[36px] tracking-normal text-[#111827] mb-3 text-center w-full">
+                        class="font-pingfang font-medium text-[18px] sm:text-[20px] md:text-[24px] leading-[27px] sm:leading-[30px] md:leading-[36px] tracking-normal text-[#111827] mb-3 md:mb-6 lg:mb-8  text-center w-full">
                         {{ item.title }}
                     </h4>
                     <p
@@ -45,7 +45,7 @@
                     class="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-3 -mx-4 px-4 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
                     @scroll.passive="onScroll">
                     <div v-for="(item, idx) in items" :key="item.title" :ref="(el) => setCardRef(el, idx)"
-                        class="w-[260px] h-[266px] snap-center shrink-0 bg-white rounded-[12px] shadow-[0_5px_8px_-2px_rgba(0,0,0,0.025),0_2px_3px_-1px_rgba(0,0,0,0.01)] border border-[#EEF0F4] p-4 py-12 flex flex-col items-center justify-center">
+                        class="w-[260px] h-[266px] snap-center shrink-0 bg-white rounded-[12px] shadow-[0_5px_8px_-2px_rgba(0,0,0,0.025),0_2px_3px_-1px_rgba(0,0,0,0.01)] border border-[#EEF0F4] p-4 py-8 flex flex-col items-center justify-center">
                         <SvgIcon :name="item.icon" class="w-[80px] h-[80px] mx-auto mb-6 object-contain" alt="图标" />
                         <h4
                             class="font-pingfang font-medium text-[18px] leading-[27px] tracking-normal text-[#111827] mb-3 text-center w-full">

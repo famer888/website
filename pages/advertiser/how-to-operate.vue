@@ -14,7 +14,7 @@
 			<div class="md:mt-[47px]">
 				<StepsSection3 />
 			</div>
-			<div class="md:mt-[20px] pb-[45px] md:pb-0">
+			<div class="md:mt-[20px] pb-[45px] md:pb-[68px]">
 				<StepsSection4 />
 			</div>
 
