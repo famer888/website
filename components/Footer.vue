@@ -1,7 +1,7 @@
 <template>
-  <footer class="bg-[#3B465A] min-h-[204px] md:min-h-[115px] flex items-center py-[20px] px-4 sm:px-6 lg:px-8">
+  <footer class="bg-[#3B465A] min-h-[204px] md:min-h-[115px] flex items-center justify-between py-[20px] px-4 sm:px-6 lg:px-8 ">
     <div class="max-w-7xl mx-auto w-full">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-[195px]">
         <!-- 左侧：Logo和导航链接 -->
         <div class="flex items-start md:items-center gap-4 md:gap-6">
           <!-- Logo -->

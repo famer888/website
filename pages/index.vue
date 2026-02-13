@@ -36,14 +36,14 @@
 
               <!-- 文案 -->
               <p
-                class="font-pingfang font-medium text-[24px] sm:text-[32px] md:text-[36px] lg:text-[40px] leading-[36px] sm:leading-[48px] md:leading-[54px] lg:leading-[72px] tracking-normal text-gray-900 py-5 sm:py-0 mb-6 sm:mb-8">
+                class="font-pingfang font-medium text-[16px] sm:text-[32px] md:text-[36px] lg:text-[40px] leading-[36px] sm:leading-[48px] md:leading-[54px] lg:leading-[72px] tracking-normal text-gray-900 py-5 sm:py-0 mb-6 sm:mb-8">
                 大家都在T1上投放,就差你了!
               </p>
 
               <!-- 按钮组 - 隐藏注册按钮，了解更多居中 -->
               <div class="flex flex-row gap-4 justify-center items-center">
                 <NuxtLink to="/"
-                  class="learn-more-btn inline-flex items-center justify-center bg-white rounded-full text-sm sm:text-base font-semibold transition-colors w-[124px] h-[40px] md:w-[200px] md:h-[60px]">
+                  class="learn-more-btn inline-flex items-center justify-center bg-white rounded-full text-[16px] sm:text-base font-normal transition-colors w-[124px] h-[40px] md:w-[200px] md:h-[60px]">
                   了解更多
                 </NuxtLink>
               </div>
@@ -59,7 +59,7 @@
             <!-- 标题 - 移动端在最上面 -->
             <div class="order-1 lg:order-none w-full lg:col-span-2 text-center lg:hidden">
               <h2
-                class="font-pingfang font-medium text-[24px] xs:text-[28px] sm:text-[32px] leading-[36px] xs:leading-[42px] sm:leading-[48px] tracking-normal text-[#707273] w-[235px] h-[48px] mx-auto">
+                class="font-pingfang font-medium text-[32px] xs:text-[28px] sm:text-[32px] leading-[36px] xs:leading-[42px] sm:leading-[48px] tracking-normal text-[#707273] w-[235px] h-[48px] mx-auto">
                 成为一名广告商!
               </h2>
             </div>

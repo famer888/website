@@ -152,7 +152,7 @@
 
 				<!-- 行业图标网格 -->
 				<!-- 移动端：包含"还有更多......"的网格 -->
-				<div class="grid grid-cols-2 gap-16 max-w-4xl mx-auto mb-8 mt-[50px] md:hidden">
+				<div class="grid grid-cols-2 gap-x-[76px] gap-y-[32px] md:gap-16 max-w-4xl mx-auto mb-8 mt-[50px] md:hidden">
 					<div v-for="(industry, index) in industriesForMobile" :key="index"
 						class="flex flex-col items-center justify-center">
 						<img v-if="!industry.isText" :src="industry.icon" :alt="industry.name"

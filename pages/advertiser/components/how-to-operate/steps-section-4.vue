@@ -1,5 +1,5 @@
 <template>
-	<section class="w-full md:p-0">
+	<section class="w-full md:p-0 md:pb-[68px]">
 		<div class="w-full md:max-w-[1200px] mx-auto px-6 md:px-0 grid grid-cols-1 md:grid-cols-2 gap-[16px] md:gap-0">
 			<!-- 左侧文字 -->
 			<div class="pt-[48px] md:pt-[101px] md:pr-[40px] order-1">

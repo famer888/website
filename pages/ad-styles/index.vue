@@ -284,6 +284,8 @@ const adBlocks = [
 const activeId = ref(navItems[0].id)
 const sectionEls = ref([])
 const isUserScrolling = ref(false)
+const isNavFixed = ref(false)
+const navInitialTop = ref(0)
 
 const setSectionRef = (el, idx) => {
 	if (!el) return
@@ -303,7 +305,24 @@ const scrollToSection = (id) => {
 	}, 1000)
 }
 
+const handleScroll = () => {
+	if (typeof window === 'undefined') return
+	if (!navInitialTop.value) return
+
+	const offset = 64 // 与 top-[64px] 保持一致
+	isNavFixed.value = window.scrollY >= navInitialTop.value - offset
+}
+
 onMounted(() => {
+	if (typeof window !== 'undefined') {
+		const navEl = document.getElementById('ad-styles-nav')
+		if (navEl) {
+			const rect = navEl.getBoundingClientRect()
+			navInitialTop.value = rect.top + window.scrollY
+		}
+		window.addEventListener('scroll', handleScroll)
+	}
+
 	// 监听滚动，自动高亮当前区块（IntersectionObserver）
 	const observer = new IntersectionObserver(
 		(entries) => {
@@ -330,6 +349,9 @@ onMounted(() => {
 
 	onUnmounted(() => {
 		observer.disconnect()
+		if (typeof window !== 'undefined') {
+			window.removeEventListener('scroll', handleScroll)
+		}
 	})
 })
 </script>

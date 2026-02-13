@@ -16,7 +16,7 @@
 </template>
 
 <script setup>
-import FeatureCardsSection from '~/components/FeatureCardsSection.vue'
+import FeatureCardsSection from './FeatureCardsSection2.vue'
 
 const description =
   '借助 T1DSP，您可以构建更智能的数据驱动型广告系列，扩大覆盖范围，并制定策略以最大限度地提高投资回报率，同时控制高昂的成本。'
