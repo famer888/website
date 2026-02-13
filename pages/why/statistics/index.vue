@@ -75,7 +75,7 @@
                     letter-spacing: 0px;
                   "
                 >
-                  百万
+                  亿
                 </div>
                 <div
                   class="text-[#062E57] mt-2"
