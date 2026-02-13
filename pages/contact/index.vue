@@ -61,7 +61,7 @@
               <div class="flex items-start space-x-3">
                 <div>
                   <button
-                    class="mt-1 text-white w-[204px] md:w-[210px] h-[60px] rounded-full pl-[18.5px] font-medium flex items-center justify-start transition-colors bg-gradient-to-t from-[#6CB8FD] to-[#3A82F9]"
+                    class="mt-1 bg-blue-600 text-white px-6 py-3 rounded-full font-medium flex items-center space-x-2 hover:bg-blue-700 transition-colors"
                   >
                     <img :src="SendIconSrc" alt="send-icon" />
                     <a
