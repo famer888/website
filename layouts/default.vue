@@ -28,16 +28,16 @@
                 class="absolute left-1/2 transform -translate-x-1/2 w-12 h-1 bg-brand" style="bottom: -8px;"></div>
               <div v-if="activeDropdown === 'why'"
                 class="absolute top-full left-0 mt-2 w-52 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
-                <NuxtLink to="/why/who-are-we"
+                <NuxtLink to="/why/who-are-we" @click="activeDropdown = null"
                   :class="route.path === '/why/who-are-we' ? 'block mx-2 px-3 py-2 text-sm text-brand rounded-lg hover:bg-[#5380DD19]' : 'block mx-2 px-3 py-2 text-sm text-gray-700 rounded-lg hover:bg-[#5380DD19]'">
                   我们是谁</NuxtLink>
-                <NuxtLink to="/why/advantages"
+                <NuxtLink to="/why/advantages" @click="activeDropdown = null"
                   :class="route.path === '/why/advantages' ? 'block mx-2 px-3 py-2 text-sm text-brand rounded-lg hover:bg-[#5380DD19]' : 'block mx-2 px-3 py-2 text-sm text-gray-700 rounded-lg hover:bg-[#5380DD19]'">
                   我们的优势</NuxtLink>
-                <NuxtLink to="/why/statistics"
+                <NuxtLink to="/why/statistics" @click="activeDropdown = null"
                   :class="route.path === '/why/statistics' ? 'block mx-2 px-3 py-2 text-sm text-brand rounded-lg hover:bg-[#5380DD19]' : 'block mx-2 px-3 py-2 text-sm text-gray-700 rounded-lg hover:bg-[#5380DD19]'">
                   数据统计</NuxtLink>
-                <NuxtLink to="/why/mobile-ads"
+                <NuxtLink to="/why/mobile-ads" @click="activeDropdown = null"
                   :class="route.path === '/why/mobile-ads' ? 'block mx-2 px-3 py-2 text-sm text-brand rounded-lg hover:bg-[#5380DD19]' : 'block mx-2 px-3 py-2 text-sm text-gray-700 rounded-lg hover:bg-[#5380DD19]'">
                   移动广告</NuxtLink>
               </div>
@@ -58,13 +58,13 @@
                 class="absolute left-1/2 transform -translate-x-1/2 w-12 h-1 bg-brand" style="bottom: -8px;"></div>
               <div v-if="activeDropdown === 'advertiser'"
                 class="absolute top-full left-0 mt-2 w-40 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
-                <NuxtLink to="/advertiser/how-to-operate"
+                <NuxtLink to="/advertiser/how-to-operate" @click="activeDropdown = null"
                   :class="route.path === '/advertiser/how-to-operate' ? 'block mx-2 px-3 py-2 text-sm text-brand rounded-lg hover:bg-[#5380DD19]' : 'block mx-2 px-3 py-2 text-sm text-gray-700 rounded-lg hover:bg-[#5380DD19]'">
                   如何操作</NuxtLink>
-                <NuxtLink to="/advertiser/t1-dsp"
+                <NuxtLink to="/advertiser/t1-dsp" @click="activeDropdown = null"
                   :class="route.path === '/advertiser/t1-dsp' ? 'block mx-2 px-3 py-2 text-sm text-brand rounded-lg hover:bg-[#5380DD19]' : 'block mx-2 px-3 py-2 text-sm text-gray-700 rounded-lg hover:bg-[#5380DD19]'">
                   T1 DSP</NuxtLink>
-                <NuxtLink to="/advertiser/target-function"
+                <NuxtLink to="/advertiser/target-function" @click="activeDropdown = null"
                   :class="route.path === '/advertiser/target-function' ? 'block mx-2 px-3 py-2 text-sm text-brand rounded-lg hover:bg-[#5380DD19]' : 'block mx-2 px-3 py-2 text-sm text-gray-700 rounded-lg hover:bg-[#5380DD19]'">
                   目标功能</NuxtLink>
               </div>
@@ -92,13 +92,13 @@
                 class="absolute left-1/2 transform -translate-x-1/2 w-12 h-1 bg-brand" style="bottom: -8px;"></div>
               <div v-if="activeDropdown === 'contact'"
                 class="absolute top-full left-0 mt-2 w-44 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
-                <NuxtLink to="/contact"
+                <NuxtLink to="/contact" @click="activeDropdown = null"
                   :class="route.path === '/contact' ? 'block mx-2 px-3 py-2 text-sm text-brand rounded-lg hover:bg-[#5380DD19]' : 'block mx-2 px-3 py-2 text-sm text-gray-700 rounded-lg hover:bg-[#5380DD19]'">
                   联系我们</NuxtLink>
-                <NuxtLink to="/contact/help-center"
+                <NuxtLink to="/contact/help-center" @click="activeDropdown = null"
                   :class="route.path === '/contact/help-center' ? 'block mx-2 px-3 py-2 text-sm text-brand rounded-lg hover:bg-[#5380DD19]' : 'block mx-2 px-3 py-2 text-sm text-gray-700 rounded-lg hover:bg-[#5380DD19]'">
                   帮助中心</NuxtLink>
-                <NuxtLink to="/contact/quality-guide"
+                <NuxtLink to="/contact/quality-guide" @click="activeDropdown = null"
                   :class="route.path === '/contact/quality-guide' ? 'block mx-2 px-3 py-2 text-sm text-brand rounded-lg hover:bg-[#5380DD19]' : 'block mx-2 px-3 py-2 text-sm text-gray-700 rounded-lg hover:bg-[#5380DD19]'">
                   质量指南</NuxtLink>
                 <!-- <NuxtLink to="/contact/download-media-kit" :class="route.path === '/contact/download-media-kit' ? 'block mx-2 px-3 py-2 text-sm text-brand rounded-lg hover:bg-[#5380DD19]' : 'block mx-2 px-3 py-2 text-sm text-gray-700 rounded-lg hover:bg-[#5380DD19]'">下载媒体资源包</NuxtLink> -->
@@ -333,16 +333,8 @@ watch(() => route.path, (newPath) => {
     sessionStorage.removeItem('closedDropdownPath')
   }
 
-  // 根据路由决定是否打开下拉菜单
-  if (newPath.startsWith('/why/')) {
-    activeDropdown.value = 'why'
-  } else if (newPath.startsWith('/advertiser/')) {
-    activeDropdown.value = 'advertiser'
-  } else if (newPath.startsWith('/contact')) {
-    activeDropdown.value = 'contact'
-  } else {
-    activeDropdown.value = null
-  }
+  // 路由变化时关闭下拉菜单（选择后隐藏）
+  activeDropdown.value = null
 }, { immediate: true })
 
 // 点击外部关闭下拉菜单
