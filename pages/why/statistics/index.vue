@@ -124,7 +124,7 @@
                     letter-spacing: 0px;
                   "
                 >
-                  十亿
+                  亿
                 </div>
                 <div
                   class="text-[#062E57] mt-2"
