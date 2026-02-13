@@ -1,8 +1,8 @@
 //隐私声明
 export const PrivacyStatement = {
-  title: '隐私声明',
-  lastUpdated: '2026年1月5日',
-  intro: '',
+  title: "隐私声明",
+  lastUpdated: "2026年1月5日",
+  intro: "",
   content: `
      <section class="mb-8">
   <pre class="font-pingfang whitespace-pre-wrap break-words text-[#626671] text-[12px] md:text-[16px] leading-[18px] md:leading-[24px] m-0">
@@ -285,14 +285,14 @@ T1 已采取安全措施，保护并防止我们控制下的信息遭受损坏�
 如果您对本隐私声明或我们的信息处理方式有任何疑问，请发送电子邮件至T1t1adx@gmail.com与我们联系。
       </pre>
        <section
-    `
-}
+    `,
+};
 
 //Cookie政策
 export const CookiePolicy = {
-  title: 'Cookie 通知',
-  lastUpdated: '2026年1月5日',
-  intro: '',
+  title: "Cookie 通知",
+  lastUpdated: "2026年1月5日",
+  intro: "",
   content: `
       <section class="mb-8">
       <pre class="font-pingfang whitespace-pre-wrap break-words text-[#626671] text-[12px] md:text-[16px] leading-[18px] md:leading-[24px] m-0">
@@ -778,13 +778,13 @@ Google Analytics
 了解更多关于 Google 如何使用数据的信息。您可以访问 Google Analytics 选择退出页面或仅接受必要的 Cookie 来选择退出 Google Analytics。要查看您的 Google Analytics（分析）Cookie 概述，请访问此处：https://support.google.com/analytics/answer/6004245
       </pre>
       </section>
-    `
-}
+    `,
+};
 //使用条款
 export const TermsTermsContent = {
-  title: '使用条款 | 广告商',
-  lastUpdated: '2026年1月5日',
-  intro: '',
+  title: "使用条款 | 广告商",
+  lastUpdated: "2026年1月5日",
+  intro: "",
   content: `
     <section class="mb-8">
     <pre class="font-pingfang whitespace-pre-wrap break-words text-[#626671] text-[12px] md:text-[16px] leading-[18px] md:leading-[24px] m-0">
@@ -799,8 +799,6 @@ export const TermsTermsContent = {
 
 “广告”包括征求所有形式的数字文本、图形、富媒体和其他广告，无论是否通过视觉互联网和/或听觉方式传播，包括其中包含的所有内容。
 
-“T1”指的是Aylo Freesites Ltd.
-
 “回避”包括竞标、赢得或购买广告位的任何会员，或任何明确表示或暗示授权代表其成员的人。
 
 “合同期限”是指卖方同意按照卖方广告位租赁条款和条件将其广告位出租给补贴的期限。
@@ -811,7 +809,7 @@ export const TermsTermsContent = {
 
 “我们”、“我们的”均指T1。
 
-“网站”是指域名为 www.T1.com 的 T1 网站。
+"网站" 指 T1 网站，域名为 www.T1T1.com。
 
 “网站内容”是指广告位出现或将要出现的网站或其他资产的内容。
 
@@ -1200,13 +1198,13 @@ Aylo Freesites Ltd 已注册为变异集团的一部分，该集团的代表成�
 想要了解更多？
     </pre>
     </section>
-  `
-}
+  `,
+};
 //部门制度
 export const TermsDepartmentContent = {
-  title: '规则与条例 | 广告商',
-  lastUpdated: '2026年1月5日',
-  intro: '',
+  title: "规则与条例 | 广告商",
+  lastUpdated: "2026年1月5日",
+  intro: "",
   content: `
     <section class="mb-8">
     <pre class="font-pingfang whitespace-pre-wrap break-words text-[#626671] text-[12px] md:text-[16px] leading-[18px] md:leading-[24px] m-0">
@@ -1214,8 +1212,6 @@ export const TermsDepartmentContent = {
 1. 一般程序
 
 除非有规定，本规则和条例中：
-
-“T1”指的是 Aylo Freesites Ltd.
 
 “成员”指网站的任何账户，包括买家和卖家。
 
@@ -1966,13 +1962,13 @@ JPG、GIF、PNG文件最大大小：300KB
  MPEG/MPG、MP4、AVI 文件最大大小：1MB
     </pre>
     </section>
-  `
-}
-//网站地图 
+  `,
+};
+//网站地图
 export const WetmentbMap = {
-  title: 'T1 网站地图',
-  lastUpdated: '',
-  intro: '',
+  title: "T1 网站地图",
+  lastUpdated: "",
+  intro: "",
   content: `
     <div class="w-full md:ml-[50px] overflow-x-hidden">
       <div class="flex flex-wrap mt-8 -mx-2 md:-mx-6 ml-5 md:ml-0">
@@ -2032,5 +2028,5 @@ export const WetmentbMap = {
         </div>
       </div>
     </div>
-  `
-}
+  `,
+};

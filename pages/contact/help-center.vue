@@ -17,7 +17,11 @@
             <input
               class="border-0 p-0 outline-none w-full"
               type="text"
-              :placeholder="isMobile ? '请搜索我们的常见问题解答' : '请搜索我们的常见问题解答或者选择以下类别'"
+              :placeholder="
+                isMobile
+                  ? '请搜索我们的常见问题解答'
+                  : '请搜索我们的常见问题解答或者选择以下类别'
+              "
             />
           </div>
         </div>
@@ -28,16 +32,20 @@
         <!-- 这里可以添加业务内容 -->
         <div class="mt-8">
           <!-- tab -->
-          <div class="sticky sm:static top-[64px] z-20  bg-white">
+          <div class="sticky sm:static top-[64px] z-20 bg-white">
             <div
               class="grid sm:flex sm:gap-20 grid-cols-3 sm:justify-start justify-center text-[#626671] text-[16px] sm:text-[32px] text-center sm:text-start"
             >
-              <div v-for="tab in tabs" :key="tab.id" class="relative pb-[10px] md:pb-0 ">
-                <div
-                  class="cursor-pointer "
-                  @click="handleTabClick(tab.id)"
-                >
-                  <span class="font-pingfang font-normal md:font-medium tracking-[0px] text-[16px] md:text-[32px] leading-[24px] md:leading-[48px]">{{ tab.name }}</span>
+              <div
+                v-for="tab in tabs"
+                :key="tab.id"
+                class="relative pb-[10px] md:pb-0"
+              >
+                <div class="cursor-pointer" @click="handleTabClick(tab.id)">
+                  <span
+                    class="font-pingfang font-normal md:font-medium tracking-[0px] text-[16px] md:text-[32px] leading-[24px] md:leading-[48px]"
+                    >{{ tab.name }}</span
+                  >
                   <label
                     v-if="activeTab === tab.id"
                     class="absolute bottom-[0px] md:bottom-[-10px] sm:bottom-[-15px] left-[50%] transform translate-x-[-50%] w-[25px] sm:w-[100px] h-[3px] sm:h-[4px] bg-[#3982F9]"
@@ -49,12 +57,20 @@
 
           <!-- 展开文本内容 -->
           <div class="mt-5 sm:mt-20">
-            <div v-for="info in informations" :key="info.key" @click="handleInfoClick(info.key)">
+            <div
+              v-for="info in informations"
+              :key="info.key"
+              @click="handleInfoClick(info.key)"
+            >
               <div
                 class="flex py-4 sm:py-8 justify-between items-center border-b-[1px] border-[#3A82F9]"
               >
                 <span class="text-[16px] sm:text-[24px]">{{ info.title }}</span>
-                <img :src="infoActive === info.key ? ArrowUpSrc : ArrowDownSrc" alt="" class="w-[14px] sm:w-[32px]" />
+                <img
+                  :src="infoActive === info.key ? ArrowUpSrc : ArrowDownSrc"
+                  alt=""
+                  class="w-[14px] sm:w-[32px]"
+                />
               </div>
               <div v-if="infoActive === info.key" class="my-4 p-4 bg-[#F4F5F9]">
                 <div class="text-[14px] text-[#626671] sm:min-h-[150px]">
@@ -66,9 +82,17 @@
 
           <!-- 联系客服 -->
           <div class="mt-5 sm:mt-10">
-            <div class="flex flex-col py-10 bg-[#F4F5F9] justify-center gap-4 md:gap-6">
-              <div class="text-center font-normal text-[14px] leading-[20px] md:text-[24px] md:leading-[48px] tracking-[0px] text-[#626671]">这是否解答了您的问题？</div>
-              <div class="flex mt-3 gap-[14px] md:gap-6 items-center justify-center">
+            <div
+              class="flex flex-col py-10 bg-[#F4F5F9] justify-center gap-4 md:gap-6"
+            >
+              <div
+                class="text-center font-normal text-[14px] leading-[20px] md:text-[24px] md:leading-[48px] tracking-[0px] text-[#626671]"
+              >
+                这是否解答了您的问题？
+              </div>
+              <div
+                class="flex mt-3 gap-[14px] md:gap-6 items-center justify-center"
+              >
                 <img
                   :src="getEmoIcon(1)"
                   alt=""
@@ -96,8 +120,10 @@
               </div>
             </div>
             <div class="mt-10">
-              <div class="w-[160px] h-[40px] sm:w-[250px] sm:h-[60px] mx-auto rounded-[20px] sm:rounded-[30px] bg-[#3A82F9] text-[16px] sm:text-[20px] text-white flex items-center justify-center gap-2 cursor-pointer">
-                <img :src="ServiceSrc" alt="" class="w-[10px] sm:w-[15px]"/>
+              <div
+                class="w-[160px] h-[40px] sm:w-[250px] sm:h-[60px] mx-auto rounded-[20px] sm:rounded-[30px] bg-[#3A82F9] text-[16px] sm:text-[20px] text-white flex items-center justify-center gap-2 cursor-pointer"
+              >
+                <img :src="ServiceSrc" alt="" class="w-[10px] sm:w-[15px]" />
                 <span>联系客服</span>
               </div>
             </div>
@@ -171,26 +197,28 @@ const informations = [
   {
     key: 1,
     title: "T1 Ads是什么?",
-    content: 'T1Ads是一家广告联盟，负责管理全球一些最大的成人视频网站的横幅广告。TraficJunky采用自助竞价、预付费的广告平台，向广告商提供广告位。'
+    content:
+      "T1Ads是一家广告联盟，负责管理全球一些最大的成人视频网站的横幅广告。T1 采用自助竞价、预付费的广告平台，向广告商提供广告位。",
   },
   {
     key: 2,
     title: "T1 Ads的市场是什么?",
-    content: 'T1Ads是一家广告联盟，负责管理全球一些最大的成人视频网站的横幅广告。TraficJunky采用自助竞价、预付费的广告平台，向广告商提供广告位。'
-  }
-]
+    content:
+      "T1Ads是一家广告联盟，负责管理全球一些最大的成人视频网站的横幅广告。T1 采用自助竞价、预付费的广告平台，向广告商提供广告位。",
+  },
+];
 
 const handleTabClick = (tabId) => {
   activeTab.value = tabId;
 };
 
 const handleInfoClick = (infoKey) => {
-  if(infoActive.value === infoKey) {
+  if (infoActive.value === infoKey) {
     infoActive.value = -1;
-  }else {
+  } else {
     infoActive.value = infoKey;
   }
-}
+};
 
 // 表情图标处理函数
 const handleEmoHover = (emoId) => {
@@ -219,7 +247,9 @@ const getEmoIcon = (emoId) => {
 
   // 如果有选中的图标
   if (selectedEmo.value !== null) {
-    return selectedEmo.value === emoId ? icons[emoId].highlight : icons[emoId].gray;
+    return selectedEmo.value === emoId
+      ? icons[emoId].highlight
+      : icons[emoId].gray;
   }
 
   // 如果没有选中，但有hover
