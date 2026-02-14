@@ -64,7 +64,7 @@
           <p
             class="text-[#171A1D] text-[12px] leading-[20px] tracking-[0px] text-justify md:text-[24px] md:leading-[52px]"
           >
-            广告主需要遵守所有区域的工作规则才能与HitopAds合作。
+            广告主需要遵守所有区域的工作规则才能与T1Ads合作。
             下面我们详细描述了允许的内容以及哪些禁止事项值得关注。
           </p>
         </div>
