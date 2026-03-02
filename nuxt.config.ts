@@ -20,9 +20,10 @@ export default defineNuxtConfig({
     head: {
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',
-      title: '官网',
+      title: 'T1 - 在全球顶级网站上投放广告 - 广告联盟 流量变现 - T1T1.com',
       meta: [
-        { name: 'description', content: '官方网站' },
+        { name: 'description', content: 'T1 - 在全球顶级网站上投放广告，广告联盟，流量变现' },
+        { name: 'keywords', content: 'T1, 广告联盟, 流量变现, 全球广告投放, DSP, 移动广告, T1T1.com' },
         { name: 'format-detection', content: 'telephone=no' }
       ],
       link: [
