@@ -186,7 +186,7 @@
           <h3
             class="font-pingfang font-medium text-[#171A1D] text-3 leading-[26px] md:text-8 md:leading-[52px] tracking-[0px] mb-4"
           >
-            前期登陆页面 / 创意 / 最终优惠页面 / 登陆页面
+            前期登录页面 / 创意 / 最终优惠页面 / 登录页面
           </h3>
 
           <p
@@ -238,7 +238,7 @@
               <p
                 class="text-[#171A1D] text-[12px] leading-[26px] tracking-[0px] text-justify md:text-[24px] md:leading-[52px] mb-6 md:mb-12"
               >
-                1.登陆页面不得包含拼写错误、错误图片、空白页面等。
+                1.登录页面不得包含拼写错误、错误图片、空白页面等。
               </p>
               <img
                 class="w-full my-10"
@@ -468,7 +468,7 @@
           <p
             class="text-[#171A1D] text-[12px] leading-[26px] tracking-[0px] text-justify md:text-[24px] md:leading-[52px] mb-6"
           >
-            5.使用用户可以轻松关闭的登陆页面。
+            5.使用用户可以轻松关闭的登录页面。
           </p>
         </div>
       </div>
