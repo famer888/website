@@ -42,13 +42,10 @@
         >
           <!-- 标题和日期 -->
           <div class="mb-8">
-            <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h1 class="text-3xl md:text-4xl font-bold md:text-[#626671] text-[#171A1D] mb-4">
               {{ currentTab.title }}
             </h1>
-            <p
-              v-if="activeTab !== 'sitemap' && activeTab !== 'contact'"
-              class="text-gray-600 text-sm md:text-base"
-            >
+            <p v-if="activeTab !== 'sitemap' && activeTab !== 'contact'" class="text-[#626671] md:mt-[26px] mt-[12px] text-sm md:text-base">
               最后更新日期: {{ currentTab.lastUpdated }}
             </p>
           </div>
@@ -57,7 +54,7 @@
           <div class="prose max-w-none">
             <div class="text-gray-700 leading-relaxed space-y-6">
               <!-- 介绍段落 -->
-              <p class="text-base mb-4 text-gray-700 leading-relaxed">
+              <p v-if="currentTab.intro" class="text-base mb-4 text-gray-700 leading-relaxed">
                 {{ currentTab.intro }}
               </p>
 
