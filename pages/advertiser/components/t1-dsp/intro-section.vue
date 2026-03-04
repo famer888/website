@@ -8,7 +8,7 @@
 			<p
 				class="font-pingfang font-normal text-left md:text-center text-[16px] md:text-[18px] leading-[24px] md:leading-[26px] tracking-normal text-[#93959C] max-w-[760px] mx-auto mb-8 md:mb-12">
 				T1 DSP
-				是一个需求方平台，允许广告商通过程序化方式从我们独家的高质量发布商处购买广告位。广告商可以购买视频、展示和其他广告格式，以实现他们的广告目标。
+				是面向广告主的需求方平台，支持以程序化方式对接我们的优质媒体资源并进行广告投放。广告主可投放视频、展示等多种广告形式，用于达成品牌曝光与效果增长等投放目标。
 			</p>
 		<!-- 立即开始按钮 (已隐藏) -->
 		</div>
