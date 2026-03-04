@@ -290,9 +290,9 @@ T1 已采取安全措施，保护并防止我们控制下的信息遭受损坏�
 
 //Cookie政策
 export const CookiePolicy = {
-  title: 'Cookie 通知',
-  lastUpdated: '2025年9月3日',
-  intro: '',
+  title: "Cookie 通知",
+  lastUpdated: "2025年9月3日",
+  intro: "",
   content: `
       <section class="mb-8">
       <pre class="font-pingfang whitespace-pre-wrap break-words text-[#626671] text-[12px] md:text-[16px] leading-[26px] md:leading-[24px] m-0 font-weight-[400]">
@@ -321,27 +321,97 @@ Cookie 是一段数据，当您浏览网站时，它会要求您的浏览器收�
 
 这些是网站运行所必需的cookie，无法在我们的系统中关闭，因为它们实现了网站的核心功能。它们用于执行通信传输（例如负载均衡cookie）、为您提供请求的服务，或根据您执行的操作（例如设置隐私偏好、登录或填写表单）进行设置（UI自定义cookie）。
 
-<div class="w-full overflow-x-auto"><table class="min-w-[640px] md:min-w-0 w-full border border-[#C3C4C8] border-collapse"><thead><tr class="text-[14px] md:text-[18px]">${['饼干域', 'Cookie 名称', '目的', '使用 Cookie', '期间'].map(e => `<th class="border border-[#C3C4C8] px-[16px] py-[18px] text-left min-w-[90px] ">${e}</th>`).join('')}</tr></thead><tbody>${[
-  ['google-analytics.com', 'GA_OPT_OUT', '用于存储用户选择退出 Google Analytics（分析）跟踪的决定。', '第三方', '用于存储用户选择退出 Google Analytics（分析）跟踪的决定。'],
-  ['www.T1T1.com', 'cookie同意', '存储用户对 Cookie 的同意选择。', '第一方', '会议'],
-  ['www.T1T1.com', 'laravel_session', '用于存储用户的活动会话（旅游区域）。', '第一方', '1小时'],
-  ['www.T1T1.com', 'T1Ads_session', '用于存储用户的活动会话（会员区）。', '第一方', '1小时'],
-  ['www.T1T1.com', 'XSRF令牌', '安全 cookie；用于防止跨站请求伪造攻击。', '第一方', '1小时'],
-  ['www.T1T1.com', 'cookieConsentMeta', '存储已登录会员的用户cookie同意详情。', '第一方', '1年'],
-  ['www.T1T1.com', '年龄门显示', '存储用户的法定年龄确认信息。', '第一方', '会议'],
-  ['www.google.com', 'AEC', 'Google ReCaptcha', '第三方', '6个月'],
-  ['www.google.com', '_GRECaptcha', 'Google ReCaptcha', '第三方', '6个月']
-].map((e) => `<tr >${e.map((cell,index) => `<td class="border border-[#C3C4C8] px-[16px] py-[24px] text-left">${index==0?`<a class="" href="${cell}">${cell}</a>`: cell}</td>`).join('')}</tr>`).join('')}</tbody></table></div>
+<div class="w-full overflow-x-auto"><table class="min-w-[640px] md:min-w-0 w-full border border-[#C3C4C8] border-collapse"><thead><tr class="text-[14px] md:text-[18px]">${["饼干域", "Cookie 名称", "目的", "使用 Cookie", "期间"].map((e) => `<th class="border border-[#C3C4C8] px-[16px] py-[18px] text-left min-w-[90px] ">${e}</th>`).join("")}</tr></thead><tbody>${[
+    [
+      "google-analytics.com",
+      "GA_OPT_OUT",
+      "用于存储用户选择退出 Google Analytics（分析）跟踪的决定。",
+      "第三方",
+      "用于存储用户选择退出 Google Analytics（分析）跟踪的决定。",
+    ],
+    [
+      "www.T1T1.com",
+      "cookie同意",
+      "存储用户对 Cookie 的同意选择。",
+      "第一方",
+      "会议",
+    ],
+    [
+      "www.T1T1.com",
+      "laravel_session",
+      "用于存储用户的活动会话（旅游区域）。",
+      "第一方",
+      "1小时",
+    ],
+    [
+      "www.T1T1.com",
+      "T1Ads_session",
+      "用于存储用户的活动会话（会员区）。",
+      "第一方",
+      "1小时",
+    ],
+    [
+      "www.T1T1.com",
+      "XSRF令牌",
+      "安全 cookie；用于防止跨站请求伪造攻击。",
+      "第一方",
+      "1小时",
+    ],
+    [
+      "www.T1T1.com",
+      "cookieConsentMeta",
+      "存储已登录会员的用户cookie同意详情。",
+      "第一方",
+      "1年",
+    ],
+    [
+      "www.T1T1.com",
+      "年龄门显示",
+      "存储用户的法定年龄确认信息。",
+      "第一方",
+      "会议",
+    ],
+    ["www.google.com", "AEC", "Google ReCaptcha", "第三方", "6个月"],
+    ["www.google.com", "_GRECaptcha", "Google ReCaptcha", "第三方", "6个月"],
+  ]
+    .map(
+      (e) =>
+        `<tr >${e.map((cell, index) => `<td class="border border-[#C3C4C8] px-[16px] py-[24px] text-left">${index == 0 ? `<a class="" href="${cell}">${cell}</a>` : cell}</td>`).join("")}</tr>`,
+    )
+    .join("")}</tbody></table></div>
 
 <span class="md:text-[20px] font-[500]">功能性 Cookie</span>
 
 这些 Cookie 用于实现附加功能或增强网站性能。它们帮助我们个性化并提升您在网站上的在线体验。此类 Cookie 还允许我们在您再次访问网站时识别您的身份并记住您的选择。
 
-<div class="w-full overflow-x-auto"><table class="min-w-[640px] md:min-w-0 w-full border border-[#C3C4C8] border-collapse"><thead><tr class="text-[14px] md:text-[18px]">${['饼干域', 'Cookie 名称', '目的', '使用 Cookie', '期间'].map(e => `<th class="border border-[#C3C4C8] px-[16px] py-[18px] text-left min-w-[90px]">${e}</th>`).join('')}</tr></thead><tbody>${[
-  ['doubleclick.net, google.com', 'pm_sess', '此 Cookie 用于 Google 广告产品（包括 Campaign Manager、Display & Video 360、Google Ads 和 Search Ads 360）的安全性和功能性。它用于维护会话信息，并在用户与这些平台互动期间帮助验证用户身份。此 Cookie 的有效期仅为 30 分钟，可确保临时会话管理，并在用户积极使用 Google 广告服务期间增强安全性。', '第三方', '30分钟'],
-  ['www.T1T1.com', '折叠菜单', '用于存储会员区域可折叠菜单首选项。', '第一方', '1年'],
-  ['www.T1T1.com', 'url_intended', '用于存储用户登录后将要访问的页面的 URL。', '第一方', '会议']
-].map((e) => `<tr >${e.map((cell,index) => `<td class="border border-[#C3C4C8] px-[16px] py-[24px] text-left">${index==0?`<a class="" href="${cell}">${cell}</a>`: cell}</td>`).join('')}</tr>`).join('')}</tbody></table></div>
+<div class="w-full overflow-x-auto"><table class="min-w-[640px] md:min-w-0 w-full border border-[#C3C4C8] border-collapse"><thead><tr class="text-[14px] md:text-[18px]">${["饼干域", "Cookie 名称", "目的", "使用 Cookie", "期间"].map((e) => `<th class="border border-[#C3C4C8] px-[16px] py-[18px] text-left min-w-[90px]">${e}</th>`).join("")}</tr></thead><tbody>${[
+    [
+      "doubleclick.net, google.com",
+      "pm_sess",
+      "此 Cookie 用于 Google 广告产品（包括 Campaign Manager、Display & Video 360、Google Ads 和 Search Ads 360）的安全性和功能性。它用于维护会话信息，并在用户与这些平台互动期间帮助验证用户身份。此 Cookie 的有效期仅为 30 分钟，可确保临时会话管理，并在用户积极使用 Google 广告服务期间增强安全性。",
+      "第三方",
+      "30分钟",
+    ],
+    [
+      "www.T1T1.com",
+      "折叠菜单",
+      "用于存储会员区域可折叠菜单首选项。",
+      "第一方",
+      "1年",
+    ],
+    [
+      "www.T1T1.com",
+      "url_intended",
+      "用于存储用户登录后将要访问的页面的 URL。",
+      "第一方",
+      "会议",
+    ],
+  ]
+    .map(
+      (e) =>
+        `<tr >${e.map((cell, index) => `<td class="border border-[#C3C4C8] px-[16px] py-[24px] text-left">${index == 0 ? `<a class="" href="${cell}">${cell}</a>` : cell}</td>`).join("")}</tr>`,
+    )
+    .join("")}</tbody></table></div>
 
 <span class="md:text-[20px] font-[500]">定向/广告 Cookie</span>
 
@@ -349,63 +419,349 @@ Cookie 是一段数据，当您浏览网站时，它会要求您的浏览器收�
 
 如果您选择禁用此类 Cookie，您仍然会看到广告，但这些广告的相关性会降低，并且不会根据您的兴趣进行个性化定制。
 
-<div class="w-full overflow-x-auto"><table class="min-w-[640px] md:min-w-0 w-full border border-[#C3C4C8] border-collapse"><thead><tr class="text-[14px] md:text-[18px]">${['饼干域', 'Cookie 名称', '目的', '使用 Cookie', '期间'].map(e => `<th class="border border-[#C3C4C8] px-[16px] py-[18px] text-left min-w-[90px]">${e}</th>`).join('')}</tr></thead><tbody>${[
-  ['doubleclick.net', '测试 cookie', '用于检查用户的浏览器是否支持 Cookie。', '第三方', '15分钟'],
-  ['google.com', 'NID', '浏览器会将此 Cookie 随请求一起发送到 Google 网站。NID Cookie 包含一个唯一 ID，Google 使用该 ID 来记住您的偏好设置和其他信息，例如您的首选语言、搜索结果数量以及是否启用安全搜索过滤器。', '第三方', '6个月'],
-  ['doubleclick.net', 'DSID', 'Google Ads 使用此信息来识别非 Google 网站上的已登录用户，并记住用户是否已同意广告个性化。', '第三方', '两周'],
-  ['google.com', '天哪', '此 Google 广告 Cookie 设置在网站域名上，用于衡量用户与广告的互动情况，以及防止同一广告展示过多次。', '第三方', '13个月'],
-  ['doubleclick.net', '集成开发环境', 'Google DoubleClick 使用这些 Cookie 投放定向广告，并衡量广告转化率。', '第三方', '13个月'],
-  ['doubleclick.net', '规则', '用于确定网站广告是否已正确显示，通常用于再营销和广告效果衡量。', '第三方', '12个月'],
-  ['google.com', 'FPGCLAW', '商店点击来自 Google Ads 的 ID。', '第三方', '90天'],
-  ['google.com', 'FPGCLGB', '商店点击来自 Google Ads 的 ID。', '第三方', '90天'],
-  ['google.com', '_gcl_gb', '存储 Google Ads 的广告系列信息。', '第三方', '90天'],
-  ['google.com', '_gac_gb_<wpid>', '包含与 Google Ads 广告系列相关的信息。', '第三方', '90天'],
-  ['google.com', '_gcl_aw', '用于存储点击信息以进行转化跟踪。', '第三方', '90天'],
-  ['google.com', 'GCL_AW_P', '用于存储点击信息以进行转化跟踪。', '第三方', '90天'],
-  ['google.com', '_gcl_gs', '存储来自广告系列的 Google 点击标识符 (GCLID)。', '第三方', '90天'],
-  ['google.com', '_gcl_ag', 'Google Ads 广告系列特定 Cookie。', '第三方', '90天'],
-  ['google.com', '转换', 'Google Ads 用于跟踪转化。', '第三方', '90天'],
-  ['youtube.com', '约克郡', '由 YouTube 设置，用于跟踪嵌入视频的观看次数及用户互动行为。', '第三方', '会议'],
-  ['youtube.com', 'VISITOR_INFO1_LIVE', '用于分析和广告，包括估算带宽和检测视频服务问题。', '第三方', '180天'],
-  ['youtube.com', 'VISITOR_INFO1_LIVE__k', '用于追踪用户与嵌入 YouTube 视频的互动行为。', '第三方', '180天'],
-  ['youtube.com', 'VISITOR_INFO1_LIVE__default', '用于追踪用户与嵌入 YouTube 视频的互动行为。', '第三方', '180天'],
-  ['google.com', 'pm_sess_NNN', '与 Google 帐户关联，用于会话管理及广告许可场景。', '第三方', '30分钟'],
-  ['google.com', '关于广告_sessNNN', '与广告个性化或跟踪选择退出状态相关。', '第三方', '30分钟'],
-  ['google.com', 'FPAU', '识别用户在 Google Ads 链接网站上的活动。', '第三方', '90天'],
-  ['google.com', 'ar_debug', '用于启用或禁用归因报告调试功能。', '第三方', '90天'],
-  ['google.com', '_gcl_au', 'Google AdSense 用于生成分析数据以了解用户互动情况。', '第三方', '90天'],
-  ['google.com', 'FPLC', '用于追踪跨域广告点击行为。', '第三方', '20小时'],
-  ['reddit.com', '_rdt_uuid', '由 Reddit 设置，用于建立兴趣档案并展示相关广告。', '第三方', '90天']
-].map((e) => `<tr >${e.map((cell,index) => `<td class="border border-[#C3C4C8] px-[16px] py-[24px] text-left">${index==0?`<a class="" href="${cell}">${cell}</a>`: cell}</td>`).join('')}</tr>`).join('')}</tbody></table></div>
+<div class="w-full overflow-x-auto"><table class="min-w-[640px] md:min-w-0 w-full border border-[#C3C4C8] border-collapse"><thead><tr class="text-[14px] md:text-[18px]">${["饼干域", "Cookie 名称", "目的", "使用 Cookie", "期间"].map((e) => `<th class="border border-[#C3C4C8] px-[16px] py-[18px] text-left min-w-[90px]">${e}</th>`).join("")}</tr></thead><tbody>${[
+    [
+      "doubleclick.net",
+      "测试 cookie",
+      "用于检查用户的浏览器是否支持 Cookie。",
+      "第三方",
+      "15分钟",
+    ],
+    [
+      "google.com",
+      "NID",
+      "浏览器会将此 Cookie 随请求一起发送到 Google 网站。NID Cookie 包含一个唯一 ID，Google 使用该 ID 来记住您的偏好设置和其他信息，例如您的首选语言、搜索结果数量以及是否启用安全搜索过滤器。",
+      "第三方",
+      "6个月",
+    ],
+    [
+      "doubleclick.net",
+      "DSID",
+      "Google Ads 使用此信息来识别非 Google 网站上的已登录用户，并记住用户是否已同意广告个性化。",
+      "第三方",
+      "两周",
+    ],
+    [
+      "google.com",
+      "天哪",
+      "此 Google 广告 Cookie 设置在网站域名上，用于衡量用户与广告的互动情况，以及防止同一广告展示过多次。",
+      "第三方",
+      "13个月",
+    ],
+    [
+      "doubleclick.net",
+      "集成开发环境",
+      "Google DoubleClick 使用这些 Cookie 投放定向广告，并衡量广告转化率。",
+      "第三方",
+      "13个月",
+    ],
+    [
+      "doubleclick.net",
+      "规则",
+      "用于确定网站广告是否已正确显示，通常用于再营销和广告效果衡量。",
+      "第三方",
+      "12个月",
+    ],
+    [
+      "google.com",
+      "FPGCLAW",
+      "商店点击来自 Google Ads 的 ID。",
+      "第三方",
+      "90天",
+    ],
+    [
+      "google.com",
+      "FPGCLGB",
+      "商店点击来自 Google Ads 的 ID。",
+      "第三方",
+      "90天",
+    ],
+    [
+      "google.com",
+      "_gcl_gb",
+      "存储 Google Ads 的广告系列信息。",
+      "第三方",
+      "90天",
+    ],
+    [
+      "google.com",
+      "_gac_gb_<wpid>",
+      "包含与 Google Ads 广告系列相关的信息。",
+      "第三方",
+      "90天",
+    ],
+    [
+      "google.com",
+      "_gcl_aw",
+      "用于存储点击信息以进行转化跟踪。",
+      "第三方",
+      "90天",
+    ],
+    [
+      "google.com",
+      "GCL_AW_P",
+      "用于存储点击信息以进行转化跟踪。",
+      "第三方",
+      "90天",
+    ],
+    [
+      "google.com",
+      "_gcl_gs",
+      "存储来自广告系列的 Google 点击标识符 (GCLID)。",
+      "第三方",
+      "90天",
+    ],
+    [
+      "google.com",
+      "_gcl_ag",
+      "Google Ads 广告系列特定 Cookie。",
+      "第三方",
+      "90天",
+    ],
+    ["google.com", "转换", "Google Ads 用于跟踪转化。", "第三方", "90天"],
+    [
+      "youtube.com",
+      "约克郡",
+      "由 YouTube 设置，用于跟踪嵌入视频的观看次数及用户互动行为。",
+      "第三方",
+      "会议",
+    ],
+    [
+      "youtube.com",
+      "VISITOR_INFO1_LIVE",
+      "用于分析和广告，包括估算带宽和检测视频服务问题。",
+      "第三方",
+      "180天",
+    ],
+    [
+      "youtube.com",
+      "VISITOR_INFO1_LIVE__k",
+      "用于追踪用户与嵌入 YouTube 视频的互动行为。",
+      "第三方",
+      "180天",
+    ],
+    [
+      "youtube.com",
+      "VISITOR_INFO1_LIVE__default",
+      "用于追踪用户与嵌入 YouTube 视频的互动行为。",
+      "第三方",
+      "180天",
+    ],
+    [
+      "google.com",
+      "pm_sess_NNN",
+      "与 Google 帐户关联，用于会话管理及广告许可场景。",
+      "第三方",
+      "30分钟",
+    ],
+    [
+      "google.com",
+      "关于广告_sessNNN",
+      "与广告个性化或跟踪选择退出状态相关。",
+      "第三方",
+      "30分钟",
+    ],
+    [
+      "google.com",
+      "FPAU",
+      "识别用户在 Google Ads 链接网站上的活动。",
+      "第三方",
+      "90天",
+    ],
+    [
+      "google.com",
+      "ar_debug",
+      "用于启用或禁用归因报告调试功能。",
+      "第三方",
+      "90天",
+    ],
+    [
+      "google.com",
+      "_gcl_au",
+      "Google AdSense 用于生成分析数据以了解用户互动情况。",
+      "第三方",
+      "90天",
+    ],
+    ["google.com", "FPLC", "用于追踪跨域广告点击行为。", "第三方", "20小时"],
+    [
+      "reddit.com",
+      "_rdt_uuid",
+      "由 Reddit 设置，用于建立兴趣档案并展示相关广告。",
+      "第三方",
+      "90天",
+    ],
+  ]
+    .map(
+      (e) =>
+        `<tr >${e.map((cell, index) => `<td class="border border-[#C3C4C8] px-[16px] py-[24px] text-left">${index == 0 ? `<a class="" href="${cell}">${cell}</a>` : cell}</td>`).join("")}</tr>`,
+    )
+    .join("")}</tbody></table></div>
 
 <span class="md:text-[20px] font-[500]">分析型 Cookie</span>
 
 这些 Cookie 使我们能够识别和统计用户数量，并了解用户如何使用和浏览网站。例如，它们允许我们对页面使用情况、互动情况以及用户在网站上的浏览路径进行统计分析，从而改进网站性能。这被称为“数字分析”，通过这些信息，我们可以了解网站上哪些内容最受欢迎，哪些内容最不受欢迎。此外，我们还使用第三方会话记录技术来帮助我们更好地了解用户体验，但记录的数据均已匿名化处理。 
 
-<div class="w-full overflow-x-auto"><table class="min-w-[640px] md:min-w-0 w-full border border-[#C3C4C8] border-collapse"><thead><tr class="text-[14px] md:text-[18px]">${['饼干域', 'Cookie 名称', '目的', '使用 Cookie', '期间'].map(e => `<th class="border border-[#C3C4C8] px-[16px] py-[18px] text-left min-w-[90px]">${e}</th>`).join('')}</tr></thead><tbody>${[
-  ['google.com', '__eoi', '出于安全目的，AdSense、AdSense for Search、Display & Video 360、Google Ad Manager 和 Google Ads 使用。', '第三方', '6个月'],
-  ['google.com', '_ga', '包含 Google Analytics 使用的唯一标识符，用于区分不同用户和会话。', '第三方', '13个月'],
-  ['google.com', '_gid', '包含 Google Analytics 使用的唯一标识符，用于区分不同浏览会话。', '第三方', '24小时'],
-  ['google.com', '_gat[_<自定义名称>]', '用于读取并过滤来自机器人的请求。', '第三方', '1分钟'],
-  ['google.com', '__utma', '持久性 Cookie，用于区分用户和会话，计算新访客和回访访客统计数据。', '第三方', '13个月'],
-  ['google.com', '__utmb', '用于识别新会话和访问，包含进入网站的时间戳。', '第三方', '30分钟'],
-  ['google.com', '__utmc', '与 __utmb 配合使用，用于计算访问时长。', '第三方', '会议'],
-  ['google.com', '__utmt', '用于限制请求速率，防止高流量数据收集过载。', '第三方', '10分钟'],
-  ['google.com', '__utmz', '跟踪访问来源、媒介、广告系列及搜索词。', '第三方', '6个月'],
-  ['google.com', '__utmv', '用于存储用户自定义变量数据。', '第三方', '13个月'],
-  ['google.com', 'AMP_TOKEN', '用于从 AMP 客户端 ID 服务检索客户端 ID。', '第三方', '1年'],
-  ['google.com', 'FPID', '用于存储发送到 Google 服务器的客户端 ID。', '第三方', '13个月'],
-  ['google.com', '_ga_<wpid>', '用于在页面浏览过程中保持特定属性的会话状态。', '第三方', '13个月'],
-  ['google.com', '_dc_gtm_<property-id>', '用于高效加载其他脚本和标签，并与数据层事件同步。', '第三方', '1分钟'],
-  ['google.com', '_gaexp', '用于存储 A/B 测试实验和会话 ID。', '第三方', '93天'],
-  ['google.com', '_gaexp_rc', '用于管理和存储 A/B 测试实验数据。', '第三方', '10秒'],
-  ['google.com', '_opt_awcid', '用于存储 Google Ads 客户 ID，以关联 Optimize 实验。', '第三方', '24小时'],
-  ['google.com', '_opt_awmid', '用于收集分析数据，优化服务内容和功能。', '第三方', '24小时'],
-  ['google.com', '_opt_awgid', '用于存储访客互动信息，辅助 A/B 测试和网站优化。', '第三方', '24小时'],
-  ['google.com', '_opt_awkid', '用于分析用户与服务的互动情况。', '第三方', '24小时'],
-  ['google.com', '_opt_utmc', '用于确定新会话和访问量，并衡量优化实验效果。', '第三方', '24小时'],
-  ['google.com', '_gac_<wpid>', '在使用 Google Analytics 时存储广告系列信息，以与 Google Ads 关联。', '第三方', '90天']
-].map((e) => `<tr >${e.map((cell,index) => `<td class="border border-[#C3C4C8] px-[16px] py-[24px] text-left">${index==0?`<a class="" href="${cell}">${cell}</a>`: cell}</td>`).join('')}</tr>`).join('')}</tbody></table></div>
+<div class="w-full overflow-x-auto"><table class="min-w-[640px] md:min-w-0 w-full border border-[#C3C4C8] border-collapse"><thead><tr class="text-[14px] md:text-[18px]">${["饼干域", "Cookie 名称", "目的", "使用 Cookie", "期间"].map((e) => `<th class="border border-[#C3C4C8] px-[16px] py-[18px] text-left min-w-[90px]">${e}</th>`).join("")}</tr></thead><tbody>${[
+    [
+      "google.com",
+      "__eoi",
+      "出于安全目的，AdSense、AdSense for Search、Display & Video 360、Google Ad Manager 和 Google Ads 使用。",
+      "第三方",
+      "6个月",
+    ],
+    [
+      "google.com",
+      "_ga",
+      "包含 Google Analytics 使用的唯一标识符，用于区分不同用户和会话。",
+      "第三方",
+      "13个月",
+    ],
+    [
+      "google.com",
+      "_gid",
+      "包含 Google Analytics 使用的唯一标识符，用于区分不同浏览会话。",
+      "第三方",
+      "24小时",
+    ],
+    [
+      "google.com",
+      "_gat[_<自定义名称>]",
+      "用于读取并过滤来自机器人的请求。",
+      "第三方",
+      "1分钟",
+    ],
+    [
+      "google.com",
+      "__utma",
+      "持久性 Cookie，用于区分用户和会话，计算新访客和回访访客统计数据。",
+      "第三方",
+      "13个月",
+    ],
+    [
+      "google.com",
+      "__utmb",
+      "用于识别新会话和访问，包含进入网站的时间戳。",
+      "第三方",
+      "30分钟",
+    ],
+    [
+      "google.com",
+      "__utmc",
+      "与 __utmb 配合使用，用于计算访问时长。",
+      "第三方",
+      "会议",
+    ],
+    [
+      "google.com",
+      "__utmt",
+      "用于限制请求速率，防止高流量数据收集过载。",
+      "第三方",
+      "10分钟",
+    ],
+    [
+      "google.com",
+      "__utmz",
+      "跟踪访问来源、媒介、广告系列及搜索词。",
+      "第三方",
+      "6个月",
+    ],
+    [
+      "google.com",
+      "__utmv",
+      "用于存储用户自定义变量数据。",
+      "第三方",
+      "13个月",
+    ],
+    [
+      "google.com",
+      "AMP_TOKEN",
+      "用于从 AMP 客户端 ID 服务检索客户端 ID。",
+      "第三方",
+      "1年",
+    ],
+    [
+      "google.com",
+      "FPID",
+      "用于存储发送到 Google 服务器的客户端 ID。",
+      "第三方",
+      "13个月",
+    ],
+    [
+      "google.com",
+      "_ga_<wpid>",
+      "用于在页面浏览过程中保持特定属性的会话状态。",
+      "第三方",
+      "13个月",
+    ],
+    [
+      "google.com",
+      "_dc_gtm_<property-id>",
+      "用于高效加载其他脚本和标签，并与数据层事件同步。",
+      "第三方",
+      "1分钟",
+    ],
+    [
+      "google.com",
+      "_gaexp",
+      "用于存储 A/B 测试实验和会话 ID。",
+      "第三方",
+      "93天",
+    ],
+    [
+      "google.com",
+      "_gaexp_rc",
+      "用于管理和存储 A/B 测试实验数据。",
+      "第三方",
+      "10秒",
+    ],
+    [
+      "google.com",
+      "_opt_awcid",
+      "用于存储 Google Ads 客户 ID，以关联 Optimize 实验。",
+      "第三方",
+      "24小时",
+    ],
+    [
+      "google.com",
+      "_opt_awmid",
+      "用于收集分析数据，优化服务内容和功能。",
+      "第三方",
+      "24小时",
+    ],
+    [
+      "google.com",
+      "_opt_awgid",
+      "用于存储访客互动信息，辅助 A/B 测试和网站优化。",
+      "第三方",
+      "24小时",
+    ],
+    [
+      "google.com",
+      "_opt_awkid",
+      "用于分析用户与服务的互动情况。",
+      "第三方",
+      "24小时",
+    ],
+    [
+      "google.com",
+      "_opt_utmc",
+      "用于确定新会话和访问量，并衡量优化实验效果。",
+      "第三方",
+      "24小时",
+    ],
+    [
+      "google.com",
+      "_gac_<wpid>",
+      "在使用 Google Analytics 时存储广告系列信息，以与 Google Ads 关联。",
+      "第三方",
+      "90天",
+    ],
+  ]
+    .map(
+      (e) =>
+        `<tr >${e.map((cell, index) => `<td class="border border-[#C3C4C8] px-[16px] py-[24px] text-left">${index == 0 ? `<a class="" href="${cell}">${cell}</a>` : cell}</td>`).join("")}</tr>`,
+    )
+    .join("")}</tbody></table></div>
 
 <span class="md:text-[20px] font-[500]">第三方 Cookie</span>
 
@@ -963,7 +1319,7 @@ T1 保留暂停任何我们认为将发布商网站网络产生负面影响的�
 为了保持竞价平台的质量，由同一目标在同一广告位或地理区域触发的多个广告系列中的广告，将与同一广告位上的单个广告系列获得相同的待遇，不会使多个广告系列获得任何优势。
 所有推广活动都必须遵守2257号法律，即广告和落地页。
 所有广告均需经过审核；可能获得批准，也可能被认为不合适。
-每个登陆页都必须在新浏览器窗口/标签页中打开。
+每个登录页都必须在新浏览器窗口/标签页中打开。
 
 
 不参与人或模型模仿者：
