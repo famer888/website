@@ -1976,7 +1976,7 @@ export const WetmentbMap = {
         <div class="flex flex-col box-border flex-[0_0_50%] md:flex-[0_0_33.333%] px-2 md:px-6">
           <div class="mb-8">
             <h3 class="mb-4">
-              <a href="/why/advantages" class="text-blue-600 hover:text-blue-700 border-b-2 border-blue-600 pb-1 text-base md:text-lg font-medium inline-block no-underline">为什么选择我们?</a>
+              <a href="/why/advantages" class="text-blue-600 hover:text-blue-700 border-b-2 border-blue-600 pb-1 text-base md:text-lg font-medium inline-block no-underline">为什么选择T1</a>
             </h3>
             <ul class="list-none pl-0 mt-4 space-y-2">
               <li class="text-gray-700 text-sm md:text-base mb-2 list-none"><a href="/why/advantages" class="text-gray-700 hover:text-blue-600 transition-colors no-underline">我们的优势</a></li>
