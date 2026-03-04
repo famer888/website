@@ -187,6 +187,17 @@
               广告形式
             </NuxtLink>
 
+            <!-- 站长 -->
+            <NuxtLink
+              to="/publisher"
+              class="text-gray-700 hover:text-brand px-3 py-2 text-sm font-medium transition-colors rounded-[24px] h-12 flex items-center justify-center w-[100px]"
+              :class="{
+                'text-brand bg-[#F7F7FA]': route.path === '/publisher',
+              }"
+            >
+              站长
+            </NuxtLink>
+
             <!-- 联系我们 -->
             <div class="relative group">
               <button
@@ -416,6 +427,15 @@
               class="w-full flex items-center px-4 py-4 font-pingfang font-medium text-[16px] leading-[24px] tracking-normal text-justify text-[#626671] border-b border-gray-100"
             >
               <span>广告形式</span>
+            </NuxtLink>
+
+            <!-- 站长 -->
+            <NuxtLink
+              to="/publisher"
+              @click="mobileMenuOpen = false"
+              class="w-full flex items-center px-4 py-4 font-pingfang font-medium text-[16px] leading-[24px] tracking-normal text-justify text-[#626671] border-b border-gray-100"
+            >
+              <span>站长</span>
             </NuxtLink>
 
             <!-- 联系我们 -->

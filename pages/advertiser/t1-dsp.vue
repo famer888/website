@@ -37,12 +37,16 @@ import CtaSection from './components/t1-dsp/cta-section.vue'
 
 // SEO 配置
 useHead({
-  title: '什么是 T1 DSP - T1',
+  title: 'T1 DSP广告投放平台 | 程序化广告 精准投放 - T1广告联盟',
   meta: [
     {
       name: 'description',
       content:
-        '了解 T1 DSP：高质量库存、数据驱动营销、智能化营销活动、目标特征、自动化功能与优化能力。',
+        'T1 DSP程序化广告投放平台，支持高质量库存、数据驱动营销、智能化营销活动、精准目标定向、自动化功能与优化能力。',
+    },
+    {
+      name: 'keywords',
+      content: 'T1 DSP,程序化广告,精准投放,广告投放平台,数据驱动营销,广告联盟',
     },
   ],
 })

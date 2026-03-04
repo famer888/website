@@ -20,10 +20,10 @@ export default defineNuxtConfig({
     head: {
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',
-      title: 'T1 - 在全球顶级网站上投放广告 - 广告联盟 流量变现 - T1T1.com',
+      title: 'T1全球广告联盟平台 | 海外广告投放 CPM CPC CPA效果广告 - T1T1.com',
       meta: [
-        { name: 'description', content: 'T1 - 在全球顶级网站上投放广告，广告联盟，流量变现' },
-        { name: 'keywords', content: 'T1, 广告联盟, 流量变现, 全球广告投放, DSP, 移动广告, T1T1.com' },
+        { name: 'description', content: 'T1提供全球高质量流量广告服务，支持CPM、CPC、CPA多种计费模式，覆盖海外优质媒体资源，帮助广告主实现精准投放与高ROI转化，助力站长实现网站流量变现。' },
+        { name: 'keywords', content: '广告联盟,全球广告平台,海外广告投放,全球流量,CPM,CPC,CPA,效果广告,流量变现,网站变现,T1,T1T1.com' },
         { name: 'format-detection', content: 'telephone=no' }
       ],
       link: [
@@ -86,6 +86,7 @@ export default defineNuxtConfig({
         '/advertiser/t1-dsp',
         '/advertiser/target-function',
         '/ad-styles',
+        '/publisher',
         '/contact',
         '/contact/help-center',
         '/contact/quality-guide',

@@ -39,7 +39,7 @@ const styles = {
 
 const steps = [
 	{
-		title: '明确您的活动。',
+		title: '精准人群与地域定向',
 		subtitle: '务必言简意赅。',
 		description:
 			'为您的广告系列设置名称、目标群体、设备和每日预算。利用我们的关键词选择功能，精准定位细分市场，定义您的受众群体，并选择其他设置，例如时间定位和频次限制，以最大限度地发挥营销活动的效用。',
@@ -48,7 +48,7 @@ const steps = [
 		textOrder: 'md:order-2',
 	},
 	{
-		title: '提交素材与规格确认',
+		title: '多种广告形式支持',
 		subtitle: '按投放目标匹配位置，确保上线节奏可控',
 		description:
 			'从资源列表中选择合适的广告形式与位置，并设置投放节奏与频控。我们会同步确认排期与交付要求，保障稳定上线。',
@@ -57,7 +57,7 @@ const steps = [
 		textOrder: 'md:order-1',
 	},
 	{
-		title: '选择资源与投放位置',
+		title: '实时数据监控与优化',
 		subtitle: '按投放目标匹配位置，确保上线节奏可控',
 		description: '从资源列表中选择合适的广告形式与位置，并设置投放节奏与频控。我们会同步确认排期与交付要求，保障稳定上线。',
 		image: img_wd4,
@@ -65,7 +65,7 @@ const steps = [
 		textOrder: 'md:order-2',
 	},
 	{
-		title: '跟进<br class="hidden sm:block" />投资回报率',
+		title: '快速开户与投放流程',
 		subtitle: null,
 		description:
 			'开始看到点击量、潜在客户和销售额的增长。<br/>分析您的统计数据并进行优化，以获得更好的结果。',

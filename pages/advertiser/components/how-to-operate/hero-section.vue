@@ -3,9 +3,9 @@
 		<div
 			class="max-w-[1200px] mx-auto pt-0 md:pt-[100px] flex flex-col md:flex-row md:shadow-[0px_2px_60px_0px_#E0EBFD]">
 			<div class="bg-transparent md:bg-white px-6 md:px-0 pt-[48px] pb-[30px] md:pt-[60px] md:pb-0 md:pl-[60px]">
-				<h2
-					class="font-pingfang font-medium tracking-[0px] text-[36px] md:text-[64px] leading-[56px] md:leading-[96px] text-[#171A1D] mb-6 md:mb-12">
-					如何成为广告商?</h2>
+			<h1
+				class="font-pingfang font-medium tracking-[0px] text-[36px] md:text-[64px] leading-[56px] md:leading-[96px] text-[#171A1D] mb-6 md:mb-12">
+				全球广告投放解决方案</h1>
 				<h3
 					class="font-pingfang font-medium tracking-[0px] text-[16px] md:text-[24px] leading-[24px] md:leading-[36px] text-[#171A1D] pr-[95px] md:pr-0 mb-6 md:text-[#626671]">
 					{{ data.subtitle }}</h3>

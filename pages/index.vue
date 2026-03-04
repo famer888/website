@@ -12,7 +12,7 @@
               <h1
                 class="font-pingfang font-medium text-[32px] sm:text-[48px] md:text-[56px] lg:text-[64px] leading-[48px] sm:leading-[72px] md:leading-[84px] lg:leading-[96px] tracking-normal text-gray-900 mb-4 md:mb-[24px]"
               >
-                在全球顶级网站上投放广告
+                全球广告联盟平台
               </h1>
             </div>
 
@@ -81,9 +81,9 @@
               class="order-1 lg:order-none w-full lg:col-span-2 text-center lg:hidden"
             >
               <h2
-                class="font-pingfang font-medium text-[32px] xs:text-[28px] sm:text-[32px] leading-[36px] xs:leading-[42px] sm:leading-[48px] tracking-normal text-[#707273] w-[235px] h-[48px] mx-auto"
+                class="font-pingfang font-medium text-[32px] xs:text-[28px] sm:text-[32px] leading-[36px] xs:leading-[42px] sm:leading-[48px] tracking-normal text-[#707273] mx-auto"
               >
-                成为一名广告商!
+                全球广告投放解决方案
               </h2>
             </div>
 
@@ -109,7 +109,7 @@
                 <h2
                   class="font-pingfang font-medium text-[64px] leading-[96px] tracking-normal text-[#707273]"
                 >
-                  成为一名广告商!
+                  全球广告投放解决方案
                 </h2>
               </div>
 
@@ -128,7 +128,7 @@
                     <h3
                       class="font-pingfang font-medium text-[18px] sm:text-[20px] md:text-[22px] lg:text-[24px] leading-[27px] sm:leading-[30px] md:leading-[33px] lg:leading-[36px] tracking-normal text-[#747677] mb-2"
                     >
-                      大量精准流量!
+                      支持CPM、CPC、CPA多种计费模式
                     </h3>
                     <p
                       class="font-pingfang font-normal text-[12px] sm:text-[14px] md:text-[15px] lg:text-[16px] text-[#A2A3A5] leading-relaxed"
@@ -151,7 +151,7 @@
                     <h3
                       class="font-pingfang font-medium text-[18px] sm:text-[20px] md:text-[22px] lg:text-[24px] leading-[27px] sm:leading-[30px] md:leading-[33px] lg:leading-[36px] tracking-normal text-[#747677] mb-2"
                     >
-                      量身定制的全球在线营销!
+                      覆盖海外高质量媒体流量
                     </h3>
                     <p
                       class="font-pingfang font-normal text-[12px] sm:text-[14px] md:text-[15px] lg:text-[16px] text-[#A2A3A5] leading-relaxed"
@@ -174,7 +174,7 @@
                     <h3
                       class="font-pingfang font-medium text-[18px] sm:text-[20px] md:text-[22px] lg:text-[24px] leading-[27px] sm:leading-[30px] md:leading-[33px] lg:leading-[36px] tracking-normal text-[#747677] mb-2"
                     >
-                      灵活的广告投放平台!
+                      实时数据与效果优化
                     </h3>
                     <p
                       class="font-pingfang font-normal text-[12px] sm:text-[14px] md:text-[15px] lg:text-[16px] text-[#A2A3A5] leading-relaxed"
@@ -212,7 +212,7 @@
               <h2
                 class="font-pingfang font-medium text-[32px] leading-[48px] tracking-[0px] text-center text-[#707273]"
               >
-                媒体资料
+                覆盖海外高质量媒体流量
               </h2>
             </div>
 
@@ -237,7 +237,7 @@
               <h2
                 class="hidden lg:block font-pingfang font-medium text-[64px] leading-[96px] tracking-normal text-[#707273] mb-6"
               >
-                媒体资料
+                覆盖海外高质量媒体流量
               </h2>
               <p
                 class="font-pingfang font-normal text-[14px] md:text-[18px] leading-[20px] md:leading-relaxed tracking-[0px] text-[#A2A3A5] mb-8"
@@ -259,6 +259,32 @@
       </section>
 
       <!-- 立即开始部分 (已隐藏) -->
+
+      <!-- SEO 内链区域 -->
+      <section class="bg-white py-12 sm:py-16 lg:py-20">
+        <div class="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 class="font-pingfang font-medium text-[28px] sm:text-[36px] md:text-[48px] leading-[42px] sm:leading-[54px] md:leading-[72px] tracking-normal text-gray-900 mb-6 md:mb-10">
+            开启您的广告之旅
+          </h2>
+          <p class="font-pingfang font-normal text-[14px] md:text-[18px] leading-[20px] md:leading-[28px] text-[#A2A3A5] mb-8 md:mb-12 max-w-[700px] mx-auto">
+            无论您是广告主还是网站站长，T1广告联盟平台都能为您提供全方位的广告服务与流量变现解决方案。
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <NuxtLink
+              to="/advertiser/how-to-operate"
+              class="register-btn inline-flex items-center justify-center text-white rounded-[30px] font-pingfang font-normal text-[16px] sm:text-[18px] leading-[24px] sm:leading-[27px] tracking-normal transition-colors shadow-lg hover:shadow-xl w-[200px] h-[50px] md:w-[240px] md:h-[60px]"
+            >
+              我是广告主
+            </NuxtLink>
+            <NuxtLink
+              to="/publisher"
+              class="learn-more-btn inline-flex items-center justify-center bg-white rounded-[30px] font-pingfang font-normal text-[16px] sm:text-[18px] leading-[24px] sm:leading-[27px] tracking-normal transition-colors w-[200px] h-[50px] md:w-[240px] md:h-[60px]"
+            >
+              我是站长
+            </NuxtLink>
+          </div>
+        </div>
+      </section>
     </div>
 
     <!-- 页脚 -->
@@ -280,14 +306,14 @@ const { navigateToAuthOrDashboard } = useAuth();
 
 // SEO 配置
 useHead({
-  title: "T1 - 在全球顶级网站上投放广告",
+  title: "T1全球广告联盟平台 | 海外广告投放 CPM CPC CPA效果广告",
   meta: [
     {
       name: "description",
       content:
-        "每日平均拥有1.02亿访问量,10938 用户量。每日平均实现1.02亿广告展示量。大家都在T1上投放,就差你了!",
+        "T1提供全球高质量流量广告服务，支持CPM、CPC、CPA多种计费模式，覆盖海外优质媒体资源，帮助广告主实现精准投放与高ROI转化。",
     },
-    { name: "keywords", content: "广告投放,广告平台,数字广告,在线广告" },
+    { name: "keywords", content: "广告联盟,全球广告平台,海外广告投放,全球流量,CPM,CPC,CPA,效果广告,流量变现" },
   ],
 });
 

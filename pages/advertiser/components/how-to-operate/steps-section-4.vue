@@ -3,9 +3,9 @@
 		<div class="w-full md:max-w-[1200px] mx-auto px-6 md:px-0 grid grid-cols-1 md:grid-cols-2 gap-[16px] md:gap-0">
 			<!-- 左侧文字 -->
 			<div class="pt-[48px] md:pt-[101px] md:pr-[40px] order-1">
-				<h2
-					class="font-pingfang font-medium tracking-[0px] text-[36px] md:text-[64px] leading-[56px] md:leading-[96px] text-[#626671] md:text-[#171A1D] mb-[24px] md:mb-[48px]"
-					v-html="'跟进<br class=\'hidden sm:block\' />投资回报率'"></h2>
+			<h2
+				class="font-pingfang font-medium tracking-[0px] text-[36px] md:text-[64px] leading-[56px] md:leading-[96px] text-[#626671] md:text-[#171A1D] mb-[24px] md:mb-[48px]">
+				快速开户与投放流程</h2>
 				<p
 					class="font-pingfang font-normal tracking-[0px] text-[14px] md:text-[18px] leading-[20px] md:leading-[28px] text-[#93959C]"
 					v-html="'开始看到点击量、潜在客户和销售额的增长。<br/>分析您的统计数据并进行优化，以获得更好的结果。'"></p>
