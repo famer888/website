@@ -57,9 +57,9 @@ const steps = [
 		textOrder: 'md:order-1',
 	},
 	{
-		title: '选择站点<br class="hidden sm:block" />及安置',
-		subtitle: null,
-		description: '从高流量网站列表中选择，然后选择您希望广告展示的位置。',
+		title: '选择资源与投放位置',
+		subtitle: '按投放目标匹配位置，确保上线节奏可控',
+		description: '从资源列表中选择合适的广告形式与位置，并设置投放节奏与频控。我们会同步确认排期与交付要求，保障稳定上线。',
 		image: img_wd4,
 		imageOrder: 'md:order-1',
 		textOrder: 'md:order-2',
