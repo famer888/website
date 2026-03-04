@@ -272,7 +272,7 @@
         <!-- 行业图标网格 -->
         <!-- 移动端：包含"还有更多......"的网格 -->
         <div
-          class="grid grid-cols-2 gap-x-[76px] gap-y-[32px] md:gap-16 max-w-4xl mx-auto mb-8 mt-[50px] md:hidden"
+          class="grid grid-cols-2 gap-x-[0px] gap-y-[32px] md:gap-16 max-w-4xl mx-auto mb-8 mt-[50px] md:hidden"
         >
           <div
             v-for="(industry, index) in industriesForMobile"
@@ -283,7 +283,7 @@
               v-if="!industry.isText"
               :src="industry.icon"
               :alt="industry.name"
-              class="w-full max-w-[100px] h-auto"
+              class="w-full max-w-[96px] h-auto"
             />
             <p
               v-else

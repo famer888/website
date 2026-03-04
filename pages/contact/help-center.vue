@@ -32,7 +32,7 @@
         <!-- 这里可以添加业务内容 -->
         <div class="mt-8">
           <!-- tab：PC 与移动端都吸附在顶部 -->
-          <div class="sticky top-[64px] sm:top-[80px] z-20 bg-white">
+          <div class="sticky top-[64px] sm:top-[64px] z-20 bg-white">
             <div
               class="grid sm:flex sm:gap-20 grid-cols-3 sm:justify-start justify-center text-[16px] sm:text-[32px] text-center sm:text-start"
             >

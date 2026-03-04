@@ -6,7 +6,7 @@
       <div class="max-w-7xl mx-auto relative h-[100%]">
         <div class="absolute left-0 top-[50%] transform translate-y-[-50%]">
           <div class="p-8 sm:p-15">
-            <h1 class="text-[36px] md:text-[80px] leading-[56px] md:leading-[110px] font-bold text-white mb-6 md:mb-8">
+            <h1 class="text-[36px] md:text-[80px] leading-[56px] md:leading-[110px] font-500 text-white mb-6 md:mb-8">
               联系我们
             </h1>
             <div class="w-[90px] md:w-[148px] h-[1px] bg-white mb-8"></div>

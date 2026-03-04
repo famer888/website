@@ -27,7 +27,7 @@
                         : 'py-28 shadow-[0_5px_8px_-2px_rgba(0,0,0,0.025),0_2px_3px_-1px_rgba(0,0,0,0.01)] border border-[#EEF0F4]',
                 ]">
                     <SvgIcon :name="item.icon"
-                        class="mt-[22px] w-[100px] h-[100px] lg:w-[160px] lg:h-[160px] mx-auto mb-4 md:mb-8 lg:mb-12 object-contain" alt="图标" />
+                        class="mt-[23px] w-[100px] h-[100px] lg:w-[160px] lg:h-[160px] mx-auto mb-4 md:mb[44px] lg:mb-[44px] object-contain" alt="图标" />
                     <h4
                         class="font-pingfang font-medium text-[18px] sm:text-[20px] md:text-[24px] leading-[27px] sm:leading-[30px] md:leading-[36px] tracking-normal text-[#111827] mb-3 md:mb-6 lg:mb-8  text-center w-full">
                         {{ item.title }}
