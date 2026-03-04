@@ -49,7 +49,7 @@
               <p
                 class="font-pingfang font-medium text-[16px] sm:text-[32px] md:text-[36px] lg:text-[40px] leading-[36px] sm:leading-[48px] md:leading-[54px] lg:leading-[72px] tracking-normal text-gray-900 py-5 sm:py-0 mb-6 sm:mb-8"
               >
-                大家都在T1上投放,就差你了!
+                大家都在T1上投放，就差你了!
               </p>
 
               <!-- 按钮组 - 隐藏注册按钮，了解更多居中 -->

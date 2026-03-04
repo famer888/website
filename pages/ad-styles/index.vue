@@ -14,14 +14,14 @@
         <div class="h-full flex items-center">
           <div class="w-full text-start">
             <h1
-              class="font-pingfang font-medium text-[33.6px] sm:text-[43.2px] md:text-[52.8px] leading-[45.6px] sm:leading-[57.6px] md:leading-[67.2px] tracking-normal text-white mb-4"
+              class="font-pingfang font-medium text-[36px]  md:text-[80px] leading-[56px]  md:leading-[110px] tracking-normal text-white mb-4"
             >
               广告形式
             </h1>
             <!-- 水平线 -->
             <div class="w-[72px] md:w-[148px] h-[1px] bg-white my-8"></div>
             <p
-              class="font-pingfang font-normal text-[14.4px] sm:text-[16.8px] leading-[21.6px] sm:leading-[24px] tracking-normal text-white/60 md:text-white"
+              class="font-pingfang font-normal text-[14px] md:text-[24px] leading-[20px] md:leading-[36px] tracking-normal text-white/60 md:text-white"
             >
               你需要的所有数字格式<br class="visible md:hidden" />
               来吸引你的受众
@@ -32,7 +32,7 @@
     </section>
 
     <!-- 介绍 + 快速导航 -->
-    <section class="bg-white py-10 md:py-14 lg:py-16">
+    <section class="bg-white py-12 md:py-[120px]">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2
           class="font-pingfang font-medium text-[26.4px] sm:text-[31.2px] md:text-[38.4px] leading-[38.4px] sm:leading-[43.2px] md:leading-[52.8px] tracking-normal text-[#111827] mb-3"
@@ -87,7 +87,7 @@
           class="scroll-mt-24"
         >
           <h3
-            class="font-pingfang font-medium text-[21.6px] sm:text-[24px] md:text-[26.4px] leading-[31.2px] sm:leading-[36px] md:leading-[38.4px] tracking-normal text-[#111827] mb-4 sm:mb-6"
+            class="font-pingfang font-medium text-[21.6px] sm:text-[24px] md:text-[26.4px] leading-[31.2px] sm:leading-[36px] md:leading-[38.4px] tracking-normal text-[#626671] mb-4 sm:mb-6"
           >
             {{ block.sectionTitle }}
           </h3>
