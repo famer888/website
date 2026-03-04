@@ -15,7 +15,7 @@
           <div
             class="hidden md:flex items-center space-x-12 absolute left-1/2 transform -translate-x-1/2"
           >
-            <!-- 为什么选择我们 -->
+            <!-- 为什么选择T1 -->
             <div class="relative group">
               <button
                 @click="toggleDropdown('why')"
@@ -308,7 +308,7 @@
           class="absolute inset-0 bg-white px-6 shadow-lg overflow-y-auto drawer-content"
         >
           <div class="px-0 py-0">
-            <!-- 为什么选择我们 -->
+            <!-- 为什么选择T1 -->
             <div>
               <button
                 @click="toggleMobileDropdown('why')"
@@ -319,7 +319,7 @@
                     : 'border-gray-100'
                 "
               >
-                <span>为什么选择我们?</span>
+                <span>为什么选择T1</span>
                 <img
                   :src="openIconSrc"
                   alt="Toggle"
@@ -543,7 +543,7 @@ const getWhyMenuText = computed(() => {
   if (route.path === "/why/advantages") return "我们的优势";
   if (route.path === "/why/statistics") return "数据统计";
   if (route.path === "/why/mobile-ads") return "移动广告";
-  return "为什么选择我们?";
+  return "为什么选择T1";
 });
 
 const getAdvertiserMenuText = computed(() => {

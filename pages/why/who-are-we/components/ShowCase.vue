@@ -58,10 +58,10 @@
     </section>
 </template>
 <script setup>
-import why6ImageSrc from '~/assets/imgaes/why/why6.png'
-import why7ImageSrc from '~/assets/imgaes/why/why7.png'
-import why9ImageSrc from '~/assets/imgaes/why/why9.png'
-import why10ImageSrc from '~/assets/imgaes/why/why10.png'
+import why6ImageSrc from '~/assets/imgaes/why/why6@2x.webp'
+import why7ImageSrc from '~/assets/imgaes/why/why7@2x.webp'
+import why9ImageSrc from '~/assets/imgaes/why/why9@2x.webp'
+import why10ImageSrc from '~/assets/imgaes/why/why10@2x.webp'
 
 const activeIndex = ref(0)
 const scrollContainer = ref(null)
@@ -96,23 +96,23 @@ onUnmounted(() => stopAutoPlay())
 
 const cards = [
     {
-        title: '精准定位目标受众！',
-        description: '了解你的受众是关键，能够精准定位他们才是你的营销活动和公司取得成功的关键因素！',
+        title: '精准受众定向',
+        description: '基于人群标签与行为数据分析，帮助广告精准触达目标用户，提高点击率与转化效果。',
         image: why6ImageSrc
     },
     {
-        title: '流量购买机会！',
-        description: '以极低的价格获得海量优质流量。广告商可以放心，使用 T1 绝不会超出预设的预算限额。',
+        title: '优质流量资源',
+        description: '整合多渠道流量资源，支持灵活预算控制与智能投放策略，帮助广告主稳定获取高质量流量。',
         image: why7ImageSrc
     },
     {
-        title: '综合统计与分析！',
-        description: '借助我们先进的分析报告工具，您可以清晰了解整体营销绩效以及各个营销活动的效率。轻松衡量您的增长和业绩，从而专注于触达更广泛的目标受众。',
+        title: '数据统计与分析',
+        description: '提供实时数据报表与效果监测系统，清晰展示曝光、点击与转化情况，方便优化投放策略。',
         image: why9ImageSrc
     },
     {
-        title: '人口统计数据！',
-        description: '精准定位目标国家、地区、城市和人群，探索触达特定受众的最佳时间和地点。T1 提供海量流量，其中大部分来自优质国家，并覆盖所有相关人群。',
+        title: '多维度人群覆盖',
+        description: '支持国家、地区、城市及人群标签定向，覆盖全球多个市场，满足不同业务需求。',
         image: why10ImageSrc
     }
 ]
