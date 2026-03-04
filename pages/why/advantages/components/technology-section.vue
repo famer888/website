@@ -1,6 +1,6 @@
 <template>
 	<section class="w-full ">
-		<div class="w-full md:max-w-[1200px] mx-auto px-6 md:px-0 py-[90px] md:py-[60px] md:pt-[60px] md:pb-[60px]">
+		<div class="w-full md:max-w-[1200px] mx-auto px-6 md:px-0 py-[90px] md:py-[60px] md:pt-[60px] md:pb-[120px]">
 			<div class="text-center space-y-[16px] md:space-y-[24px] mb-[46px] md:mb-[60px]">
 				<h2
 					class="font-pingfang font-medium text-[36px] leading-[56px] tracking-[0px] text-[#626671] md:text-[56px] md:leading-[96px]">

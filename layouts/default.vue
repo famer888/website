@@ -177,26 +177,40 @@
             </div>
 
             <!-- 广告样式 -->
-            <NuxtLink
-              to="/ad-styles"
-              class="text-gray-700 hover:text-brand px-3 py-2 text-sm font-medium transition-colors rounded-[24px] h-12 flex items-center justify-center w-[100px]"
-              :class="{
-                'text-brand bg-[#F7F7FA]': route.path === '/ad-styles',
-              }"
-            >
-              广告形式
-            </NuxtLink>
+            <div class="relative group">
+              <NuxtLink
+                to="/ad-styles"
+                class="flex items-center hover:text-brand px-3 py-2 text-sm font-medium transition-colors rounded-[24px] h-12 w-[100px] justify-center"
+                :class="
+                  route.path === '/ad-styles' ? 'text-brand' : 'text-gray-700'
+                "
+              >
+                广告形式
+              </NuxtLink>
+              <div
+                v-if="route.path === '/ad-styles'"
+                class="absolute left-1/2 transform -translate-x-1/2 w-12 h-1 bg-brand"
+                style="bottom: -8px"
+              ></div>
+            </div>
 
             <!-- 站长 -->
-            <NuxtLink
-              to="/publisher"
-              class="text-gray-700 hover:text-brand px-3 py-2 text-sm font-medium transition-colors rounded-[24px] h-12 flex items-center justify-center w-[100px]"
-              :class="{
-                'text-brand bg-[#F7F7FA]': route.path === '/publisher',
-              }"
-            >
-              站长
-            </NuxtLink>
+            <div class="relative group">
+              <NuxtLink
+                to="/publisher"
+                class="flex items-center hover:text-brand px-3 py-2 text-sm font-medium transition-colors rounded-[24px] h-12 w-[100px] justify-center"
+                :class="
+                  route.path === '/publisher' ? 'text-brand' : 'text-gray-700'
+                "
+              >
+                站长
+              </NuxtLink>
+              <div
+                v-if="route.path === '/publisher'"
+                class="absolute left-1/2 transform -translate-x-1/2 w-12 h-1 bg-brand"
+                style="bottom: -8px"
+              ></div>
+            </div>
 
             <!-- 联系我们 -->
             <div class="relative group">

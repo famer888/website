@@ -27,22 +27,31 @@
       <div class="prose max-w-none">
         <!-- 这里可以添加业务内容 -->
         <div class="mt-8">
-          <!-- tab -->
-          <div
-            class="grid sm:flex sm:gap-20 grid-cols-3 sm:justify-start justify-center text-[#626671] text-[16px] sm:text-[32px] text-center sm:text-start"
-          >
-            <template v-for="tab in tabs" :key="tab.id">
+          <!-- tab：PC 与移动端都吸附在顶部 -->
+          <div class="sticky top-[64px] sm:top-[80px] z-20 bg-white">
+            <div
+              class="grid sm:flex sm:gap-20 grid-cols-3 sm:justify-start justify-center text-[16px] sm:text-[32px] text-center sm:text-start"
+            >
               <div
+                v-for="tab in tabs"
+                :key="tab.id"
                 class="cursor-pointer relative"
                 @click="handleTabClick(tab.id)"
               >
-                <span>{{ tab.name }}</span>
+                <span
+                  :class="[
+                    'font-pingfang font-normal md:font-medium tracking-[0px] text-[16px] md:text-[32px] leading-[24px] md:leading-[48px]',
+                    activeTab === tab.id ? 'text-[#3A82F9]' : 'text-[#626671]',
+                  ]"
+                >
+                  {{ tab.name }}
+                </span>
                 <label
                   v-if="activeTab === tab.id"
                   class="absolute bottom-[-10px] sm:bottom-[-15px] left-[50%] transform translate-x-[-50%] w-[25px] sm:w-[100px] h-[3px] sm:h-[4px] bg-[#3982F9]"
                 ></label>
               </div>
-            </template>
+            </div>
           </div>
 
           <!-- 展开文本内容 -->
@@ -52,10 +61,10 @@
                 class="flex py-4 sm:py-8 justify-between items-center border-b-[1px] border-[#3A82F9]"
               >
                 <span class="text-[16px] sm:text-[24px]">{{ info.title }}</span>
-                <img :src="infoActive === info.key ? ArrowUpSrc : ArrowDownSrc" alt="" class="w-[14px] sm:w-[32px]" />
+                <img :src="infoActive === info.key ? ArrowUpSrc : ArrowDownSrc" alt="" class="w-[14px] sm:w-[32px] cursor-pointer" />
               </div>
               <div v-if="infoActive === info.key" class="my-4 p-4 bg-[#F4F5F9]">
-                <div class="text-[14px] text-[#626671] sm:min-h-[150px]">
+                <div class="text-[14px] md:text-[24px] leading-[20px] md:leading-[48px] text-[#626671] sm:min-h-[150px]">
                   {{ info.content }}
                 </div>
               </div>
@@ -95,7 +104,7 @@
             </div>
             <div class="mt-10">
               <div class="w-[160px] h-[40px] sm:w-[250px] sm:h-[60px] mx-auto rounded-[20px] sm:rounded-[30px] bg-[#3A82F9] text-[16px] sm:text-[20px] text-white flex items-center justify-center gap-2 cursor-pointer">
-                <img :src="ServiceSrc" alt="" class="w-[10px] sm:w-[15px]"></img>
+                <img :src="ServiceSrc" alt="" class="w-[10px] sm:w-[15px]" />
                 <span>联系客服</span>
               </div>
             </div>
