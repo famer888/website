@@ -5,7 +5,7 @@
 			<div class="pt-[48px] md:pt-[123px] md:pr-[23px] order-1">
 				<h2
 					class="font-pingfang font-medium tracking-[0px] text-[36px] md:text-[64px] leading-[56px] md:leading-[96px] text-[#626671] md:text-[#171A1D] mb-[24px] md:mb-[48px]">
-					上传您的横幅广告。</h2>
+					上传您的横幅广告</h2>
 				<h3
 					class="font-pingfang font-medium tracking-[0px] text-[16px] md:text-[24px] leading-[24px] md:leading-[36px] text-[#626671] mb-[16px] md:mb-[24px]">
 					让你的信息表达更有创意！</h3>

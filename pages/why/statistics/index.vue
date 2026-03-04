@@ -357,7 +357,7 @@ import statistics15ImageSrc from "~/assets/imgaes/why/statistics15.svg";
 // 行业数据
 const industriesForPC = [
   { name: "博彩", icon: statistics9ImageSrc },
-  { name: "成人娱乐", icon: statistics10ImageSrc },
+  { name: "化妆品", icon: statistics10ImageSrc },
   { name: "游戏", icon: statistics11ImageSrc },
   { name: "约会", icon: statistics12ImageSrc },
   { name: "web3", icon: statistics13ImageSrc },
@@ -365,7 +365,7 @@ const industriesForPC = [
 
 const industriesForMobile = [
   { name: "博彩", icon: statistics9ImageSrc },
-  { name: "成人娱乐", icon: statistics10ImageSrc },
+  { name: "化妆品", icon: statistics10ImageSrc },
   { name: "游戏", icon: statistics11ImageSrc },
   { name: "约会", icon: statistics12ImageSrc },
   { name: "web3", icon: statistics13ImageSrc },

@@ -95,7 +95,7 @@
             class="font-pingfang font-normal hidden md:block text-[14.4px] sm:text-[16.8px] md:text-[19.2px] leading-[24px] sm:leading-[26.4px] md:leading-[31.2px] tracking-normal text-[#A2A3A5] mt-4 mb-6"
           >
             T1
-            提供展示位置为资讯页、视频详情页、信息列表页等的开屏广告，具体要求如下:
+            提供展示位置为资讯页、视频详情页、信息列表页等的开屏广告，具体要求如下
           </p>
           <div
             class="bg-white border border-[#EEF0F4] rounded-[8px] overflow-hidden"
@@ -150,7 +150,7 @@
         <h3
           class="font-pingfang font-medium text-[26.4px] sm:text-[31.2px] md:text-[38.4px] leading-[38.4px] sm:leading-[43.2px] md:leading-[52.8px] tracking-normal text-[#111827] mb-6"
         >
-          在顶级成人网站上投放广告!
+          在顶级流量网站上投放广告!
         </h3>
         <p
           class="font-pingfang font-normal text-[14.4px] sm:text-[16.8px] leading-[21.6px] sm:leading-[26.4px] tracking-normal text-[#A2A3A5] mb-8"
